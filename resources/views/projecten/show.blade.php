@@ -1,0 +1,132 @@
+@extends('layouts.app')
+
+@section('title', $title . ' | Projecten | Fitness Aannemer')
+@section('meta_description', $metaDesc)
+
+@section('content')
+    <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="ip-hero-el flex items-center gap-2 mb-6">
+                <a href="{{ url('/projecten') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter Tight'">Projecten</a>
+                <i class="fa-solid fa-chevron-right text-white/20 text-[8px]"></i>
+                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter Tight'">{{ $title }}</span>
+            </div>
+            <div class="max-w-3xl">
+                <div class="ip-hero-el flex items-center gap-3 mb-4">
+                    <span class="inline-block bg-primary/20 text-primary text-[10px] font-semibold px-2.5 py-1 rounded-full border border-primary/30">{{ $type }}</span>
+                    <span class="text-white/50 text-xs font-semibold" style="font-family: 'Inter Tight'">{{ $size }}</span>
+                    <span class="text-white/20 text-xs">&#8226;</span>
+                    <span class="text-white/50 text-xs font-semibold" style="font-family: 'Inter Tight'">{{ $location }}</span>
+                </div>
+                <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">{!! $heroTitle !!}</h1>
+                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-6 lg:my-8">{{ $heroDesc }}</p>
+                <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                    <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                    <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Alle projecten</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-16 lg:py-32 relative overflow-hidden" id="pd-section1">
+        <div class="horizontal-blob w-[700px] h-[700px]" style="background: radial-gradient(circle, rgba(82,171,226,0.2) 0%, rgba(82,171,226,0) 70%); top: -20%; left: -10%; animation: blob-float-1 18s ease-in-out infinite;"></div>
+        <div class="horizontal-blob w-[500px] h-[500px]" style="background: radial-gradient(circle, rgba(82,171,226,0.15) 0%, rgba(82,171,226,0) 70%); top: 40%; right: -10%; animation: blob-float-2 22s ease-in-out infinite;"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                <div class="ip-block-text">
+                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $introLabel }}</span>
+                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-6 lg:mb-8">{!! $introTitle !!}</h2>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">{{ $introP1 }}</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">{{ $introP2 }}</p>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Alle projecten</a>
+                    </div>
+                </div>
+                <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
+                    @if(str_ends_with($media1, '.mp4'))
+                        <video src="{{ asset($media1) }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                    @elseif(str_starts_with($media1, 'http'))
+                        <img src="{{ $media1 }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
+                    @else
+                        <img src="{{ asset($media1) }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
+                    @endif
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-secondary py-16 lg:py-32 overflow-hidden" id="pd-section2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
+                    @if(str_ends_with($mediaMid, '.mp4'))
+                        <video src="{{ asset($mediaMid) }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                    @elseif(str_starts_with($mediaMid, 'http'))
+                        <img src="{{ $mediaMid }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
+                    @else
+                        <img src="{{ asset($mediaMid) }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
+                    @endif
+                </div>
+                <div class="ip-block-text">
+                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $midLabel }}</span>
+                    <h2 class="text-white text-3xl lg:text-5xl font-bold leading-[1.05] mb-6 lg:mb-8">{!! $midTitle !!}</h2>
+                    <p class="text-white/50 text-sm leading-relaxed mb-4">{{ $midP1 }}</p>
+                    <p class="text-white/50 text-sm leading-relaxed mb-8">{{ $midP2 }}</p>
+
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <div class="bg-white/[0.06] rounded-xl px-4 py-3">
+                            <p class="text-white/30 text-[10px] uppercase tracking-wider font-semibold mb-1">Type</p>
+                            <p class="text-white text-sm font-bold" style="font-family: 'Inter Tight'">{{ $type }}</p>
+                        </div>
+                        <div class="bg-white/[0.06] rounded-xl px-4 py-3">
+                            <p class="text-white/30 text-[10px] uppercase tracking-wider font-semibold mb-1">Oppervlakte</p>
+                            <p class="text-white text-sm font-bold" style="font-family: 'Inter Tight'">{{ $size }}</p>
+                        </div>
+                        <div class="bg-white/[0.06] rounded-xl px-4 py-3">
+                            <p class="text-white/30 text-[10px] uppercase tracking-wider font-semibold mb-1">Locatie</p>
+                            <p class="text-white text-sm font-bold" style="font-family: 'Inter Tight'">{{ $location }}</p>
+                        </div>
+                    </div>
+
+                    @if(!empty($merken))
+                    <div class="flex flex-wrap gap-2">
+                        @foreach($merken as $merk)
+                            <span class="inline-block bg-primary/10 text-primary text-[10px] font-semibold px-2.5 py-1 rounded-full border border-primary/20">{{ $merk }}</span>
+                        @endforeach
+                    </div>
+                    @endif
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-16 lg:py-32 relative overflow-hidden" id="pd-section3">
+        <div class="horizontal-blob w-[600px] h-[600px]" style="background: radial-gradient(circle, rgba(82,171,226,0.18) 0%, rgba(82,171,226,0) 70%); top: -15%; right: -5%; animation: blob-float-3 15s ease-in-out infinite;"></div>
+        <div class="horizontal-blob w-[500px] h-[500px]" style="background: radial-gradient(circle, rgba(82,171,226,0.15) 0%, rgba(82,171,226,0) 70%); bottom: -20%; left: -8%; animation: blob-float-1 20s ease-in-out infinite;"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                <div class="ip-block-text">
+                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $section3Label }}</span>
+                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-6 lg:mb-8">{!! $section3Title !!}</h2>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">{{ $section3P1 }}</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">{{ $section3P2 }}</p>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Alle projecten</a>
+                    </div>
+                </div>
+                <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
+                    @if(str_ends_with($media3, '.mp4'))
+                        <video src="{{ asset($media3) }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                    @elseif(str_starts_with($media3, 'http'))
+                        <img src="{{ $media3 }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
+                    @else
+                        <img src="{{ asset($media3) }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
+                    @endif
+                </div>
+            </div>
+        </div>
+    </section>
+
+@endsection

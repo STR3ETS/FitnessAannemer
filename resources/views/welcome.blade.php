@@ -1019,24 +1019,6 @@
             </div>
         </section>
 
-        <div class="bg-secondary text-center pt-16 lg:pt-32 px-4 sm:px-6 relative z-10">
-            <h2 class="brands-fade text-white text-3xl sm:text-5xl md:text-6xl font-bold leading-[1.05] mb-6">Klaar om jouw gym<br><span class="text-primary">te realiseren?</span></h2>
-            <p class="brands-fade text-white/35 text-sm leading-relaxed max-w-lg mx-auto">Van concept tot oplevering, wij regelen alles. Neem contact op voor een vrijblijvend adviesgesprek en ontdek wat wij voor jouw fitnessruimte kunnen betekenen.</p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-8">
-                <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
-                <a href="{{ url('/offerte-aanvragen') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Offerte aanvragen</a>
-            </div>
-        </div>
-
-        <div class="project-arc bg-secondary relative z-10 hidden sm:block">
-            @for ($i = 1; $i <= 9; $i++)
-            <div class="project-arc-card rounded-3xl" data-arc-index="{{ $i - 1 }}">
-                <video src="/shorts/fitnessaannemer-short-{{ $i }}.mp4" class="absolute inset-0 w-full h-full object-cover rounded-3xl" muted loop playsinline></video>
-                <div class="project-arc-overlay absolute inset-0 bg-secondary rounded-3xl pointer-events-none"></div>
-            </div>
-            @endfor
-        </div>
-
         {{-- Reviews Section - Split Editorial --}}
         <section class="reviews-section bg-secondary py-16 lg:py-32 overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
@@ -1170,6 +1152,114 @@
                 </div>
             </div>
         </section>
+
+        {{-- E-book Download Section --}}
+        <section class="bg-white py-16 lg:py-32 overflow-hidden" data-header-light>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <div class="flex flex-col lg:flex-row rounded-3xl overflow-hidden border border-secondary/[0.06]">
+
+                    {{-- Left: E-book mockup --}}
+                    <div class="lg:w-[45%] bg-secondary relative flex items-center justify-center p-10 lg:p-16 min-h-[400px]">
+                        {{-- Decorative gradient --}}
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent"></div>
+
+                        {{-- Tablet mockup --}}
+                        <div class="relative z-10">
+                            {{-- "100% Gratis" badge --}}
+                            <div class="absolute -top-3 -right-3 lg:-top-4 lg:-right-6 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-lg z-20">100% Gratis</div>
+
+                            {{-- Tablet frame --}}
+                            <div class="relative bg-secondary border-[3px] border-white/20 rounded-2xl p-4 shadow-2xl max-w-[280px]">
+                                {{-- E-book cover --}}
+                                <div class="bg-gradient-to-br from-secondary via-[#0a0f1a] to-secondary rounded-lg p-6 aspect-[3/4] flex flex-col justify-between relative overflow-hidden">
+                                    {{-- Subtle grid pattern --}}
+                                    <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+                                    <div class="relative z-10">
+                                        <img src="{{ asset('fitnessaannemer-logo-fa-blauw.png') }}" alt="Fitness Aannemer" class="h-5 mb-4 opacity-60">
+                                        <span class="text-primary text-[9px] font-bold uppercase tracking-[0.2em] block">E-book 2025</span>
+                                    </div>
+
+                                    <div class="relative z-10">
+                                        <h3 class="text-white text-lg font-bold leading-tight mb-2">Gym inrichten<br>van A tot Z</h3>
+                                        <div class="w-8 h-[2px] bg-primary mb-3"></div>
+                                        <p class="text-white/30 text-[9px] uppercase tracking-wider font-medium">Nederland & Belgie</p>
+                                    </div>
+
+                                    <div class="relative z-10 flex items-center gap-2">
+                                        <span class="text-white/25 text-[8px] font-medium">50+ pagina's</span>
+                                        <span class="text-white/15 text-[8px]">&bull;</span>
+                                        <span class="text-white/25 text-[8px] font-medium">Checklists</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- Shadow page behind --}}
+                            <div class="absolute top-3 -left-3 w-full h-full bg-white/[0.04] border border-white/[0.06] rounded-2xl -z-10"></div>
+                        </div>
+                    </div>
+
+                    {{-- Right: Content + Form --}}
+                    <div class="lg:w-[55%] bg-white p-8 sm:p-12 lg:p-16 flex flex-col justify-center">
+                        <span class="text-primary text-xs font-semibold uppercase tracking-widest mb-4 block">Gratis e-book</span>
+                        <h2 class="text-secondary text-2xl sm:text-3xl lg:text-4xl font-bold leading-[1.1] mb-4">Transformeer jouw gym met <span class="text-primary">expert kennis</span></h2>
+                        <p class="text-secondary/50 text-sm leading-relaxed mb-8">Download ons uitgebreide e-book en ontdek de geheimen van succesvolle gym inrichting. Van concept tot realisatie.</p>
+
+                        {{-- USPs --}}
+                        <div class="flex flex-col gap-3 mb-8">
+                            @foreach(['50+ pagina\'s expert kennis', 'Praktische checklists & tools', 'Exclusieve case studies'] as $usp)
+                            <div class="flex items-center gap-3">
+                                <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-check text-primary text-[10px]"></i>
+                                </div>
+                                <span class="text-secondary text-sm font-medium">{{ $usp }}</span>
+                            </div>
+                            @endforeach
+                        </div>
+
+                        {{-- Form --}}
+                        <form action="#" method="POST" class="space-y-3">
+                            @csrf
+                            <div class="relative">
+                                <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-secondary/20 text-xs"></i>
+                                <input type="text" name="naam" placeholder="Jouw naam" required class="w-full bg-secondary/[0.03] border border-secondary/10 rounded-xl pl-11 pr-4 py-3.5 text-sm text-secondary placeholder:text-secondary/30 focus:outline-none focus:border-primary/40 transition">
+                            </div>
+                            <div class="relative">
+                                <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-secondary/20 text-xs"></i>
+                                <input type="email" name="email" placeholder="jouw@email.nl" required class="w-full bg-secondary/[0.03] border border-secondary/10 rounded-xl pl-11 pr-4 py-3.5 text-sm text-secondary placeholder:text-secondary/30 focus:outline-none focus:border-primary/40 transition">
+                            </div>
+                            <button type="submit" class="w-full bg-secondary hover:bg-secondary/90 text-white text-sm font-semibold rounded-xl px-6 py-3.5 flex items-center justify-center gap-2 transition">
+                                <i class="fa-solid fa-download text-xs"></i>
+                                Download gratis e-book
+                            </button>
+                        </form>
+
+                        <p class="text-secondary/30 text-[11px] text-center mt-4">100% gratis &middot; Geen verborgen kosten &middot; Direct toegang</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <div class="bg-secondary text-center pt-16 lg:pt-32 px-4 sm:px-6 relative z-10">
+            <h2 class="brands-fade text-white text-3xl sm:text-5xl md:text-6xl font-bold leading-[1.05] mb-6">Klaar om jouw gym<br><span class="text-primary">te realiseren?</span></h2>
+            <p class="brands-fade text-white/35 text-sm leading-relaxed max-w-lg mx-auto">Van concept tot oplevering, wij regelen alles. Neem contact op voor een vrijblijvend adviesgesprek en ontdek wat wij voor jouw fitnessruimte kunnen betekenen.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-8">
+                <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                <a href="{{ url('/offerte-aanvragen') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Offerte aanvragen</a>
+            </div>
+        </div>
+
+        <div class="project-arc bg-secondary relative z-10 hidden sm:block">
+            @for ($i = 1; $i <= 9; $i++)
+            <div class="project-arc-card rounded-3xl" data-arc-index="{{ $i - 1 }}">
+                <video src="/shorts/fitnessaannemer-short-{{ $i }}.mp4" class="absolute inset-0 w-full h-full object-cover rounded-3xl" muted loop playsinline></video>
+                <div class="project-arc-overlay absolute inset-0 bg-secondary rounded-3xl pointer-events-none"></div>
+            </div>
+            @endfor
+        </div>
 
         @include('partials.footer')
         @include('partials.cookie-consent')

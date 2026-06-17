@@ -3,6 +3,38 @@
 @section('title', 'Onderhoud & Reparaties | Fitness Aannemer')
 @section('meta_description', 'Professioneel onderhoud en snelle reparatie van fitnessapparatuur. Minimaliseer downtime en verleng de levensduur van jouw investering.')
 
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "Service",
+    "name": "Onderhoud & Reparaties",
+    "description": "Professioneel onderhoud en snelle reparatie van fitnessapparatuur. Minimaliseer downtime en verleng de levensduur van jouw investering.",
+    "url": "{{ url('/diensten/onderhoud-en-reparaties') }}",
+    "provider": {
+        "@@type": "Organization",
+        "name": "Fitness Aannemer",
+        "url": "{{ url('/') }}"
+    },
+    "areaServed": [
+        { "@@type": "Country", "name": "Nederland" },
+        { "@@type": "Country", "name": "België" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@@type": "ListItem", "position": 2, "name": "Diensten", "item": "{{ url('/diensten') }}" },
+        { "@@type": "ListItem", "position": 3, "name": "Onderhoud & Reparaties", "item": "{{ url('/diensten/onderhoud-en-reparaties') }}" }
+    ]
+}
+</script>
+@endsection
+
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30" id="or-hero">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">

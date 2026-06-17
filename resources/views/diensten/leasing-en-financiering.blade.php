@@ -3,6 +3,38 @@
 @section('title', 'Leasing & Financiering | Fitness Aannemer')
 @section('meta_description', 'Flexibele lease- en financieringsopties voor fitnessapparatuur. Start direct met topapparatuur en spreid de kosten met operational lease, financial lease of financiering.')
 
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "Service",
+    "name": "Leasing & Financiering",
+    "description": "Flexibele lease- en financieringsopties voor fitnessapparatuur. Start direct met topapparatuur en spreid de kosten.",
+    "url": "{{ url('/diensten/leasing-en-financiering') }}",
+    "provider": {
+        "@@type": "Organization",
+        "name": "Fitness Aannemer",
+        "url": "{{ url('/') }}"
+    },
+    "areaServed": [
+        { "@@type": "Country", "name": "Nederland" },
+        { "@@type": "Country", "name": "België" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@@type": "ListItem", "position": 2, "name": "Diensten", "item": "{{ url('/diensten') }}" },
+        { "@@type": "ListItem", "position": 3, "name": "Leasing & Financiering", "item": "{{ url('/diensten/leasing-en-financiering') }}" }
+    ]
+}
+</script>
+@endsection
+
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30" id="lf-hero">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">

@@ -3,6 +3,38 @@
 @section('title', 'Inrichting & Planning | Fitness Aannemer')
 @section('meta_description', 'Professioneel gymontwerp met 3D visualisatie. Fitness Aannemer maakt een doordacht plan voor jouw fitnessruimte, van plattegrond tot apparatuurkeuze.')
 
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "Service",
+    "name": "Inrichting & Planning",
+    "description": "Professioneel gymontwerp met 3D visualisatie. Van plattegrond tot apparatuurkeuze.",
+    "url": "{{ url('/diensten/inrichting-en-planning') }}",
+    "provider": {
+        "@@type": "Organization",
+        "name": "Fitness Aannemer",
+        "url": "{{ url('/') }}"
+    },
+    "areaServed": [
+        { "@@type": "Country", "name": "Nederland" },
+        { "@@type": "Country", "name": "België" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@@type": "ListItem", "position": 2, "name": "Diensten", "item": "{{ url('/diensten') }}" },
+        { "@@type": "ListItem", "position": 3, "name": "Inrichting & Planning", "item": "{{ url('/diensten/inrichting-en-planning') }}" }
+    ]
+}
+</script>
+@endsection
+
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30" id="ip-hero">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">

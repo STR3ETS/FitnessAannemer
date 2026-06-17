@@ -3,6 +3,17 @@
 @section('title', 'Cookiebeleid | Fitness Aannemer')
 @section('meta_description', 'Lees het cookiebeleid van Fitness Aannemer. Welke cookies wij gebruiken, waarom, en hoe je ze kunt beheren.')
 
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "WebPage",
+    "name": "Cookiebeleid",
+    "url": "{{ url('/cookies') }}"
+}
+</script>
+@endsection
+
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-12 lg:pb-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">

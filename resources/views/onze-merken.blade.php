@@ -3,6 +3,28 @@
 @section('title', 'Onze Merken | Fitness Aannemer')
 @section('meta_description', 'Fitness Aannemer werkt met topmerken als Life Fitness, Matrix, Concept2, KingsBox, Gym80 en Keiser. Ontdek ons assortiment.')
 
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "WebPage",
+    "name": "Onze Merken",
+    "description": "Fitness Aannemer werkt met topmerken als Life Fitness, Matrix, Concept2, KingsBox, Gym80 en Keiser.",
+    "url": "{{ url('/onze-merken') }}"
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@@type": "ListItem", "position": 2, "name": "Onze Merken", "item": "{{ url('/onze-merken') }}" }
+    ]
+}
+</script>
+@endsection
+
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">

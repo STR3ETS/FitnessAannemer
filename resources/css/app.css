@@ -423,12 +423,15 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* ===== Reviews Section - Split Editorial ===== */
+.reviews-fade,
 .review-showcase {
-    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
-.review-card-sm {
-    will-change: background-color, border-color;
+.review-slide,
+.review-card-img {
+    transition: none;
 }
 
 .review-progress-bar {

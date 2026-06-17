@@ -12,6 +12,21 @@
         <link rel="canonical" href="{{ url('/gratis-adviesgesprek') }}">
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 
+        {{-- Open Graph --}}
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ url('/gratis-adviesgesprek') }}">
+        <meta property="og:title" content="Gratis Adviesgesprek | Fitness Aannemer">
+        <meta property="og:description" content="Plan een gratis adviesgesprek met Fitness Aannemer. Vertel ons over jouw project en wij nemen binnen 24 uur contact op.">
+        <meta property="og:image" content="{{ asset('fitnessaannemer-logo-fa-blauw.png') }}">
+        <meta property="og:locale" content="nl_NL">
+        <meta property="og:site_name" content="Fitness Aannemer">
+
+        {{-- Twitter Card --}}
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Gratis Adviesgesprek | Fitness Aannemer">
+        <meta name="twitter:description" content="Plan een gratis adviesgesprek met Fitness Aannemer. Vertel ons over jouw project en wij nemen binnen 24 uur contact op.">
+        <meta name="twitter:image" content="{{ asset('fitnessaannemer-logo-fa-blauw.png') }}">
+
         <link rel="preload" href="{{ asset('fontawesome/css/all.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}"></noscript>
 

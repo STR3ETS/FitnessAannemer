@@ -3,6 +3,40 @@
 @section('title', $title . ' | Gymreviews | Fitness Aannemer')
 @section('meta_description', $metaDesc)
 
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "Article",
+    "headline": "{{ $title }}",
+    "description": "{{ $metaDesc }}",
+    "url": "{{ url()->current() }}",
+    "publisher": {
+        "@@type": "Organization",
+        "name": "Fitness Aannemer",
+        "url": "{{ url('/') }}"
+    },
+    "isPartOf": {
+        "@@type": "Blog",
+        "name": "Fitnesswijzer",
+        "url": "{{ url('/fitnesswijzer') }}"
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@@type": "ListItem", "position": 2, "name": "Fitnesswijzer", "item": "{{ url('/fitnesswijzer') }}" },
+        { "@@type": "ListItem", "position": 3, "name": "Gymreviews", "item": "{{ url('/fitnesswijzer/gymreviews') }}" },
+        { "@@type": "ListItem", "position": 4, "name": "{{ $title }}", "item": "{{ url()->current() }}" }
+    ]
+}
+</script>
+@endsection
+
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">

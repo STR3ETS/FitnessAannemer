@@ -3,6 +3,41 @@
 @section('title', 'Over ons | Fitness Aannemer')
 @section('meta_description', 'Maak kennis met Stijn Harder, oprichter van Fitness Aannemer. Van webshop tot volledige gymbouw. Ontdek ons verhaal, onze aanpak en waarom wij anders zijn.')
 
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "AboutPage",
+    "name": "Over Fitness Aannemer",
+    "description": "Maak kennis met Stijn Harder, oprichter van Fitness Aannemer. Van webshop tot volledige gymbouw.",
+    "url": "{{ url('/over-ons') }}",
+    "mainEntity": {
+        "@@type": "Organization",
+        "name": "Fitness Aannemer",
+        "url": "{{ url('/') }}",
+        "founder": {
+            "@@type": "Person",
+            "name": "Stijn Harder"
+        },
+        "areaServed": [
+            { "@@type": "Country", "name": "Nederland" },
+            { "@@type": "Country", "name": "België" }
+        ]
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@@type": "ListItem", "position": 2, "name": "Over ons", "item": "{{ url('/over-ons') }}" }
+    ]
+}
+</script>
+@endsection
+
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">

@@ -3,6 +3,17 @@
 @section('title', 'Algemene Voorwaarden | Fitness Aannemer')
 @section('meta_description', 'Lees de algemene voorwaarden van Fitness Aannemer. Voorwaarden voor onze diensten, leveringen, garantie en aansprakelijkheid.')
 
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "WebPage",
+    "name": "Algemene Voorwaarden",
+    "url": "{{ url('/algemene-voorwaarden') }}"
+}
+</script>
+@endsection
+
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-12 lg:pb-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">

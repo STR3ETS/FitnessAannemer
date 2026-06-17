@@ -3,6 +3,34 @@
 @section('title', 'Gym Verdienmodellen | Fitnesswijzer | Fitness Aannemer')
 @section('meta_description', 'Ontdek de verschillende verdienmodellen voor sportscholen en fitnessruimtes. Van leasekosten tot winstberekeningen en slimme verdienstrategieen.')
 
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "CollectionPage",
+    "name": "Gym Verdienmodellen",
+    "description": "Ontdek de verschillende verdienmodellen voor sportscholen en fitnessruimtes.",
+    "url": "{{ url('/fitnesswijzer/gym-verdienmodellen') }}",
+    "isPartOf": {
+        "@@type": "Blog",
+        "name": "Fitnesswijzer",
+        "url": "{{ url('/fitnesswijzer') }}"
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@@type": "ListItem", "position": 2, "name": "Fitnesswijzer", "item": "{{ url('/fitnesswijzer') }}" },
+        { "@@type": "ListItem", "position": 3, "name": "Gym Verdienmodellen", "item": "{{ url('/fitnesswijzer/gym-verdienmodellen') }}" }
+    ]
+}
+</script>
+@endsection
+
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">

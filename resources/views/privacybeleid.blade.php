@@ -3,6 +3,17 @@
 @section('title', 'Privacybeleid | Fitness Aannemer')
 @section('meta_description', 'Lees het privacybeleid van Fitness Aannemer. Hoe wij omgaan met jouw persoonsgegevens, welke data wij verzamelen en jouw rechten.')
 
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "WebPage",
+    "name": "Privacybeleid",
+    "url": "{{ url('/privacybeleid') }}"
+}
+</script>
+@endsection
+
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-12 lg:pb-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">

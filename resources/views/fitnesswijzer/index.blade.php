@@ -3,6 +3,33 @@
 @section('title', 'Fitnesswijzer | Fitness Aannemer')
 @section('meta_description', 'De Fitnesswijzer van Fitness Aannemer. Tips, inspiratie, verdienmodellen en gymreviews voor iedereen die een fitnessruimte wil starten of verbeteren.')
 
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "Blog",
+    "name": "Fitnesswijzer",
+    "description": "Tips, inspiratie, verdienmodellen en gymreviews voor iedereen die een fitnessruimte wil starten of verbeteren.",
+    "url": "{{ url('/fitnesswijzer') }}",
+    "publisher": {
+        "@@type": "Organization",
+        "name": "Fitness Aannemer",
+        "url": "{{ url('/') }}"
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@@type": "ListItem", "position": 2, "name": "Fitnesswijzer", "item": "{{ url('/fitnesswijzer') }}" }
+    ]
+}
+</script>
+@endsection
+
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30" id="fw-hero">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">

@@ -3,6 +3,76 @@
 @section('title', 'Onze Diensten | Fitness Aannemer')
 @section('meta_description', 'Eén partner, alle diensten. Fitness Aannemer verzorgt inrichting, levering, installatie, onderhoud en leasing van fitnessapparatuur.')
 
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "Service",
+    "serviceType": "Fitness Equipment & Gym Design",
+    "provider": {
+        "@@type": "Organization",
+        "name": "Fitness Aannemer",
+        "url": "{{ url('/') }}"
+    },
+    "name": "Onze Diensten",
+    "description": "Fitness Aannemer verzorgt inrichting, levering, installatie, onderhoud en leasing van fitnessapparatuur.",
+    "url": "{{ url('/diensten') }}",
+    "areaServed": [
+        { "@@type": "Country", "name": "Nederland" },
+        { "@@type": "Country", "name": "België" }
+    ],
+    "hasOfferCatalog": {
+        "@@type": "OfferCatalog",
+        "name": "Diensten",
+        "itemListElement": [
+            {
+                "@@type": "Offer",
+                "itemOffered": {
+                    "@@type": "Service",
+                    "name": "Inrichting & Planning",
+                    "url": "{{ url('/diensten/inrichting-en-planning') }}"
+                }
+            },
+            {
+                "@@type": "Offer",
+                "itemOffered": {
+                    "@@type": "Service",
+                    "name": "Levering & Installatie",
+                    "url": "{{ url('/diensten/levering-en-installatie') }}"
+                }
+            },
+            {
+                "@@type": "Offer",
+                "itemOffered": {
+                    "@@type": "Service",
+                    "name": "Onderhoud & Reparaties",
+                    "url": "{{ url('/diensten/onderhoud-en-reparaties') }}"
+                }
+            },
+            {
+                "@@type": "Offer",
+                "itemOffered": {
+                    "@@type": "Service",
+                    "name": "Leasing & Financiering",
+                    "url": "{{ url('/diensten/leasing-en-financiering') }}"
+                }
+            }
+        ]
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@@type": "ListItem", "position": 2, "name": "Diensten", "item": "{{ url('/diensten') }}" }
+    ]
+}
+</script>
+@endsection
+
 @section('content')
     {{-- Hero --}}
     <section class="bg-secondary pt-32 lg:pt-40 pb-12 lg:pb-20">

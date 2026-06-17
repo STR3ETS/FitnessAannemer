@@ -628,72 +628,59 @@ document.addEventListener('DOMContentLoaded', () => {
         const slides = document.querySelectorAll('.review-slide');
         const fills = document.querySelectorAll('.review-progress-fill');
         const bars = document.querySelectorAll('.review-progress-bar');
-        const cards = document.querySelectorAll('.review-card-sm');
+        const cardImgs = document.querySelectorAll('.review-card-img');
+        const prevBtn = document.querySelector('.review-prev');
+        const nextBtn = document.querySelector('.review-next');
         const total = slides.length;
         let currentReview = 0;
         let reviewInterval = null;
         const reviewDuration = 6;
 
-        // Heading + stars entrance
-        gsap.from('.reviews-fade', {
-            y: 50,
-            opacity: 0,
-            stagger: 0.12,
-            duration: 0.8,
-            ease: 'power3.out',
-            scrollTrigger: {
-                trigger: '.reviews-section',
-                start: 'top 70%',
+        // Heading entrance (initial state set via CSS)
+        ScrollTrigger.create({
+            trigger: '.reviews-section',
+            start: 'top 70%',
+            once: true,
+            onEnter: () => {
+                gsap.to('.reviews-fade', {
+                    y: 0,
+                    opacity: 1,
+                    stagger: 0.12,
+                    duration: 0.8,
+                    ease: 'power3.out',
+                });
             },
         });
 
-        // Showcase entrance
-        gsap.from('.review-showcase', {
-            y: 60,
-            opacity: 0,
-            duration: 1,
-            ease: 'power3.out',
-            scrollTrigger: {
-                trigger: '.reviews-section',
-                start: 'top 60%',
+        // Showcase entrance (initial state set via CSS)
+        ScrollTrigger.create({
+            trigger: '.reviews-section',
+            start: 'top 60%',
+            once: true,
+            onEnter: () => {
+                gsap.to('.review-showcase', {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: 'power3.out',
+                });
             },
         });
-
-
-        function updateCards(idx) {
-            const prev = (idx - 1 + total) % total;
-            const next = (idx + 1) % total;
-            const visible = [prev, idx, next];
-
-            cards.forEach((card, i) => {
-                if (!visible.includes(i)) {
-                    card.style.display = 'none';
-                } else {
-                    card.style.display = '';
-                    if (i === idx) {
-                        card.classList.remove('bg-white/[0.03]', 'border-white/[0.06]');
-                        card.classList.add('bg-white/[0.07]', 'border-primary/40');
-                    } else {
-                        card.classList.remove('bg-white/[0.07]', 'border-primary/40');
-                        card.classList.add('bg-white/[0.03]', 'border-white/[0.06]');
-                    }
-                }
-            });
-        }
-
-        // Set initial card visibility (only show 3)
-        updateCards(0);
 
         function showReview(idx) {
             if (idx === currentReview) return;
 
-            // Kill all running tweens on slides to prevent overlap
+            // Kill running tweens
             slides.forEach(s => gsap.killTweensOf(s));
+            cardImgs.forEach(c => gsap.killTweensOf(c));
             fills.forEach(f => gsap.killTweensOf(f));
 
-            // Hide all slides immediately
+            // Hide all slides and images
             slides.forEach((s, i) => {
                 if (i !== idx) gsap.set(s, { opacity: 0, y: 0 });
+            });
+            cardImgs.forEach((c, i) => {
+                if (i !== idx) gsap.set(c, { opacity: 0 });
             });
 
             // Reset all fills
@@ -701,10 +688,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             currentReview = idx;
 
-            // Fade in the target slide
+            // Fade in slide
             gsap.fromTo(slides[currentReview],
                 { opacity: 0, y: 30 },
                 { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }
+            );
+
+            // Crossfade image card
+            gsap.fromTo(cardImgs[currentReview],
+                { opacity: 0 },
+                { opacity: 1, duration: 0.7, ease: 'power2.inOut' }
             );
 
             // Animate progress bar fill
@@ -712,9 +705,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 { scaleX: 0 },
                 { scaleX: 1, duration: reviewDuration, ease: 'none' }
             );
-
-            // Highlight active card
-            updateCards(idx);
         }
 
         function startAutoplay() {
@@ -738,15 +728,23 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Click review cards to jump
-        cards.forEach((card, i) => {
-            card.addEventListener('click', () => {
-                if (i === currentReview) return;
+        // Prev / Next buttons
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
                 clearInterval(reviewInterval);
-                showReview(i);
+                const prev = (currentReview - 1 + total) % total;
+                showReview(prev);
                 startAutoplay();
             });
-        });
+        }
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                clearInterval(reviewInterval);
+                const next = (currentReview + 1) % total;
+                showReview(next);
+                startAutoplay();
+            });
+        }
     }
 
     // ===== Project arc carousel =====

@@ -3,6 +3,33 @@
 @section('title', 'Projecten | Fitness Aannemer')
 @section('meta_description', 'Bekijk onze gerealiseerde projecten. Van PT studio\'s tot commerciele sportscholen. Ontdek wat Fitness Aannemer heeft gerealiseerd.')
 
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "CollectionPage",
+    "name": "Projecten",
+    "description": "Bekijk onze gerealiseerde projecten. Van PT studio's tot commerciele sportscholen.",
+    "url": "{{ url('/projecten') }}",
+    "publisher": {
+        "@@type": "Organization",
+        "name": "Fitness Aannemer",
+        "url": "{{ url('/') }}"
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@@type": "ListItem", "position": 2, "name": "Projecten", "item": "{{ url('/projecten') }}" }
+    ]
+}
+</script>
+@endsection
+
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">

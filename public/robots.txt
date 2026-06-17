@@ -1,2 +1,4 @@
 User-agent: *
 Disallow:
+
+Sitemap: https://fitnessaannemer.nl/sitemap.xml

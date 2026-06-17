@@ -3,6 +3,35 @@
 @section('title', 'Contact | Fitness Aannemer')
 @section('meta_description', 'Neem contact op met Fitness Aannemer. Bel, mail of bezoek ons voor advies over jouw fitnessruimte.')
 
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "ContactPage",
+    "name": "Contact",
+    "description": "Neem contact op met Fitness Aannemer voor advies over jouw fitnessruimte.",
+    "url": "{{ url('/contact') }}",
+    "mainEntity": {
+        "@@type": "Organization",
+        "name": "Fitness Aannemer",
+        "url": "{{ url('/') }}",
+        "email": "info@fitnessaannemer.nl",
+        "telephone": "+31850609981"
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@@type": "ListItem", "position": 2, "name": "Contact", "item": "{{ url('/contact') }}" }
+    ]
+}
+</script>
+@endsection
+
 @section('content')
     {{-- Hero --}}
     <section class="bg-secondary pt-32 lg:pt-40 pb-20">

@@ -3,6 +3,33 @@
 @section('title', 'Apparatuur | Fitness Aannemer')
 @section('meta_description', 'Ontdek ons complete assortiment fitnessapparatuur. Cardio, kracht, functioneel, gewichten, flooring en herstel van topmerken.')
 
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "CollectionPage",
+    "name": "Fitnessapparatuur",
+    "description": "Ontdek ons complete assortiment fitnessapparatuur. Cardio, kracht, functioneel, gewichten, flooring en herstel van topmerken.",
+    "url": "{{ url('/apparatuur') }}",
+    "publisher": {
+        "@@type": "Organization",
+        "name": "Fitness Aannemer",
+        "url": "{{ url('/') }}"
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@@type": "ListItem", "position": 2, "name": "Apparatuur", "item": "{{ url('/apparatuur') }}" }
+    ]
+}
+</script>
+@endsection
+
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-12 lg:pb-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">

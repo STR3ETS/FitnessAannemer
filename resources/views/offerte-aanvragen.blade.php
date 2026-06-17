@@ -1,7 +1,29 @@
 @extends('layouts.app')
 
 @section('title', 'Offerte Aanvragen | Fitness Aannemer')
-@section('meta_description', 'Vraag een vrijblijvende offerte aan voor jouw fitnessproject. Van sportscholen tot homegyms — wij maken een voorstel op maat.')
+@section('meta_description', 'Vraag een vrijblijvende offerte aan voor jouw fitnessproject. Van sportscholen tot homegyms, wij maken een voorstel op maat.')
+
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "WebPage",
+    "name": "Offerte Aanvragen",
+    "description": "Vraag een vrijblijvende offerte aan voor jouw fitnessproject.",
+    "url": "{{ url('/offerte-aanvragen') }}"
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@@type": "ListItem", "position": 2, "name": "Offerte Aanvragen", "item": "{{ url('/offerte-aanvragen') }}" }
+    ]
+}
+</script>
+@endsection
 
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-20">

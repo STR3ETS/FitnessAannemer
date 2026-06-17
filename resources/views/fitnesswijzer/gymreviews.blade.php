@@ -3,6 +3,34 @@
 @section('title', 'Gymreviews | Fitnesswijzer | Fitness Aannemer')
 @section('meta_description', 'Uitgebreide gymreviews van de meest bijzondere sportscholen en fitnessruimtes van Nederland. Apparatuur, sfeer, prijs en faciliteiten beoordeeld.')
 
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "CollectionPage",
+    "name": "Gymreviews",
+    "description": "Uitgebreide gymreviews van de meest bijzondere sportscholen en fitnessruimtes van Nederland.",
+    "url": "{{ url('/fitnesswijzer/gymreviews') }}",
+    "isPartOf": {
+        "@@type": "Blog",
+        "name": "Fitnesswijzer",
+        "url": "{{ url('/fitnesswijzer') }}"
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@@type": "ListItem", "position": 2, "name": "Fitnesswijzer", "item": "{{ url('/fitnesswijzer') }}" },
+        { "@@type": "ListItem", "position": 3, "name": "Gymreviews", "item": "{{ url('/fitnesswijzer/gymreviews') }}" }
+    ]
+}
+</script>
+@endsection
+
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">

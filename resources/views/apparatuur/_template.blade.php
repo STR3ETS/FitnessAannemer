@@ -4,6 +4,29 @@
 @section('title', $title . ' | Fitness Aannemer')
 @section('meta_description', $metaDesc)
 
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "WebPage",
+    "name": "{{ $title }}",
+    "description": "{{ $metaDesc }}",
+    "url": "{{ url()->current() }}"
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@@type": "ListItem", "position": 2, "name": "Apparatuur", "item": "{{ url('/apparatuur') }}" },
+        { "@@type": "ListItem", "position": 3, "name": "{{ $title }}", "item": "{{ url()->current() }}" }
+    ]
+}
+</script>
+@endsection
+
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">

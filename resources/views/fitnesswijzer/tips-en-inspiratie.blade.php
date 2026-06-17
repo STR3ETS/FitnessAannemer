@@ -3,6 +3,34 @@
 @section('title', 'Tips & Inspiratie | Fitnesswijzer | Fitness Aannemer')
 @section('meta_description', 'Praktische tips en inspiratie voor het inrichten en runnen van jouw fitnessruimte. Van apparatuurkeuze tot gym design en financiering.')
 
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "CollectionPage",
+    "name": "Tips & Inspiratie",
+    "description": "Praktische tips en inspiratie voor het inrichten en runnen van jouw fitnessruimte.",
+    "url": "{{ url('/fitnesswijzer/tips-en-inspiratie') }}",
+    "isPartOf": {
+        "@@type": "Blog",
+        "name": "Fitnesswijzer",
+        "url": "{{ url('/fitnesswijzer') }}"
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
+        { "@@type": "ListItem", "position": 2, "name": "Fitnesswijzer", "item": "{{ url('/fitnesswijzer') }}" },
+        { "@@type": "ListItem", "position": 3, "name": "Tips & Inspiratie", "item": "{{ url('/fitnesswijzer/tips-en-inspiratie') }}" }
+    ]
+}
+</script>
+@endsection
+
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">

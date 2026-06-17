@@ -118,26 +118,10 @@
         <div class="w-full h-screen bg-secondary">
             <div class="max-w-7xl h-full mx-auto flex flex-col items-center justify-center relative px-4 sm:px-6">
                 <h1 id="hero-heading" class="text-white text-3xl sm:text-5xl lg:text-6xl font-bold text-center leading-[1]"></h1>
-                <p class="hero-fade text-sm text-white opacity-80 font-medium text-center my-6 sm:my-8 px-2">Van eerste schets tot sleuteloverdracht.<br>Wij ontwerpen, leveren en installeren complete fitnessruimtes op maat.</p>
+                <p class="hero-fade text-sm text-white opacity-80 font-medium text-center my-6 sm:my-8 px-2">Onafhankelijk ontwerp, complete inrichting en oplevering<br class="hidden sm:block"> onder een dak.</p>
                 <div class="hero-fade flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
                     <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                     <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk onze projecten</a>
-                </div>
-                <div class="hero-fade flex items-center gap-4 sm:gap-8 absolute z-1 bottom-8">
-                    <div class="flex flex-col items-center justify-center">
-                        <p class="text-primary text-md font-black">5+</p>
-                        <p class="text-white/50 text-[11px] uppercase font-semibold">Projecten</p>
-                    </div>
-                    <div class="w-[2px] h-[35px] bg-white/20"></div>
-                    <div class="flex flex-col items-center justify-center">
-                        <p class="text-primary text-md font-black">2400+</p>
-                        <p class="text-white/50 text-[11px] uppercase font-semibold">M² gerealiseerd</p>
-                    </div>
-                    <div class="w-[2px] h-[35px] bg-white/20"></div>
-                    <div class="flex flex-col items-center justify-center">
-                        <p class="text-primary text-md font-black">A-Z</p>
-                        <p class="text-white/50 text-[11px] uppercase font-semibold">Ontzorgd</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -820,12 +804,15 @@
             <div class="brands-marquee-wrap mb-4 relative z-10">
                 <div class="brands-marquee">
                     @for ($i = 0; $i < 3; $i++)
-                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/Life-Fitness.png') }}" alt="Life Fitness" class="brand-logo"></span>
                     <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/MATRIX-LOGO.png') }}" alt="Matrix" class="brand-logo"></span>
+                    <span class="brand-pill brand-pill--text">EGYM</span>
+                    <span class="brand-pill brand-pill--text">ZIVA</span>
+                    <span class="brand-pill brand-pill--text">Vision</span>
+                    <span class="brand-pill brand-pill--text">YourReformer</span>
+                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/Life-Fitness.png') }}" alt="Life Fitness" class="brand-logo"></span>
+                    <span class="brand-pill brand-pill--text">Eleiko</span>
+                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/logo-hammer-strength-2.png') }}" alt="Hammer Strength" class="brand-logo"></span>
                     <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/Concept2-1.png') }}" alt="Concept2" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/StairMaster-Logo.png') }}" alt="StairMaster" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/LOGO_WEIss-1024x462-1.png') }}" alt="Gym80" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/keiser-scaled.png') }}" alt="Keiser" class="brand-logo"></span>
                     @endfor
                 </div>
             </div>
@@ -834,54 +821,22 @@
             <div class="brands-marquee-wrap mb-20 relative z-10">
                 <div class="brands-marquee brands-marquee--reverse">
                     @for ($i = 0; $i < 3; $i++)
-                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/acf.Logo-Star-Trac-scaled.webp') }}" alt="Star Trac" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/66840a042cc873f7252180df_Full-width-logo.png') }}" alt="Next Round" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/6239bf5b33d83711745b1edb_StockZ-Logo-Primary-CMYK-Black.png') }}" alt="Stockz" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/LOGO-CLUBJOY-LIGGEND-KLEUR-e1643845894830.png') }}" alt="Clubjoy" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/logo-hammer-strength-2.png') }}" alt="Hammer Strength" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/Life-Fitness.png') }}" alt="Life Fitness" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/Concept2-1.png') }}" alt="Concept2" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/MATRIX-LOGO.png') }}" alt="Matrix" class="brand-logo"></span>
+                    <span class="brand-pill brand-pill--text">Watson</span>
+                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/LOGO_WEIss-1024x462-1.png') }}" alt="Gym80" class="brand-logo"></span>
+                    <span class="brand-pill brand-pill--text">Nike Strength</span>
+                    <span class="brand-pill brand-pill--text">LifeMaxx</span>
+                    <span class="brand-pill brand-pill--text">TKO</span>
+                    <span class="brand-pill brand-pill--text">Assault Fitness</span>
+                    <span class="brand-pill brand-pill--text">Sprinttracks</span>
+                    <span class="brand-pill brand-pill--text">InBody</span>
                     @endfor
-                </div>
-            </div>
-
-            {{-- Stats --}}
-            <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-12 px-4 sm:px-6 relative z-10">
-                <div class="text-center brands-fade">
-                    <div class="flex items-baseline justify-center gap-1">
-                        <span class="brand-counter text-3xl sm:text-5xl font-black text-white" data-target="50">0</span>
-                        <span class="text-3xl text-primary font-black">+</span>
-                    </div>
-                    <p class="text-white/30 text-xs font-medium mt-2 uppercase tracking-wider">Premium merken</p>
-                </div>
-                <div class="text-center brands-fade">
-                    <div class="flex items-baseline justify-center gap-1">
-                        <span class="brand-counter text-3xl sm:text-5xl font-black text-white" data-target="10000">0</span>
-                        <span class="text-3xl text-primary font-black">+</span>
-                    </div>
-                    <p class="text-white/30 text-xs font-medium mt-2 uppercase tracking-wider">Producten</p>
-                </div>
-                <div class="text-center brands-fade">
-                    <div class="flex items-baseline justify-center gap-1">
-                        <span class="brand-counter text-3xl sm:text-5xl font-black text-white" data-target="500">0</span>
-                        <span class="text-3xl text-primary font-black">+</span>
-                    </div>
-                    <p class="text-white/30 text-xs font-medium mt-2 uppercase tracking-wider">Projecten gerealiseerd</p>
-                </div>
-                <div class="text-center brands-fade">
-                    <div class="flex items-baseline justify-center gap-1">
-                        <span class="brand-counter text-3xl sm:text-5xl font-black text-white" data-target="15">0</span>
-                        <span class="text-3xl text-primary font-black">+</span>
-                    </div>
-                    <p class="text-white/30 text-xs font-medium mt-2 uppercase tracking-wider">Jaar ervaring</p>
                 </div>
             </div>
 
             {{-- CTAs --}}
             <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pb-16 lg:pb-32 relative z-10 brands-fade">
-                <a href="#" class="bg-primary rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Bekijk alle merken <i class="fa-solid fa-arrow-right text-xs ml-1.5"></i></a>
-                <a href="#" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition-colors">Offerte aanvragen</a>
+                <a href="{{ url('/onze-merken') }}" class="bg-primary rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Bekijk alle merken <i class="fa-solid fa-arrow-right text-xs ml-1.5"></i></a>
+                <a href="{{ url('/offerte-aanvragen') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition-colors">Offerte aanvragen</a>
             </div>
         </section>
 
@@ -959,6 +914,29 @@
                             </div>
                         </div>
                     </a>
+                </div>
+            </div>
+        </section>
+
+        {{-- Lease CTA Banner --}}
+        <section class="bg-primary relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary to-[#3d8ec5]"></div>
+            <div class="absolute inset-0 opacity-[0.06]" style="background-image: radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 50%, white 1px, transparent 1px); background-size: 40px 40px;"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 lg:py-14 relative z-10">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-12">
+                    <div class="flex items-center gap-5 lg:gap-6">
+                        <div class="w-14 h-14 rounded-2xl bg-white/15 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-coins text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-xl sm:text-2xl font-bold leading-tight">Liever leasen dan kopen?</h3>
+                            <p class="text-white/70 text-sm mt-1">Start direct met topapparatuur en spreid de kosten. Flexibele lease vanaf 3 jaar.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 shrink-0">
+                        <a href="{{ url('/diensten/leasing-en-financiering') }}" class="bg-white text-primary text-xs font-semibold rounded-full px-6 py-3.5 hover:bg-white/90 transition whitespace-nowrap">Bekijk leaseopties <i class="fa-solid fa-arrow-right text-[10px] ml-1.5"></i></a>
+                        <a href="{{ url('/offerte-aanvragen') }}" class="bg-white/15 border border-white/25 text-white text-xs font-semibold rounded-full px-6 py-3.5 hover:bg-white/25 transition whitespace-nowrap">Offerte aanvragen</a>
+                    </div>
                 </div>
             </div>
         </section>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import 'tailwindcss';
 
@@ -25,7 +25,7 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: 'DM Serif Display';
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 /* Fixed header */
@@ -328,6 +328,18 @@ h1,h2,h3,h4,h5,h6 {
 
 .brand-pill:hover .brand-logo {
     opacity: 0.85;
+}
+
+.brand-pill--text {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 0.02em;
+    transition: color 0.4s, border-color 0.4s, background 0.4s;
+}
+
+.brand-pill--text:hover {
+    color: rgba(255, 255, 255, 0.85);
 }
 
 /* ===== Projects Section - Sticky Scroll ===== */

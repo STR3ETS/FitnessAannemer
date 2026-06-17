@@ -30,6 +30,7 @@
         <div class="md:col-span-2">
             <h6 class="text-white font-semibold text-sm mb-4">Diensten</h6>
             <div class="flex flex-col gap-2.5">
+                <a href="{{ url('/diensten/inrichting-en-planning') }}" class="text-white/50 text-xs hover:text-white transition">Ontwerp & 3D-visualisatie</a>
                 <a href="{{ url('/diensten/inrichting-en-planning') }}" class="text-white/50 text-xs hover:text-white transition">Inrichting & planning</a>
                 <a href="{{ url('/diensten/levering-en-installatie') }}" class="text-white/50 text-xs hover:text-white transition">Levering & installatie</a>
                 <a href="{{ url('/diensten/onderhoud-en-reparaties') }}" class="text-white/50 text-xs hover:text-white transition">Onderhoud & reparaties</a>

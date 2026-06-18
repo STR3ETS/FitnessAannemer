@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\SitemapController;
 
@@ -73,6 +74,9 @@ Route::get('/fitnesswijzer/tips-en-inspiratie', [PageController::class, 'tipsOve
 Route::get('/fitnesswijzer/tips-en-inspiratie/{slug}', [PageController::class, 'tip'])->name('fitnesswijzer.tips.show');
 Route::get('/fitnesswijzer/gymreviews', [PageController::class, 'gymreviewsOverview'])->name('fitnesswijzer.reviews');
 Route::get('/fitnesswijzer/gymreviews/{slug}', [PageController::class, 'gymreview'])->name('fitnesswijzer.reviews.show');
+
+// Landingspagina's
+Route::get('/lp/{slug}', [LandingPageController::class, 'show'])->name('landing-page.show');
 
 // Sitemap
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');

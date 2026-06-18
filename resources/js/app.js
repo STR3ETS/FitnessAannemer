@@ -156,6 +156,57 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ===== Scroll Video Hero =====
+    const heroVideo = document.getElementById('hero-video');
+    const heroScroll = document.getElementById('hero-scroll');
+
+    if (heroVideo && heroScroll) {
+        heroVideo.pause();
+        heroVideo.currentTime = 0;
+
+        let targetTime = 0;
+        let seekPending = false;
+
+        // Throttled seek: only seek once per frame, skip if already seeking
+        function scheduledSeek() {
+            if (Math.abs(heroVideo.currentTime - targetTime) > 0.03) {
+                heroVideo.currentTime = targetTime;
+            }
+            seekPending = false;
+        }
+
+        // Pin and scrub
+        ScrollTrigger.create({
+            trigger: heroScroll,
+            start: 'top top',
+            end: 'bottom bottom',
+            pin: '#hero-pinned',
+            onUpdate: (self) => {
+                if (!heroVideo.duration) return;
+                // Clamp to avoid black frames at end of video
+                const maxTime = heroVideo.duration - 0.3;
+                targetTime = Math.min(self.progress * heroVideo.duration, maxTime);
+                if (!seekPending) {
+                    seekPending = true;
+                    requestAnimationFrame(scheduledSeek);
+                }
+            },
+        });
+
+        // Fade out hero content in last 30% of scroll
+        gsap.to('.hero-content', {
+            opacity: 0,
+            y: -60,
+            ease: 'power2.in',
+            scrollTrigger: {
+                trigger: heroScroll,
+                start: '70% top',
+                end: 'bottom top',
+                scrub: true,
+            },
+        });
+    }
+
     // ===== Hero fade-in (subtitle, buttons, stats) =====
     const heroFades = document.querySelectorAll('.hero-fade');
     if (heroFades.length) {

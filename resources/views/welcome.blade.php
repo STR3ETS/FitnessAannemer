@@ -115,16 +115,21 @@
     <body class="bg-white">
         @include('partials.header')
 
-        <div class="w-full h-screen bg-secondary">
-            <div class="max-w-7xl h-full mx-auto flex flex-col items-center justify-center relative px-4 sm:px-6">
-                <h1 id="hero-heading" class="text-white text-3xl sm:text-5xl lg:text-6xl font-bold text-center leading-[1]"></h1>
-                <p class="hero-fade text-sm text-white opacity-80 font-medium text-center my-6 sm:my-8 px-2">Onafhankelijk ontwerp, complete inrichting en oplevering<br class="hidden sm:block"> onder een dak.</p>
-                <div class="hero-fade flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
-                    <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
-                    <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk onze projecten</a>
+        {{-- Scroll Video Hero --}}
+        <section id="hero-scroll" class="hero-scroll-wrapper">
+            <div id="hero-pinned" class="hero-pinned">
+                <video id="hero-video" src="{{ asset('assets/video_hero_home_scrub.mp4') }}" muted playsinline preload="auto" class="hero-video"></video>
+                <div class="hero-video-overlay"></div>
+                <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center justify-center h-full relative z-10">
+                    <h1 id="hero-heading" class="text-white text-3xl sm:text-5xl lg:text-6xl font-bold text-center leading-[1]"></h1>
+                    <p class="hero-fade text-sm text-white opacity-80 font-medium text-center my-6 sm:my-8 px-2">Onafhankelijk ontwerp, complete inrichting en oplevering<br class="hidden sm:block"> onder een dak.</p>
+                    <div class="hero-fade flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk onze projecten</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <div class="bg-primary w-full py-4 overflow-hidden">
             <div class="marquee flex items-center gap-12 whitespace-nowrap">
@@ -1136,45 +1141,9 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div class="flex flex-col lg:flex-row rounded-3xl overflow-hidden border border-secondary/[0.06]">
 
-                    {{-- Left: E-book mockup --}}
-                    <div class="lg:w-[45%] bg-secondary relative flex items-center justify-center p-10 lg:p-16 min-h-[400px]">
-                        {{-- Decorative gradient --}}
-                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent"></div>
-
-                        {{-- Tablet mockup --}}
-                        <div class="relative z-10">
-                            {{-- "100% Gratis" badge --}}
-                            <div class="absolute -top-3 -right-3 lg:-top-4 lg:-right-6 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-lg z-20">100% Gratis</div>
-
-                            {{-- Tablet frame --}}
-                            <div class="relative bg-secondary border-[3px] border-white/20 rounded-2xl p-4 shadow-2xl max-w-[280px]">
-                                {{-- E-book cover --}}
-                                <div class="bg-gradient-to-br from-secondary via-[#0a0f1a] to-secondary rounded-lg p-6 aspect-[3/4] flex flex-col justify-between relative overflow-hidden">
-                                    {{-- Subtle grid pattern --}}
-                                    <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 20px 20px;"></div>
-
-                                    <div class="relative z-10">
-                                        <img src="{{ asset('fitnessaannemer-logo-fa-blauw.png') }}" alt="Fitness Aannemer" class="h-5 mb-4 opacity-60">
-                                        <span class="text-primary text-[9px] font-bold uppercase tracking-[0.2em] block">E-book 2025</span>
-                                    </div>
-
-                                    <div class="relative z-10">
-                                        <h3 class="text-white text-lg font-bold leading-tight mb-2">Gym inrichten<br>van A tot Z</h3>
-                                        <div class="w-8 h-[2px] bg-primary mb-3"></div>
-                                        <p class="text-white/30 text-[9px] uppercase tracking-wider font-medium">Nederland & Belgie</p>
-                                    </div>
-
-                                    <div class="relative z-10 flex items-center gap-2">
-                                        <span class="text-white/25 text-[8px] font-medium">50+ pagina's</span>
-                                        <span class="text-white/15 text-[8px]">&bull;</span>
-                                        <span class="text-white/25 text-[8px] font-medium">Checklists</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {{-- Shadow page behind --}}
-                            <div class="absolute top-3 -left-3 w-full h-full bg-white/[0.04] border border-white/[0.06] rounded-2xl -z-10"></div>
-                        </div>
+                    {{-- Left: E-book afbeelding --}}
+                    <div class="lg:w-[45%] aspect-square">
+                        <img src="{{ asset('assets/e-book.jpeg') }}" alt="Gratis Gym-Inrichting Handboek - Fitness Aannemer" class="w-full h-full object-cover">
                     </div>
 
                     {{-- Right: Content + Form --}}
@@ -1211,8 +1180,6 @@
                                 Download gratis e-book
                             </button>
                         </form>
-
-                        <p class="text-secondary/30 text-[11px] text-center mt-4">100% gratis &middot; Geen verborgen kosten &middot; Direct toegang</p>
                     </div>
 
                 </div>

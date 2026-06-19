@@ -924,23 +924,59 @@
         </section>
 
         {{-- Lease CTA Banner --}}
-        <section class="bg-primary relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary to-[#3d8ec5]"></div>
-            <div class="absolute inset-0 opacity-[0.06]" style="background-image: radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 50%, white 1px, transparent 1px); background-size: 40px 40px;"></div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 lg:py-14 relative z-10">
-                <div class="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-12">
-                    <div class="flex items-center gap-5 lg:gap-6">
-                        <div class="w-14 h-14 rounded-2xl bg-white/15 flex items-center justify-center shrink-0">
-                            <i class="fa-solid fa-coins text-white text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-white text-xl sm:text-2xl font-bold leading-tight">Liever leasen dan kopen?</h3>
-                            <p class="text-white/70 text-sm mt-1">Start direct met topapparatuur en spreid de kosten. Flexibele lease vanaf 3 jaar.</p>
+        <section class="bg-white py-16 lg:py-24" data-header-light>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <div class="relative rounded-2xl overflow-hidden bg-secondary">
+                    {{-- Background gym image (right side) --}}
+                    <div class="absolute inset-0">
+                        <img src="{{ asset('assets/4.jpg') }}" alt="" class="w-full h-full object-cover opacity-50">
+                        <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/95 to-transparent"></div>
+                    </div>
+
+                    {{-- Content --}}
+                    <div class="relative z-10 px-8 sm:px-12 lg:px-16 py-12 lg:py-16">
+                        <div class="max-w-lg">
+                            <div class="flex items-center gap-3 mb-5">
+                                <div class="w-8 h-[2px] bg-primary"></div>
+                                <span class="text-primary text-[11px] font-semibold uppercase tracking-widest">Lease & financiering</span>
+                            </div>
+                            <h2 class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.05] mb-4">Liever <span class="text-primary">leasen</span><br>dan kopen?</h2>
+                            <p class="text-white/50 text-sm leading-relaxed max-w-sm mb-6">Start direct met topapparatuur zonder grote investering. Flexibele leaseoplossingen afgestemd op jouw situatie.</p>
+                            <a href="{{ url('/diensten/leasing-en-financiering') }}" class="inline-flex items-center bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Bekijk leaseopties <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         </div>
                     </div>
-                    <div class="flex items-center gap-3 shrink-0">
-                        <a href="{{ url('/diensten/leasing-en-financiering') }}" class="bg-white text-primary text-xs font-semibold rounded-full px-6 py-3.5 hover:bg-white/90 transition whitespace-nowrap">Bekijk leaseopties <i class="fa-solid fa-arrow-right text-[10px] ml-1.5"></i></a>
-                        <a href="{{ url('/offerte-aanvragen') }}" class="bg-white/15 border border-white/25 text-white text-xs font-semibold rounded-full px-6 py-3.5 hover:bg-white/25 transition whitespace-nowrap">Offerte aanvragen</a>
+
+                    {{-- Bottom feature bar --}}
+                    <div class="relative z-10 bg-primary/90 backdrop-blur-sm px-8 sm:px-12 lg:px-16 py-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-clock text-white text-xs"></i>
+                                </div>
+                                <div>
+                                    <span class="text-white text-[11px] font-bold uppercase tracking-wide block">Flexibele looptijden</span>
+                                    <p class="text-white/60 text-[10px]">Niet vof de looptijd past bij jouw situatie</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-piggy-bank text-white text-xs"></i>
+                                </div>
+                                <div>
+                                    <span class="text-white text-[11px] font-bold uppercase tracking-wide block">Geen grote investering</span>
+                                    <p class="text-white/60 text-[10px]">Spreid het bedrag (af)houd je financiele ruimte</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-headset text-white text-xs"></i>
+                                </div>
+                                <div>
+                                    <span class="text-white text-[11px] font-bold uppercase tracking-wide block">Persoonlijk advies</span>
+                                    <p class="text-white/60 text-[10px]">Wij begeleiden met je vanuit advies en oplossing op maat</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

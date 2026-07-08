@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'Contact | Fitness Aannemer')
 @section('meta_description', 'Neem contact op met Fitness Aannemer. Bel, mail of bezoek ons voor advies over jouw fitnessruimte.')
@@ -58,7 +58,7 @@
                                 <i class="fa-solid fa-phone text-primary"></i>
                             </div>
                             <div>
-                                <p class="text-secondary text-sm font-semibold mb-0.5" style="font-family: 'Inter Tight'">(085) 060 - 9981</p>
+                                <p class="text-secondary text-sm font-semibold mb-0.5" style="font-family: 'Inter'">(085) 060 - 9981</p>
                                 <p class="text-secondary/40 text-xs">Ma - Za: 9:00 - 18:00</p>
                             </div>
                         </a>
@@ -68,7 +68,7 @@
                                 <i class="fa-solid fa-envelope text-primary"></i>
                             </div>
                             <div>
-                                <p class="text-secondary text-sm font-semibold mb-0.5" style="font-family: 'Inter Tight'">info@fitnessaannemer.nl</p>
+                                <p class="text-secondary text-sm font-semibold mb-0.5" style="font-family: 'Inter'">info@fitnessaannemer.nl</p>
                                 <p class="text-secondary/40 text-xs">Reactie binnen 24 uur</p>
                             </div>
                         </a>
@@ -78,7 +78,7 @@
                                 <i class="fa-solid fa-location-dot text-primary"></i>
                             </div>
                             <div>
-                                <p class="text-secondary text-sm font-semibold mb-0.5" style="font-family: 'Inter Tight'">Soerense Zand Zuid 13</p>
+                                <p class="text-secondary text-sm font-semibold mb-0.5" style="font-family: 'Inter'">Soerense Zand Zuid 13</p>
                                 <p class="text-secondary/40 text-xs">6961 RA Eerbeek</p>
                             </div>
                         </div>
@@ -88,7 +88,7 @@
                                 <i class="fa-solid fa-clock text-primary"></i>
                             </div>
                             <div>
-                                <p class="text-secondary text-sm font-semibold mb-0.5" style="font-family: 'Inter Tight'">Openingstijden</p>
+                                <p class="text-secondary text-sm font-semibold mb-0.5" style="font-family: 'Inter'">Openingstijden</p>
                                 <p class="text-secondary/40 text-xs">Maandag - Zaterdag: 9:00 - 18:00</p>
                             </div>
                         </div>
@@ -96,19 +96,22 @@
 
                     {{-- Social media --}}
                     <div class="mt-10">
-                        <p class="text-secondary text-sm font-semibold mb-4" style="font-family: 'Inter Tight'">Volg ons</p>
+                        <p class="text-secondary text-sm font-semibold mb-4" style="font-family: 'Inter'">Volg ons</p>
                         <div class="flex items-center gap-3">
-                            <a href="https://instagram.com/fitnessaannemer.nl" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-secondary/10 flex items-center justify-center text-secondary/40 hover:text-primary hover:border-primary/30 transition">
+                            <a href="https://www.instagram.com/fitnessaannemer.nl/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-secondary/10 flex items-center justify-center text-secondary/40 hover:text-primary hover:border-primary/30 transition">
                                 <i class="fa-brands fa-instagram text-sm"></i>
                             </a>
-                            <a href="https://tiktok.com/@fitnessaannemer" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-secondary/10 flex items-center justify-center text-secondary/40 hover:text-primary hover:border-primary/30 transition">
+                            <a href="https://www.tiktok.com/@fitnessaannemer" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-secondary/10 flex items-center justify-center text-secondary/40 hover:text-primary hover:border-primary/30 transition">
                                 <i class="fa-brands fa-tiktok text-sm"></i>
                             </a>
-                            <a href="https://youtube.com/@fitnessaannemer" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-secondary/10 flex items-center justify-center text-secondary/40 hover:text-primary hover:border-primary/30 transition">
+                            <a href="https://www.youtube.com/@FitnessAannemer" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-secondary/10 flex items-center justify-center text-secondary/40 hover:text-primary hover:border-primary/30 transition">
                                 <i class="fa-brands fa-youtube text-sm"></i>
                             </a>
-                            <a href="https://linkedin.com/company/fitnessaannemer" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-secondary/10 flex items-center justify-center text-secondary/40 hover:text-primary hover:border-primary/30 transition">
-                                <i class="fa-brands fa-linkedin-in text-sm"></i>
+                            <a href="https://www.facebook.com/profile.php?id=61557754181423" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-secondary/10 flex items-center justify-center text-secondary/40 hover:text-primary hover:border-primary/30 transition">
+                                <i class="fa-brands fa-facebook-f text-sm"></i>
+                            </a>
+                            <a href="https://pin.it/7jMdHylyE" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-secondary/10 flex items-center justify-center text-secondary/40 hover:text-primary hover:border-primary/30 transition">
+                                <i class="fa-brands fa-pinterest-p text-sm"></i>
                             </a>
                         </div>
                     </div>

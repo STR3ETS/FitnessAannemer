@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'Levering & Installatie | Fitness Aannemer')
 @section('meta_description', 'Complete levering en professionele installatie van fitnessapparatuur door ons eigen montageteam. Turnkey oplevering in heel Nederland en Belgie.')
@@ -39,9 +39,9 @@
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30" id="li-hero">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="ip-hero-el flex items-center gap-2 mb-6">
-                <a href="{{ url('/diensten') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter Tight'">Diensten</a>
+                <a href="{{ url('/diensten') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter'">Diensten</a>
                 <i class="fa-solid fa-chevron-right text-white/20 text-[8px]"></i>
-                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter Tight'">Levering & installatie</span>
+                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">Levering & installatie</span>
             </div>
             <div class="max-w-3xl">
                 <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Levering &<br><span class="text-primary">installatie</span></h1>
@@ -136,7 +136,7 @@
                     <div class="ip-step relative flex items-start gap-8 lg:gap-0 {{ $index % 2 === 0 ? '' : 'lg:flex-row-reverse' }}">
                         {{-- Content --}}
                         <div class="lg:w-1/2 {{ $index % 2 === 0 ? 'lg:pr-16 lg:text-right' : 'lg:pl-16' }} pl-16 lg:pl-0">
-                            <span class="text-primary/30 text-6xl font-bold leading-none" style="font-family: 'Inter Tight'">{{ $stap['nr'] }}</span>
+                            <span class="text-primary/30 text-6xl font-bold leading-none" style="font-family: 'Inter'">{{ $stap['nr'] }}</span>
                             <h3 class="text-white text-xl lg:text-2xl font-bold mt-2 mb-3">{{ $stap['title'] }}</h3>
                             <p class="text-white/45 text-sm leading-relaxed mb-3">{{ $stap['desc'] }}</p>
                             <span class="inline-flex items-center gap-2 text-primary/60 text-xs font-medium">
@@ -187,8 +187,8 @@
                 <div class="ip-block-text">
                     <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Turnkey oplevering</span>
                     <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Een partij voor <span class="text-primary">het complete traject</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Geen gedoe met meerdere leveranciers, transporteurs en monteurs. Wij regelen alles van A tot Z. Dat betekent minder stress, snellere oplevering en een gegarandeerd eindresultaat.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Of het nu gaat om een complete sportschool of een compacte hotelgym, wij leveren en installeren in heel Nederland en Belgie. Met een vaste opleverdatum die we nakomen.</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Geen gedoe met meerdere leveranciers, transporteurs en monteurs. Wij regelen alles van A tot Z. Dat betekent minder stress, snellere oplevering en een strak eindresultaat.</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Of het nu gaat om een complete sportschool of een compacte hotelgym, wij leveren en installeren in heel Nederland en Belgie. Met duidelijke planning en een helder tijdspad.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                         <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>

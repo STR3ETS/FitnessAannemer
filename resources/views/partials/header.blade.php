@@ -123,17 +123,20 @@
             </a>
 
             <div class="flex items-center justify-center gap-4 mt-8">
-                <a href="https://instagram.com/fitnessaannemer.nl" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
+                <a href="https://www.instagram.com/fitnessaannemer.nl/" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
                     <i class="fa-brands fa-instagram text-sm"></i>
                 </a>
-                <a href="https://tiktok.com/@fitnessaannemer" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
+                <a href="https://www.tiktok.com/@fitnessaannemer" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
                     <i class="fa-brands fa-tiktok text-sm"></i>
                 </a>
-                <a href="https://youtube.com/@fitnessaannemer" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
+                <a href="https://www.youtube.com/@FitnessAannemer" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
                     <i class="fa-brands fa-youtube text-sm"></i>
                 </a>
-                <a href="https://linkedin.com/company/fitnessaannemer" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
-                    <i class="fa-brands fa-linkedin-in text-sm"></i>
+                <a href="https://www.facebook.com/profile.php?id=61557754181423" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
+                    <i class="fa-brands fa-facebook-f text-sm"></i>
+                </a>
+                <a href="https://pin.it/7jMdHylyE" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
+                    <i class="fa-brands fa-pinterest-p text-sm"></i>
                 </a>
             </div>
         </div>

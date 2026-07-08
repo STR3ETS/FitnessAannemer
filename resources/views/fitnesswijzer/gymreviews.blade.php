@@ -1,7 +1,7 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'Gymreviews | Fitnesswijzer | Fitness Aannemer')
-@section('meta_description', 'Uitgebreide gymreviews van de meest bijzondere sportscholen en fitnessruimtes van Nederland. Apparatuur, sfeer, prijs en faciliteiten beoordeeld.')
+@section('meta_description', 'Uitgebreide gymreviews van de meest bijzondere sportscholen en fitnessruimtes van de Benelux. Apparatuur, sfeer, prijs en faciliteiten beoordeeld.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -9,7 +9,7 @@
     "@@context": "https://schema.org",
     "@@type": "CollectionPage",
     "name": "Gymreviews",
-    "description": "Uitgebreide gymreviews van de meest bijzondere sportscholen en fitnessruimtes van Nederland.",
+    "description": "Uitgebreide gymreviews van de meest bijzondere sportscholen en fitnessruimtes van de Benelux.",
     "url": "{{ url('/fitnesswijzer/gymreviews') }}",
     "isPartOf": {
         "@@type": "Blog",
@@ -35,13 +35,13 @@
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="ip-hero-el flex items-center gap-2 mb-6">
-                <a href="{{ url('/fitnesswijzer') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter Tight'">Fitnesswijzer</a>
+                <a href="{{ url('/fitnesswijzer') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter'">Fitnesswijzer</a>
                 <i class="fa-solid fa-chevron-right text-white/20 text-[8px]"></i>
-                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter Tight'">Gymreviews</span>
+                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">Gymreviews</span>
             </div>
             <div class="max-w-3xl">
                 <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Gym<span class="text-primary">reviews</span></h1>
-                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">Uitgebreide reviews van de meest bijzondere sportscholen en fitnessruimtes van Nederland. Van budget tot ultra-premium, van kerken tot underground gyms.</p>
+                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">Uitgebreide reviews van de meest bijzondere sportscholen en fitnessruimtes van de Benelux. Van budget tot ultra-premium, van kerken tot underground gyms.</p>
                 <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                     <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                     <a href="{{ url('/fitnesswijzer') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Fitnesswijzer</a>
@@ -58,7 +58,7 @@
                 <div class="ip-block-text">
                     <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Gymreviews</span>
                     <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Wij bezoeken en <span class="text-primary">beoordelen</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Van budget keten tot ultra-premium boutique gym, wij bezoeken de meest bijzondere fitnessruimtes van Nederland. Per review beoordelen we apparatuur, sfeer, faciliteiten en prijs-kwaliteitverhouding.</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Van budget keten tot ultra-premium boutique gym, wij bezoeken de meest bijzondere fitnessruimtes van de Benelux. Per review beoordelen we apparatuur, sfeer, faciliteiten en prijs-kwaliteitverhouding.</p>
                     <p class="text-secondary/50 text-sm leading-relaxed mb-8">Onze reviews zijn eerlijk en onafhankelijk. We laten zien wat een gym bijzonder maakt, welke apparatuurkeuzes zijn gemaakt en wat je als sporter kunt verwachten. Ideaal als inspiratie voor jouw eigen project.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                         <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
@@ -90,9 +90,9 @@
                         @endif
                         <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/20"></div>
                         <div class="absolute bottom-0 left-0 right-0 p-8">
-                            <h3 class="text-white text-xl {{ $loop->first ? 'lg:text-2xl' : '' }} font-bold mb-2" style="font-family: 'Inter Tight'">{{ $artikel['title'] }}</h3>
+                            <h3 class="text-white text-xl {{ $loop->first ? 'lg:text-2xl' : '' }} font-bold mb-2" style="font-family: 'Inter'">{{ $artikel['title'] }}</h3>
                             <p class="text-white/70 text-sm leading-relaxed max-w-lg">{{ $artikel['cardDesc'] }}</p>
-                            <span class="inline-flex items-center text-primary text-xs font-semibold mt-4" style="font-family: 'Inter Tight'">
+                            <span class="inline-flex items-center text-primary text-xs font-semibold mt-4" style="font-family: 'Inter'">
                                 Lees review <i class="fa-solid fa-arrow-right text-[10px] ml-1.5 group-hover:translate-x-1 transition-transform"></i>
                             </span>
                         </div>

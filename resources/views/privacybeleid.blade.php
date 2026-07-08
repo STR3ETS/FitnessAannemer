@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'Privacybeleid | Fitness Aannemer')
 @section('meta_description', 'Lees het privacybeleid van Fitness Aannemer. Hoe wij omgaan met jouw persoonsgegevens, welke data wij verzamelen en jouw rechten.')
@@ -18,9 +18,9 @@
     <section class="bg-secondary pt-32 lg:pt-40 pb-12 lg:pb-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex items-center gap-2 mb-6">
-                <a href="{{ url('/') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter Tight'">Home</a>
+                <a href="{{ url('/') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter'">Home</a>
                 <i class="fa-solid fa-chevron-right text-white/20 text-[8px]"></i>
-                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter Tight'">Privacybeleid</span>
+                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">Privacybeleid</span>
             </div>
             <h1 class="text-white text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1]">Privacy<span class="text-primary">beleid</span></h1>
         </div>

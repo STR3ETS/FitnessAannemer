@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'Tips & Inspiratie | Fitnesswijzer | Fitness Aannemer')
 @section('meta_description', 'Praktische tips en inspiratie voor het inrichten en runnen van jouw fitnessruimte. Van apparatuurkeuze tot gym design en financiering.')
@@ -35,9 +35,9 @@
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="ip-hero-el flex items-center gap-2 mb-6">
-                <a href="{{ url('/fitnesswijzer') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter Tight'">Fitnesswijzer</a>
+                <a href="{{ url('/fitnesswijzer') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter'">Fitnesswijzer</a>
                 <i class="fa-solid fa-chevron-right text-white/20 text-[8px]"></i>
-                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter Tight'">Tips & inspiratie</span>
+                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">Tips & inspiratie</span>
             </div>
             <div class="max-w-3xl">
                 <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Tips & <span class="text-primary">inspiratie</span></h1>
@@ -90,9 +90,9 @@
                         @endif
                         <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/20"></div>
                         <div class="absolute bottom-0 left-0 right-0 p-8">
-                            <h3 class="text-white text-xl {{ $loop->first ? 'lg:text-2xl' : '' }} font-bold mb-2" style="font-family: 'Inter Tight'">{{ $artikel['title'] }}</h3>
+                            <h3 class="text-white text-xl {{ $loop->first ? 'lg:text-2xl' : '' }} font-bold mb-2" style="font-family: 'Inter'">{{ $artikel['title'] }}</h3>
                             <p class="text-white/70 text-sm leading-relaxed max-w-lg">{{ $artikel['cardDesc'] }}</p>
-                            <span class="inline-flex items-center text-primary text-xs font-semibold mt-4" style="font-family: 'Inter Tight'">
+                            <span class="inline-flex items-center text-primary text-xs font-semibold mt-4" style="font-family: 'Inter'">
                                 Lees artikel <i class="fa-solid fa-arrow-right text-[10px] ml-1.5 group-hover:translate-x-1 transition-transform"></i>
                             </span>
                         </div>

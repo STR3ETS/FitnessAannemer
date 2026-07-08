@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'Projecten | Fitness Aannemer')
 @section('meta_description', 'Bekijk onze gerealiseerde projecten. Van PT studio\'s tot commerciele sportscholen. Ontdek wat Fitness Aannemer heeft gerealiseerd.')
@@ -34,9 +34,9 @@
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="ip-hero-el flex items-center gap-2 mb-6">
-                <a href="{{ url('/') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter Tight'">Home</a>
+                <a href="{{ url('/') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter'">Home</a>
                 <i class="fa-solid fa-chevron-right text-white/20 text-[8px]"></i>
-                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter Tight'">Projecten</span>
+                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">Projecten</span>
             </div>
             <div class="max-w-3xl">
                 <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Onze <span class="text-primary">projecten</span></h1>
@@ -87,13 +87,13 @@
                         <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="inline-block bg-primary/20 text-primary text-[10px] font-semibold px-2.5 py-1 rounded-full border border-primary/30">{{ $project['type'] }}</span>
-                                <span class="text-white/70 text-xs font-semibold" style="font-family: 'Inter Tight'">{{ $project['size'] }}</span>
+                                <span class="text-white/70 text-xs font-semibold" style="font-family: 'Inter'">{{ $project['size'] }}</span>
                                 <span class="text-white/30 text-xs">&#8226;</span>
-                                <span class="text-white/70 text-xs font-semibold" style="font-family: 'Inter Tight'">{{ $project['location'] }}</span>
+                                <span class="text-white/70 text-xs font-semibold" style="font-family: 'Inter'">{{ $project['location'] }}</span>
                             </div>
-                            <h3 class="text-white text-2xl {{ $loop->first ? 'lg:text-3xl' : '' }} font-bold mb-2" style="font-family: 'Inter Tight'">{{ $project['title'] }}</h3>
+                            <h3 class="text-white text-2xl {{ $loop->first ? 'lg:text-3xl' : '' }} font-bold mb-2" style="font-family: 'Inter'">{{ $project['title'] }}</h3>
                             <p class="text-white/70 text-sm leading-relaxed max-w-lg">{{ $project['cardDesc'] }}</p>
-                            <span class="inline-flex items-center text-primary text-xs font-semibold mt-4" style="font-family: 'Inter Tight'">
+                            <span class="inline-flex items-center text-primary text-xs font-semibold mt-4" style="font-family: 'Inter'">
                                 Bekijk project <i class="fa-solid fa-arrow-right text-[10px] ml-1.5 group-hover:translate-x-1 transition-transform"></i>
                             </span>
                         </div>
@@ -104,11 +104,11 @@
 
             <div class="ip-fade grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center pt-12 lg:pt-16 border-t border-white/[0.06]">
                 <div>
-                    <p class="text-primary text-3xl lg:text-5xl font-bold mb-2">5+</p>
+                    <p class="text-primary text-3xl lg:text-5xl font-bold mb-2">60+</p>
                     <p class="text-white/40 text-xs uppercase font-semibold tracking-wider">Projecten</p>
                 </div>
                 <div>
-                    <p class="text-primary text-3xl lg:text-5xl font-bold mb-2">2400+</p>
+                    <p class="text-primary text-3xl lg:text-5xl font-bold mb-2">7000+</p>
                     <p class="text-white/40 text-xs uppercase font-semibold tracking-wider">M² gerealiseerd</p>
                 </div>
                 <div>

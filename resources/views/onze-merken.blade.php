@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'Onze Merken | Fitness Aannemer')
 @section('meta_description', 'Fitness Aannemer werkt met topmerken als Life Fitness, Matrix, Concept2, KingsBox, Gym80 en Keiser. Ontdek ons assortiment.')
@@ -29,13 +29,13 @@
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="ip-hero-el flex items-center gap-2 mb-6">
-                <a href="{{ url('/') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter Tight'">Home</a>
+                <a href="{{ url('/') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter'">Home</a>
                 <i class="fa-solid fa-chevron-right text-white/20 text-[8px]"></i>
-                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter Tight'">Onze merken</span>
+                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">Onze merken</span>
             </div>
             <div class="max-w-3xl">
                 <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Onze <span class="text-primary">merken</span></h1>
-                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">Wij werken uitsluitend met topmerken uit de fitnessindustrie. Kwaliteit, duurzaamheid en innovatie staan bij ons voorop. Dankzij directe partnerships krijg je het beste assortiment tegen scherpe condities.</p>
+                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">Niet gebonden aan een merk, wel aan kwaliteit. Wij adviseren objectief welke apparatuur past bij jouw concept, doelgroep en budget. Breed assortiment, scherpe condities.</p>
                 <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                     <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                     <a href="{{ url('/apparatuur') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk apparatuur</a>
@@ -77,16 +77,21 @@
             $merken = [
                 ['name' => 'Life Fitness', 'logo' => 'assets/wp-uploads/Life-Fitness.png', 'desc' => 'Wereldleider in fitnessapparatuur. Premium cardio- en krachtapparatuur voor commercieel gebruik.', 'cat' => 'Cardio & Kracht'],
                 ['name' => 'Matrix Fitness', 'logo' => 'assets/wp-uploads/MATRIX-LOGO.png', 'desc' => 'Innovatieve fitnessoplossingen met geavanceerde technologie en strak design.', 'cat' => 'Cardio & Kracht'],
-                ['name' => 'Gym80', 'logo' => 'assets/wp-uploads/LOGO_WEIss-1024x462-1.png', 'desc' => 'Duitse precisie-engineering. Commerciele krachtapparatuur van de hoogste kwaliteit.', 'cat' => 'Krachtapparatuur'],
+                ['name' => 'GYM80', 'logo' => 'assets/wp-uploads/LOGO_WEIss-1024x462-1.png', 'desc' => 'Duitse precisie-engineering. Commerciele krachtapparatuur van de hoogste kwaliteit.', 'cat' => 'Krachtapparatuur'],
                 ['name' => 'Hammer Strength', 'logo' => 'assets/wp-uploads/logo-hammer-strength-2.png', 'desc' => 'Plate-loaded krachtapparatuur voor serieuze krachtsporters. Robuust en professioneel.', 'cat' => 'Krachtapparatuur'],
                 ['name' => 'Concept2', 'logo' => 'assets/wp-uploads/Concept2-1.png', 'desc' => 'De standaard in roeimachines, SkiErg en BikeErg. Onmisbaar voor functionele training.', 'cat' => 'Functioneel'],
-                ['name' => 'Keiser', 'logo' => 'assets/wp-uploads/keiser-scaled.png', 'desc' => 'Pneumatische weerstandstraining. Innovatief, veilig en ideaal voor functional training.', 'cat' => 'Functioneel & Kracht'],
-                ['name' => 'StairMaster', 'logo' => 'assets/wp-uploads/StairMaster-Logo.png', 'desc' => 'De ultieme klimtraining. StepMills en StairClimbers voor intensieve cardio workouts.', 'cat' => 'Cardio'],
-                ['name' => 'Star Trac', 'logo' => 'assets/wp-uploads/acf.Logo-Star-Trac-scaled.webp', 'desc' => 'Cardio-apparatuur met focus op gebruiksgemak en entertainment-integratie.', 'cat' => 'Cardio'],
-                ['name' => 'Stockz', 'logo' => 'assets/wp-uploads/6239bf5b33d83711745b1edb_StockZ-Logo-Primary-CMYK-Black.png', 'desc' => 'Functionele trainingsoplossingen en storage-systemen voor een opgeruimde gym.', 'cat' => 'Functioneel & Opslag'],
-                ['name' => 'Next Round', 'logo' => 'assets/wp-uploads/66840a042cc873f7252180df_Full-width-logo.png', 'desc' => 'Boxing en MMA apparatuur. Bokszakken, ringen en trainingsaccessoires.', 'cat' => 'Boksen & MMA'],
-                ['name' => 'Clubjoy', 'logo' => 'assets/wp-uploads/LOGO-CLUBJOY-LIGGEND-KLEUR-e1643845894830.png', 'desc' => 'Groepslessen en virtual training oplossingen voor een compleet lesaanbod.', 'cat' => 'Groepsfitness'],
-                ['name' => 'KingsBox', 'logo' => null, 'desc' => 'Functionele fitness en CrossFit apparatuur. Rigs, racks en accessoires voor elke box.', 'cat' => 'Functioneel'],
+                ['name' => 'EGYM', 'logo' => null, 'desc' => 'Digitale kracht- en flexibiliteitstraining. Slimme apparatuur die automatisch op de gebruiker afstemt.', 'cat' => 'Digitaal & Kracht'],
+                ['name' => 'Eleiko', 'logo' => null, 'desc' => 'Zweedse topkwaliteit. Olympische halters, bumper plates en platforms voor serieuze kracht.', 'cat' => 'Krachtapparatuur'],
+                ['name' => 'Watson', 'logo' => null, 'desc' => 'Handgemaakte Britse krachtapparatuur. Gebouwd om generaties mee te gaan.', 'cat' => 'Krachtapparatuur'],
+                ['name' => 'Nike Strength', 'logo' => null, 'desc' => 'Functionele trainingsapparatuur en accessoires met het kenmerkende Nike DNA.', 'cat' => 'Functioneel & Kracht'],
+                ['name' => 'ZIVA', 'logo' => null, 'desc' => 'Professionele dumbbells, kettlebells en accessoires. Duurzaam en stijlvol ontworpen.', 'cat' => 'Accessoires & Kracht'],
+                ['name' => 'Vision', 'logo' => null, 'desc' => 'Betrouwbare cardio-apparatuur voor commercieel en thuisgebruik. Solide en onderhoudsvriendelijk.', 'cat' => 'Cardio'],
+                ['name' => 'YourReformer', 'logo' => null, 'desc' => 'Reformers en pilatesapparatuur voor studio\'s. Compact, stijlvol en professioneel.', 'cat' => 'Pilates'],
+                ['name' => 'LifeMaxx', 'logo' => null, 'desc' => 'Nederlands merk voor dumbbells, racks en functionele trainingstools. Breed assortiment.', 'cat' => 'Accessoires & Kracht'],
+                ['name' => 'TKO', 'logo' => null, 'desc' => 'Professionele krachtaccessoires, bags en opslagsystemen voor commerciele gyms.', 'cat' => 'Accessoires & Opslag'],
+                ['name' => 'Assault Fitness', 'logo' => null, 'desc' => 'AirBikes en runners voor high-intensity training. Gebouwd voor de zwaarste workouts.', 'cat' => 'Functioneel & Cardio'],
+                ['name' => 'Sprinttracks', 'logo' => null, 'desc' => 'Professionele sprintbanen voor indoor gebruik. Ideaal voor functionele en HIIT zones.', 'cat' => 'Functioneel'],
+                ['name' => 'InBody', 'logo' => null, 'desc' => 'Lichaamsanalyse en compositiemetingen. Professionele meetapparatuur voor resultaattracking.', 'cat' => 'Analyse & Metingen'],
             ];
             @endphp
 
@@ -97,7 +102,7 @@
                         @if($merk['logo'])
                             <img src="{{ asset($merk['logo']) }}" alt="{{ $merk['name'] }}" class="h-7 w-auto object-contain" style="filter: brightness(0) invert(1); opacity: 0.7;">
                         @else
-                            <span class="text-white/70 text-lg font-bold" style="font-family: 'Inter Tight'">{{ $merk['name'] }}</span>
+                            <span class="text-white/70 text-lg font-bold" style="font-family: 'Inter'">{{ $merk['name'] }}</span>
                         @endif
                     </div>
                     <p class="text-white/40 text-sm leading-relaxed mb-4">{{ $merk['desc'] }}</p>

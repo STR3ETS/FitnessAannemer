@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'Offerte Aanvragen | Fitness Aannemer')
 @section('meta_description', 'Vraag een vrijblijvende offerte aan voor jouw fitnessproject. Van sportscholen tot homegyms, wij maken een voorstel op maat.')
@@ -57,7 +57,7 @@
                         @csrf
 
                         <div>
-                            <h2 class="text-secondary text-xl font-bold mb-1" style="font-family: 'Inter Tight'">Jouw gegevens</h2>
+                            <h2 class="text-secondary text-xl font-bold mb-1" style="font-family: 'Inter'">Jouw gegevens</h2>
                             <p class="text-secondary/40 text-sm mb-6">Velden met * zijn verplicht.</p>
                         </div>
 
@@ -89,7 +89,7 @@
                         <hr class="border-secondary/[0.06] my-2">
 
                         <div>
-                            <h2 class="text-secondary text-xl font-bold mb-1" style="font-family: 'Inter Tight'">Over jouw project</h2>
+                            <h2 class="text-secondary text-xl font-bold mb-1" style="font-family: 'Inter'">Over jouw project</h2>
                             <p class="text-secondary/40 text-sm mb-6">Hoe meer je vertelt, hoe gerichter onze offerte.</p>
                         </div>
 
@@ -172,7 +172,7 @@
                 <div class="lg:col-span-2">
                     <div class="sticky top-32 space-y-6">
                         <div class="bg-secondary/[0.03] border border-secondary/[0.06] rounded-2xl p-7">
-                            <h3 class="text-secondary text-base font-bold mb-4" style="font-family: 'Inter Tight'">Wat kun je verwachten?</h3>
+                            <h3 class="text-secondary text-base font-bold mb-4" style="font-family: 'Inter'">Wat kun je verwachten?</h3>
                             <div class="space-y-4">
                                 <div class="flex items-start gap-3">
                                     <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -205,7 +205,7 @@
                         </div>
 
                         <div class="bg-secondary rounded-2xl p-7">
-                            <h3 class="text-white text-base font-bold mb-3" style="font-family: 'Inter Tight'">Liever direct contact?</h3>
+                            <h3 class="text-white text-base font-bold mb-3" style="font-family: 'Inter'">Liever direct contact?</h3>
                             <p class="text-white/40 text-sm leading-relaxed mb-5">Neem telefonisch of per e-mail contact met ons op.</p>
                             <div class="space-y-3">
                                 <a href="tel:0850609981" class="flex items-center gap-3 text-white/60 text-sm hover:text-primary transition">
@@ -220,7 +220,7 @@
                         <div class="bg-secondary/[0.03] border border-secondary/[0.06] rounded-2xl p-7">
                             <div class="flex items-center gap-3 mb-3">
                                 <i class="fa-solid fa-shield-check text-primary"></i>
-                                <h3 class="text-secondary text-sm font-bold" style="font-family: 'Inter Tight'">100% vrijblijvend</h3>
+                                <h3 class="text-secondary text-sm font-bold" style="font-family: 'Inter'">100% vrijblijvend</h3>
                             </div>
                             <p class="text-secondary/40 text-xs leading-relaxed">Aan een offerte-aanvraag zijn geen verplichtingen verbonden. Wij geloven in transparantie en eerlijk advies.</p>
                         </div>
@@ -234,11 +234,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
-                    <p class="text-primary text-3xl lg:text-4xl font-bold mb-2">5+</p>
+                    <p class="text-primary text-3xl lg:text-4xl font-bold mb-2">60+</p>
                     <p class="text-white/50 text-xs uppercase font-semibold tracking-wider">Projecten</p>
                 </div>
                 <div>
-                    <p class="text-primary text-3xl lg:text-4xl font-bold mb-2">2400+</p>
+                    <p class="text-primary text-3xl lg:text-4xl font-bold mb-2">7000+</p>
                     <p class="text-white/50 text-xs uppercase font-semibold tracking-wider">M² gerealiseerd</p>
                 </div>
                 <div>

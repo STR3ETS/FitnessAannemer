@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'Inrichting & Planning | Fitness Aannemer')
 @section('meta_description', 'Professioneel gymontwerp met 3D visualisatie. Fitness Aannemer maakt een doordacht plan voor jouw fitnessruimte, van plattegrond tot apparatuurkeuze.')
@@ -39,9 +39,9 @@
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30" id="ip-hero">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="ip-hero-el flex items-center gap-2 mb-6">
-                <a href="{{ url('/diensten') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter Tight'">Diensten</a>
+                <a href="{{ url('/diensten') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter'">Diensten</a>
                 <i class="fa-solid fa-chevron-right text-white/20 text-[8px]"></i>
-                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter Tight'">Inrichting & planning</span>
+                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">Inrichting & planning</span>
             </div>
             <div class="max-w-3xl">
                 <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Inrichting &<br><span class="text-primary">planning</span></h1>
@@ -147,7 +147,7 @@
                     <div class="ip-step relative flex items-start gap-8 lg:gap-0 {{ $index % 2 === 0 ? '' : 'lg:flex-row-reverse' }}">
                         {{-- Content --}}
                         <div class="lg:w-1/2 {{ $index % 2 === 0 ? 'lg:pr-16 lg:text-right' : 'lg:pl-16' }} pl-16 lg:pl-0">
-                            <span class="text-primary/30 text-6xl font-bold leading-none" style="font-family: 'Inter Tight'">{{ $stap['nr'] }}</span>
+                            <span class="text-primary/30 text-6xl font-bold leading-none" style="font-family: 'Inter'">{{ $stap['nr'] }}</span>
                             <h3 class="text-white text-xl lg:text-2xl font-bold mt-2 mb-3">{{ $stap['title'] }}</h3>
                             <p class="text-white/45 text-sm leading-relaxed mb-3">{{ $stap['desc'] }}</p>
                             <span class="inline-flex items-center gap-2 text-primary/60 text-xs font-medium">

@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Fitness Aannemer | Fitnessapparatuur & Complete Gymoplossingen</title>
+        <title>Fitness Aannemer | Specialist in gymontwerp & inrichting</title>
 
         {{-- SEO Meta --}}
-        <meta name="description" content="Fitness Aannemer ontwerpt, levert en installeert complete fitnessoplossingen op maat. Van boutique gym tot bedrijfsfitness. Topmerken als Life Fitness, Matrix en Concept2.">
+        <meta name="description" content="Fitness Aannemer is de onafhankelijke specialist in het ontwerpen en inrichten van sportscholen in de Benelux. Van ontwerp tot oplevering, alles onder een dak. 60+ projecten gerealiseerd.">
         <meta name="keywords" content="fitnessapparatuur, gym inrichting, fitnessruimte ontwerp, krachtapparatuur, cardioapparatuur, fitness aannemer, gym op maat, bedrijfsfitness, PT studio inrichting, fitnessapparatuur leasen">
         <meta name="author" content="Fitness Aannemer">
         <meta name="robots" content="index, follow">
@@ -18,16 +18,16 @@
         {{-- Open Graph / Facebook --}}
         <meta property="og:type" content="website">
         <meta property="og:url" content="{{ url('/') }}">
-        <meta property="og:title" content="Fitness Aannemer | Fitnessapparatuur & Complete Gymoplossingen">
-        <meta property="og:description" content="Fitness Aannemer ontwerpt, levert en installeert complete fitnessoplossingen op maat. Van boutique gym tot bedrijfsfitness.">
+        <meta property="og:title" content="Fitness Aannemer | Specialist in gymontwerp & inrichting">
+        <meta property="og:description" content="De onafhankelijke specialist in het ontwerpen en inrichten van sportscholen in de Benelux. Van ontwerp tot oplevering, alles onder een dak.">
         <meta property="og:locale" content="nl_NL">
         <meta property="og:site_name" content="Fitness Aannemer">
         {{-- <meta property="og:image" content="{{ asset('images/og-image.jpg') }}"> --}}
 
         {{-- Twitter --}}
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Fitness Aannemer | Fitnessapparatuur & Complete Gymoplossingen">
-        <meta name="twitter:description" content="Fitness Aannemer ontwerpt, levert en installeert complete fitnessoplossingen op maat. Van boutique gym tot bedrijfsfitness.">
+        <meta name="twitter:title" content="Fitness Aannemer | Specialist in gymontwerp & inrichting">
+        <meta name="twitter:description" content="De onafhankelijke specialist in het ontwerpen en inrichten van sportscholen in de Benelux. Van ontwerp tot oplevering, alles onder een dak.">
         {{-- <meta name="twitter:image" content="{{ asset('images/og-image.jpg') }}"> --}}
 
         {{-- Structured Data --}}
@@ -38,7 +38,7 @@
             "name": "Fitness Aannemer",
             "url": "{{ url('/') }}",
             "logo": "{{ asset('fitnessaannemer-logo-fa-blauw.png') }}",
-            "description": "Fitness Aannemer ontwerpt, levert en installeert complete fitnessoplossingen op maat voor gyms, PT studio's, hotels en bedrijven in Nederland en België.",
+            "description": "Fitness Aannemer is de onafhankelijke specialist in het ontwerpen en inrichten van sportscholen in de Benelux. Van ontwerp tot oplevering, alles onder een dak.",
             "email": "info@fitnessaannemer.nl",
             "telephone": "+31850609981",
             "areaServed": [
@@ -52,8 +52,11 @@
                 "Fitnessapparatuur leasing"
             ],
             "sameAs": [
-                "https://www.instagram.com/fitnessaannemer/",
-                "https://www.linkedin.com/company/fitnessaannemer/"
+                "https://www.instagram.com/fitnessaannemer.nl/",
+                "https://www.tiktok.com/@fitnessaannemer",
+                "https://www.youtube.com/@FitnessAannemer",
+                "https://www.facebook.com/profile.php?id=61557754181423",
+                "https://pin.it/7jMdHylyE"
             ]
         }
         </script>
@@ -75,15 +78,15 @@
                     "name": "Hoe verloopt het traject van ontwerp tot oplevering?",
                     "acceptedAnswer": {
                         "@@type": "Answer",
-                        "text": "We starten met een intake of locatiebezoek, maken een 3D-ontwerp, stellen de juiste apparatuur samen en verzorgen de volledige levering en installatie. Je wordt volledig ontzorgd van A tot Z."
+                        "text": "We starten met een vrijblijvend adviesgesprek of locatiebezoek. Daarna maken we een 3D-ontwerp, stellen de juiste apparatuur samen en verzorgen de volledige levering, plaatsing en oplevering. Een aanspreekpunt voor het hele traject."
                     }
                 },
                 {
                     "@@type": "Question",
-                    "name": "Kan ik jullie ook inschakelen voor gymrenovatie?",
+                    "name": "Zijn jullie gebonden aan een specifiek merk?",
                     "acceptedAnswer": {
                         "@@type": "Answer",
-                        "text": "Absoluut. We helpen regelmatig met het moderniseren of efficienter indelen van bestaande gyms. Denk aan nieuwe indeling, apparatuurvervanging of vloerupgrade."
+                        "text": "Nee. Wij zijn bewust onafhankelijk en zitten niet vast aan een leverancier of merk. We adviseren wat past bij jouw doelgroep, budget en verdienmodel."
                     }
                 },
                 {
@@ -91,7 +94,7 @@
                     "name": "Werken jullie ook buiten Nederland?",
                     "acceptedAnswer": {
                         "@@type": "Answer",
-                        "text": "Ja. We zijn actief in zowel Nederland als Belgie. Ook internationale projecten zijn bespreekbaar, afhankelijk van omvang en planning."
+                        "text": "Ja. We zijn actief in de hele Benelux. Ook internationale projecten zijn bespreekbaar, afhankelijk van omvang en planning."
                     }
                 },
                 {
@@ -99,7 +102,15 @@
                     "name": "Kan ik apparatuur bij jullie leasen of financieren?",
                     "acceptedAnswer": {
                         "@@type": "Answer",
-                        "text": "Ja. Wij bieden lease- en financieringsmogelijkheden voor zowel starters als gevestigde ondernemers. Zo realiseer je jouw gym zonder grote investering vooraf."
+                        "text": "Ja. Een deel van het interieur kan bij ons geleased worden. Flexibele looptijden, persoonlijk advies en een eigen inbreng van 15 a 20%. Voor bestaande zaken met positieve jaarcijfers is dit in 90% van de gevallen geen probleem."
+                    }
+                },
+                {
+                    "@@type": "Question",
+                    "name": "Doen jullie ook het bouwkundige werk?",
+                    "acceptedAnswer": {
+                        "@@type": "Answer",
+                        "text": "Nee. Bouwkundig werk loopt via onze vaste partneraannemers. Wij houden de regie op ontwerp, inrichting en oplevering."
                     }
                 }
             ]
@@ -122,7 +133,7 @@
                 <div class="hero-video-overlay"></div>
                 <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center justify-center h-full relative z-10">
                     <h1 id="hero-heading" class="text-white text-3xl sm:text-5xl lg:text-6xl font-bold text-center leading-[1]"></h1>
-                    <p class="hero-fade text-sm text-white opacity-80 font-medium text-center my-6 sm:my-8 px-2">Onafhankelijk ontwerp, complete inrichting en oplevering<br class="hidden sm:block"> onder een dak.</p>
+                    <p class="hero-fade text-sm text-white opacity-80 font-medium text-center my-6 sm:my-8 px-2">Onafhankelijk ontwerp, complete inrichting en oplevering<br class="hidden sm:block"> onder een dak. Turn key, dat is waar wij het verschil maken.</p>
                     <div class="hero-fade flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
                         <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk onze projecten</a>
@@ -163,8 +174,8 @@
         <div class="bg-secondary py-16 lg:py-32 overflow-hidden" id="social-section">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div class="flex flex-col lg:flex-row lg:items-end gap-4 lg:gap-0 justify-between mb-8 lg:mb-12">
-                    <h2 class="social-fade text-white text-3xl lg:text-5xl font-bold leading-[1]">Bekend van onder andere<br><span class="text-primary">Tiktok & Instagram</span></h2>
-                    <p class="social-fade lg:max-w-[400px] lg:text-right text-xs text-white opacity-80">Volg ons op social media en bekijk hoe wij fitnessruimtes van concept tot realisatie transformeren. Van eerste ontwerp tot de laatste machine op zijn plek.</p>
+                    <h2 class="social-fade text-white text-3xl lg:text-5xl font-bold leading-[1]">Bekend van onder andere<br><span class="text-primary">TikTok & Instagram</span></h2>
+                    <p class="social-fade lg:max-w-[400px] lg:text-right text-xs text-white opacity-80">Gemiddeld 1.000.000 weergaven per maand. Volg ons en bekijk hoe wij fitnessruimtes van ontwerp tot oplevering transformeren. Bereik dat we ook direct als marketing inzetten voor onze klanten.</p>
                 </div>
                 <div class="video-track" id="video-track">
                     @for ($i = 1; $i <= 9; $i++)
@@ -176,14 +187,20 @@
                 </div>
                 <div class="social-fade flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-8 lg:mt-12">
                     <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
+                    <a href="https://www.instagram.com/fitnessaannemer.nl/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
+                    <a href="https://www.tiktok.com/@fitnessaannemer" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
                         <i class="fa-brands fa-tiktok"></i>
                     </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
+                    <a href="https://www.youtube.com/@FitnessAannemer" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
                         <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61557754181423" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://pin.it/7jMdHylyE" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
+                        <i class="fa-brands fa-pinterest-p"></i>
                     </a>
                     <a href="#" class="bg-white/10 border border-white/30 rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-white/20 transition-colors">Bekijk onze projecten</a>
                 </div>
@@ -406,7 +423,7 @@
                                         <i class="fa-solid fa-calendar-check text-primary text-sm"></i>
                                     </div>
                                     <div>
-                                        <p class="text-secondary text-xs font-semibold">Binnen 48 uur</p>
+                                        <p class="text-secondary text-xs font-semibold">Binnen 24 uur</p>
                                         <p class="text-secondary/40 text-[11px]">Reactie op je aanvraag</p>
                                     </div>
                                 </div>
@@ -530,9 +547,10 @@
                                 <div class="h-[1px] w-16 bg-primary/30"></div>
                                 <span class="text-primary text-xs font-semibold uppercase tracking-widest">Ontwerp</span>
                             </div>
-                            <h3 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.1] mb-4 lg:mb-6">Ontwerp<br>& visualisatie</h3>
-                            <p class="text-secondary/50 text-sm leading-relaxed max-w-md mb-6">Op basis van het adviesgesprek gaan onze ontwerpers aan de slag. We maken een gedetailleerde plattegrond en een 3D-visualisatie zodat je precies ziet hoe jouw ruimte eruit komt te zien.</p>
-                            <p class="text-secondary/50 text-sm leading-relaxed max-w-md mb-8">Elke machine, elk rek, elke loopband wordt ingetekend op de juiste plek. We houden rekening met looplijnen, veiligheidsafstanden en de optimale gebruikerservaring.</p>
+                            <h3 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.1] mb-4 lg:mb-6">Interior design<br>& visualisatie</h3>
+                            <p class="text-secondary/50 text-sm leading-relaxed max-w-md mb-4">Hier maken wij het verschil. Op basis van het adviesgesprek ontwerpen we een complete indeling: plattegrond, 3D-visualisatie en apparatuurkeuze. Je ziet precies hoe jouw ruimte eruit komt te zien voordat er iets wordt geplaatst.</p>
+                            <p class="text-secondary/50 text-sm leading-relaxed max-w-md mb-4">Elke machine, elk rek, elke loopband wordt ingetekend op de juiste plek. We houden rekening met looplijnen, veiligheidsafstanden en de optimale gebruikerservaring.</p>
+                            <p class="text-secondary/50 text-sm leading-relaxed max-w-md mb-8">We denken ook commercieel mee: een gym moet niet alleen mooi zijn, maar ook werken als verdienmodel. Dat is het verschil tussen een interieurbureau en een specialist die de fitnessbranche kent.</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">3D rendering</span>
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Plattegrond op maat</span>
@@ -637,8 +655,8 @@
                                 <span class="text-primary text-xs font-semibold uppercase tracking-widest">Realisatie</span>
                             </div>
                             <h3 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.1] mb-4 lg:mb-6">Levering<br>& installatie</h3>
-                            <p class="text-secondary/50 text-sm leading-relaxed max-w-md mb-6">Zodra het ontwerp is goedgekeurd, regelen wij de volledige levering en installatie. Onze monteurs plaatsen alle apparatuur volgens het ontwerp en zorgen dat alles werkt.</p>
-                            <p class="text-secondary/50 text-sm leading-relaxed max-w-md mb-8">Van het uitladen van de vrachtwagen tot het afstellen van de laatste machine. Wij zorgen ervoor dat je fitnessruimte klaar is voor gebruik op de afgesproken datum.</p>
+                            <p class="text-secondary/50 text-sm leading-relaxed max-w-md mb-6">Zodra het ontwerp is goedgekeurd, regelen wij de volledige levering en plaatsing van de inrichting en apparatuur. Alles wordt geinstalleerd volgens het ontwerp en afgesteld voor gebruik.</p>
+                            <p class="text-secondary/50 text-sm leading-relaxed max-w-md mb-8">Van het uitladen tot het afstellen van de laatste machine. Bouwkundig werk loopt via onze vaste partneraannemers. Wij houden de regie op inrichting en oplevering.</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Professionele montage</span>
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Vaste opleverdatum</span>
@@ -800,9 +818,9 @@
 
             {{-- Heading --}}
             <div class="text-center pt-16 lg:pt-32 pb-10 lg:pb-20 px-4 sm:px-6 relative z-10">
-                <p class="brands-fade text-primary text-xs font-semibold uppercase tracking-widest mb-5">Partners & merken</p>
-                <h2 class="brands-fade text-white text-3xl sm:text-5xl md:text-6xl font-bold leading-[1.05] mb-6">Topapparatuur van de<br><span class="text-primary">beste merken</span></h2>
-                <p class="brands-fade text-white/35 text-sm leading-relaxed max-w-lg mx-auto">Wij werken uitsluitend met A-merken in de fitnessbranche. Zo garanderen we kwaliteit, duurzaamheid en de beste trainervaring voor jouw leden.</p>
+                <p class="brands-fade text-primary text-xs font-semibold uppercase tracking-widest mb-5">Merk-onafhankelijk</p>
+                <h2 class="brands-fade text-white text-3xl sm:text-5xl md:text-6xl font-bold leading-[1.05] mb-6">Niet gebonden aan<br><span class="text-primary">een merk</span></h2>
+                <p class="brands-fade text-white/35 text-sm leading-relaxed max-w-lg mx-auto">Wij zitten niet vast aan een leverancier. Daardoor adviseren we wat past bij jouw doelgroep, budget en verdienmodel. Dat brede aanbod is juist ons verkoopargument.</p>
             </div>
 
             {{-- Brand marquee row 1 (left-to-right) --}}
@@ -851,7 +869,7 @@
                 {{-- Header --}}
                 <div class="flex flex-col lg:flex-row lg:items-end gap-4 lg:gap-0 justify-between mb-8 lg:mb-16">
                     <h2 class="diensten-fade text-secondary text-3xl lg:text-5xl font-bold leading-[1]">Wat wij voor jou<br><span class="text-primary">kunnen betekenen</span></h2>
-                    <p class="diensten-fade lg:max-w-[400px] lg:text-right text-xs text-secondary/50">Van sportschool tot homegym, van hotel tot renovatie. Wij ontzorgen het complete traject van ontwerp tot oplevering.</p>
+                    <p class="diensten-fade lg:max-w-[400px] lg:text-right text-xs text-secondary/50">Van sportschool tot homegym, van hotel tot PT studio. Wij ontzorgen het complete traject van ontwerp en inrichting tot oplevering.</p>
                 </div>
 
                 {{-- Diensten Grid --}}
@@ -865,8 +883,8 @@
                                 <div class="flex items-center gap-3 mb-3">
                                     <span class="inline-block bg-primary/20 text-primary text-[10px] font-semibold px-2.5 py-1 rounded-full border border-primary/30">Ontwerp</span>
                                 </div>
-                                <h3 class="text-white text-2xl font-bold mb-2">Inrichting & planning</h3>
-                                <p class="text-white/70 text-sm leading-relaxed max-w-lg">Slim ontwerp en doordachte planning vormen de basis van elke succesvolle fitnessruimte. Wij vertalen jouw visie naar een functioneel concept.</p>
+                                <h3 class="text-white text-2xl font-bold mb-2">Ontwerp & interior design</h3>
+                                <p class="text-white/70 text-sm leading-relaxed max-w-lg">Interior design is onze kracht. Wij vertalen jouw visie naar een functioneel ontwerp dat ook commercieel klopt.</p>
                                 <span class="inline-flex items-center text-primary text-xs font-semibold mt-4">Bekijk dienst <i class="fa-solid fa-arrow-right text-[10px] ml-1.5 group-hover:translate-x-1 transition-transform"></i></span>
                             </div>
                         </div>
@@ -924,60 +942,42 @@
         </section>
 
         {{-- Lease CTA Banner --}}
-        <section class="bg-white py-16 lg:py-24" data-header-light>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                <div class="relative rounded-2xl overflow-hidden bg-secondary">
-                    {{-- Background gym image (right side) --}}
-                    <div class="absolute inset-0">
-                        <img src="{{ asset('assets/4.jpg') }}" alt="" class="w-full h-full object-cover opacity-50">
-                        <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/95 to-transparent"></div>
-                    </div>
-
-                    {{-- Content --}}
-                    <div class="relative z-10 px-8 sm:px-12 lg:px-16 py-12 lg:py-16">
-                        <div class="max-w-lg">
-                            <div class="flex items-center gap-3 mb-5">
-                                <div class="w-8 h-[2px] bg-primary"></div>
-                                <span class="text-primary text-[11px] font-semibold uppercase tracking-widest">Lease & financiering</span>
-                            </div>
-                            <h2 class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.05] mb-4">Liever <span class="text-primary">leasen</span><br>dan kopen?</h2>
-                            <p class="text-white/50 text-sm leading-relaxed max-w-sm mb-6">Start direct met topapparatuur zonder grote investering. Flexibele leaseoplossingen afgestemd op jouw situatie.</p>
-                            <a href="{{ url('/diensten/leasing-en-financiering') }}" class="inline-flex items-center bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Bekijk leaseopties <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+        <section class="bg-secondary py-16 lg:py-32 relative overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="{{ asset('assets/4.jpg') }}" alt="" class="w-full h-full object-cover opacity-30">
+                <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/90 to-secondary/60"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+                <div class="flex flex-col lg:flex-row lg:items-end gap-4 lg:gap-0 justify-between mb-8 lg:mb-12">
+                    <h2 class="text-white text-3xl lg:text-5xl font-bold leading-[1]">Liever <span class="text-primary">leasen</span><br>dan kopen?</h2>
+                    <p class="lg:max-w-[400px] lg:text-right text-xs text-white opacity-80">Start direct met topapparatuur zonder grote investering. Flexibele leaseoplossingen afgestemd op jouw situatie.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8 lg:mb-12">
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-clock text-primary text-sm"></i>
                         </div>
+                        <h3 class="text-white text-sm font-bold mb-1">Flexibele looptijden</h3>
+                        <p class="text-white/50 text-xs leading-relaxed">Kies een looptijd die past bij jouw situatie en budget.</p>
                     </div>
-
-                    {{-- Bottom feature bar --}}
-                    <div class="relative z-10 bg-primary/90 backdrop-blur-sm px-8 sm:px-12 lg:px-16 py-4">
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                            <div class="flex items-center gap-3">
-                                <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-                                    <i class="fa-solid fa-clock text-white text-xs"></i>
-                                </div>
-                                <div>
-                                    <span class="text-white text-[11px] font-bold uppercase tracking-wide block">Flexibele looptijden</span>
-                                    <p class="text-white/60 text-[10px]">Niet vof de looptijd past bij jouw situatie</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-                                    <i class="fa-solid fa-piggy-bank text-white text-xs"></i>
-                                </div>
-                                <div>
-                                    <span class="text-white text-[11px] font-bold uppercase tracking-wide block">Geen grote investering</span>
-                                    <p class="text-white/60 text-[10px]">Spreid het bedrag (af)houd je financiele ruimte</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-                                    <i class="fa-solid fa-headset text-white text-xs"></i>
-                                </div>
-                                <div>
-                                    <span class="text-white text-[11px] font-bold uppercase tracking-wide block">Persoonlijk advies</span>
-                                    <p class="text-white/60 text-[10px]">Wij begeleiden met je vanuit advies en oplossing op maat</p>
-                                </div>
-                            </div>
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-piggy-bank text-primary text-sm"></i>
                         </div>
+                        <h3 class="text-white text-sm font-bold mb-1">Geen grote investering</h3>
+                        <p class="text-white/50 text-xs leading-relaxed">Spreid de kosten en behoud je financiele ruimte.</p>
                     </div>
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-headset text-primary text-sm"></i>
+                        </div>
+                        <h3 class="text-white text-sm font-bold mb-1">Persoonlijk advies</h3>
+                        <p class="text-white/50 text-xs leading-relaxed">Wij begeleiden je met advies en een oplossing op maat.</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+                    <a href="{{ url('/diensten/leasing-en-financiering') }}" class="bg-primary rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Bekijk leaseopties <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                    <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-white/10 border border-white/30 rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-white/20 transition-colors">Gratis adviesgesprek</a>
                 </div>
             </div>
         </section>
@@ -1000,19 +1000,23 @@
                         $faqs = [
                             [
                                 'question' => 'Hoe verloopt het traject van ontwerp tot oplevering?',
-                                'answer' => 'We starten met een intake of locatiebezoek, maken een 3D-ontwerp, stellen de juiste apparatuur samen en verzorgen de volledige levering en installatie. Je wordt volledig ontzorgd van A tot Z.',
+                                'answer' => 'We starten met een vrijblijvend adviesgesprek of locatiebezoek. Daarna maken we een 3D-ontwerp, stellen de juiste apparatuur samen en verzorgen de volledige levering, plaatsing en oplevering. Een aanspreekpunt voor het hele traject.',
                             ],
                             [
-                                'question' => 'Kan ik jullie ook inschakelen voor gymrenovatie?',
-                                'answer' => 'Absoluut. We helpen regelmatig met het moderniseren of efficienter indelen van bestaande gyms. Denk aan nieuwe indeling, apparatuurvervanging of vloerupgrade.',
+                                'question' => 'Zijn jullie gebonden aan een specifiek merk?',
+                                'answer' => 'Nee. Wij zijn bewust onafhankelijk en zitten niet vast aan een leverancier of merk. We adviseren wat past bij jouw doelgroep, budget en verdienmodel. Van Matrix en Life Fitness tot Eleiko en Concept2.',
                             ],
                             [
                                 'question' => 'Werken jullie ook buiten Nederland?',
-                                'answer' => 'Ja. We zijn actief in zowel Nederland als Belgie. Ook internationale projecten zijn bespreekbaar, afhankelijk van omvang en planning.',
+                                'answer' => 'Ja. We zijn actief in de hele Benelux. Ook internationale projecten zijn bespreekbaar, afhankelijk van omvang en planning.',
                             ],
                             [
                                 'question' => 'Kan ik apparatuur bij jullie leasen of financieren?',
-                                'answer' => 'Ja. Wij bieden lease- en financieringsmogelijkheden voor zowel starters als gevestigde ondernemers. Zo realiseer je jouw gym zonder grote investering vooraf.',
+                                'answer' => 'Ja. Een deel van het interieur kan bij ons geleased worden. Flexibele looptijden, persoonlijk advies en een eigen inbreng van 15 a 20%. Voor bestaande zaken met positieve jaarcijfers is dit in 90% van de gevallen geen probleem.',
+                            ],
+                            [
+                                'question' => 'Doen jullie ook het bouwkundige werk?',
+                                'answer' => 'Nee. Wij zijn geen aannemer in de traditionele zin. Bouwkundig werk zoals wandjes, gietvloeren en schilderwerk loopt via onze vaste partneraannemers. Wij houden de regie op ontwerp, inrichting en oplevering.',
                             ],
                         ];
                         @endphp
@@ -1039,72 +1043,97 @@
         </section>
 
         {{-- Reviews Section - Split Editorial --}}
+        @php
+        $reviews = [
+            [
+                'quote' => 'Tijdens de uitvoering van de grote sportschool renovatie van Vitality Sports in Duiven hebben wij als LIPS Aannemers met veel plezier samen gewerkt met Fitness Aannemer.',
+                'initials' => 'EP',
+                'name' => 'Esmee Piek',
+                'role' => 'Samenwerkingspartner',
+                'company' => 'LIPS Aannemers',
+                'image' => asset('assets/wp-uploads/011_DSC0596-HDR-scaled-e1758023491547.jpg'),
+                'project' => 'Vitality Sports Duiven',
+                'projectDesc' => 'Hyrox gym van 1.000 m2 in Duiven',
+                'location' => 'Duiven',
+                'size' => '1.000 m²',
+            ],
+            [
+                'quote' => 'Stijn en zijn team zijn om mee te sparren over alles omtrent het opstarten en opschalen van je eigen gym en hebben de juiste connecties in het fitness wereldje.',
+                'initials' => 'GR',
+                'name' => 'Google Review',
+                'role' => 'Klant',
+                'company' => 'Fitness Aannemer',
+                'image' => asset('assets/wp-uploads/FA_VDS_AUG2025-07-scaled.jpg'),
+                'project' => 'MANA Eindhoven',
+                'projectDesc' => 'Social Performance Club van 900 m2 in de Blob',
+                'location' => 'Eindhoven',
+                'size' => '900 m²',
+            ],
+            [
+                'quote' => 'Fijne jongens om mee te werken. Altijd bereikbaar en zorgen voor een mooi eindproduct.',
+                'initials' => 'JT',
+                'name' => 'Johannes Talhout',
+                'role' => 'Klant',
+                'company' => 'Fitness Aannemer',
+                'image' => asset('assets/wp-uploads/009_DSC0569-HDR-scaled.jpg'),
+                'project' => 'De Krachtfabriek Huissen',
+                'projectDesc' => 'Urban gym van 900 m2 in Huissen',
+                'location' => 'Huissen',
+                'size' => '900 m²',
+            ],
+            [
+                'quote' => 'Wij zijn erg tevreden over de kwaliteit van alle Kingsbox producten in onze box! Daarnaast heb ik altijd fijn (en snel) contact met Stijn. Kortom, heel tevreden!',
+                'initials' => 'YJ',
+                'name' => 'Y de Jong',
+                'role' => 'Eigenaar',
+                'company' => 'Google Review',
+                'image' => asset('assets/wp-uploads/SOCIAL-Farmfit-018-WF104894.jpg'),
+                'project' => 'Farm Fit Culemborg',
+                'projectDesc' => 'Functionele studio in een oude varkensstal',
+                'location' => 'Culemborg',
+                'size' => '150 m²',
+            ],
+            [
+                'quote' => 'Stijn is een jonge ondernemer die goed meedenkt met de mogelijkheden van wat je wensen zijn. Hij houdt je goed op de hoogte van de voortgang van de processen. De materialen van Kingsbox zijn goed en onderscheidend.',
+                'initials' => 'JG',
+                'name' => 'Job Grave',
+                'role' => 'Klant',
+                'company' => 'Fitness Aannemer',
+                'image' => asset('assets/wp-uploads/FULL-Ballin-Fit-021-WF106948-scaled.jpg'),
+                'project' => 'Ballin Fit Amsterdam',
+                'projectDesc' => 'Performance club van 770 m2 in Amsterdam-Noord',
+                'location' => 'Amsterdam-Noord',
+                'size' => '770 m²',
+            ],
+            [
+                'quote' => 'Geweldig bedrijf om zaken mee te doen! Aardige, professionele en gedreven (jonge) ondernemers met een passie voor het vak.',
+                'initials' => 'SR',
+                'name' => 'Schar Reaux',
+                'role' => 'Klant',
+                'company' => 'Fitness Aannemer',
+                'image' => asset('assets/wp-uploads/Kopie-van-FitnessAaannemer_Upshape_VDS-7694-scaled.jpg'),
+                'project' => 'ONA Gym Vught',
+                'projectDesc' => 'Women\'s only gym van 250 m2 in Vught',
+                'location' => 'Vught',
+                'size' => '250 m²',
+            ],
+            [
+                'quote' => 'Super happy met de fitness equipment die ik via Fitness Aannemer heb besteld! Ook de hulp, het advies en de service was top. Het is precies geworden zoals ik voor ogen had.',
+                'initials' => 'CH',
+                'name' => 'Christa',
+                'role' => 'Klant',
+                'company' => 'Fitness Aannemer',
+                'image' => asset('assets/wp-uploads/FULL-Ballin-Fit-004-WF206687-scaled.jpg'),
+                'project' => 'FitCore Breda',
+                'projectDesc' => 'Pijnvrij bewegen studio van 50 m2 in Breda',
+                'location' => 'Breda',
+                'size' => '50 m²',
+            ],
+        ];
+        @endphp
+        @if(count($reviews))
         <section class="reviews-section bg-secondary py-16 lg:py-32 overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                @php
-                $reviews = [
-                    [
-                        'quote' => 'Vanaf het eerste adviesgesprek voelde het professioneel en persoonlijk. Het resultaat is boven verwachting. De samenwerking was soepel en het team dacht proactief mee over elke stap.',
-                        'name' => 'Jordi Vermeer',
-                        'role' => 'Eigenaar',
-                        'company' => 'FarmFit Culemborg',
-                        'initials' => 'JV',
-                        'image' => '/assets/1.jpg',
-                        'project' => 'FarmFit Culemborg',
-                        'projectDesc' => 'Volledig ingerichte sportschool met premium apparatuur en custom branding.',
-                        'location' => 'Culemborg',
-                        'size' => '450 m²',
-                    ],
-                    [
-                        'quote' => 'Fitness Aannemer leverde niet alleen de apparatuur, maar dacht ook mee over de indeling en sfeer. Het eindresultaat overtreft onze verwachtingen. Onze leden zijn direct enthousiast.',
-                        'name' => 'Mike Bakker',
-                        'role' => 'Eigenaar',
-                        'company' => 'Ballin Fit Amsterdam',
-                        'initials' => 'MB',
-                        'image' => '/assets/2.jpg',
-                        'project' => 'Ballin Fit Amsterdam',
-                        'projectDesc' => 'Boutique gym met focus op functionele training en groepslessen.',
-                        'location' => 'Amsterdam',
-                        'size' => '320 m²',
-                    ],
-                    [
-                        'quote' => 'De snelheid en kwaliteit waarmee alles geregeld werd was indrukwekkend. Van ontwerp tot oplevering liep alles vlekkeloos. Leden zijn super enthousiast over de nieuwe ruimte.',
-                        'name' => 'Sophie Klein',
-                        'role' => 'Manager',
-                        'company' => 'Upshape Den Haag',
-                        'initials' => 'SK',
-                        'image' => '/assets/3.jpg',
-                        'project' => 'Upshape Den Haag',
-                        'projectDesc' => 'Moderne fitnessruimte met cardio, kracht en een open groepsleszaal.',
-                        'location' => 'Den Haag',
-                        'size' => '580 m²',
-                    ],
-                    [
-                        'quote' => 'Fitness Aannemer begreep direct wat we nodig hadden en leverde een strak, premium resultaat af. De gym past perfect bij het niveau dat onze gasten verwachten.',
-                        'name' => 'Rob Hendriks',
-                        'role' => 'Facilitair manager',
-                        'company' => 'Van der Valk',
-                        'initials' => 'RH',
-                        'image' => '/assets/4.jpg',
-                        'project' => 'Van der Valk Hotel',
-                        'projectDesc' => 'Luxe hotelgym met Technogym apparatuur en premium afwerking.',
-                        'location' => 'Utrecht',
-                        'size' => '120 m²',
-                    ],
-                    [
-                        'quote' => 'Van rig tot vloer, alles is top. De nazorg is ook uitstekend, ze staan altijd klaar als er iets is. Precies de partner die je nodig hebt voor een CrossFit box.',
-                        'name' => 'Dennis de Wit',
-                        'role' => 'Eigenaar',
-                        'company' => 'Vitality Sports Duiven',
-                        'initials' => 'DW',
-                        'image' => '/assets/5.jpg',
-                        'project' => 'Vitality Sports Duiven',
-                        'projectDesc' => 'Complete CrossFit box met custom rig en functionele trainingszone.',
-                        'location' => 'Duiven',
-                        'size' => '600 m²',
-                    ],
-                ];
-                @endphp
 
                 <div class="review-showcase">
                     <div class="flex flex-col lg:flex-row gap-10 lg:gap-16">
@@ -1171,6 +1200,7 @@
                 </div>
             </div>
         </section>
+        @endif
 
         {{-- E-book Download Section --}}
         <section class="bg-white py-16 lg:py-32 overflow-hidden" data-header-light>
@@ -1226,7 +1256,7 @@
 
         <div class="bg-secondary text-center pt-16 lg:pt-32 px-4 sm:px-6 relative z-10">
             <h2 class="brands-fade text-white text-3xl sm:text-5xl md:text-6xl font-bold leading-[1.05] mb-6">Klaar om jouw gym<br><span class="text-primary">te realiseren?</span></h2>
-            <p class="brands-fade text-white/35 text-sm leading-relaxed max-w-lg mx-auto">Van concept tot oplevering, wij regelen alles. Neem contact op voor een vrijblijvend adviesgesprek en ontdek wat wij voor jouw fitnessruimte kunnen betekenen.</p>
+            <p class="brands-fade text-white/35 text-sm leading-relaxed max-w-lg mx-auto">Van ontwerp tot oplevering, wij regelen alles. Neem contact op voor een vrijblijvend adviesgesprek en ontdek wat wij voor jouw fitnessruimte kunnen betekenen.</p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-8">
                 <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                 <a href="{{ url('/offerte-aanvragen') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Offerte aanvragen</a>

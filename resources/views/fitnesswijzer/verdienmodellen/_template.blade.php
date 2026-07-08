@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', $title . ' | Gym Verdienmodellen | Fitness Aannemer')
 @section('meta_description', $metaDesc)
@@ -41,11 +41,11 @@
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="ip-hero-el flex items-center gap-2 mb-6">
-                <a href="{{ url('/fitnesswijzer') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter Tight'">Fitnesswijzer</a>
+                <a href="{{ url('/fitnesswijzer') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter'">Fitnesswijzer</a>
                 <i class="fa-solid fa-chevron-right text-white/20 text-[8px]"></i>
-                <a href="{{ url('/fitnesswijzer/gym-verdienmodellen') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter Tight'">Gym verdienmodellen</a>
+                <a href="{{ url('/fitnesswijzer/gym-verdienmodellen') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter'">Gym verdienmodellen</a>
                 <i class="fa-solid fa-chevron-right text-white/20 text-[8px]"></i>
-                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter Tight'">{{ $title }}</span>
+                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">{{ $title }}</span>
             </div>
             <div class="max-w-3xl">
                 <h1 class="ip-hero-el text-white text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1]">{!! $heroTitle !!}</h1>

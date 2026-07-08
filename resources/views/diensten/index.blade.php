@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'Onze Diensten | Fitness Aannemer')
 @section('meta_description', 'Eén partner, alle diensten. Fitness Aannemer verzorgt inrichting, levering, installatie, onderhoud en leasing van fitnessapparatuur.')
@@ -134,7 +134,7 @@
                         <span class="bg-primary/8 text-primary text-[11px] font-semibold px-3 py-1.5 rounded-full border border-primary/15">{{ $tag }}</span>
                         @endforeach
                     </div>
-                    <span class="inline-flex items-center text-primary text-xs font-semibold group-hover:gap-2 transition-all" style="font-family: 'Inter Tight'">
+                    <span class="inline-flex items-center text-primary text-xs font-semibold group-hover:gap-2 transition-all" style="font-family: 'Inter'">
                         Meer informatie <i class="fa-solid fa-arrow-right text-[10px] ml-1.5"></i>
                     </span>
                 </a>

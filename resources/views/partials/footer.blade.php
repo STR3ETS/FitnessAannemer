@@ -5,23 +5,23 @@
             <a href="{{ url('/') }}">
                 <img src="{{ asset('fitnessaannemer-logo-fa-blauw.png') }}" alt="Fitness Aannemer" class="max-h-10">
             </a>
-            <p class="text-white/50 text-xs mt-4 leading-relaxed">Van eerste schets tot sleuteloverdracht. Wij ontwerpen, leveren en installeren complete fitnessruimtes op maat.</p>
+            <p class="text-white/50 text-xs mt-4 leading-relaxed">De specialist in het ontwerpen en inrichten van sportscholen. Onafhankelijk advies, complete inrichting en oplevering onder een dak.</p>
             {{-- Social icons --}}
             <div class="flex items-center gap-3 mt-6">
-                <a href="https://instagram.com/fitnessaannemer.nl" target="_blank" rel="noopener" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
+                <a href="https://www.instagram.com/fitnessaannemer.nl/" target="_blank" rel="noopener" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
                     <i class="fa-brands fa-instagram text-sm"></i>
                 </a>
-                <a href="https://tiktok.com/@fitnessaannemer" target="_blank" rel="noopener" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
+                <a href="https://www.tiktok.com/@fitnessaannemer" target="_blank" rel="noopener" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
                     <i class="fa-brands fa-tiktok text-sm"></i>
                 </a>
-                <a href="https://youtube.com/@fitnessaannemer" target="_blank" rel="noopener" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
+                <a href="https://www.youtube.com/@FitnessAannemer" target="_blank" rel="noopener" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
                     <i class="fa-brands fa-youtube text-sm"></i>
                 </a>
-                <a href="https://linkedin.com/company/fitnessaannemer" target="_blank" rel="noopener" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
-                    <i class="fa-brands fa-linkedin-in text-sm"></i>
+                <a href="https://www.facebook.com/profile.php?id=61557754181423" target="_blank" rel="noopener" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
+                    <i class="fa-brands fa-facebook-f text-sm"></i>
                 </a>
-                <a href="https://snapchat.com/add/fitnessaannemer" target="_blank" rel="noopener" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
-                    <i class="fa-brands fa-snapchat text-sm"></i>
+                <a href="https://pin.it/7jMdHylyE" target="_blank" rel="noopener" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
+                    <i class="fa-brands fa-pinterest-p text-sm"></i>
                 </a>
             </div>
         </div>
@@ -106,7 +106,7 @@
     {{-- Bottom bar --}}
     <div class="border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-3">
-            <p class="text-white/30 text-[11px]">&copy; {{ date('Y') }} Fitness Aannemer. Alle rechten voorbehouden.</p>
+            <p class="text-white/30 text-[11px]">&copy; {{ date('Y') }} Fitness Aannemer. Alle rechten voorbehouden. KvK: 80540228</p>
             <div class="flex items-center gap-5">
                 <a href="{{ url('/privacybeleid') }}" class="text-white/30 hover:text-white text-[11px] transition">Privacybeleid</a>
                 <a href="{{ url('/algemene-voorwaarden') }}" class="text-white/30 hover:text-white text-[11px] transition">Algemene voorwaarden</a>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'Apparatuur | Fitness Aannemer')
 @section('meta_description', 'Ontdek ons complete assortiment fitnessapparatuur. Cardio, kracht, functioneel, gewichten, flooring en herstel van topmerken.')
@@ -63,7 +63,7 @@
                     </div>
                     <h3 class="text-secondary text-xl font-bold mb-3">{{ $cat['title'] }}</h3>
                     <p class="text-secondary/50 text-sm leading-relaxed mb-6">{{ $cat['desc'] }}</p>
-                    <span class="inline-flex items-center text-primary text-xs font-semibold" style="font-family: 'Inter Tight'">
+                    <span class="inline-flex items-center text-primary text-xs font-semibold" style="font-family: 'Inter'">
                         Bekijk {{ strtolower($cat['title']) }} <i class="fa-solid fa-arrow-right text-[10px] ml-1.5"></i>
                     </span>
                 </a>
@@ -78,7 +78,7 @@
             <p class="text-white/40 text-xs uppercase tracking-widest font-semibold mb-8">Topmerken in ons assortiment</p>
             <div class="flex flex-wrap items-center justify-center gap-8">
                 @foreach(['Life Fitness', 'Matrix', 'Concept2', 'Gym80', 'Keiser', 'StairMaster', 'KingsBox', 'Hammer Strength'] as $merk)
-                <span class="text-white/30 text-sm font-semibold hover:text-white/60 transition" style="font-family: 'Inter Tight'">{{ $merk }}</span>
+                <span class="text-white/30 text-sm font-semibold hover:text-white/60 transition" style="font-family: 'Inter'">{{ $merk }}</span>
                 @endforeach
             </div>
         </div>

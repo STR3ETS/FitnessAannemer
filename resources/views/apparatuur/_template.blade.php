@@ -1,4 +1,4 @@
-{{-- Shared template for all apparatuur category pages --}}
+﻿{{-- Shared template for all apparatuur category pages --}}
 @extends('layouts.app')
 
 @section('title', $title . ' | Fitness Aannemer')
@@ -31,9 +31,9 @@
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="ip-hero-el flex items-center gap-2 mb-6">
-                <a href="{{ url('/apparatuur') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter Tight'">Apparatuur</a>
+                <a href="{{ url('/apparatuur') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter'">Apparatuur</a>
                 <i class="fa-solid fa-chevron-right text-white/20 text-[8px]"></i>
-                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter Tight'">{{ $heroLabel }}</span>
+                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">{{ $heroLabel }}</span>
             </div>
             <div class="max-w-3xl">
                 <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">{!! $heroTitle !!}</h1>
@@ -87,7 +87,7 @@
                     <div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
                         <i class="fa-solid {{ $prod['icon'] }} text-primary"></i>
                     </div>
-                    <h3 class="text-white text-base font-bold mb-2" style="font-family: 'Inter Tight'">{{ $prod['title'] }}</h3>
+                    <h3 class="text-white text-base font-bold mb-2" style="font-family: 'Inter'">{{ $prod['title'] }}</h3>
                     <p class="text-white/40 text-sm leading-relaxed">{{ $prod['desc'] }}</p>
                 </div>
                 @endforeach

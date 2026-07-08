@@ -1,7 +1,7 @@
 {{-- CTA Section --}}
 <div class="bg-secondary text-center pt-16 lg:pt-32 px-4 sm:px-6 relative z-10">
     <h2 class="brands-fade text-white text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.05] mb-6">Klaar om jouw gym<br><span class="text-primary">te realiseren?</span></h2>
-    <p class="brands-fade text-white/35 text-sm leading-relaxed max-w-lg mx-auto">Van concept tot oplevering, wij regelen alles. Neem contact op voor een vrijblijvend adviesgesprek en ontdek wat wij voor jouw fitnessruimte kunnen betekenen.</p>
+    <p class="brands-fade text-white/35 text-sm leading-relaxed max-w-lg mx-auto">Van ontwerp tot oplevering, wij regelen alles. Neem contact op voor een vrijblijvend adviesgesprek en ontdek wat wij voor jouw fitnessruimte kunnen betekenen.</p>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-8">
         <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
         <a href="{{ url('/offerte-aanvragen') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Offerte aanvragen</a>
@@ -23,12 +23,6 @@
     <div class="reviews-marquee-track flex gap-6" style="width: max-content">
         @php
         $marqueeReviews = [
-            ['quote' => 'Vanaf het eerste adviesgesprek voelde het professioneel en persoonlijk. Het resultaat is boven verwachting.', 'name' => 'Jordi Vermeer', 'role' => 'FarmFit Culemborg', 'initials' => 'JV'],
-            ['quote' => 'Fitness Aannemer leverde niet alleen de apparatuur, maar dacht ook mee over de indeling en sfeer. Top service.', 'name' => 'Mike Bakker', 'role' => 'Ballin Fit Amsterdam', 'initials' => 'MB'],
-            ['quote' => 'De snelheid en kwaliteit waarmee alles geregeld werd was indrukwekkend. Leden zijn super enthousiast.', 'name' => 'Sophie Klein', 'role' => 'Upshape Den Haag', 'initials' => 'SK'],
-            ['quote' => 'Fitness Aannemer begreep direct wat we nodig hadden en leverde een strak, premium resultaat af.', 'name' => 'Rob Hendriks', 'role' => 'Van der Valk', 'initials' => 'RH'],
-            ['quote' => 'Van rig tot vloer, alles is top. De nazorg is ook uitstekend, ze staan altijd klaar.', 'name' => 'Dennis de Wit', 'role' => 'Vitality Sports Duiven', 'initials' => 'DW'],
-            ['quote' => 'Echt een team dat snapt wat een gym nodig heeft. Alles werd tot in detail verzorgd.', 'name' => 'Laura Jansen', 'role' => 'PowerZone Rotterdam', 'initials' => 'LJ'],
         ];
         @endphp
         @for($set = 0; $set < 2; $set++)

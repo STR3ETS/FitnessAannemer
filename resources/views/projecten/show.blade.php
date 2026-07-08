@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', $title . ' | Projecten | Fitness Aannemer')
 @section('meta_description', $metaDesc)
@@ -35,16 +35,16 @@
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="ip-hero-el flex items-center gap-2 mb-6">
-                <a href="{{ url('/projecten') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter Tight'">Projecten</a>
+                <a href="{{ url('/projecten') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter'">Projecten</a>
                 <i class="fa-solid fa-chevron-right text-white/20 text-[8px]"></i>
-                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter Tight'">{{ $title }}</span>
+                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">{{ $title }}</span>
             </div>
             <div class="max-w-3xl">
                 <div class="ip-hero-el flex items-center gap-3 mb-4">
                     <span class="inline-block bg-primary/20 text-primary text-[10px] font-semibold px-2.5 py-1 rounded-full border border-primary/30">{{ $type }}</span>
-                    <span class="text-white/50 text-xs font-semibold" style="font-family: 'Inter Tight'">{{ $size }}</span>
+                    <span class="text-white/50 text-xs font-semibold" style="font-family: 'Inter'">{{ $size }}</span>
                     <span class="text-white/20 text-xs">&#8226;</span>
-                    <span class="text-white/50 text-xs font-semibold" style="font-family: 'Inter Tight'">{{ $location }}</span>
+                    <span class="text-white/50 text-xs font-semibold" style="font-family: 'Inter'">{{ $location }}</span>
                 </div>
                 <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">{!! $heroTitle !!}</h1>
                 <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-6 lg:my-8">{{ $heroDesc }}</p>
@@ -105,15 +105,15 @@
                     <div class="flex flex-wrap gap-3 mb-6">
                         <div class="bg-white/[0.06] rounded-xl px-4 py-3">
                             <p class="text-white/30 text-[10px] uppercase tracking-wider font-semibold mb-1">Type</p>
-                            <p class="text-white text-sm font-bold" style="font-family: 'Inter Tight'">{{ $type }}</p>
+                            <p class="text-white text-sm font-bold" style="font-family: 'Inter'">{{ $type }}</p>
                         </div>
                         <div class="bg-white/[0.06] rounded-xl px-4 py-3">
                             <p class="text-white/30 text-[10px] uppercase tracking-wider font-semibold mb-1">Oppervlakte</p>
-                            <p class="text-white text-sm font-bold" style="font-family: 'Inter Tight'">{{ $size }}</p>
+                            <p class="text-white text-sm font-bold" style="font-family: 'Inter'">{{ $size }}</p>
                         </div>
                         <div class="bg-white/[0.06] rounded-xl px-4 py-3">
                             <p class="text-white/30 text-[10px] uppercase tracking-wider font-semibold mb-1">Locatie</p>
-                            <p class="text-white text-sm font-bold" style="font-family: 'Inter Tight'">{{ $location }}</p>
+                            <p class="text-white text-sm font-bold" style="font-family: 'Inter'">{{ $location }}</p>
                         </div>
                     </div>
 
@@ -156,5 +156,67 @@
             </div>
         </div>
     </section>
+
+    @if(!empty($extraSections))
+        @foreach($extraSections as $i => $es)
+            @php $isDark = $i % 2 === 0; @endphp
+            <section class="{{ $isDark ? 'bg-secondary' : 'bg-white relative overflow-hidden' }} py-16 lg:py-32" id="pd-section{{ $i + 4 }}">
+                @if(!$isDark)
+                    <div class="horizontal-blob w-[600px] h-[600px]" style="background: radial-gradient(circle, rgba(82,171,226,0.18) 0%, rgba(82,171,226,0) 70%); top: -15%; {{ $i % 4 === 1 ? 'right' : 'left' }}: -5%; animation: blob-float-{{ ($i % 3) + 1 }} {{ 15 + $i * 2 }}s ease-in-out infinite;"></div>
+                @endif
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 {{ !$isDark ? 'relative' : '' }}">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                        @if($isDark)
+                            @if(!empty($es['media']))
+                            <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
+                                @if(str_ends_with($es['media'], '.mp4'))
+                                    <video src="{{ asset($es['media']) }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                                @elseif(str_starts_with($es['media'], 'http'))
+                                    <img src="{{ $es['media'] }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
+                                @else
+                                    <img src="{{ asset($es['media']) }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
+                                @endif
+                            </div>
+                            @endif
+                            <div class="ip-block-text">
+                                <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $es['label'] }}</span>
+                                <h2 class="text-white text-3xl lg:text-5xl font-bold leading-[1.05] mb-6 lg:mb-8">{!! $es['title'] !!}</h2>
+                                @foreach($es['paragraphs'] as $pi => $p)
+                                    <p class="text-white/50 text-sm leading-relaxed {{ $pi < count($es['paragraphs']) - 1 ? 'mb-4' : 'mb-8' }}">{{ $p }}</p>
+                                @endforeach
+                                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                                    <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                                    <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Alle projecten</a>
+                                </div>
+                            </div>
+                        @else
+                            <div class="ip-block-text">
+                                <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $es['label'] }}</span>
+                                <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-6 lg:mb-8">{!! $es['title'] !!}</h2>
+                                @foreach($es['paragraphs'] as $pi => $p)
+                                    <p class="text-secondary/50 text-sm leading-relaxed {{ $pi < count($es['paragraphs']) - 1 ? 'mb-4' : 'mb-8' }}">{{ $p }}</p>
+                                @endforeach
+                                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                                    <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                                    <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Alle projecten</a>
+                                </div>
+                            </div>
+                            @if(!empty($es['media']))
+                            <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
+                                @if(str_ends_with($es['media'], '.mp4'))
+                                    <video src="{{ asset($es['media']) }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                                @elseif(str_starts_with($es['media'], 'http'))
+                                    <img src="{{ $es['media'] }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
+                                @else
+                                    <img src="{{ asset($es['media']) }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
+                                @endif
+                            </div>
+                            @endif
+                        @endif
+                    </div>
+                </div>
+            </section>
+        @endforeach
+    @endif
 
 @endsection

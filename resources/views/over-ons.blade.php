@@ -1,7 +1,7 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'Over ons | Fitness Aannemer')
-@section('meta_description', 'Maak kennis met Stijn Harder, oprichter van Fitness Aannemer. Van webshop tot volledige gymbouw. Ontdek ons verhaal, onze aanpak en waarom wij anders zijn.')
+@section('meta_description', 'Maak kennis met het team achter Fitness Aannemer. Van webshop tot specialist in gymontwerp en inrichting. Ontdek ons verhaal en waarom 60+ sportscholen voor ons kozen.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -9,16 +9,16 @@
     "@@context": "https://schema.org",
     "@@type": "AboutPage",
     "name": "Over Fitness Aannemer",
-    "description": "Maak kennis met Stijn Harder, oprichter van Fitness Aannemer. Van webshop tot volledige gymbouw.",
+    "description": "Maak kennis met het team achter Fitness Aannemer. Specialist in gymontwerp en inrichting, 60+ projecten in de Benelux.",
     "url": "{{ url('/over-ons') }}",
     "mainEntity": {
         "@@type": "Organization",
         "name": "Fitness Aannemer",
         "url": "{{ url('/') }}",
-        "founder": {
-            "@@type": "Person",
-            "name": "Stijn Harder"
-        },
+        "founder": [
+            { "@@type": "Person", "name": "Stijn Harder" },
+            { "@@type": "Person", "name": "Sil Wartena" }
+        ],
         "areaServed": [
             { "@@type": "Country", "name": "Nederland" },
             { "@@type": "Country", "name": "België" }
@@ -42,13 +42,13 @@
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="ip-hero-el flex items-center gap-2 mb-6">
-                <a href="{{ url('/') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter Tight'">Home</a>
+                <a href="{{ url('/') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter'">Home</a>
                 <i class="fa-solid fa-chevron-right text-white/20 text-[8px]"></i>
-                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter Tight'">Over ons</span>
+                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">Over ons</span>
             </div>
             <div class="max-w-3xl">
-                <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Building the gyms of the <span class="text-primary">future</span></h1>
-                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">Fitness Aannemer is ontstaan uit passie voor fitness en ondernemerschap. Wij ontwerpen, leveren en bouwen complete fitnessruimtes door heel Nederland en Belgie. Van eerste idee tot sleuteloverdracht.</p>
+                <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">De specialisten achter jouw <span class="text-primary">gym</span></h1>
+                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">Fitness Aannemer is ontstaan uit passie voor fitness en ondernemerschap. Wij ontwerpen en richten complete fitnessruimtes in door heel Nederland en Belgie. Van eerste idee tot oplevering.</p>
                 <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                     <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                     <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk projecten</a>
@@ -64,9 +64,9 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="ip-block-text">
                     <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Het verhaal</span>
-                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Van webshop naar <span class="text-primary">gymbouwer</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Fitness Aannemer is opgericht door Stijn Harder vanuit Duiven. Het begon met DeThuisSportWinkel.nl, een webshop met fitnessapparatuur van duizenden euro's. Een beetje adverteren, afwachten, en hopen dat iemand spontaan tienduizend euro overmaakt via iDEAL. Dat gebeurde niet.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Maandenlang producten toevoegen, omschrijvingen optimaliseren, knutselen aan advertenties. Kleine orders kwamen binnen, maar pas toen de focus verschoof naar het totaalplaatje, complete home gyms bouwen, begon het te draaien. Fitness Aannemer is niet geboren uit een strak businessplan, maar uit blijven proberen, testen, aanpassen en doorzetten.</p>
+                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Van webshop naar <span class="text-primary">inrichtingsspecialist</span></h2>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Fitness Aannemer is opgericht door Stijn Harder en Sil Wartena. Het begon met DeThuisSportWinkel.nl, een webshop met fitnessapparatuur van duizenden euro's. Een beetje adverteren, afwachten, en hopen dat iemand spontaan tienduizend euro overmaakt via iDEAL. Dat gebeurde niet.</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Maandenlang producten toevoegen, omschrijvingen optimaliseren, knutselen aan advertenties. Kleine orders kwamen binnen, maar pas toen de focus verschoof naar het totaalplaatje, complete fitnessruimtes ontwerpen en inrichten, begon het te draaien. Fitness Aannemer is niet geboren uit een strak businessplan, maar uit blijven proberen, testen, aanpassen en doorzetten.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                         <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk projecten</a>
@@ -96,10 +96,10 @@
                         {{-- Bio --}}
                         <div class="p-8 lg:p-12 flex flex-col justify-center">
                             <span class="inline-block text-primary text-[10px] font-semibold uppercase tracking-widest mb-3">Oprichter</span>
-                            <h3 class="text-white text-3xl lg:text-4xl font-bold mb-2" style="font-family: 'Inter Tight'">Stijn Harder</h3>
-                            <p class="text-primary text-sm font-semibold mb-6" style="font-family: 'Inter Tight'">Founder & CEO</p>
+                            <h3 class="text-white text-3xl lg:text-4xl font-bold mb-2" style="font-family: 'Inter'">Stijn Harder</h3>
+                            <p class="text-primary text-sm font-semibold mb-6" style="font-family: 'Inter'">Founder & CEO</p>
                             <p class="text-white/50 text-sm leading-relaxed mb-4">Komt uit de fitnesswereld. Werkte bij FeelGoodClub AeroFitt en Vitality Sports in Duiven. Die ervaring op de vloer, zien wat werkt en wat niet, vormt de basis van hoe Fitness Aannemer opereert.</p>
-                            <p class="text-white/50 text-sm leading-relaxed mb-8">Gelooft dat een gym meer moet zijn dan een ruimte met apparaten. Het moet een beleving zijn. Deelt zijn kennis via TikTok en YouTube, waar duizenden mensen meekijken met gymreviews, bouwprojecten en tips voor fitnessondernemers.</p>
+                            <p class="text-white/50 text-sm leading-relaxed mb-8">Gelooft dat een gym meer moet zijn dan een ruimte met apparaten. Het moet een beleving zijn. Deelt zijn kennis via TikTok en YouTube, waar duizenden mensen meekijken met gymreviews, inrichtingsprojecten en tips voor fitnessondernemers.</p>
                             <div class="flex items-center gap-3">
                                 <a href="https://www.tiktok.com/@fitnessaannemer" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
                                     <i class="fa-brands fa-tiktok text-sm"></i>
@@ -110,8 +110,11 @@
                                 <a href="https://www.instagram.com/fitnessaannemer.nl/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
                                     <i class="fa-brands fa-instagram text-sm"></i>
                                 </a>
-                                <a href="https://nl.linkedin.com/in/stijn-harder" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
-                                    <i class="fa-brands fa-linkedin-in text-sm"></i>
+                                <a href="https://www.facebook.com/profile.php?id=61557754181423" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
+                                    <i class="fa-brands fa-facebook-f text-sm"></i>
+                                </a>
+                                <a href="https://pin.it/7jMdHylyE" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
+                                    <i class="fa-brands fa-pinterest-p text-sm"></i>
                                 </a>
                             </div>
                         </div>
@@ -121,12 +124,12 @@
 
             <div class="ip-fade grid grid-cols-2 md:grid-cols-4 gap-8 text-center mt-20 pt-16 border-t border-white/[0.06]">
                 <div>
-                    <p class="text-primary text-4xl lg:text-5xl font-bold mb-2">5+</p>
+                    <p class="text-primary text-4xl lg:text-5xl font-bold mb-2">60+</p>
                     <p class="text-white/40 text-xs uppercase font-semibold tracking-wider">Projecten gerealiseerd</p>
                 </div>
                 <div>
-                    <p class="text-primary text-4xl lg:text-5xl font-bold mb-2">2400+</p>
-                    <p class="text-white/40 text-xs uppercase font-semibold tracking-wider">M2 ingericht</p>
+                    <p class="text-primary text-4xl lg:text-5xl font-bold mb-2">7000+</p>
+                    <p class="text-white/40 text-xs uppercase font-semibold tracking-wider">M² ingericht</p>
                 </div>
                 <div>
                     <p class="text-primary text-4xl lg:text-5xl font-bold mb-2">50+</p>

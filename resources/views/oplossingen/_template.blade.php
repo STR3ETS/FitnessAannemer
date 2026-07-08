@@ -1,4 +1,4 @@
-{{-- Shared template for all solution pages --}}
+﻿{{-- Shared template for all solution pages --}}
 @extends('layouts.app')
 
 @section('title', $title . ' | Fitness Aannemer')
@@ -39,9 +39,9 @@
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="ip-hero-el flex items-center gap-2 mb-6">
-                <a href="{{ url('/') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter Tight'">Home</a>
+                <a href="{{ url('/') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter'">Home</a>
                 <i class="fa-solid fa-chevron-right text-white/20 text-[8px]"></i>
-                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter Tight'">{{ $heroLabel }}</span>
+                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">{{ $heroLabel }}</span>
             </div>
             <div class="max-w-3xl">
                 <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">{!! $heroTitle !!}</h1>

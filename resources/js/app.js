@@ -224,11 +224,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const heading = document.getElementById('hero-heading');
     if (heading) {
         const segments = [
-            { text: 'Jouw gym ontworpen ', primary: false },
-            { text: 'en', primary: true },
+            { text: 'De specialist die jouw', primary: false },
             { text: '\n', primary: false },
-            { text: 'ingericht door ', primary: false },
-            { text: 'experts', primary: true },
+            { text: 'gym ', primary: false },
+            { text: 'ontwerpt', primary: true },
+            { text: ' en ', primary: false },
+            { text: 'inricht', primary: true },
             { text: '.', primary: false },
         ];
 

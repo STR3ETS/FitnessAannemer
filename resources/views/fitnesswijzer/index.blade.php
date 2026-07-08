@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'Fitnesswijzer | Fitness Aannemer')
 @section('meta_description', 'De Fitnesswijzer van Fitness Aannemer. Tips, inspiratie, verdienmodellen en gymreviews voor iedereen die een fitnessruimte wil starten of verbeteren.')
@@ -34,9 +34,9 @@
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30" id="fw-hero">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="ip-hero-el flex items-center gap-2 mb-6">
-                <a href="{{ url('/') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter Tight'">Home</a>
+                <a href="{{ url('/') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter'">Home</a>
                 <i class="fa-solid fa-chevron-right text-white/20 text-[8px]"></i>
-                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter Tight'">Fitnesswijzer</span>
+                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">Fitnesswijzer</span>
             </div>
             <div class="max-w-3xl">
                 <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Fitness<span class="text-primary">wijzer</span></h1>
@@ -85,7 +85,7 @@
                     </div>
                     <h3 class="text-white text-xl font-bold mb-3">Gym verdienmodellen</h3>
                     <p class="text-white/40 text-sm leading-relaxed mb-6">Ontdek de verschillende verdienmodellen voor sportscholen, PT studio's en boutique gyms. Van abonnementen tot personal training.</p>
-                    <span class="inline-flex items-center text-primary text-xs font-semibold" style="font-family: 'Inter Tight'">
+                    <span class="inline-flex items-center text-primary text-xs font-semibold" style="font-family: 'Inter'">
                         Lees meer <i class="fa-solid fa-arrow-right text-[10px] ml-1.5"></i>
                     </span>
                 </a>
@@ -96,7 +96,7 @@
                     </div>
                     <h3 class="text-white text-xl font-bold mb-3">Tips & inspiratie</h3>
                     <p class="text-white/40 text-sm leading-relaxed mb-6">Praktische tips voor het inrichten, runnen en groeien van jouw fitnessruimte. Van apparatuurkeuze tot sfeer en branding.</p>
-                    <span class="inline-flex items-center text-primary text-xs font-semibold" style="font-family: 'Inter Tight'">
+                    <span class="inline-flex items-center text-primary text-xs font-semibold" style="font-family: 'Inter'">
                         Lees meer <i class="fa-solid fa-arrow-right text-[10px] ml-1.5"></i>
                     </span>
                 </a>
@@ -107,7 +107,7 @@
                     </div>
                     <h3 class="text-white text-xl font-bold mb-3">Gymreviews</h3>
                     <p class="text-white/40 text-sm leading-relaxed mb-6">Eerlijke ervaringen van gymeigenaren over hun inrichtingstraject. Ontdek wat anderen vinden van het proces en resultaat.</p>
-                    <span class="inline-flex items-center text-primary text-xs font-semibold" style="font-family: 'Inter Tight'">
+                    <span class="inline-flex items-center text-primary text-xs font-semibold" style="font-family: 'Inter'">
                         Lees meer <i class="fa-solid fa-arrow-right text-[10px] ml-1.5"></i>
                     </span>
                 </a>

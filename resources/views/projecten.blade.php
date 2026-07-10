@@ -31,8 +31,14 @@
 @endsection
 
 @section('content')
-    <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30 relative overflow-hidden">
+        <div class="hidden lg:block absolute inset-y-0 right-0 w-1/2">
+            <img src="{{ asset('assets/wp-uploads/011_DSC0596-HDR-scaled-e1758023491547.jpg') }}" alt="" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-transparent"></div>
+            <div class="absolute w-[650px] h-[650px] rounded-full border border-white/[0.07] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute w-[400px] h-[400px] rounded-full border border-white/[0.10] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
             <div class="ip-hero-el flex items-center gap-2 mb-6">
                 <a href="{{ url('/') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter'">Home</a>
                 <i class="fa-solid fa-chevron-right text-white/20 text-[8px]"></i>

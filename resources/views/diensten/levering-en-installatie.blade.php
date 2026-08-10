@@ -1,7 +1,7 @@
 ﻿@extends('layouts.app')
 
-@section('title', 'Levering & Installatie | Fitness Aannemer')
-@section('meta_description', 'Complete levering en professionele installatie van fitnessapparatuur door ons eigen montageteam. Turnkey oplevering in heel Nederland en Belgie.')
+@section('title', 'Levering & installatie fitnessapparatuur | Fitness Aannemer')
+@section('meta_description', 'Complete levering en installatie van fitnessapparatuur en inrichting door ons eigen montageteam. Een aanspreekpunt, een opleverdatum, actief in heel de Benelux. Vraag een offerte aan.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -51,9 +51,9 @@
             </div>
             <div class="max-w-3xl">
                 <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Levering &<br><span class="text-primary">installatie</span></h1>
-                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">Wij zorgen voor de complete levering en professionele installatie van jouw fitnessruimte. Van transport tot oplevering, alles uit een hand.</p>
+                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">Complete levering en installatie van alles wat jouw sportschool nodig heeft, door ons eigen montageteam. Van transport tot de laatste afgestelde machine: alles uit één hand, met één opleverdatum.</p>
                 <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                    <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                    <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                     <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk onze projecten</a>
                 </div>
             </div>
@@ -67,11 +67,11 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="ip-block-text">
                     <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Eigen montageteam</span>
-                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Professionele installatie <br class="hidden md:block"><span class="text-primary">uit eigen huis</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Ons ervaren montageteam verzorgt de complete installatie van jouw fitnessruimte. Van het leggen van professionele sportvloeren tot het plaatsen en kalibreren van alle apparatuur. Geen onderaannemers, geen miscommunicatie.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">We werken volgens een strak draaiboek zodat alles op tijd en volgens plan wordt opgeleverd. Een aanspreekpunt, een planning, direct klaar voor gebruik.</p>
+                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Geïnstalleerd zoals het <span class="text-primary">ontworpen is</span></h2>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Ons eigen montageteam verzorgt de volledige levering en installatie, in heel Nederland en België. Geen externe monteurs die het ontwerp voor het eerst zien, maar een vast team dat het project kent en precies weet waar alles moet staan.</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Elke machine wordt geplaatst volgens de plattegrond, afgesteld en getest voor gebruik. Van het uitladen tot de laatste stelschroef: als wij de deur achter ons dichttrekken, kun jij open.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-20">
                 <span class="ip-fade inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">Hoe wij werken</span>
-                <h2 class="ip-fade text-white text-4xl lg:text-5xl font-bold leading-[1.05]">Van bestelling tot<br><span class="text-primary">gebruiksklare gym</span></h2>
+                <h2 class="ip-fade text-white text-4xl lg:text-5xl font-bold leading-[1.05]">Van bestelling tot<br><span class="text-primary">opgeleverde sportschool</span></h2>
             </div>
 
             @php
@@ -96,37 +96,35 @@
                     'nr' => '01',
                     'icon' => 'fa-clipboard-check',
                     'title' => 'Orderbevestiging & planning',
-                    'desc' => 'Na akkoord op de offerte plannen we de levering en installatie in. Je krijgt een duidelijke planning met vaste data en een persoonlijke projectcoordinator als vast aanspreekpunt.',
-                    'detail' => 'Vaste contactpersoon',
-                    'video' => '/shorts/fitnessaannemer-short-2.mp4',
+                    'desc' => 'Na akkoord op de offerte plannen we direct de levering in. Je krijgt één planning met een vaste opleverdatum, afgestemd op de bouw of verbouwing van jouw ruimte.',
+                    'detail' => 'Vaste opleverdatum',
+                    'video' => '/assets/li-step01.mp4',
                 ],
                 [
                     'nr' => '02',
                     'icon' => 'fa-truck-fast',
-                    'title' => 'Logistiek & transport',
-                    'desc' => 'Wij coordineren het volledige transport. Alle apparatuur wordt veilig verpakt en geleverd op de afgesproken datum. Rechtstreeks van de fabrikant naar jouw locatie.',
-                    'detail' => 'Gecoordineerd transport',
-                    'images' => [
-                        ['src' => '/assets/foto-assets/BluePrint-2024-photos-47-1024x683.jpg', 'alt' => 'Levering fitnessapparatuur'],
-                        ['src' => '/assets/foto-assets/Snapinsta.app_370955197_18291839842131715_7907551785806304431_n_1080-819x1024.jpg', 'alt' => 'Transport coordinatie'],
-                    ],
+                    'title' => 'Levering & transport',
+                    'desc' => 'Wij regelen het volledige transport, van fabrikant tot jouw deur. Ook bij lastige locaties: verdiepingen, smalle doorgangen of binnensteden. Wij hebben het allemaal gezien.',
+                    'detail' => 'NL & BE breed',
+                    'image' => '/assets/li-step02.jpg',
+                    'image_alt' => 'Levering fitnessapparatuur',
                 ],
                 [
                     'nr' => '03',
                     'icon' => 'fa-screwdriver-wrench',
-                    'title' => 'Installatie & montage',
-                    'desc' => 'Ons eigen team plaatst en installeert alle apparatuur, vloeren, spiegels en accessoires. Alles wordt professioneel gemonteerd en afgesteld voor direct gebruik.',
+                    'title' => 'Montage & installatie',
+                    'desc' => 'Ons montageteam bouwt alles op volgens het ontwerp: apparatuur, vloeren, verlichting, spiegels, kluisjes, meubels en audio. Elke machine wordt afgesteld en getest.',
                     'detail' => 'Eigen montageteam',
-                    'video' => '/shorts/fitnessaannemer-short-4.mp4',
+                    'image' => '/assets/li-step03.jpg',
+                    'image_alt' => 'Montage fitnessapparatuur',
                 ],
                 [
                     'nr' => '04',
                     'icon' => 'fa-circle-check',
-                    'title' => 'Keuring & oplevering',
-                    'desc' => 'Na installatie keuren we alle apparatuur, geven we een uitgebreide instructie en dragen het project officieel aan je over. Direct klaar voor gebruik.',
-                    'detail' => 'Gebruiksklaar opgeleverd',
-                    'image' => '/assets/foto-assets/SOCIAL-Farmfit-015-WF104887-1-1-1024x683.jpg',
-                    'image_alt' => 'Opgeleverde fitnessruimte',
+                    'title' => 'Oplevering',
+                    'desc' => 'We lopen samen alles na: staat elke machine op de juiste plek, werkt alles naar behoren? Pas als jij tevreden bent, is de klus af.',
+                    'detail' => 'Direct klaar voor gebruik',
+                    'video' => '/assets/li-step04.mp4',
                 ],
             ];
             @endphp
@@ -188,16 +186,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
-                    <img src="{{ asset('assets/3.jpg') }}" alt="Turnkey opgeleverde fitnessruimte" class="w-full h-full object-cover">
+                    <img src="{{ asset('assets/li-blok4.jpg') }}" alt="Complete sportschoolinrichting" class="w-full h-full object-cover">
                 </div>
                 <div class="ip-block-text">
-                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Turnkey oplevering</span>
-                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Een partij voor <span class="text-primary">het complete traject</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Geen gedoe met meerdere leveranciers, transporteurs en monteurs. Wij regelen alles van A tot Z. Dat betekent minder stress, snellere oplevering en een strak eindresultaat.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Of het nu gaat om een complete sportschool of een compacte hotelgym, wij leveren en installeren in heel Nederland en Belgie. Met duidelijke planning en een helder tijdspad.</p>
+                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Compleet assortiment</span>
+                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Meer dan alleen <span class="text-primary">apparatuur</span></h2>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Een sportschool is meer dan een rij machines. Daarom leveren en installeren wij de complete inrichting: apparatuur van 18 merken, sportvloeren zoals PVC, laminaat, rubberen tegels en Sprinttracks, verlichting, spiegels, kluisjes, meubels en audio.</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Alles komt uit één hand en wordt in één planning geïnstalleerd. Geen vijf leveranciers met vijf leverdata, maar één team dat jouw sportschool compleet oplevert.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
-                        <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/onze-merken') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk alle merken</a>
                     </div>
                 </div>
             </div>

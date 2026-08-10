@@ -46,9 +46,9 @@
             </div>
             <div class="max-w-3xl">
                 <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Onze <span class="text-primary">projecten</span></h1>
-                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-6 lg:my-8">Van luxe PT studio's tot grote functionele gyms. Bekijk een selectie van gerealiseerde projecten en ontdek wat wij voor jou kunnen betekenen.</p>
+                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-6 lg:my-8">Van boutique studio's tot commerciële clubs van 1.000+ m². Bekijk onze gerealiseerde projecten en zie wat wij ontwerpen, bouwen en opleveren, door heel Nederland en België.</p>
                 <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                    <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                    <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                     <a href="{{ url('/diensten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk onze diensten</a>
                 </div>
             </div>
@@ -63,10 +63,10 @@
                 <div class="ip-block-text">
                     <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Portfolio</span>
                     <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-6 lg:mb-8">Van eerste schets tot <span class="text-primary">sleuteloverdracht</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Elk project begint met een gesprek. Over jouw visie, doelgroep en ambities. Samen vertalen we dat naar een fitnessruimte die er niet alleen goed uitziet, maar ook goed werkt.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Van compacte PT studio's tot grote commerciele sportscholen. Wij verzorgen het complete traject: ontwerp, apparatuurselectie, levering, installatie en nazorg.</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Elk project begint met een gesprek over jouw visie, doelgroep en ambities. Samen vertalen we dat naar een sportschool die er niet alleen goed uitziet, maar ook rendeert: leden aantrekt, leden bindt en omzet draait.</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Van compacte PT studio's tot commerciële sportscholen van 1.000+ m²: wij verzorgen het complete traject. Ontwerp, bouw onder onze regie, levering, installatie en oplevering. Elk project hieronder is van eerste schets tot sleutel door ons gerealiseerd.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/diensten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze diensten</a>
                     </div>
                 </div>
@@ -140,7 +140,7 @@
                     <p class="text-secondary/50 text-sm leading-relaxed mb-4">Elk project op deze pagina begon met hetzelfde: een ondernemer met een visie en de behoefte aan een betrouwbare partner. Wij vertalen jouw idee naar een fitnessruimte die past bij jouw concept en doelgroep.</p>
                     <p class="text-secondary/50 text-sm leading-relaxed mb-8">Plan een vrijblijvend adviesgesprek en ontdek hoe wij jouw gymproject tot een succes maken. Van eerste concept tot complete realisatie.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/diensten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze diensten</a>
                     </div>
                 </div>

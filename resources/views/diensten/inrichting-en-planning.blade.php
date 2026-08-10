@@ -1,15 +1,15 @@
 ﻿@extends('layouts.app')
 
-@section('title', 'Inrichting & Planning | Fitness Aannemer')
-@section('meta_description', 'Professioneel gymontwerp met 3D visualisatie. Fitness Aannemer maakt een doordacht plan voor jouw fitnessruimte, van plattegrond tot apparatuurkeuze.')
+@section('title', 'Interieurontwerp sportschool | 3D-visualisatie | Fitness Aannemer')
+@section('meta_description', 'Interieurontwerp voor jouw sportschool: plattegrond, 3D-visualisatie en apparatuurkeuze. Een ontwerp dat rendeert, van specialisten in de fitnessbranche. Plan een gratis adviesgesprek.')
 
 @section('schema')
 <script type="application/ld+json">
 {
     "@@context": "https://schema.org",
     "@@type": "Service",
-    "name": "Inrichting & Planning",
-    "description": "Professioneel gymontwerp met 3D visualisatie. Van plattegrond tot apparatuurkeuze.",
+    "name": "Interieurontwerp & 3D-visualisatie",
+    "description": "Interieurontwerp voor sportscholen met 3D-visualisatie, plattegrond en apparatuurkeuze.",
     "url": "{{ url('/diensten/inrichting-en-planning') }}",
     "provider": {
         "@@type": "Organization",
@@ -29,7 +29,7 @@
     "itemListElement": [
         { "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
         { "@@type": "ListItem", "position": 2, "name": "Diensten", "item": "{{ url('/diensten') }}" },
-        { "@@type": "ListItem", "position": 3, "name": "Inrichting & Planning", "item": "{{ url('/diensten/inrichting-en-planning') }}" }
+        { "@@type": "ListItem", "position": 3, "name": "Interieurontwerp & 3D-visualisatie", "item": "{{ url('/diensten/inrichting-en-planning') }}" }
     ]
 }
 </script>
@@ -38,7 +38,7 @@
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30 relative overflow-hidden" id="ip-hero">
         <div class="hidden lg:block absolute inset-y-0 right-0 w-1/2">
-            <img src="{{ asset('assets/foto-assets/MCJO3851_FA-1-1024x683.jpg') }}" alt="" class="w-full h-full object-cover">
+            <img src="{{ asset('assets/io-hero.jpg') }}" alt="Interieurontwerp sportschool" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-transparent"></div>
             <div class="absolute w-[650px] h-[650px] rounded-full border border-white/[0.07] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
             <div class="absolute w-[400px] h-[400px] rounded-full border border-white/[0.10] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
@@ -47,13 +47,13 @@
             <div class="ip-hero-el flex items-center gap-2 mb-6">
                 <a href="{{ url('/diensten') }}" class="text-white/40 text-xs font-medium hover:text-white transition" style="font-family: 'Inter'">Diensten</a>
                 <i class="fa-solid fa-chevron-right text-white/20 text-[8px]"></i>
-                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">Inrichting & planning</span>
+                <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">Interieurontwerp & 3D-visualisatie</span>
             </div>
             <div class="max-w-3xl">
-                <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Inrichting &<br><span class="text-primary">planning</span></h1>
-                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">Slim ontwerp en doordachte planning vormen de basis van elke succesvolle fitnessruimte. Wij vertalen jouw visie naar een functioneel en inspirerend concept.</p>
+                <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Interieurontwerp &<br><span class="text-primary">3D-visualisatie</span></h1>
+                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">Slim ontwerp vormt de basis van elke succesvolle sportschool. Wij vertalen jouw visie naar een ontwerp dat er niet alleen goed uitziet, maar ook rendeert. Omdat we ons alleen op sportscholen richten, zit alles wat een club succesvol maakt vanaf de eerste schets in het plan.</p>
                 <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                    <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                    <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                     <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk onze projecten</a>
                 </div>
             </div>
@@ -68,15 +68,15 @@
                 <div class="ip-block-text">
                     <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Zonering & indeling</span>
                     <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Elke vierkante meter <span class="text-primary">doordacht benut</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Een goede gym draait niet om zoveel mogelijk apparaten, maar om de juiste indeling. Wij ontwerpen zones die logisch op elkaar aansluiten: vrije gewichten gescheiden van cardio, een functionele zone met voldoende ruimte, en looppaden die flow creëren, ook tijdens piekuren.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Door rekening te houden met zichtlijnen, spiegelplaatsing en natuurlijke looproutes voelt jouw gym ruimer en professioneler aan. Of je nu 100 of 1.000 m² hebt.</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Een goede sportschool draait niet om zoveel mogelijk apparaten, maar om de juiste indeling. Wij ontwerpen zones die logisch op elkaar aansluiten: vrije gewichten gescheiden van cardio, een functionele zone met voldoende ruimte, en looplijnen die flow creëren, ook tijdens piekuren.</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Door rekening te houden met zichtlijnen, spiegelplaatsing en natuurlijke looproutes voelt jouw sportschool ruimer en professioneler aan. Of je nu 100 of 1.000 m² hebt. En elke m² die slim wordt benut, is een m² die omzet draait.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
                     </div>
                 </div>
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
-                    <img src="{{ asset('assets/foto-assets/MCJO3851_FA-1-1024x683.jpg') }}" alt="Doordachte gymindeling met zones" class="w-full h-full object-cover">
+                    <img src="{{ asset('assets/io-zonering.jpg') }}" alt="Doordachte sportschoolindeling met zones" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
@@ -97,47 +97,40 @@
                     'icon' => 'fa-comments',
                     'title' => 'Kennismaking & intake',
                     'desc' => 'We starten met een vrijblijvend gesprek. Wat is jouw visie? Wie is je doelgroep? Welke ruimte heb je beschikbaar? We brengen alles in kaart, van ambitie tot budget.',
-                    'detail' => 'Op locatie of via videocall',
-                    'video' => '/shorts/fitnessaannemer-short-1.mp4',
+                    'detail' => 'Bij ons op kantoor of op locatie',
+                    'video' => '/assets/io-step01.mp4',
                 ],
                 [
                     'nr' => '02',
                     'icon' => 'fa-ruler-combined',
                     'title' => 'Plattegrond & zonering',
-                    'desc' => 'Op basis van de inmeting maken wij een geoptimaliseerde plattegrond. Met doordachte zones: vrije gewichten, cardio, functioneel, stretching en looproutes die flow creëren.',
+                    'desc' => 'Op basis van de inmeting maken wij een geoptimaliseerde plattegrond. Met doordachte zones: vrije gewichten, cardio, functioneel, stretching en looplijnen die flow creëren.',
                     'detail' => '2D plattegrond met maatvoering',
-                    'images' => [
-                        ['src' => '/assets/foto-assets/BluePrint-2024-photos-50-819x1024.jpg', 'alt' => 'Plattegrond bovenaanzicht'],
-                        ['src' => '/assets/foto-assets/BluePrint-2024-photos-3-1024x683.jpg', 'alt' => 'Zonering detail'],
-                    ],
+                    'video' => '/assets/io-step02.mp4',
                 ],
                 [
                     'nr' => '03',
                     'icon' => 'fa-cube',
                     'title' => '3D visualisatie',
-                    'desc' => 'Jouw gym komt tot leven in fotorealistische 3D renders. Zie precies hoe de apparatuur staat, hoe het licht valt en hoe de sfeer aanvoelt. Vóórdat je investeert.',
+                    'desc' => 'Jouw sportschool komt tot leven in fotorealistische 3D-renders. Zie precies hoe de apparatuur staat, hoe het licht valt en hoe de sfeer aanvoelt. Vóórdat je investeert.',
                     'detail' => 'Fotorealistisch & vanuit elke hoek',
-                    'video' => '/shorts/fitnessaannemer-short-10.mp4',
+                    'video' => '/assets/io-step03.mp4',
                 ],
                 [
                     'nr' => '04',
                     'icon' => 'fa-list-check',
                     'title' => 'Apparatuurselectie',
-                    'desc' => 'Wij stellen een apparatuurpakket samen dat perfect past bij jouw concept, ruimte en budget. Van premium merken als Life Fitness en Matrix tot functionele rigs en flooring.',
+                    'desc' => 'Wij stellen een apparatuurpakket samen dat past bij jouw concept, ruimte en budget. Merk-onafhankelijk, uit het aanbod van 18 merken waarvan wij officieel dealer zijn.',
                     'detail' => 'Merk- en modeladvies op maat',
-                    'image' => '/assets/foto-assets/FULL-Ballin-Fit-013-WF206762-1-1024x683.jpg',
-                    'image_alt' => 'Fitnessapparatuur selectie',
+                    'video' => '/assets/io-step04.mp4',
                 ],
                 [
                     'nr' => '05',
                     'icon' => 'fa-file-signature',
                     'title' => 'Definitief plan & offerte',
-                    'desc' => 'Alles komt samen in een helder projectplan: plattegrond, 3D visuals, apparatuurlijst, planning en een transparante offerte. Zodat je precies weet waar je aan toe bent.',
+                    'desc' => 'Alles komt samen in een helder projectplan: plattegrond, 3D-visuals, apparatuurlijst, planning en een transparante offerte. Zodat je precies weet waar je aan toe bent.',
                     'detail' => 'Compleet en transparant',
-                    'images' => [
-                        ['src' => '/assets/foto-assets/BluePrint-2024-photos-39-1024x683.jpg', 'alt' => 'Projectplan document'],
-                        ['src' => '/assets/foto-assets/hotel-1024x768.jpg', 'alt' => 'Opgeleverde fitnessruimte'],
-                    ],
+                    'video' => '/assets/io-step05.mp4',
                 ],
             ];
             @endphp
@@ -202,12 +195,12 @@
                     <img src="{{ asset('assets/foto-assets/FULL-Ballin-Fit-013-WF206762-1-1024x683.jpg') }}" alt="Fitnessapparatuur op maat geselecteerd" class="w-full h-full object-cover">
                 </div>
                 <div class="ip-block-text">
-                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Apparatuurselectie</span>
-                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">De juiste apparatuur <br class="hidden md:block"><span class="text-primary">voor jouw concept</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Wij selecteren apparatuur die past bij jouw doelgroep, concept en budget. Van premium krachttoestellen en cardio-units tot functionele rigs, flooring en accessoires. Alles afgestemd op de beschikbare ruimte en gewenste beleving.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Dankzij onze directe lijnen met fabrikanten als Life Fitness, Matrix en Hammer Strength krijg je scherpe prijzen en snelle levertijden. Wij adviseren objectief, zonder vaste merkverplichting.</p>
+                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Ontwerp dat rendeert</span>
+                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Mooi is niet genoeg, <span class="text-primary">het moet werken</span></h2>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Wij denken bij elk ontwerp commercieel mee. Waar komt de entree zodat nieuwe leden meteen de juiste indruk krijgen? Welke zones stimuleren leden om langer te blijven? Hoe voorkom je opstoppingen tijdens piekuren?</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Een sportschool moet niet alleen mooi zijn, maar ook werken als verdienmodel: elke m² moet omzet draaien en de indeling moet leden binden. Dat nemen we vanaf de eerste schets mee in het ontwerp.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
                     </div>
                 </div>

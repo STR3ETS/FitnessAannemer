@@ -1,7 +1,7 @@
 ﻿@extends('layouts.app')
 
-@section('title', 'Onderhoud & Reparaties | Fitness Aannemer')
-@section('meta_description', 'Professioneel onderhoud en snelle reparatie van fitnessapparatuur. Minimaliseer downtime en verleng de levensduur van jouw investering.')
+@section('title', 'Onderhoud & reparatie fitnessapparatuur | Fitness Aannemer')
+@section('meta_description', 'Onderhoudscontracten, garantieservice en snelle reparaties voor jouw sportschool. Wij houden je apparatuur draaiend, want stilstand kost leden. Bekijk de servicepakketten.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -53,7 +53,7 @@
                 <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Onderhoud &<br><span class="text-primary">reparaties</span></h1>
                 <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">Bescherm je investering met professioneel onderhoud en snelle reparaties. Wij zorgen dat jouw apparatuur altijd in topconditie blijft.</p>
                 <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                    <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                    <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                     <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk onze projecten</a>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                     <p class="text-secondary/50 text-sm leading-relaxed mb-4">Fitnessapparatuur draait dagelijks op volle capaciteit. Zonder regelmatig onderhoud slijten onderdelen sneller, ontstaan storingen en daalt de gebruikservaring voor jouw leden. Preventief onderhoud voorkomt dit.</p>
                     <p class="text-secondary/50 text-sm leading-relaxed mb-8">Met een onderhoudscontract op maat zorgen wij voor periodieke inspectie, smering, kalibratie en vervanging van slijtdelen. Zodat jouw apparatuur jarenlang betrouwbaar blijft draaien.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
                     </div>
                 </div>
@@ -196,7 +196,7 @@
                     <p class="text-secondary/50 text-sm leading-relaxed mb-4">Een kapot toestel betekent ontevreden leden en gemiste inkomsten. Daarom bieden wij snelle reparatieservice met korte responstijden. Ons team van ervaren technici lost de meeste storingen ter plaatse op.</p>
                     <p class="text-secondary/50 text-sm leading-relaxed mb-8">Geen wachtlijsten en geen onduidelijkheid. Neem contact op en wij zorgen dat jouw gym zo snel mogelijk weer op volle kracht draait. In heel Nederland en Belgie.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
                     </div>
                 </div>

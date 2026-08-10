@@ -28,7 +28,7 @@
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30 relative overflow-hidden">
         <div class="hidden lg:block absolute inset-y-0 right-0 w-1/2">
-            <video src="{{ asset('assets/10-3_AI-Transitions_v2.mp4') }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+            <img src="{{ asset('assets/vl-blok2.jpg') }}" alt="" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-transparent"></div>
             <div class="absolute w-[650px] h-[650px] rounded-full border border-white/[0.07] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
             <div class="absolute w-[400px] h-[400px] rounded-full border border-white/[0.10] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
@@ -43,7 +43,7 @@
                 <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Onze <span class="text-primary">merken</span></h1>
                 <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">Niet gebonden aan een merk, wel aan kwaliteit. Wij adviseren objectief welke apparatuur past bij jouw concept, doelgroep en budget. Breed assortiment, scherpe condities.</p>
                 <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                    <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                    <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                     <a href="{{ url('/apparatuur') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk apparatuur</a>
                 </div>
             </div>
@@ -61,12 +61,12 @@
                     <p class="text-secondary/50 text-sm leading-relaxed mb-4">Wij werken rechtstreeks samen met de grootste namen in de fitnessindustrie. Dat betekent geen tussenhandel, scherpe prijzen en toegang tot het volledige assortiment van elk merk.</p>
                     <p class="text-secondary/50 text-sm leading-relaxed mb-8">Van Life Fitness en Matrix voor cardio en kracht, tot Concept2 voor functionele training en Gym80 voor Duitse precisie-krachtapparatuur. Wij adviseren objectief welke merken en modellen het beste passen bij jouw concept.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/apparatuur') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk apparatuur</a>
                     </div>
                 </div>
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
-                    <img src="{{ asset('assets/wp-uploads/nike-4-2-1024x683.jpg') }}" alt="Premium fitnessapparatuur showroom" class="w-full h-full object-cover" loading="lazy">
+                    <img src="{{ asset('assets/Matrix_Fitness.jpg') }}" alt="Matrix Fitness apparatuur" class="w-full h-full object-cover" loading="lazy">
                 </div>
             </div>
         </div>
@@ -81,23 +81,23 @@
 
             @php
             $merken = [
-                ['name' => 'Life Fitness', 'logo' => 'assets/wp-uploads/Life-Fitness.png', 'desc' => 'Wereldleider in fitnessapparatuur. Premium cardio- en krachtapparatuur voor commercieel gebruik.', 'cat' => 'Cardio & Kracht'],
-                ['name' => 'Matrix Fitness', 'logo' => 'assets/wp-uploads/MATRIX-LOGO.png', 'desc' => 'Innovatieve fitnessoplossingen met geavanceerde technologie en strak design.', 'cat' => 'Cardio & Kracht'],
+                ['name' => 'Life Fitness', 'logo' => 'assets/wp-uploads/Life-Fitness.png', 'desc' => 'Wereldleider in fitnessapparatuur. Premium cardio- en krachtapparatuur voor commercieel gebruik.', 'cat' => 'Cardio en Kracht'],
+                ['name' => 'Matrix Fitness', 'logo' => 'assets/wp-uploads/MATRIX-LOGO.png', 'desc' => 'Innovatieve fitnessoplossingen met geavanceerde technologie en strak design.', 'cat' => 'Cardio en Kracht'],
                 ['name' => 'GYM80', 'logo' => 'assets/wp-uploads/LOGO_WEIss-1024x462-1.png', 'desc' => 'Duitse precisie-engineering. Commerciele krachtapparatuur van de hoogste kwaliteit.', 'cat' => 'Krachtapparatuur'],
-                ['name' => 'Hammer Strength', 'logo' => 'assets/wp-uploads/logo-hammer-strength-2.png', 'desc' => 'Plate-loaded krachtapparatuur voor serieuze krachtsporters. Robuust en professioneel.', 'cat' => 'Krachtapparatuur'],
-                ['name' => 'Concept2', 'logo' => 'assets/wp-uploads/Concept2-1.png', 'desc' => 'De standaard in roeimachines, SkiErg en BikeErg. Onmisbaar voor functionele training.', 'cat' => 'Functioneel'],
-                ['name' => 'EGYM', 'logo' => null, 'desc' => 'Digitale kracht- en flexibiliteitstraining. Slimme apparatuur die automatisch op de gebruiker afstemt.', 'cat' => 'Digitaal & Kracht'],
-                ['name' => 'Eleiko', 'logo' => null, 'desc' => 'Zweedse topkwaliteit. Olympische halters, bumper plates en platforms voor serieuze kracht.', 'cat' => 'Krachtapparatuur'],
-                ['name' => 'Watson', 'logo' => null, 'desc' => 'Handgemaakte Britse krachtapparatuur. Gebouwd om generaties mee te gaan.', 'cat' => 'Krachtapparatuur'],
-                ['name' => 'Nike Strength', 'logo' => null, 'desc' => 'Functionele trainingsapparatuur en accessoires met het kenmerkende Nike DNA.', 'cat' => 'Functioneel & Kracht'],
-                ['name' => 'ZIVA', 'logo' => null, 'desc' => 'Professionele dumbbells, kettlebells en accessoires. Duurzaam en stijlvol ontworpen.', 'cat' => 'Accessoires & Kracht'],
-                ['name' => 'Vision', 'logo' => null, 'desc' => 'Betrouwbare cardio-apparatuur voor commercieel en thuisgebruik. Solide en onderhoudsvriendelijk.', 'cat' => 'Cardio'],
-                ['name' => 'YourReformer', 'logo' => null, 'desc' => 'Reformers en pilatesapparatuur voor studio\'s. Compact, stijlvol en professioneel.', 'cat' => 'Pilates'],
-                ['name' => 'LifeMaxx', 'logo' => null, 'desc' => 'Nederlands merk voor dumbbells, racks en functionele trainingstools. Breed assortiment.', 'cat' => 'Accessoires & Kracht'],
-                ['name' => 'TKO', 'logo' => null, 'desc' => 'Professionele krachtaccessoires, bags en opslagsystemen voor commerciele gyms.', 'cat' => 'Accessoires & Opslag'],
-                ['name' => 'Assault Fitness', 'logo' => null, 'desc' => 'AirBikes en runners voor high-intensity training. Gebouwd voor de zwaarste workouts.', 'cat' => 'Functioneel & Cardio'],
-                ['name' => 'Sprinttracks', 'logo' => null, 'desc' => 'Professionele sprintbanen voor indoor gebruik. Ideaal voor functionele en HIIT zones.', 'cat' => 'Functioneel'],
-                ['name' => 'InBody', 'logo' => null, 'desc' => 'Lichaamsanalyse en compositiemetingen. Professionele meetapparatuur voor resultaattracking.', 'cat' => 'Analyse & Metingen'],
+                ['name' => 'Hammer Strength', 'logo' => 'assets/brand-logos/logo-hammer-strength.png', 'desc' => 'Plate-loaded krachtapparatuur voor serieuze krachtsporters. Robuust en professioneel.', 'cat' => 'Krachtapparatuur'],
+                ['name' => 'Concept2', 'logo' => 'assets/wp-uploads/Concept2-1.png', 'desc' => 'De standaard in roeimachines, SkiErg en BikeErg. Onmisbaar voor functionele training.', 'cat' => 'Cardio'],
+                ['name' => 'EGYM', 'logo' => 'assets/brand-logos/Logo_Egym.png', 'desc' => 'Digitale kracht- en flexibiliteitstraining. Slimme apparatuur die automatisch op de gebruiker afstemt.', 'cat' => 'Digitaal en Kracht'],
+                ['name' => 'Eleiko', 'logo' => 'assets/brand-logos/Eleiko_Logo_2021_RGB-scaled.png', 'desc' => 'Zweedse topkwaliteit. Olympische halters, bumper plates en platforms voor serieuze kracht.', 'cat' => 'Functioneel'],
+                ['name' => 'Watson', 'logo' => 'assets/brand-logos/Logo_Watson.png', 'desc' => 'Handgemaakte Britse krachtapparatuur. Gebouwd om generaties mee te gaan.', 'cat' => 'Krachtapparatuur'],
+                ['name' => 'Nike Strength', 'logo' => 'assets/brand-logos/NikeStrength_Black_Logo_600px.png', 'desc' => 'Functionele trainingsapparatuur en accessoires met het kenmerkende Nike DNA.', 'cat' => 'Functioneel'],
+                ['name' => 'ZIVA', 'logo' => 'assets/brand-logos/Logo_ZIVA.png', 'desc' => 'Professionele dumbbells, kettlebells en accessoires. Duurzaam en stijlvol ontworpen.', 'cat' => 'Functioneel'],
+                ['name' => 'Vision', 'logo' => 'assets/brand-logos/Vision_Fitness_Logo.jpg', 'desc' => 'Betrouwbare cardio-apparatuur voor commercieel en thuisgebruik. Solide en onderhoudsvriendelijk.', 'cat' => 'Cardio en Kracht'],
+                ['name' => 'YourReformer', 'logo' => 'assets/brand-logos/Logo_YourReformer.png', 'desc' => 'Reformers en pilatesapparatuur voor studio\'s. Compact, stijlvol en professioneel.', 'cat' => 'Reformers'],
+                ['name' => 'LifeMaxx', 'logo' => 'assets/brand-logos/Logo_Lifemaxx.webp', 'desc' => 'Nederlands merk voor dumbbells, racks en functionele trainingstools. Breed assortiment.', 'cat' => 'Functioneel en Kracht'],
+                ['name' => 'TKO', 'logo' => 'assets/brand-logos/Logo_TKO.webp', 'desc' => 'Professionele krachtaccessoires, bags en opslagsystemen voor commerciele gyms.', 'cat' => 'Cardio en Kracht'],
+                ['name' => 'Assault Fitness', 'logo' => 'assets/brand-logos/assault_fitness_logo.webp', 'desc' => 'AirBikes en runners voor high-intensity training. Gebouwd voor de zwaarste workouts.', 'cat' => 'Cardio'],
+                ['name' => 'Sprinttracks', 'logo' => 'assets/brand-logos/Logo_Sprinttracks.png', 'desc' => 'Professionele sprintbanen voor indoor gebruik. Ideaal voor functionele en HIIT zones.', 'cat' => 'Vloeren'],
+                ['name' => 'InBody', 'logo' => 'assets/brand-logos/Logo_Inbody.png', 'desc' => 'Lichaamsanalyse en compositiemetingen. Professionele meetapparatuur voor resultaattracking.', 'cat' => 'Analyse en metingen'],
             ];
             @endphp
 
@@ -149,7 +149,7 @@
                     <p class="text-secondary/50 text-sm leading-relaxed mb-4">Elk merk heeft zijn eigen sterke punten. Life Fitness voor all-round commercieel gebruik, Gym80 voor high-end kracht, Concept2 voor functionele training. Wij adviseren objectief welke combinatie past bij jouw situatie.</p>
                     <p class="text-secondary/50 text-sm leading-relaxed mb-8">Geen vaste merkverplichtingen, geen verborgen kosten. Wij stellen samen met jou het optimale pakket samen op basis van concept, doelgroep en budget. Inclusief levering, installatie en garantie.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/apparatuur') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk apparatuur</a>
                     </div>
                 </div>

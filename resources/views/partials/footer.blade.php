@@ -30,10 +30,9 @@
         <div class="md:col-span-2">
             <h6 class="text-white font-semibold text-sm mb-4">Diensten</h6>
             <div class="flex flex-col gap-2.5">
-                <a href="{{ url('/diensten/inrichting-en-planning') }}" class="text-white/50 text-xs hover:text-white transition">Ontwerp & 3D-visualisatie</a>
-                <a href="{{ url('/diensten/inrichting-en-planning') }}" class="text-white/50 text-xs hover:text-white transition">Inrichting & planning</a>
+                <a href="{{ url('/diensten/turnkey-sportschool-bouwen') }}" class="text-white/50 text-xs hover:text-white transition">Turnkey sportschool bouwen</a>
+                <a href="{{ url('/diensten/inrichting-en-planning') }}" class="text-white/50 text-xs hover:text-white transition">Interieurontwerp & 3D-visualisatie</a>
                 <a href="{{ url('/diensten/levering-en-installatie') }}" class="text-white/50 text-xs hover:text-white transition">Levering & installatie</a>
-                <a href="{{ url('/diensten/onderhoud-en-reparaties') }}" class="text-white/50 text-xs hover:text-white transition">Onderhoud & reparaties</a>
                 <a href="{{ url('/diensten/leasing-en-financiering') }}" class="text-white/50 text-xs hover:text-white transition">Leasing & financiering</a>
             </div>
         </div>
@@ -43,13 +42,13 @@
             <h6 class="text-white font-semibold text-sm mb-4">Oplossingen</h6>
             <div class="flex flex-col gap-2.5">
                 <a href="{{ url('/sportschool-inrichten') }}" class="text-white/50 text-xs hover:text-white transition">Sportscholen</a>
-                <a href="{{ url('/homegyms-inrichten') }}" class="text-white/50 text-xs hover:text-white transition">Homegyms</a>
-                <a href="{{ url('/pilates-studio-inrichten') }}" class="text-white/50 text-xs hover:text-white transition">Pilates studio's</a>
-                <a href="{{ url('/crossfit-box-inrichten') }}" class="text-white/50 text-xs hover:text-white transition">Crossfit boxen</a>
                 <a href="{{ url('/pt-studio-inrichten') }}" class="text-white/50 text-xs hover:text-white transition">PT studio's</a>
-                <a href="{{ url('/bedrijfsfitness-inrichten') }}" class="text-white/50 text-xs hover:text-white transition">Bedrijfsfitness</a>
+                <a href="{{ url('/pilates-studio-inrichten') }}" class="text-white/50 text-xs hover:text-white transition">Pilates studio's</a>
+                <a href="{{ url('/homegyms-inrichten') }}" class="text-white/50 text-xs hover:text-white transition">Homegyms</a>
                 <a href="{{ url('/hotel-gym-inrichten') }}" class="text-white/50 text-xs hover:text-white transition">Hotel gyms</a>
+                <a href="{{ url('/bedrijfsfitness-inrichten') }}" class="text-white/50 text-xs hover:text-white transition">Bedrijfsfitness</a>
                 <a href="{{ url('/hyrox-box-inrichten') }}" class="text-white/50 text-xs hover:text-white transition">Hyrox boxen</a>
+                <a href="{{ url('/wellnessruimte-inrichten') }}" class="text-white/50 text-xs hover:text-white transition">Wellness & recovery</a>
             </div>
         </div>
 
@@ -59,12 +58,11 @@
             <div class="flex flex-col gap-2.5">
                 <a href="{{ url('/') }}" class="text-white/50 text-xs hover:text-white transition">Home</a>
                 <a href="{{ url('/over-ons') }}" class="text-white/50 text-xs hover:text-white transition">Over ons</a>
-                <a href="{{ url('/apparatuur') }}" class="text-white/50 text-xs hover:text-white transition">Apparatuur</a>
+                <a href="{{ url('/apparatuur') }}" class="text-white/50 text-xs hover:text-white transition">Apparatuur & materiaal</a>
                 <a href="{{ url('/onze-merken') }}" class="text-white/50 text-xs hover:text-white transition">Onze merken</a>
                 <a href="{{ url('/projecten') }}" class="text-white/50 text-xs hover:text-white transition">Projecten</a>
                 <a href="{{ url('/fitnesswijzer') }}" class="text-white/50 text-xs hover:text-white transition">Fitnesswijzer</a>
-                <a href="{{ url('/offerte-aanvragen') }}" class="text-white/50 text-xs hover:text-white transition">Offerte aanvragen</a>
-                <a href="{{ url('/contact') }}" class="text-white/50 text-xs hover:text-white transition">Contact</a>
+                <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="text-white/50 text-xs hover:text-white transition">Vrijblijvend adviesgesprek</a>
             </div>
         </div>
 

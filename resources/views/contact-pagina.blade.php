@@ -44,8 +44,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
             <div class="max-w-3xl">
                 <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">Contact</span>
-                <h1 class="text-white text-4xl lg:text-5xl font-bold leading-[1.05] mb-6">Wil jij jouw ideale fitnessruimte realiseren?</h1>
-                <p class="text-white/60 text-sm lg:text-base leading-relaxed max-w-xl">Heb je een vraag over onze diensten of wil je vrijblijvend sparren over jouw project? Neem contact met ons op — we reageren binnen 24 uur.</p>
+                <h1 class="text-white text-4xl lg:text-5xl font-bold leading-[1.05] mb-6">Laten we <span class="text-primary">kennismaken</span></h1>
+                <p class="text-white/60 text-sm lg:text-base leading-relaxed max-w-xl">Heb je een vraag over onze diensten of wil je vrijblijvend sparren over jouw project? Neem contact op. We reageren binnen 24 uur.</p>
             </div>
         </div>
     </section>

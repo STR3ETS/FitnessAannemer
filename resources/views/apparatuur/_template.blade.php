@@ -1,4 +1,4 @@
-﻿{{-- Shared template for all apparatuur category pages --}}
+{{-- Shared template for all apparatuur category pages --}}
 @extends('layouts.app')
 
 @section('title', $title . ' | Fitness Aannemer')
@@ -28,14 +28,13 @@
 @endsection
 
 @section('content')
+    @php $heroImg = $heroImage ?? $media1; @endphp
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30 relative overflow-hidden">
         <div class="hidden lg:block absolute inset-y-0 right-0 w-1/2">
-            @if(str_ends_with($media1, '.mp4'))
-                <video src="{{ asset($media1) }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
-            @elseif(str_starts_with($media1, 'http'))
-                <img src="{{ $media1 }}" alt="" class="w-full h-full object-cover">
+            @if(str_ends_with($heroImg, '.mp4'))
+                <video src="{{ asset($heroImg) }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
             @else
-                <img src="{{ asset($media1) }}" alt="" class="w-full h-full object-cover">
+                <img src="{{ asset($heroImg) }}" alt="" class="w-full h-full object-cover">
             @endif
             <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-transparent"></div>
             <div class="absolute w-[650px] h-[650px] rounded-full border border-white/[0.07] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
@@ -51,8 +50,8 @@
                 <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">{!! $heroTitle !!}</h1>
                 <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">{{ $heroDesc }}</p>
                 <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                    <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
-                    <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk onze projecten</a>
+                    <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                    <a href="{{ url($heroCta2Url ?? '/onze-merken') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">{{ $heroCta2Text ?? 'Bekijk alle merken' }}</a>
                 </div>
             </div>
         </div>
@@ -69,8 +68,8 @@
                     <p class="text-secondary/50 text-sm leading-relaxed mb-4">{{ $introP1 }}</p>
                     <p class="text-secondary/50 text-sm leading-relaxed mb-8">{{ $introP2 }}</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
-                        <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url($introCta2Url ?? '/onze-merken') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">{{ $introCta2Text ?? 'Bekijk alle merken' }}</a>
                     </div>
                 </div>
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
@@ -86,38 +85,25 @@
 
     <section class="bg-secondary py-16 lg:py-32 overflow-hidden" id="app-section2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            {{-- Section heading --}}
-            <div class="ip-fade text-center mb-16">
-                <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">{{ $midLabel }}</span>
-                <h2 class="text-white text-4xl lg:text-5xl font-bold leading-[1.05]">{!! $midTitle !!}</h2>
-            </div>
-
-            {{-- Product feature cards --}}
-            <div class="ip-fade grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
-                @foreach($products as $prod)
-                <div class="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-7 hover:border-primary/30 hover:bg-primary/[0.04] transition-all duration-300">
-                    <div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
-                        <i class="fa-solid {{ $prod['icon'] }} text-primary"></i>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden bg-white/[0.03] border border-white/[0.06]">
+                    @if(str_ends_with($mediaMid, '.mp4'))
+                        <video src="{{ asset($mediaMid) }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                    @else
+                        <img src="{{ asset($mediaMid) }}" alt="{{ $midLabel }}" class="w-full h-full object-cover" loading="lazy">
+                    @endif
+                </div>
+                <div class="ip-block-text">
+                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $midLabel }}</span>
+                    <h2 class="text-white text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">{!! $midTitle !!}</h2>
+                    <p class="text-white/50 text-sm leading-relaxed mb-4">{{ $midP1 }}</p>
+                    <p class="text-white/50 text-sm leading-relaxed mb-8">{{ $midP2 }}</p>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url($midCta2Url ?? '/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">{{ $midCta2Text ?? 'Bekijk onze projecten' }}</a>
                     </div>
-                    <h3 class="text-white text-base font-bold mb-2" style="font-family: 'Inter'">{{ $prod['title'] }}</h3>
-                    <p class="text-white/40 text-sm leading-relaxed">{{ $prod['desc'] }}</p>
-                </div>
-                @endforeach
-            </div>
-
-            {{-- Brand logos --}}
-            @if(!empty($merken))
-            <div class="ip-fade">
-                <p class="text-white/30 text-xs uppercase tracking-widest font-semibold text-center mb-8">Merken in deze categorie</p>
-                <div class="flex flex-wrap items-center justify-center gap-4">
-                    @foreach($merken as $merk)
-                    <span class="brand-pill">
-                        <img src="{{ $merk['logo'] }}" alt="{{ $merk['name'] }}" class="brand-logo">
-                    </span>
-                    @endforeach
                 </div>
             </div>
-            @endif
         </div>
     </section>
 
@@ -132,8 +118,8 @@
                     <p class="text-secondary/50 text-sm leading-relaxed mb-4">{{ $section3P1 }}</p>
                     <p class="text-secondary/50 text-sm leading-relaxed mb-8">{{ $section3P2 }}</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
-                        <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url($section3Cta2Url ?? '/diensten/leasing-en-financiering') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">{{ $section3Cta2Text ?? 'Bekijk leaseopties' }}</a>
                     </div>
                 </div>
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">

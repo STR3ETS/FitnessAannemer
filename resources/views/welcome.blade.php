@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Fitness Aannemer | Specialist in gymontwerp & inrichting</title>
+        <title>Sportschool ontwerpen, bouwen en inrichten | Fitness Aannemer</title>
 
         {{-- SEO Meta --}}
-        <meta name="description" content="Fitness Aannemer is de onafhankelijke specialist in het ontwerpen en inrichten van sportscholen in de Benelux. Van ontwerp tot oplevering, alles onder een dak. 60+ projecten gerealiseerd.">
+        <meta name="description" content="Sportschool laten ontwerpen, bouwen en inrichten? Wij regelen het complete traject. 60+ projecten, dealer van 18 merken, eigen montageteam. Plan een gratis adviesgesprek.">
         <meta name="keywords" content="fitnessapparatuur, gym inrichting, fitnessruimte ontwerp, krachtapparatuur, cardioapparatuur, fitness aannemer, gym op maat, bedrijfsfitness, PT studio inrichting, fitnessapparatuur leasen">
         <meta name="author" content="Fitness Aannemer">
         <meta name="robots" content="index, follow">
@@ -18,16 +18,16 @@
         {{-- Open Graph / Facebook --}}
         <meta property="og:type" content="website">
         <meta property="og:url" content="{{ url('/') }}">
-        <meta property="og:title" content="Fitness Aannemer | Specialist in gymontwerp & inrichting">
-        <meta property="og:description" content="De onafhankelijke specialist in het ontwerpen en inrichten van sportscholen in de Benelux. Van ontwerp tot oplevering, alles onder een dak.">
+        <meta property="og:title" content="Sportschool ontwerpen, bouwen & inrichten | Fitness Aannemer">
+        <meta property="og:description" content="Sportschool laten ontwerpen, bouwen en inrichten? Wij regelen het complete traject. 60+ projecten, dealer van 18 merken, eigen montageteam.">
         <meta property="og:locale" content="nl_NL">
         <meta property="og:site_name" content="Fitness Aannemer">
         {{-- <meta property="og:image" content="{{ asset('images/og-image.jpg') }}"> --}}
 
         {{-- Twitter --}}
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Fitness Aannemer | Specialist in gymontwerp & inrichting">
-        <meta name="twitter:description" content="De onafhankelijke specialist in het ontwerpen en inrichten van sportscholen in de Benelux. Van ontwerp tot oplevering, alles onder een dak.">
+        <meta name="twitter:title" content="Sportschool ontwerpen, bouwen & inrichten | Fitness Aannemer">
+        <meta name="twitter:description" content="Sportschool laten ontwerpen, bouwen en inrichten? Wij regelen het complete traject. 60+ projecten, dealer van 18 merken, eigen montageteam.">
         {{-- <meta name="twitter:image" content="{{ asset('images/og-image.jpg') }}"> --}}
 
         {{-- Structured Data --}}
@@ -135,7 +135,7 @@
                     <h1 id="hero-heading" class="text-white text-3xl sm:text-5xl lg:text-6xl font-bold text-center leading-[1]"></h1>
                     <p class="hero-fade text-sm text-white opacity-80 font-medium text-center my-6 sm:my-8 px-2">Onafhankelijk ontwerp, complete inrichting en oplevering<br class="hidden sm:block"> onder een dak. Turn key, dat is waar wij het verschil maken.</p>
                     <div class="hero-fade flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk onze projecten</a>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
 
         <div class="bg-primary w-full py-4 overflow-hidden">
             <div class="marquee flex items-center gap-12 whitespace-nowrap">
-                <span class="text-white text-xs font-semibold uppercase tracking-wider">Gratis adviesgesprek</span>
+                <span class="text-white text-xs font-semibold uppercase tracking-wider">Vrijblijvend adviesgesprek</span>
                 <span class="text-white/50">&#9670;</span>
                 <span class="text-white text-xs font-semibold uppercase tracking-wider">Ontwerp op maat</span>
                 <span class="text-white/50">&#9670;</span>
@@ -156,7 +156,7 @@
                 <span class="text-white/50">&#9670;</span>
                 <span class="text-white text-xs font-semibold uppercase tracking-wider">Leasing mogelijk</span>
                 <span class="text-white/50">&#9670;</span>
-                <span class="text-white text-xs font-semibold uppercase tracking-wider">Gratis adviesgesprek</span>
+                <span class="text-white text-xs font-semibold uppercase tracking-wider">Vrijblijvend adviesgesprek</span>
                 <span class="text-white/50">&#9670;</span>
                 <span class="text-white text-xs font-semibold uppercase tracking-wider">Ontwerp op maat</span>
                 <span class="text-white/50">&#9670;</span>
@@ -186,7 +186,7 @@
                     @endfor
                 </div>
                 <div class="social-fade flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-8 lg:mt-12">
-                    <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                    <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
                     <a href="https://www.instagram.com/fitnessaannemer.nl/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
@@ -248,58 +248,9 @@
                             </div>
                         </div>
                         <div class="flex-shrink-0 w-[480px] hidden lg:block">
-                            <svg class="panel-sketch w-full h-auto" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                {{-- Room shell: walls, floor, ceiling --}}
-                                <path class="draw-line" d="M250 140 L460 245 L250 350 L40 245Z" stroke-width="1.5"/>
-                                <path class="draw-line" d="M40 245 L40 85 L250 0 L250 140" stroke-width="1.5"/>
-                                <path class="draw-line" d="M460 245 L460 85 L250 0" stroke-width="1.5"/>
-                                <path class="draw-line draw-line--subtle" d="M40 85 L250 0 L460 85" stroke-width="0.8"/>
-
-                                {{-- Floor grid --}}
-                                <path class="draw-line draw-line--subtle" d="M145 192 L355 192" stroke-width="0.4"/>
-                                <path class="draw-line draw-line--subtle" d="M93 220 L407 220" stroke-width="0.4"/>
-                                <path class="draw-line draw-line--subtle" d="M66 245 L434 245" stroke-width="0.4"/>
-                                <path class="draw-line draw-line--subtle" d="M93 270 L407 270" stroke-width="0.4"/>
-                                <path class="draw-line draw-line--subtle" d="M145 298 L355 298" stroke-width="0.4"/>
-                                <path class="draw-line draw-line--subtle" d="M250 140 L250 350" stroke-width="0.4"/>
-                                <path class="draw-line draw-line--subtle" d="M175 140 L40 245" stroke-width="0.4"/>
-                                <path class="draw-line draw-line--subtle" d="M325 140 L460 245" stroke-width="0.4"/>
-
-                                {{-- Ceiling beams --}}
-                                <path class="draw-line draw-line--subtle" d="M145 42 L145 140" stroke-width="0.5"/>
-                                <path class="draw-line draw-line--subtle" d="M355 42 L355 140" stroke-width="0.5"/>
-                                <path class="draw-line draw-line--subtle" d="M145 42 L40 127" stroke-width="0.5"/>
-                                <path class="draw-line draw-line--subtle" d="M355 42 L460 127" stroke-width="0.5"/>
-
-                                {{-- Windows (back wall, 3x) --}}
-                                <path class="draw-line" d="M290 18 L365 55 L365 105 L290 68Z" stroke-width="0.8"/>
-                                <path class="draw-line draw-line--subtle" d="M328 37 L328 87" stroke-width="0.4"/>
-                                <path class="draw-line" d="M375 55 L435 85 L435 135 L375 105Z" stroke-width="0.8"/>
-                                <path class="draw-line draw-line--subtle" d="M405 70 L405 120" stroke-width="0.4"/>
-                                <path class="draw-line" d="M210 10 L275 40 L275 85 L210 55Z" stroke-width="0.8"/>
-
-                                {{-- Mirror wall (left) --}}
-                                <path class="draw-line draw-line--subtle" d="M43 100 L170 50 L170 10 L43 60Z" stroke-width="0.7"/>
-                                <path class="draw-line draw-line--subtle" d="M43 140 L130 100 L130 55 L43 95Z" stroke-width="0.5"/>
-
-                                {{-- Entrance door (right wall) --}}
-                                <path class="draw-line" d="M440 185 L440 130" stroke-width="1.5"/>
-                                <path class="draw-line" d="M455 192 L455 137" stroke-width="1.5"/>
-                                <path class="draw-line" d="M440 130 L455 137" stroke-width="1"/>
-                                <path class="draw-line" d="M440 185 L455 192" stroke-width="1"/>
-                                <path class="draw-line draw-line--subtle" d="M444 180 L451 183 L451 143 L444 140Z" stroke-width="0.5"/>
-                                <circle class="draw-line" cx="448" cy="164" r="1.5" stroke-width="0.8"/>
-
-                                {{-- Hanging lights --}}
-                                <path class="draw-line draw-line--subtle" d="M190 18 L190 38" stroke-width="0.5"/>
-                                <path class="draw-line draw-line--subtle" d="M183 38 L197 38" stroke-width="0.8"/>
-                                <path class="draw-line draw-line--subtle" d="M340 40 L340 60" stroke-width="0.5"/>
-                                <path class="draw-line draw-line--subtle" d="M333 60 L347 60" stroke-width="0.8"/>
-
-                                {{-- Dimension annotations --}}
-                                <path class="draw-line draw-line--subtle" d="M250 375 L470 262" stroke-width="0.5" stroke-dasharray="4 4"/>
-                                <path class="draw-line draw-line--subtle" d="M250 375 L30 262" stroke-width="0.5" stroke-dasharray="4 4"/>
-                            </svg>
+                            <div class="rounded-3xl aspect-[9/16] max-h-[420px] overflow-hidden relative">
+                                <video src="{{ asset('assets/10_AI-Transitions_v1.mp4') }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
                         </div>
                         <div class="absolute bottom-16 right-6 hidden lg:flex items-center gap-2 text-secondary/30">
                             <span class="text-xs font-medium uppercase tracking-wider">Scroll om te ontdekken</span>
@@ -654,9 +605,9 @@
                                 <div class="h-[1px] w-16 bg-primary/30"></div>
                                 <span class="text-primary text-xs font-semibold uppercase tracking-widest">Realisatie</span>
                             </div>
-                            <h3 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.1] mb-4 lg:mb-6">Levering<br>& installatie</h3>
+                            <h3 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.1] mb-4 lg:mb-6">Realisatie<br>& <span class="text-primary">installatie</span></h3>
                             <p class="text-secondary/50 text-sm leading-relaxed max-w-md mb-6">Zodra het ontwerp is goedgekeurd, regelen wij de volledige levering en plaatsing van de inrichting en apparatuur. Alles wordt geinstalleerd volgens het ontwerp en afgesteld voor gebruik.</p>
-                            <p class="text-secondary/50 text-sm leading-relaxed max-w-md mb-8">Van het uitladen tot het afstellen van de laatste machine. Bouwkundig werk loopt via onze vaste partneraannemers. Wij houden de regie op inrichting en oplevering.</p>
+                            <p class="text-secondary/50 text-sm leading-relaxed max-w-md mb-8">Een aanspreekpunt, een planning, een opleverdatum. Bouwkundig werk loopt via onze vaste partneraannemers. Wij houden de regie op inrichting en oplevering.</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Professionele montage</span>
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Vaste opleverdatum</span>
@@ -674,8 +625,8 @@
                         </div>
                         {{-- Desktop videos --}}
                         <div class="flex-shrink-0 hidden lg:flex items-start gap-5 relative">
-                            <video src="/shorts/fitnessaannemer-short-4.mp4" class="w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl -mt-12" muted loop playsinline autoplay></video>
-                            <video src="/shorts/fitnessaannemer-short-5.mp4" class="w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
+                            <video src="/shorts/fitnessaannemer-short-realisatie-1.mp4" class="w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl -mt-12" muted loop playsinline autoplay></video>
+                            <video src="/shorts/fitnessaannemer-short-realisatie-2.mp4" class="w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
                             <div class="absolute bottom-8 -left-8 bg-white rounded-3xl shadow-xl p-5 z-10">
                                 <div class="flex items-center gap-3">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -691,9 +642,57 @@
                     </div>
                 </div>
 
+                {{-- Panel 5: Schoonmaak & sleuteloverdracht (1 video) --}}
+                <div class="horizontal-panel relative">
+                    <span class="absolute -bottom-8 -left-6 text-[350px] font-black text-secondary/[0.03] leading-none select-none pointer-events-none hidden lg:block">04</span>
+                    <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 flex flex-col lg:flex-row items-center h-full relative gap-8 lg:gap-16">
+                        <div class="flex-1 pt-8 lg:pt-12">
+                            <div class="flex items-center gap-3 mb-4 lg:mb-6">
+                                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+                                    <span class="text-white text-xs font-bold">04</span>
+                                </div>
+                                <div class="h-[1px] w-16 bg-primary/30"></div>
+                                <span class="text-primary text-xs font-semibold uppercase tracking-widest">Oplevering</span>
+                            </div>
+                            <h3 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.1] mb-4 lg:mb-6">Schoonmaak &<br><span class="text-primary">sleuteloverdracht</span></h3>
+                            <p class="text-secondary/50 text-sm leading-relaxed max-w-md mb-6">Na de installatie leveren we geen bouwplaats op, maar een club die klaar is voor je eerste leden. Ons schoonmaakteam maakt de volledige ruimte grondig schoon, van vloer tot apparatuur.</p>
+                            <p class="text-secondary/50 text-sm leading-relaxed max-w-md mb-8">Daarna lopen we samen elk punt van het ontwerp na tijdens de oplevering. Klopt alles? Dan krijg jij de sleutel en kan de opening gepland worden.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Professionele schoonmaak</span>
+                                <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Oplevering op locatie</span>
+                                <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Sleuteloverdracht</span>
+                                <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Direct klaar voor opening</span>
+                            </div>
+                            <div class="flex items-center gap-3 mt-8">
+                                <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-1.5"></i></a>
+                                <a href="{{ url('/projecten') }}" class="border border-secondary/15 rounded-full px-6 py-3 text-secondary/60 text-xs font-semibold hover:border-primary/30 hover:text-primary transition-colors">Bekijk projecten</a>
+                            </div>
+                        </div>
+                        {{-- Mobile image --}}
+                        <div class="lg:hidden rounded-3xl overflow-hidden aspect-[9/16] max-h-[400px]">
+                            <video src="/shorts/fitnessaannemer-short-schoonmaak.mp4" class="w-full h-full object-cover" muted loop playsinline autoplay></video>
+                        </div>
+                        {{-- Desktop video --}}
+                        <div class="flex-shrink-0 hidden lg:flex items-start gap-5 relative">
+                            <video src="/shorts/fitnessaannemer-short-schoonmaak.mp4" class="w-[270px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
+                            <div class="absolute -bottom-4 -left-4 bg-white rounded-3xl shadow-xl p-5 z-10">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                                        <i class="fa-solid fa-key text-primary text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-secondary text-xs font-semibold">Sleuteloverdracht</p>
+                                        <p class="text-secondary/40 text-[11px]">Klaar voor opening</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 {{-- Panel 5: Nazorg (1 video) --}}
                 <div class="horizontal-panel relative">
-                    <span class="absolute -top-8 left-12 text-[350px] font-black text-secondary/[0.03] leading-none select-none pointer-events-none hidden lg:block">04</span>
+                    <span class="absolute -top-8 left-12 text-[350px] font-black text-secondary/[0.03] leading-none select-none pointer-events-none hidden lg:block">05</span>
                     {{-- Service / maintenance SVG --}}
                     <svg class="panel-sketch panel-sketch--tl hidden lg:block" viewBox="0 0 420 380" fill="none" xmlns="http://www.w3.org/2000/svg">
                         {{-- Shield with checkmark (center piece) --}}
@@ -773,7 +772,7 @@
                         </div>
                         {{-- Desktop videos --}}
                         <div class="flex-shrink-0 relative hidden lg:block">
-                            <video src="/shorts/fitnessaannemer-short-7.mp4" class="w-[270px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
+                            <video src="/shorts/fitnessaannemer-short-nazorg.mp4" class="w-[270px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
                             <div class="absolute -top-4 -right-4 bg-white rounded-3xl shadow-xl p-4 z-10">
                                 <div class="flex items-center gap-3">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -789,14 +788,14 @@
                         <div class="flex-1 pt-8 lg:pt-12">
                             <div class="flex items-center gap-3 mb-4 lg:mb-6">
                                 <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-                                    <span class="text-white text-xs font-bold">04</span>
+                                    <span class="text-white text-xs font-bold">05</span>
                                 </div>
                                 <div class="h-[1px] w-16 bg-primary/30"></div>
                                 <span class="text-primary text-xs font-semibold uppercase tracking-widest">Nazorg</span>
                             </div>
                             <h3 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.1] mb-4 lg:mb-6">Onderhoud<br>& service</h3>
-                            <p class="text-secondary/50 text-sm leading-relaxed max-w-md mb-6">Na oplevering laten we je niet in de steek. We bieden onderhoudspakketten, garantieservice en technische ondersteuning. Gaat er iets stuk? Dan staan we klaar.</p>
-                            <p class="text-secondary/50 text-sm leading-relaxed max-w-md mb-8">Wil je later uitbreiden of apparatuur vervangen? We denken graag mee en zorgen dat jouw gym altijd up-to-date blijft.</p>
+                            <p class="text-secondary/50 text-sm leading-relaxed max-w-md mb-6">Na de opening laten we je niet in de steek. Met onderhoudscontracten, garantieservice en technische ondersteuning houden we jouw club draaiend. Gaat er iets stuk? Dan staan we snel voor je klaar, elke dag dat een machine stilstaat, kost je leden.</p>
+                            <p class="text-secondary/50 text-sm leading-relaxed max-w-md mb-8">Wil je later uitbreiden of apparatuur vervangen? We denken mee en zorgen dat jouw club met je meegroeit.</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Onderhoudscontracten</span>
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Garantieservice</span>
@@ -820,7 +819,7 @@
             <div class="text-center pt-16 lg:pt-32 pb-10 lg:pb-20 px-4 sm:px-6 relative z-10">
                 <p class="brands-fade text-primary text-xs font-semibold uppercase tracking-widest mb-5">Merk-onafhankelijk</p>
                 <h2 class="brands-fade text-white text-3xl sm:text-5xl md:text-6xl font-bold leading-[1.05] mb-6">Niet gebonden aan<br><span class="text-primary">een merk</span></h2>
-                <p class="brands-fade text-white/35 text-sm leading-relaxed max-w-lg mx-auto">Wij zitten niet vast aan een leverancier. Daardoor adviseren we wat past bij jouw doelgroep, budget en verdienmodel. Dat brede aanbod is juist ons verkoopargument.</p>
+                <p class="brands-fade text-white/35 text-sm leading-relaxed max-w-lg mx-auto">Wij zijn officieel dealer van maar liefst 18 merken en zitten dus niet vast aan een. Daardoor adviseren we wat echt past bij jouw doelgroep, budget en verdienmodel. Zonder voorkeur, zonder verplichtingen. Van Matrix tot Eleiko, van cardio tot strength: wij stellen de mix samen die voor jouw club het beste rendeert.</p>
             </div>
 
             {{-- Brand marquee row 1 (left-to-right) --}}
@@ -828,13 +827,13 @@
                 <div class="brands-marquee">
                     @for ($i = 0; $i < 3; $i++)
                     <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/MATRIX-LOGO.png') }}" alt="Matrix" class="brand-logo"></span>
-                    <span class="brand-pill brand-pill--text">EGYM</span>
-                    <span class="brand-pill brand-pill--text">ZIVA</span>
-                    <span class="brand-pill brand-pill--text">Vision</span>
-                    <span class="brand-pill brand-pill--text">YourReformer</span>
+                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Logo_Egym.png') }}" alt="EGYM" class="brand-logo"></span>
+                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Logo_ZIVA.png') }}" alt="ZIVA" class="brand-logo"></span>
+                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Vision_Fitness_Logo.jpg') }}" alt="Vision" class="brand-logo"></span>
+                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Logo_YourReformer.png') }}" alt="YourReformer" class="brand-logo"></span>
                     <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/Life-Fitness.png') }}" alt="Life Fitness" class="brand-logo"></span>
-                    <span class="brand-pill brand-pill--text">Eleiko</span>
-                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/logo-hammer-strength-2.png') }}" alt="Hammer Strength" class="brand-logo"></span>
+                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Eleiko_Logo_2021_RGB-scaled.png') }}" alt="Eleiko" class="brand-logo"></span>
+                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/logo-hammer-strength.png') }}" alt="Hammer Strength" class="brand-logo"></span>
                     <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/Concept2-1.png') }}" alt="Concept2" class="brand-logo"></span>
                     @endfor
                 </div>
@@ -844,14 +843,14 @@
             <div class="brands-marquee-wrap mb-20 relative z-10">
                 <div class="brands-marquee brands-marquee--reverse">
                     @for ($i = 0; $i < 3; $i++)
-                    <span class="brand-pill brand-pill--text">Watson</span>
+                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Logo_Watson.png') }}" alt="Watson" class="brand-logo"></span>
                     <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/LOGO_WEIss-1024x462-1.png') }}" alt="Gym80" class="brand-logo"></span>
-                    <span class="brand-pill brand-pill--text">Nike Strength</span>
-                    <span class="brand-pill brand-pill--text">LifeMaxx</span>
-                    <span class="brand-pill brand-pill--text">TKO</span>
-                    <span class="brand-pill brand-pill--text">Assault Fitness</span>
-                    <span class="brand-pill brand-pill--text">Sprinttracks</span>
-                    <span class="brand-pill brand-pill--text">InBody</span>
+                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/NikeStrength_Black_Logo_600px.png') }}" alt="Nike Strength" class="brand-logo"></span>
+                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Logo_Lifemaxx.webp') }}" alt="LifeMaxx" class="brand-logo"></span>
+                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Logo_TKO.webp') }}" alt="TKO" class="brand-logo"></span>
+                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/assault_fitness_logo.webp') }}" alt="Assault Fitness" class="brand-logo"></span>
+                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Logo_Sprinttracks.png') }}" alt="Sprinttracks" class="brand-logo"></span>
+                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Logo_Inbody.png') }}" alt="InBody" class="brand-logo"></span>
                     @endfor
                 </div>
             </div>
@@ -859,7 +858,55 @@
             {{-- CTAs --}}
             <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pb-16 lg:pb-32 relative z-10 brands-fade">
                 <a href="{{ url('/onze-merken') }}" class="bg-primary rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Bekijk alle merken <i class="fa-solid fa-arrow-right text-xs ml-1.5"></i></a>
-                <a href="{{ url('/offerte-aanvragen') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition-colors">Offerte aanvragen</a>
+                <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition-colors">Bekijk onze projecten</a>
+            </div>
+        </section>
+
+        {{-- Alles voor een complete club --}}
+        <section class="complete-club-section bg-white py-16 lg:py-32 relative" data-header-light>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+                <div class="text-center mb-10 lg:mb-16">
+                    <p class="club-fade text-primary text-xs font-semibold uppercase tracking-widest mb-5">Totaaloplossing</p>
+                    <h2 class="club-fade text-secondary text-3xl sm:text-5xl md:text-6xl font-bold leading-[1.05] mb-6">Alles voor een<br><span class="text-primary">complete club</span></h2>
+                    <p class="club-fade text-secondary/50 text-sm leading-relaxed max-w-lg mx-auto">Van apparatuur tot de kluisjes in de kleedkamer. Wij leveren alles wat jouw club nodig heeft, uit een hand.</p>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
+                    @php
+                    $categories = [
+                        ['name' => 'Apparatuur', 'desc' => 'Cardio, kracht en functioneel van 18 merken', 'image' => 'apparatuur.jpg', 'icon' => 'fa-dumbbell'],
+                        ['name' => 'Vloeren', 'desc' => 'PVC, laminaat en sportvloeren zoals rubberen tegels en Sprinttracks', 'image' => 'vloeren.jpg', 'icon' => 'fa-border-all'],
+                        ['name' => 'Verlichting', 'desc' => 'Alle soorten, van sfeer tot functioneel', 'image' => 'verlichting.jpg', 'icon' => 'fa-lightbulb'],
+                        ['name' => 'Audio', 'desc' => 'Voor iedere ruimte', 'image' => 'audio.jpg', 'icon' => 'fa-volume-high'],
+                        ['name' => 'Spiegels', 'desc' => 'Op maat voor elke wand', 'image' => 'spiegels.jpg', 'icon' => 'fa-clone'],
+                        ['name' => 'Kluisjes', 'desc' => 'Voor kleedkamer en entree', 'image' => 'kluisjes.jpg', 'icon' => 'fa-lock'],
+                        ['name' => 'Meubels', 'desc' => 'Van receptie tot loungehoek', 'image' => 'meubels.jpg', 'icon' => 'fa-couch'],
+                    ];
+                    @endphp
+
+                    @foreach($categories as $cat)
+                    <div class="club-fade group relative rounded-2xl overflow-hidden aspect-[3/4] cursor-default">
+                        @if($cat['image'])
+                        <img src="{{ asset('assets/categories/' . $cat['image']) }}" alt="{{ $cat['name'] }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        @else
+                        <div class="absolute inset-0 bg-secondary/10"></div>
+                        @endif
+                        <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/50 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
+                            <div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center mb-2">
+                                <i class="fa-solid {{ $cat['icon'] }} text-primary text-xs"></i>
+                            </div>
+                            <h3 class="text-white text-sm sm:text-base font-bold mb-1">{{ $cat['name'] }}</h3>
+                            <p class="text-white/60 text-[11px] sm:text-xs leading-relaxed">{{ $cat['desc'] }}</p>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-10 lg:mt-16 club-fade">
+                    <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-1.5"></i></a>
+                    <a href="{{ url('/onze-merken') }}" class="border border-secondary/15 rounded-full px-6 py-3.5 text-secondary/60 text-xs font-semibold hover:border-primary/30 hover:text-primary transition-colors">Bekijk alle merken</a>
+                </div>
             </div>
         </section>
 
@@ -869,54 +916,54 @@
                 {{-- Header --}}
                 <div class="flex flex-col lg:flex-row lg:items-end gap-4 lg:gap-0 justify-between mb-8 lg:mb-16">
                     <h2 class="diensten-fade text-secondary text-3xl lg:text-5xl font-bold leading-[1]">Wat wij voor jou<br><span class="text-primary">kunnen betekenen</span></h2>
-                    <p class="diensten-fade lg:max-w-[400px] lg:text-right text-xs text-secondary/50">Van sportschool tot homegym, van hotel tot PT studio. Wij ontzorgen het complete traject van ontwerp en inrichting tot oplevering.</p>
+                    <p class="diensten-fade lg:max-w-[400px] lg:text-right text-xs text-secondary/50">Van sportschool tot hotelgym, van PT-studio tot bedrijfsfitness. Wij ontzorgen het complete traject, van ontwerp en bouw tot inrichting en oplevering.</p>
                 </div>
 
                 {{-- Diensten Grid --}}
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {{-- Inrichting & planning --}}
+                    {{-- Interieurontwerp --}}
                     <a href="{{ url('/diensten/inrichting-en-planning') }}" class="dienst-card group bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300">
                         <div class="aspect-[16/9] relative overflow-hidden">
-                            <img src="/assets/1.jpg" alt="Inrichting & planning" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <img src="{{ asset('assets/dienst-interieur.jpg') }}" alt="Interieurontwerp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/20"></div>
                             <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                                 <div class="flex items-center gap-3 mb-3">
                                     <span class="inline-block bg-primary/20 text-primary text-[10px] font-semibold px-2.5 py-1 rounded-full border border-primary/30">Ontwerp</span>
                                 </div>
-                                <h3 class="text-white text-2xl font-bold mb-2">Ontwerp & interior design</h3>
-                                <p class="text-white/70 text-sm leading-relaxed max-w-lg">Interior design is onze kracht. Wij vertalen jouw visie naar een functioneel ontwerp dat ook commercieel klopt.</p>
+                                <h3 class="text-white text-2xl font-bold mb-2">Interieurontwerp</h3>
+                                <p class="text-white/70 text-sm leading-relaxed max-w-lg">Interieurontwerp is onze kracht. Wij vertalen jouw visie naar een ontwerp dat er niet alleen goed uitziet, maar ook rendeert: slimme looplijnen, elke m² benut en een indeling die leden bindt.</p>
                                 <span class="inline-flex items-center text-primary text-xs font-semibold mt-4">Bekijk dienst <i class="fa-solid fa-arrow-right text-[10px] ml-1.5 group-hover:translate-x-1 transition-transform"></i></span>
                             </div>
                         </div>
                     </a>
 
-                    {{-- Levering & installatie --}}
+                    {{-- Bouw, levering & installatie --}}
                     <a href="{{ url('/diensten/levering-en-installatie') }}" class="dienst-card group bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300">
                         <div class="aspect-[16/9] relative overflow-hidden">
-                            <img src="/assets/2.jpg" alt="Levering & installatie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <img src="{{ asset('assets/dienst-bouw.jpg') }}" alt="Bouw, levering & installatie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/20"></div>
                             <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                                 <div class="flex items-center gap-3 mb-3">
                                     <span class="inline-block bg-primary/20 text-primary text-[10px] font-semibold px-2.5 py-1 rounded-full border border-primary/30">Turnkey</span>
                                 </div>
-                                <h3 class="text-white text-2xl font-bold mb-2">Levering & installatie</h3>
-                                <p class="text-white/70 text-sm leading-relaxed max-w-lg">Complete levering en professionele installatie van jouw fitnessruimte. Van transport tot oplevering, alles uit een hand.</p>
+                                <h3 class="text-white text-2xl font-bold mb-2">Bouw, levering & installatie</h3>
+                                <p class="text-white/70 text-sm leading-relaxed max-w-lg">Totaal projectmanagement over de bouw: onze vaste partneraannemers bouwen, wij voeren de regie. Daarna verzorgt ons montageteam de complete levering en installatie. Alles uit een hand, met een opleverdatum.</p>
                                 <span class="inline-flex items-center text-primary text-xs font-semibold mt-4">Bekijk dienst <i class="fa-solid fa-arrow-right text-[10px] ml-1.5 group-hover:translate-x-1 transition-transform"></i></span>
                             </div>
                         </div>
                     </a>
 
-                    {{-- Onderhoud & reparaties --}}
+                    {{-- Fitnessapparatuur --}}
                     <a href="{{ url('/diensten/onderhoud-en-reparaties') }}" class="dienst-card group bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300">
                         <div class="aspect-[16/9] relative overflow-hidden">
-                            <img src="/assets/3.jpg" alt="Onderhoud & reparaties" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <img src="/assets/3.jpg" alt="Fitnessapparatuur" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/20"></div>
                             <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                                 <div class="flex items-center gap-3 mb-3">
-                                    <span class="inline-block bg-primary/20 text-primary text-[10px] font-semibold px-2.5 py-1 rounded-full border border-primary/30">Service</span>
+                                    <span class="inline-block bg-primary/20 text-primary text-[10px] font-semibold px-2.5 py-1 rounded-full border border-primary/30">Apparatuur</span>
                                 </div>
-                                <h3 class="text-white text-2xl font-bold mb-2">Onderhoud & reparaties</h3>
-                                <p class="text-white/70 text-sm leading-relaxed max-w-lg">Bescherm je investering met professioneel onderhoud en snelle reparaties. Jouw apparatuur altijd in topconditie.</p>
+                                <h3 class="text-white text-2xl font-bold mb-2">Fitnessapparatuur</h3>
+                                <p class="text-white/70 text-sm leading-relaxed max-w-lg">Merk-onafhankelijk advies over cardio-, kracht- en functionele apparatuur. Van Matrix tot Eleiko, wij stellen de mix samen die past bij jouw doelgroep, budget en verdienmodel.</p>
                                 <span class="inline-flex items-center text-primary text-xs font-semibold mt-4">Bekijk dienst <i class="fa-solid fa-arrow-right text-[10px] ml-1.5 group-hover:translate-x-1 transition-transform"></i></span>
                             </div>
                         </div>
@@ -925,14 +972,14 @@
                     {{-- Leasing & financiering --}}
                     <a href="{{ url('/diensten/leasing-en-financiering') }}" class="dienst-card group bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300">
                         <div class="aspect-[16/9] relative overflow-hidden">
-                            <img src="/assets/4.jpg" alt="Leasing & financiering" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <img src="{{ asset('assets/dienst-leasing.jpg') }}" alt="Leasing & financiering" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/20"></div>
                             <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                                 <div class="flex items-center gap-3 mb-3">
                                     <span class="inline-block bg-primary/20 text-primary text-[10px] font-semibold px-2.5 py-1 rounded-full border border-primary/30">Financieel</span>
                                 </div>
                                 <h3 class="text-white text-2xl font-bold mb-2">Leasing & financiering</h3>
-                                <p class="text-white/70 text-sm leading-relaxed max-w-lg">Investeer in professionele fitnessapparatuur zonder grote eenmalige uitgave. Flexibele lease- en financieringsopties die passen bij jouw situatie.</p>
+                                <p class="text-white/70 text-sm leading-relaxed max-w-lg">Een complete club zonder grote eenmalige investering. Bij ons lease je niet alleen de apparatuur, maar ook het interieur: van vloeren tot verlichting. Flexibele opties, afgestemd op jouw businessplan en cashflow.</p>
                                 <span class="inline-flex items-center text-primary text-xs font-semibold mt-4">Bekijk dienst <i class="fa-solid fa-arrow-right text-[10px] ml-1.5 group-hover:translate-x-1 transition-transform"></i></span>
                             </div>
                         </div>
@@ -944,13 +991,13 @@
         {{-- Lease CTA Banner --}}
         <section class="bg-secondary py-16 lg:py-32 relative overflow-hidden">
             <div class="absolute inset-0">
-                <img src="{{ asset('assets/4.jpg') }}" alt="" class="w-full h-full object-cover opacity-30">
+                <img src="{{ asset('assets/lease-bg.jpg') }}" alt="" class="w-full h-full object-cover opacity-30">
                 <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/90 to-secondary/60"></div>
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
                 <div class="flex flex-col lg:flex-row lg:items-end gap-4 lg:gap-0 justify-between mb-8 lg:mb-12">
                     <h2 class="text-white text-3xl lg:text-5xl font-bold leading-[1]">Liever <span class="text-primary">leasen</span><br>dan kopen?</h2>
-                    <p class="lg:max-w-[400px] lg:text-right text-xs text-white opacity-80">Start direct met topapparatuur zonder grote investering. Flexibele leaseoplossingen afgestemd op jouw situatie.</p>
+                    <p class="lg:max-w-[400px] lg:text-right text-xs text-white opacity-80">Start direct met een complete club zonder grote investering. Bij ons lease je niet alleen apparatuur, maar ook het interieur: van vloeren tot verlichting. Flexibele oplossingen, afgestemd op jouw situatie.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8 lg:mb-12">
                     <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
@@ -958,26 +1005,26 @@
                             <i class="fa-solid fa-clock text-primary text-sm"></i>
                         </div>
                         <h3 class="text-white text-sm font-bold mb-1">Flexibele looptijden</h3>
-                        <p class="text-white/50 text-xs leading-relaxed">Kies een looptijd die past bij jouw situatie en budget.</p>
+                        <p class="text-white/50 text-xs leading-relaxed">Kies een looptijd die past bij jouw businessplan en cashflow.</p>
                     </div>
                     <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
                         <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mb-4">
                             <i class="fa-solid fa-piggy-bank text-primary text-sm"></i>
                         </div>
-                        <h3 class="text-white text-sm font-bold mb-1">Geen grote investering</h3>
-                        <p class="text-white/50 text-xs leading-relaxed">Spreid de kosten en behoud je financiele ruimte.</p>
+                        <h3 class="text-white text-sm font-bold mb-1">Behoud je werkkapitaal</h3>
+                        <p class="text-white/50 text-xs leading-relaxed">Spreid de kosten en houd ruimte voor wat echt groei brengt: marketing, personeel en je opening.</p>
                     </div>
                     <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
                         <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mb-4">
-                            <i class="fa-solid fa-headset text-primary text-sm"></i>
+                            <i class="fa-solid fa-calculator text-primary text-sm"></i>
                         </div>
-                        <h3 class="text-white text-sm font-bold mb-1">Persoonlijk advies</h3>
-                        <p class="text-white/50 text-xs leading-relaxed">Wij begeleiden je met advies en een oplossing op maat.</p>
+                        <h3 class="text-white text-sm font-bold mb-1">Inzicht in je opties</h3>
+                        <p class="text-white/50 text-xs leading-relaxed">Wij rekenen de scenario's voor je door: kopen, leasen of een combinatie. Zo vergelijk je zelf, of samen met je accountant, wat het beste past.</p>
                     </div>
                 </div>
                 <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
                     <a href="{{ url('/diensten/leasing-en-financiering') }}" class="bg-primary rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Bekijk leaseopties <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
-                    <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-white/10 border border-white/30 rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-white/20 transition-colors">Gratis adviesgesprek</a>
+                    <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-white/10 border border-white/30 rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-white/20 transition-colors">Vrijblijvend adviesgesprek</a>
                 </div>
             </div>
         </section>
@@ -991,7 +1038,7 @@
                         <span class="text-primary text-xs font-semibold uppercase tracking-widest mb-4 block">Veelgestelde vragen</span>
                         <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-4">Alles wat je wilt <span class="text-primary">weten</span></h2>
                         <p class="text-secondary/50 text-sm leading-relaxed max-w-sm">Heb je een vraag die hier niet bij staat? Neem dan gerust contact met ons op voor een vrijblijvend gesprek.</p>
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="inline-flex items-center bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition mt-8">Stel je vraag <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="inline-flex items-center bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition mt-8">Stel je vraag <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                     </div>
 
                     {{-- Right: Accordion --}}
@@ -1000,11 +1047,11 @@
                         $faqs = [
                             [
                                 'question' => 'Hoe verloopt het traject van ontwerp tot oplevering?',
-                                'answer' => 'We starten met een vrijblijvend adviesgesprek of locatiebezoek. Daarna maken we een 3D-ontwerp, stellen de juiste apparatuur samen en verzorgen de volledige levering, plaatsing en oplevering. Een aanspreekpunt voor het hele traject.',
+                                'answer' => 'We starten met een vrijblijvend adviesgesprek of locatiebezoek. Daarna volgen ontwerp en 3D-visualisatie, stellen we de apparatuur samen en voeren we de regie over de bouw. Tot slot verzorgen we de volledige levering, installatie en oplevering. Een aanspreekpunt voor het hele traject.',
                             ],
                             [
                                 'question' => 'Zijn jullie gebonden aan een specifiek merk?',
-                                'answer' => 'Nee. Wij zijn bewust onafhankelijk en zitten niet vast aan een leverancier of merk. We adviseren wat past bij jouw doelgroep, budget en verdienmodel. Van Matrix en Life Fitness tot Eleiko en Concept2.',
+                                'answer' => 'Nee. Wij zijn officieel dealer van 18 merken en bewust onafhankelijk. We adviseren wat past bij jouw doelgroep, budget en verdienmodel. Van Matrix en Life Fitness tot Eleiko en Concept2.',
                             ],
                             [
                                 'question' => 'Werken jullie ook buiten Nederland?',
@@ -1012,11 +1059,19 @@
                             ],
                             [
                                 'question' => 'Kan ik apparatuur bij jullie leasen of financieren?',
-                                'answer' => 'Ja. Een deel van het interieur kan bij ons geleased worden. Flexibele looptijden, persoonlijk advies en een eigen inbreng van 15 a 20%. Voor bestaande zaken met positieve jaarcijfers is dit in 90% van de gevallen geen probleem.',
+                                'answer' => 'Ja. Zowel apparatuur als interieur kun je bij ons leasen of financieren, met flexibele looptijden en persoonlijk advies. In het adviesgesprek rekenen we door welke opzet bij jouw situatie past en wij leveren alle cijfers aan voor je accountant.',
                             ],
                             [
-                                'question' => 'Doen jullie ook het bouwkundige werk?',
-                                'answer' => 'Nee. Wij zijn geen aannemer in de traditionele zin. Bouwkundig werk zoals wandjes, gietvloeren en schilderwerk loopt via onze vaste partneraannemers. Wij houden de regie op ontwerp, inrichting en oplevering.',
+                                'question' => 'Regelen jullie ook de bouw?',
+                                'answer' => 'Ja. Voor elk project stellen wij een bouwteam samen en voeren wij de volledige regie: van wanden en vloeren tot schilderwerk en afwerking. Jij hebt een aanspreekpunt en een planning. Heb je zelf al een schilder of installateur? Die schuift gewoon aan in ons bouwteam, onder onze regie.',
+                            ],
+                            [
+                                'question' => 'Hoe lang duurt een compleet project?',
+                                'answer' => 'De doorlooptijd wordt vooral bepaald door de levertijd van apparatuur: gemiddeld 12 tot 14 weken. Die tijd benutten we slim, want terwijl de apparatuur onderweg is, bouwen en richten wij de ruimte in. Zo staat alles klaar zodra de machines arriveren en verliezen we geen week. In het adviesgesprek krijg je een concrete planning voor jouw project.',
+                            ],
+                            [
+                                'question' => 'Wat kost het inrichten van een sportschool?',
+                                'answer' => 'Dat hangt af van drie factoren: het aantal vierkante meters, de apparatuurkeuze en het afwerkingsniveau. Een compacte PT-studio vraagt een andere investering dan een commerciele club van 1.000 m². Daarom werken we niet met standaardprijzen, maar met een budgetindicatie op maat. In een vrijblijvend adviesgesprek rekenen we jouw plan door en weet je binnen twee week waar je aan toe bent.',
                             ],
                         ];
                         @endphp
@@ -1215,12 +1270,12 @@
                     {{-- Right: Content + Form --}}
                     <div class="lg:w-[55%] bg-white p-8 sm:p-12 lg:p-16 flex flex-col justify-center">
                         <span class="text-primary text-xs font-semibold uppercase tracking-widest mb-4 block">Gratis e-book</span>
-                        <h2 class="text-secondary text-2xl sm:text-3xl lg:text-4xl font-bold leading-[1.1] mb-4">Transformeer jouw gym met <span class="text-primary">expert kennis</span></h2>
-                        <p class="text-secondary/50 text-sm leading-relaxed mb-8">Download ons uitgebreide e-book en ontdek de geheimen van succesvolle gym inrichting. Van concept tot realisatie.</p>
+                        <h2 class="text-secondary text-2xl sm:text-3xl lg:text-4xl font-bold leading-[1.1] mb-4">Van idee tot <span class="text-primary">succesvolle sportschool</span></h2>
+                        <p class="text-secondary/50 text-sm leading-relaxed mb-8">Alles wat je moet weten voordat je begint: van concept en businessplan tot inrichting en opening. Download ons gratis e-book en start goed voorbereid.</p>
 
                         {{-- USPs --}}
                         <div class="flex flex-col gap-3 mb-8">
-                            @foreach(['50+ pagina\'s expert kennis', 'Praktische checklists & tools', 'Exclusieve case studies'] as $usp)
+                            @foreach(['Stap-voor-stap van idee tot opening', 'Praktische checklists & budgettips', 'Inzichten uit 60+ gerealiseerde projecten'] as $usp)
                             <div class="flex items-center gap-3">
                                 <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                                     <i class="fa-solid fa-check text-primary text-[10px]"></i>
@@ -1231,21 +1286,29 @@
                         </div>
 
                         {{-- Form --}}
-                        <form action="#" method="POST" class="space-y-3">
-                            @csrf
+                        <form id="ebook-form" class="space-y-3" novalidate>
                             <div class="relative">
                                 <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-secondary/20 text-xs"></i>
-                                <input type="text" name="naam" placeholder="Jouw naam" required class="w-full bg-secondary/[0.03] border border-secondary/10 rounded-xl pl-11 pr-4 py-3.5 text-sm text-secondary placeholder:text-secondary/30 focus:outline-none focus:border-primary/40 transition">
+                                <input type="text" name="naam" id="ebook-naam" placeholder="Jouw naam" required class="w-full bg-secondary/[0.03] border border-secondary/10 rounded-xl pl-11 pr-4 py-3.5 text-sm text-secondary placeholder:text-secondary/30 focus:outline-none focus:border-primary/40 transition">
                             </div>
                             <div class="relative">
                                 <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-secondary/20 text-xs"></i>
-                                <input type="email" name="email" placeholder="jouw@email.nl" required class="w-full bg-secondary/[0.03] border border-secondary/10 rounded-xl pl-11 pr-4 py-3.5 text-sm text-secondary placeholder:text-secondary/30 focus:outline-none focus:border-primary/40 transition">
+                                <input type="email" name="email" id="ebook-email" placeholder="jouw@email.nl" required class="w-full bg-secondary/[0.03] border border-secondary/10 rounded-xl pl-11 pr-4 py-3.5 text-sm text-secondary placeholder:text-secondary/30 focus:outline-none focus:border-primary/40 transition">
                             </div>
-                            <button type="submit" class="w-full bg-secondary hover:bg-secondary/90 text-white text-sm font-semibold rounded-xl px-6 py-3.5 flex items-center justify-center gap-2 transition">
+                            <p id="ebook-error" class="text-red-500 text-xs hidden"></p>
+                            <button type="submit" id="ebook-btn" class="w-full bg-secondary hover:bg-secondary/90 text-white text-sm font-semibold rounded-xl px-6 py-3.5 flex items-center justify-center gap-2 transition">
                                 <i class="fa-solid fa-download text-xs"></i>
                                 Download gratis e-book
                             </button>
                         </form>
+                        <div id="ebook-success" class="hidden text-center py-6">
+                            <div class="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+                                <i class="fa-solid fa-check text-green-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-secondary text-lg font-bold mb-2">Je download start automatisch</h3>
+                            <p class="text-secondary/50 text-sm mb-4">Het e-book wordt nu gedownload. Niet ontvangen?</p>
+                            <a href="{{ asset('EBook_Startende_Ondernemers.pdf') }}" download class="text-primary text-sm font-semibold hover:underline">Klik hier om opnieuw te downloaden</a>
+                        </div>
                     </div>
 
                 </div>
@@ -1258,8 +1321,8 @@
             <h2 class="brands-fade text-white text-3xl sm:text-5xl md:text-6xl font-bold leading-[1.05] mb-6">Klaar om jouw gym<br><span class="text-primary">te realiseren?</span></h2>
             <p class="brands-fade text-white/35 text-sm leading-relaxed max-w-lg mx-auto">Van ontwerp tot oplevering, wij regelen alles. Neem contact op voor een vrijblijvend adviesgesprek en ontdek wat wij voor jouw fitnessruimte kunnen betekenen.</p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-8">
-                <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
-                <a href="{{ url('/offerte-aanvragen') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Offerte aanvragen</a>
+                <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk onze projecten</a>
             </div>
         </div>
 

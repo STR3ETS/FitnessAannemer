@@ -1,7 +1,7 @@
-﻿@extends('layouts.app')
+@extends('layouts.app')
 
 @section('title', 'Over ons | Fitness Aannemer')
-@section('meta_description', 'Maak kennis met het team achter Fitness Aannemer. Van webshop tot specialist in gymontwerp en inrichting. Ontdek ons verhaal en waarom 60+ sportscholen voor ons kozen.')
+@section('meta_description', 'Maak kennis met het team achter Fitness Aannemer. Specialisten in gymontwerp en inrichting met 60+ gerealiseerde projecten door heel de Benelux.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -39,9 +39,10 @@
 @endsection
 
 @section('content')
+    {{-- BLOK 1: HERO --}}
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30 relative overflow-hidden">
         <div class="hidden lg:block absolute inset-y-0 right-0 w-1/2">
-            <video src="{{ asset('assets/10-2_AI-Transitions_v2.mp4') }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+            <video src="{{ asset('assets/kr-blok4.mp4') }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
             <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-transparent"></div>
             <div class="absolute w-[650px] h-[650px] rounded-full border border-white/[0.07] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
             <div class="absolute w-[400px] h-[400px] rounded-full border border-white/[0.10] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
@@ -53,102 +54,114 @@
                 <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">Over ons</span>
             </div>
             <div class="max-w-3xl">
-                <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">De specialisten achter jouw <span class="text-primary">gym</span></h1>
-                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">Fitness Aannemer is ontstaan uit passie voor fitness en ondernemerschap. Wij ontwerpen en richten complete fitnessruimtes in door heel Nederland en Belgie. Van eerste idee tot oplevering.</p>
+                <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">De specialisten achter jouw <span class="text-primary">sportschool</span></h1>
+                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">Fitness Aannemer ontwerpt, bouwt en richt complete sportscholen in door heel Nederland en België. Met een eigen ontwerpteam, een vast montageteam en een netwerk van bouwpartners realiseren wij projecten van compacte studio tot club van 1.000+ m².</p>
                 <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                    <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                    <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                     <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk projecten</a>
                 </div>
             </div>
         </div>
     </section>
 
+    {{-- BLOK 2: STATEMENT + KLANTLOGO'S --}}
+    <section class="bg-secondary py-16 lg:py-28 overflow-hidden border-t border-white/[0.06]" id="oo-statement">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+            <blockquote class="ip-fade text-white text-2xl lg:text-4xl font-bold leading-snug mb-16">
+                "Elke sportschool die wij bouwen, moet zichzelf <span class="text-primary">terugverdienen</span>. Anders hebben wij ons werk niet goed gedaan."
+            </blockquote>
+
+            <div class="ip-fade">
+                <span class="inline-block text-primary text-[10px] font-semibold uppercase tracking-widest mb-8">Gerealiseerd voor</span>
+                <div class="flex flex-wrap items-center justify-center gap-8 lg:gap-12 opacity-50">
+                    {{-- Klantlogo's worden toegevoegd zodra logo's beschikbaar zijn --}}
+                    @php
+                    $klanten = [
+                        ['name' => 'Vitality Sports'],
+                        ['name' => 'MANA'],
+                        ['name' => 'De Krachtfabriek'],
+                        ['name' => 'Ballin Fit'],
+                        ['name' => 'ONA Gym'],
+                        ['name' => 'Farm Fit'],
+                        ['name' => 'FitCore'],
+                    ];
+                    @endphp
+                    @foreach($klanten as $klant)
+                        <span class="text-white/70 text-sm font-semibold" style="font-family: 'Inter'">{{ $klant['name'] }}</span>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- BLOK 3: WIE WIJ ZIJN --}}
     <section class="bg-white py-16 lg:py-32 relative overflow-hidden" id="oo-section1">
         <div class="horizontal-blob w-[700px] h-[700px]" style="background: radial-gradient(circle, rgba(82,171,226,0.2) 0%, rgba(82,171,226,0) 70%); top: -20%; left: -10%; animation: blob-float-1 18s ease-in-out infinite;"></div>
         <div class="horizontal-blob w-[500px] h-[500px]" style="background: radial-gradient(circle, rgba(82,171,226,0.15) 0%, rgba(82,171,226,0) 70%); top: 40%; right: -10%; animation: blob-float-2 22s ease-in-out infinite;"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="ip-block-text">
-                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Het verhaal</span>
-                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Van webshop naar <span class="text-primary">inrichtingsspecialist</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Fitness Aannemer is opgericht door Stijn Harder en Sil Wartena. Het begon met DeThuisSportWinkel.nl, een webshop met fitnessapparatuur van duizenden euro's. Een beetje adverteren, afwachten, en hopen dat iemand spontaan tienduizend euro overmaakt via iDEAL. Dat gebeurde niet.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Maandenlang producten toevoegen, omschrijvingen optimaliseren, knutselen aan advertenties. Kleine orders kwamen binnen, maar pas toen de focus verschoof naar het totaalplaatje, complete fitnessruimtes ontwerpen en inrichten, begon het te draaien. Fitness Aannemer is niet geboren uit een strak businessplan, maar uit blijven proberen, testen, aanpassen en doorzetten.</p>
+                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Wie wij zijn</span>
+                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Gebouwd op <span class="text-primary">de vloer</span></h2>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Sinds 2016 zitten wij in de fitnessbranche. Oprichters Stijn Harder en Sil Wartena stonden jarenlang zelf op de vloer van commerciële clubs en zagen daar wat werkt en wat niet. Die tien jaar ervaring vormt de basis van elk project dat we vandaag realiseren.</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Inmiddels staat er een team van specialisten in concept, ontwerp, sales, projectuitvoering en finance, met 60+ gerealiseerde projecten door heel de Benelux. Van boutique studio's tot commerciële clubs van meer dan 1.000 m², telkens vanuit dezelfde overtuiging: een sportschool moet niet alleen mooi zijn, maar ook renderen.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk projecten</a>
                     </div>
                 </div>
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
-                    <video src="{{ asset('shorts/fitnessaannemer-short-1.mp4') }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                    <video src="{{ asset('assets/oo-blok3.mp4') }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-secondary py-16 lg:py-32 overflow-hidden" id="oo-section2">
+    {{-- BLOK 4: TEAMSECTIE --}}
+    <section class="bg-secondary py-16 lg:py-32 overflow-hidden" id="oo-team">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="ip-fade text-center mb-16">
+            <div class="ip-fade text-center mb-6">
                 <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">Het team</span>
-                <h2 class="text-white text-4xl lg:text-5xl font-bold leading-[1.05]">De mensen achter <span class="text-primary">Fitness Aannemer</span></h2>
+                <h2 class="text-white text-4xl lg:text-5xl font-bold leading-[1.05] mb-6">De mensen achter <span class="text-primary">Fitness Aannemer</span></h2>
+                <p class="text-white/50 text-sm leading-relaxed max-w-2xl mx-auto">Eén team dat jouw project draagt: van concept en ontwerp tot verkoop, planning en cijfers. De uitvoering op de vloer doen we met ons vaste montageteam en bouwpartners, onder onze regie.</p>
             </div>
 
-            <div class="ip-fade max-w-4xl mx-auto">
-                <div class="bg-white/[0.03] border border-white/[0.06] rounded-3xl overflow-hidden">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        {{-- Video portret --}}
-                        <div class="aspect-[3/4] md:aspect-auto overflow-hidden relative">
-                            <video src="{{ asset('shorts/fitnessaannemer-short-5.mp4') }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
-                        </div>
-                        {{-- Bio --}}
-                        <div class="p-8 lg:p-12 flex flex-col justify-center">
-                            <span class="inline-block text-primary text-[10px] font-semibold uppercase tracking-widest mb-3">Oprichter</span>
-                            <h3 class="text-white text-3xl lg:text-4xl font-bold mb-2" style="font-family: 'Inter'">Stijn Harder</h3>
-                            <p class="text-primary text-sm font-semibold mb-6" style="font-family: 'Inter'">Founder & CEO</p>
-                            <p class="text-white/50 text-sm leading-relaxed mb-4">Komt uit de fitnesswereld. Werkte bij FeelGoodClub AeroFitt en Vitality Sports in Duiven. Die ervaring op de vloer, zien wat werkt en wat niet, vormt de basis van hoe Fitness Aannemer opereert.</p>
-                            <p class="text-white/50 text-sm leading-relaxed mb-8">Gelooft dat een gym meer moet zijn dan een ruimte met apparaten. Het moet een beleving zijn. Deelt zijn kennis via TikTok en YouTube, waar duizenden mensen meekijken met gymreviews, inrichtingsprojecten en tips voor fitnessondernemers.</p>
-                            <div class="flex items-center gap-3">
-                                <a href="https://www.tiktok.com/@fitnessaannemer" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
-                                    <i class="fa-brands fa-tiktok text-sm"></i>
-                                </a>
-                                <a href="https://www.youtube.com/@FitnessAannemer" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
-                                    <i class="fa-brands fa-youtube text-sm"></i>
-                                </a>
-                                <a href="https://www.instagram.com/fitnessaannemer.nl/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
-                                    <i class="fa-brands fa-instagram text-sm"></i>
-                                </a>
-                                <a href="https://www.facebook.com/profile.php?id=61557754181423" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
-                                    <i class="fa-brands fa-facebook-f text-sm"></i>
-                                </a>
-                                <a href="https://pin.it/7jMdHylyE" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
-                                    <i class="fa-brands fa-pinterest-p text-sm"></i>
-                                </a>
-                            </div>
-                        </div>
+            {{-- Groepsfoto placeholder --}}
+            <div class="ip-fade rounded-3xl aspect-[21/9] overflow-hidden bg-white/[0.03] border border-white/[0.06] mb-12 flex items-center justify-center">
+                <p class="text-white/20 text-sm">Groepsfoto volgt</p>
+            </div>
+
+            @php
+            $team = [
+                ['name' => 'Stijn Harder', 'role' => 'Founder', 'desc' => 'Marketing, strategie en concept.'],
+                ['name' => 'Sil Wartena', 'role' => 'Founder', 'desc' => 'Strategie.'],
+                ['name' => 'Timo', 'role' => 'Salesmanager', 'desc' => 'Jouw eerste aanspreekpunt van kennismaking tot offerte.'],
+                ['name' => 'Kevin', 'role' => 'Accountmanager', 'desc' => 'Denkt mee van eerste vraag tot passend voorstel.'],
+                ['name' => 'Lars', 'role' => 'Accountmanager', 'desc' => 'Denkt mee van eerste vraag tot passend voorstel.'],
+                ['name' => 'Cacharel', 'role' => 'Design en projectuitvoering', 'desc' => 'Vertaalt het ontwerp naar de vloer.'],
+                ['name' => 'Renee', 'role' => 'Design', 'desc' => 'Plattegronden en 3D-visualisaties.'],
+                ['name' => 'Jeroen', 'role' => 'Data en finance', 'desc' => 'Bewaakt budgetten en cijfers achter elk project.'],
+            ];
+            @endphp
+
+            <div class="ip-fade grid grid-cols-2 md:grid-cols-4 gap-5">
+                @foreach($team as $lid)
+                <div class="bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden">
+                    <div class="aspect-[3/4] bg-white/[0.02] flex items-center justify-center">
+                        <i class="fa-solid fa-user text-white/10 text-3xl"></i>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-white font-bold text-sm mb-0.5">{{ $lid['name'] }}</h3>
+                        <p class="text-primary text-[11px] font-semibold mb-2">{{ $lid['role'] }}</p>
+                        <p class="text-white/40 text-xs leading-relaxed">{{ $lid['desc'] }}</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="ip-fade grid grid-cols-2 md:grid-cols-4 gap-8 text-center mt-20 pt-16 border-t border-white/[0.06]">
-                <div>
-                    <p class="text-primary text-4xl lg:text-5xl font-bold mb-2">60+</p>
-                    <p class="text-white/40 text-xs uppercase font-semibold tracking-wider">Projecten gerealiseerd</p>
-                </div>
-                <div>
-                    <p class="text-primary text-4xl lg:text-5xl font-bold mb-2">7000+</p>
-                    <p class="text-white/40 text-xs uppercase font-semibold tracking-wider">M² ingericht</p>
-                </div>
-                <div>
-                    <p class="text-primary text-4xl lg:text-5xl font-bold mb-2">50+</p>
-                    <p class="text-white/40 text-xs uppercase font-semibold tracking-wider">Premium merken</p>
-                </div>
-                <div>
-                    <p class="text-primary text-4xl lg:text-5xl font-bold mb-2">A-Z</p>
-                    <p class="text-white/40 text-xs uppercase font-semibold tracking-wider">Volledig ontzorgd</p>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
 
+    {{-- BLOK 5: ONZE AANPAK --}}
     <section class="bg-white py-16 lg:py-32 relative overflow-hidden" id="oo-section3">
         <div class="horizontal-blob w-[600px] h-[600px]" style="background: radial-gradient(circle, rgba(82,171,226,0.18) 0%, rgba(82,171,226,0) 70%); top: -15%; right: -5%; animation: blob-float-3 15s ease-in-out infinite;"></div>
         <div class="horizontal-blob w-[500px] h-[500px]" style="background: radial-gradient(circle, rgba(82,171,226,0.15) 0%, rgba(82,171,226,0) 70%); bottom: -20%; left: -8%; animation: blob-float-1 20s ease-in-out infinite;"></div>
@@ -156,16 +169,16 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="ip-block-text">
                     <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Onze aanpak</span>
-                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Geen tussenhandel, geen <span class="text-primary">gedoe</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Fitness Aannemer werkt rechtstreeks met fabrikanten als Life Fitness, Matrix, Concept2, Gym80 en Keiser. Geen tussenpartijen, geen onnodige opslag. Dat vertaalt zich in scherpe prijzen en toegang tot het volledige assortiment van elk merk.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Van 3D-ontwerp en vloeren tot apparatuur en installatie: alles onder een dak. Wij begeleiden elk project van eerste schets tot sleuteloverdracht. Of het nu een sportschool van 1.000m2 is, een boutique PT-studio of een homegym in je schuur. Geen verrassingen, geen gedoe, gewoon een gym waar je trots op bent.</p>
+                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Turnkey, met <span class="text-primary">korte lijnen</span></h2>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Wij geloven in korte lijnen en vaste teams. Het ontwerp komt van ons eigen ontwerpteam, de installatie van ons vaste montageteam en de bouw voeren we uit met een vast netwerk van partneraannemers, onder onze regie. Zo houden we grip op kwaliteit, planning en budget.</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Als officieel dealer van 18 merken werken we rechtstreeks met fabrikanten als Life Fitness, Matrix, Gym80 en Eleiko. Dat betekent toegang tot het volledige assortiment en onafhankelijk advies: wij stellen samen wat bij jouw club past, zonder voorkeur en zonder verplichtingen.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/apparatuur') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk apparatuur</a>
                     </div>
                 </div>
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
-                    <img src="{{ asset('assets/wp-uploads/FULL-Ballin-Fit-004-WF206687-scaled.jpg') }}" alt="Gerealiseerd gymproject Fitness Aannemer" class="w-full h-full object-cover" loading="lazy">
+                    <video src="{{ asset('assets/oo-blok5.mp4') }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
                 </div>
             </div>
         </div>

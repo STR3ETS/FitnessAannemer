@@ -49,7 +49,7 @@
                 <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Tips & <span class="text-primary">inspiratie</span></h1>
                 <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-6 lg:my-8">Praktische kennis en inspiratie voor het inrichten, runnen en groeien van jouw fitnessruimte. Van indeling en verlichting tot financiering en groeiverhalen.</p>
                 <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                    <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                    <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                     <a href="{{ url('/fitnesswijzer') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Fitnesswijzer</a>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                     <p class="text-secondary/50 text-sm leading-relaxed mb-4">Een goede gym draait om meer dan alleen apparatuur. Het zijn de details die bepalen of leden terugkomen: de sfeer, de indeling, de verlichting, de vloer en het geluid.</p>
                     <p class="text-secondary/50 text-sm leading-relaxed mb-8">In onze artikelen delen we praktische tips, groeiverhalen en inzichten uit tientallen gerealiseerde projecten. Direct toepasbaar, ongeacht de grootte van jouw ruimte.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                     <p class="text-secondary/50 text-sm leading-relaxed mb-4">Elke fitnessruimte is uniek. Wat werkt voor een commerciele sportschool verschilt van een boutique studio of homegym. Wij adviseren op basis van jouw specifieke situatie.</p>
                     <p class="text-secondary/50 text-sm leading-relaxed mb-8">Plan een vrijblijvend adviesgesprek en ontdek hoe wij jouw fitnessruimte naar een hoger niveau tillen. Van eerste idee tot complete realisatie.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
                     </div>
                 </div>

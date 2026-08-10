@@ -28,15 +28,11 @@
         <td style="border-bottom:1px solid #eee;">{{ $data['oppervlakte'] }}</td>
     </tr>
     <tr style="background:#f8f9fa;">
-        <td style="font-weight:bold;border-bottom:1px solid #eee;">Budget indicatie</td>
-        <td style="border-bottom:1px solid #eee;">{{ $data['budget'] }}</td>
-    </tr>
-    <tr>
-        <td style="font-weight:bold;border-bottom:1px solid #eee;">Gewenste start</td>
-        <td style="border-bottom:1px solid #eee;">{{ $data['startdatum'] }}</td>
+        <td style="font-weight:bold;border-bottom:1px solid #eee;">Dienst</td>
+        <td style="border-bottom:1px solid #eee;">{{ $data['dienst'] }}</td>
     </tr>
     @if(!empty($data['bericht']))
-    <tr style="background:#f8f9fa;">
+    <tr>
         <td style="font-weight:bold;border-bottom:1px solid #eee;">Bericht</td>
         <td style="border-bottom:1px solid #eee;">{{ $data['bericht'] }}</td>
     </tr>

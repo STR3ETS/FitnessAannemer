@@ -20,8 +20,7 @@ class ContactController extends Controller
         $validated = $request->validate([
             'ruimte_type' => 'required|string|max:100',
             'oppervlakte' => 'required|string|max:50',
-            'budget' => 'required|string|max:50',
-            'startdatum' => 'required|string|max:50',
+            'dienst' => 'required|string|max:100',
             'bericht' => 'nullable|string|max:2000',
             'naam' => 'required|string|max:255',
             'email' => 'required|email|max:255',
@@ -34,11 +33,9 @@ class ContactController extends Controller
             'utm_content' => 'nullable|string|max:255',
         ]);
 
-        // Send notification email
         Mail::to(config('mail.to_address', 'info@fitnessaannemer.nl'))
             ->send(new AdviesgesprekAanvraag($validated));
 
-        // Create lead in Odoo CRM
         try {
             $odoo = new OdooService();
             if ($odoo->isConfigured()) {
@@ -47,10 +44,37 @@ class ContactController extends Controller
             }
         } catch (\Exception $e) {
             Log::error('Odoo lead creation failed: ' . $e->getMessage());
-            // Form submission still succeeds - email was already sent
         }
 
-        return back()->with('success', true);
+        $dienstSlugs = [
+            'Interieur ontwerp en turn key realisatie' => 'turnkey',
+            'Apparatuur' => 'apparatuur',
+            'Interieur ontwerp' => 'interieur-ontwerp',
+            'Overig' => 'overig',
+        ];
+        $slug = $dienstSlugs[$validated['dienst']] ?? 'overig';
+
+        return redirect("/bedankt/{$slug}");
+    }
+
+    public function bedankt(string $dienst)
+    {
+        $pages = [
+            'turnkey' => ['title' => 'Interieur ontwerp en turn key realisatie', 'value' => 100],
+            'apparatuur' => ['title' => 'Apparatuur', 'value' => 50],
+            'interieur-ontwerp' => ['title' => 'Interieur ontwerp', 'value' => 25],
+            'overig' => ['title' => 'Overig', 'value' => 10],
+        ];
+
+        if (!isset($pages[$dienst])) {
+            abort(404);
+        }
+
+        return view('bedankt', [
+            'dienst' => $dienst,
+            'dienstTitle' => $pages[$dienst]['title'],
+            'conversionValue' => $pages[$dienst]['value'],
+        ]);
     }
 
     public function submitOfferte(Request $request)
@@ -68,11 +92,9 @@ class ContactController extends Controller
             'bericht' => 'nullable|string|max:2000',
         ]);
 
-        // Send notification email
         Mail::to(config('mail.to_address', 'info@fitnessaannemer.nl'))
             ->send(new \App\Mail\OfferteAanvraag($validated));
 
-        // Create lead in Odoo CRM
         try {
             $odoo = new OdooService();
             if ($odoo->isConfigured()) {

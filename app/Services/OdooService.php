@@ -198,9 +198,19 @@ class OdooService
     public function createLead(array $data): int
     {
         $description = "Type ruimte: {$data['ruimte_type']}\n"
-            . "Oppervlakte: {$data['oppervlakte']}\n"
-            . "Budget: {$data['budget']}\n"
-            . "Gewenste start: {$data['startdatum']}";
+            . "Oppervlakte: {$data['oppervlakte']}";
+
+        if (!empty($data['dienst'])) {
+            $description .= "\nDienst: {$data['dienst']}";
+        }
+
+        if (!empty($data['budget'])) {
+            $description .= "\nBudget: {$data['budget']}";
+        }
+
+        if (!empty($data['startdatum'])) {
+            $description .= "\nGewenste start: {$data['startdatum']}";
+        }
 
         if (!empty($data['bericht'])) {
             $description .= "\n\nBericht:\n{$data['bericht']}";

@@ -49,7 +49,7 @@
                 <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Gym <span class="text-primary">verdienmodellen</span></h1>
                 <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-6 lg:my-8">Welk verdienmodel past het beste bij jouw fitnessruimte? Van leasekosten en winstberekeningen tot slimme strategieen om je omzet te verhogen.</p>
                 <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                    <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                    <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                     <a href="{{ url('/fitnesswijzer') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Fitnesswijzer</a>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                     <p class="text-secondary/50 text-sm leading-relaxed mb-4">Het verdienmodel is een van de belangrijkste beslissingen bij het starten van een fitnessruimte. Het bepaalt niet alleen je omzet, maar ook je doelgroep, positionering en de apparatuur die je nodig hebt.</p>
                     <p class="text-secondary/50 text-sm leading-relaxed mb-8">In onze artikelen delen wij concrete cijfers, rekenvoorbeelden en strategieen. Van leasekosten en winstberekeningen tot slimme manieren om extra omzet te genereren.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                     <p class="text-secondary/50 text-sm leading-relaxed mb-4">Het verdienmodel bepaalt welke apparatuur, indeling en sfeer jouw gym nodig heeft. Een lidmaatschap-gym vraagt om andere apparatuur dan een boutique studio of PT ruimte.</p>
                     <p class="text-secondary/50 text-sm leading-relaxed mb-8">Wij adviseren niet alleen over apparatuur en inrichting, maar denken ook mee over het concept als geheel. Zodat jouw investering aansluit bij het businessmodel dat het beste bij jou past.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
                     </div>
                 </div>

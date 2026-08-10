@@ -1,7 +1,7 @@
 ﻿@extends('layouts.app')
 
-@section('title', 'Leasing & Financiering | Fitness Aannemer')
-@section('meta_description', 'Flexibele lease- en financieringsopties voor fitnessapparatuur. Start direct met topapparatuur en spreid de kosten met operational lease, financial lease of financiering.')
+@section('title', 'Fitnessapparatuur leasen | Ook interieur | Fitness Aannemer')
+@section('meta_description', 'Fitnessapparatuur en interieur leasen of financieren: flexibele looptijden, afgestemd op jouw businessplan en cashflow. Wij rekenen met je mee. Bekijk de leaseopties.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -38,7 +38,7 @@
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30 relative overflow-hidden" id="lf-hero">
         <div class="hidden lg:block absolute inset-y-0 right-0 w-1/2">
-            <img src="{{ asset('assets/foto-assets/hotel-1024x768.jpg') }}" alt="" class="w-full h-full object-cover">
+            <img src="{{ asset('assets/lf-hero.jpg') }}" alt="Leasing fitnessapparatuur" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-transparent"></div>
             <div class="absolute w-[650px] h-[650px] rounded-full border border-white/[0.07] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
             <div class="absolute w-[400px] h-[400px] rounded-full border border-white/[0.10] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
@@ -51,9 +51,9 @@
             </div>
             <div class="max-w-3xl">
                 <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Leasing &<br><span class="text-primary">financiering</span></h1>
-                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-6 lg:my-8">Investeer in professionele fitnessapparatuur zonder grote eenmalige uitgave. Wij bieden flexibele lease- en financieringsopties die passen bij jouw situatie.</p>
+                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-6 lg:my-8">Een complete sportschool zonder grote eenmalige investering. Bij ons lease je niet alleen de apparatuur, maar ook het interieur: van vloeren tot verlichting. Flexibele opties, afgestemd op jouw businessplan en cashflow.</p>
                 <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                    <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                    <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                     <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk onze projecten</a>
                 </div>
             </div>
@@ -67,16 +67,16 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="ip-block-text">
                     <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Slim investeren</span>
-                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Topapparatuur <br class="hidden md:block"><span class="text-primary">binnen handbereik</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Een complete fitnessruimte vraagt om een flinke investering. Niet iedereen wil of kan dat in een keer doen. Met onze lease- en financieringsopties start je direct met de beste apparatuur terwijl je de kosten spreidt.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Wij werken samen met gerenommeerde financieringspartners en adviseren objectief over de beste optie voor jouw situatie. Of het nu gaat om operational lease, financial lease of externe financiering.</p>
+                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Behoud je <span class="text-primary">werkkapitaal</span></h2>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Een complete sportschool vraagt om een flinke investering. Niet iedereen wil of kan dat in één keer doen. Met onze lease- en financieringsopties spreid je de kosten en houd je ruimte voor wat écht groei brengt: marketing, personeel en je opening.</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Wij werken samen met gerenommeerde financieringspartners en rekenen alle scenario's voor je door: operational lease, financial lease of externe financiering. Zo vergelijk je zelf, of samen met je accountant, wat het beste past.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
                     </div>
                 </div>
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
-                    <img src="{{ asset('assets/foto-assets/hotel-1024x768.jpg') }}" alt="Professionele fitnessruimte via leasing" class="w-full h-full object-cover">
+                    <img src="{{ asset('assets/lf-blok2.jpg') }}" alt="Sportschool via leasing" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
@@ -95,10 +95,11 @@
                 [
                     'nr' => '01',
                     'icon' => 'fa-comments',
-                    'title' => 'Inventarisatie & advies',
-                    'desc' => 'We bespreken jouw plannen, budget en voorkeuren. Op basis hiervan adviseren we welke financieringsvorm het beste past: operational lease, financial lease of externe financiering.',
-                    'detail' => 'Vrijblijvend en objectief',
-                    'video' => '/shorts/fitnessaannemer-short-6.mp4',
+                    'title' => 'Inventarisatie & doorrekening',
+                    'desc' => 'We bespreken jouw plannen, budget en voorkeuren. Op basis daarvan rekenen we de scenario\'s voor je door: operational lease, financial lease of externe financiering.',
+                    'detail' => 'Vrijblijvend en transparant',
+                    'image' => '/assets/lf-step01.jpg',
+                    'image_alt' => 'Inventarisatie en doorrekening',
                 ],
                 [
                     'nr' => '02',
@@ -106,27 +107,24 @@
                     'title' => 'Voorstel op maat',
                     'desc' => 'Je ontvangt een helder financieringsvoorstel met maandelijkse termijnen, looptijd en voorwaarden. Geen kleine lettertjes, transparant en overzichtelijk.',
                     'detail' => 'Transparante voorwaarden',
-                    'images' => [
-                        ['src' => '/assets/foto-assets/BluePrint-2024-photos-50-819x1024.jpg', 'alt' => 'Financieringsvoorstel'],
-                        ['src' => '/assets/foto-assets/MCJO3843-683x1024.jpg', 'alt' => 'Adviesgesprek financiering'],
-                    ],
+                    'video' => '/assets/lf-step02.mp4',
                 ],
                 [
                     'nr' => '03',
                     'icon' => 'fa-file-signature',
                     'title' => 'Goedkeuring & overeenkomst',
-                    'desc' => 'Na akkoord regelen wij de volledige afhandeling met de financieringspartner. Je tekent de overeenkomst en wij zetten het leveringstraject in gang.',
+                    'desc' => 'Na akkoord van de financieringspartner regelen wij de volledige afhandeling. Je tekent de overeenkomst en wij zetten het leveringstraject in gang.',
                     'detail' => 'Wij regelen de afhandeling',
-                    'video' => '/shorts/fitnessaannemer-short-8.mp4',
+                    'video' => '/assets/lf-step03.mp4',
                 ],
                 [
                     'nr' => '04',
                     'icon' => 'fa-rocket',
                     'title' => 'Levering & direct starten',
-                    'desc' => 'Jouw apparatuur wordt geleverd en geinstalleerd. Je start direct met een volledig ingerichte fitnessruimte zonder grote voorinvestering.',
+                    'desc' => 'Jouw apparatuur en inrichting worden geleverd en geïnstalleerd. Je start direct met een volledig ingerichte sportschool zonder grote voorinvestering.',
                     'detail' => 'Direct operationeel',
-                    'image' => '/assets/1.jpg',
-                    'image_alt' => 'Opgeleverde fitnessruimte via leasing',
+                    'image' => '/assets/lf-step04.jpg',
+                    'image_alt' => 'Levering en installatie sportschool',
                 ],
             ];
             @endphp
@@ -188,15 +186,15 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
-                    <img src="{{ asset('assets/foto-assets/FULL-Ballin-Fit-013-WF206762-1-1024x683.jpg') }}" alt="Fitnessapparatuur via financiering" class="w-full h-full object-cover">
+                    <img src="{{ asset('assets/lf-blok4.jpg') }}" alt="Financieringsopties sportschool" class="w-full h-full object-cover">
                 </div>
                 <div class="ip-block-text">
                     <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Financieringsopties</span>
-                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">De juiste financiering <br class="hidden md:block"><span class="text-primary">voor jouw situatie</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Operational lease is ideaal als je flexibiliteit wilt. Je gebruikt de apparatuur zonder eigenaarschap, met vaste maandelijkse kosten. Bij financial lease bouw je eigendom op en profiteer je van fiscale voordelen.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Heb je liever externe financiering via een bank of investeerder? Wij helpen je met een gedegen projectplan en de juiste documentatie. Samen vinden we de oplossing die bij jou past.</p>
+                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">De opties <span class="text-primary">op een rij</span></h2>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Bij operational lease gebruik je de apparatuur tegen vaste maandelijkse kosten, zonder eigenaarschap. Bij financial lease word je stapsgewijs eigenaar. En externe financiering via een bank of investeerder is ook mogelijk; daarvoor leveren wij een gedegen projectplan en de juiste documentatie aan.</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Welke vorm past, hangt af van jouw situatie en plannen. Wij rekenen de scenario's door en leveren alle cijfers aan, zodat jouw accountant direct kan vergelijken.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                        <a href="{{ url('/gratis-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Gratis adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
+                        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
                     </div>
                 </div>

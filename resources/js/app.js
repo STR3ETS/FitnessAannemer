@@ -56,13 +56,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('main-header');
     if (header) {
         let lastScrollY = 0;
+        let lastDirection = 0;
+        let scrollAccum = 0;
         let ticking = false;
+        const scrollThreshold = 8;
 
         // Collect light-background sections for header color swap
         const lightSections = document.querySelectorAll('.horizontal-section, [data-header-light]');
 
         function updateHeader() {
             const scrollY = window.scrollY;
+            const delta = scrollY - lastScrollY;
+            const direction = delta > 0 ? 1 : -1;
 
             // Glass effect after scrolling past 50px
             if (scrollY > 50) {
@@ -86,14 +91,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 header.classList.remove('is-light');
             }
 
-            // Hide on scroll down, show on scroll up (only after 200px)
-            if (scrollY > 200) {
-                if (scrollY > lastScrollY) {
+            // Hide on scroll down, show on scroll up (only after 200px, with threshold)
+            if (direction !== lastDirection) {
+                scrollAccum = 0;
+                lastDirection = direction;
+            }
+            scrollAccum += Math.abs(delta);
+
+            if (scrollY > 200 && scrollAccum > scrollThreshold) {
+                if (direction > 0) {
                     header.classList.add('is-hidden');
                 } else {
                     header.classList.remove('is-hidden');
                 }
-            } else {
+            } else if (scrollY <= 200) {
                 header.classList.remove('is-hidden');
             }
 
@@ -165,17 +176,25 @@ document.addEventListener('DOMContentLoaded', () => {
         heroVideo.currentTime = 0;
 
         let targetTime = 0;
-        let seekPending = false;
+        let isSeeking = false;
 
-        // Throttled seek: only seek once per frame, skip if already seeking
-        function scheduledSeek() {
-            if (Math.abs(heroVideo.currentTime - targetTime) > 0.03) {
+        function doSeek() {
+            if (Math.abs(heroVideo.currentTime - targetTime) > 0.01) {
+                isSeeking = true;
                 heroVideo.currentTime = targetTime;
+            } else {
+                isSeeking = false;
             }
-            seekPending = false;
         }
 
-        // Pin and scrub
+        heroVideo.addEventListener('seeked', () => {
+            if (Math.abs(heroVideo.currentTime - targetTime) > 0.01) {
+                heroVideo.currentTime = targetTime;
+            } else {
+                isSeeking = false;
+            }
+        });
+
         ScrollTrigger.create({
             trigger: heroScroll,
             start: 'top top',
@@ -183,12 +202,10 @@ document.addEventListener('DOMContentLoaded', () => {
             pin: '#hero-pinned',
             onUpdate: (self) => {
                 if (!heroVideo.duration) return;
-                // Clamp to avoid black frames at end of video
                 const maxTime = heroVideo.duration - 0.3;
                 targetTime = Math.min(self.progress * heroVideo.duration, maxTime);
-                if (!seekPending) {
-                    seekPending = true;
-                    requestAnimationFrame(scheduledSeek);
+                if (!isSeeking) {
+                    requestAnimationFrame(doSeek);
                 }
             },
         });
@@ -229,8 +246,8 @@ document.addEventListener('DOMContentLoaded', () => {
             { text: 'gym ', primary: false },
             { text: 'ontwerpt', primary: true },
             { text: ' en ', primary: false },
-            { text: 'inricht', primary: true },
-            { text: '.', primary: false },
+            { text: 'turn key ', primary: true },
+            { text: 'inricht.', primary: false },
         ];
 
         let segmentIndex = 0;
@@ -520,6 +537,27 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+    }
+
+    // ===== Complete Club Section =====
+    const clubSection = document.querySelector('.complete-club-section');
+    if (clubSection) {
+        const clubFades = document.querySelectorAll('.club-fade');
+        gsap.set(clubFades, { y: 40, opacity: 0 });
+        ScrollTrigger.create({
+            trigger: '.complete-club-section',
+            start: 'top 75%',
+            onEnter: () => {
+                gsap.to(clubFades, {
+                    y: 0,
+                    opacity: 1,
+                    stagger: 0.08,
+                    duration: 0.7,
+                    ease: 'power3.out',
+                });
+            },
+            once: true,
+        });
     }
 
     // ===== Diensten Section =====
@@ -907,6 +945,60 @@ document.addEventListener('DOMContentLoaded', () => {
             }));
         }
     });
+
+    // ===== E-book form validation + download =====
+    const ebookForm = document.getElementById('ebook-form');
+    if (ebookForm) {
+        const naamInput = document.getElementById('ebook-naam');
+        const emailInput = document.getElementById('ebook-email');
+        const errorEl = document.getElementById('ebook-error');
+        const btn = document.getElementById('ebook-btn');
+        const successEl = document.getElementById('ebook-success');
+
+        ebookForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            errorEl.classList.add('hidden');
+
+            const naam = naamInput.value.trim();
+            const email = emailInput.value.trim();
+
+            if (!naam) {
+                errorEl.textContent = 'Vul je naam in om het e-book te downloaden.';
+                errorEl.classList.remove('hidden');
+                naamInput.focus();
+                return;
+            }
+
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                errorEl.textContent = 'Vul een geldig e-mailadres in.';
+                errorEl.classList.remove('hidden');
+                emailInput.focus();
+                return;
+            }
+
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-xs"></i> Even geduld...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                const link = document.createElement('a');
+                link.href = ebookForm.closest('section').querySelector('[download]').href;
+                link.download = '';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+                ebookForm.classList.add('hidden');
+                successEl.classList.remove('hidden');
+            }, 800);
+        });
+
+        [naamInput, emailInput].forEach(input => {
+            input.addEventListener('input', () => {
+                errorEl.classList.add('hidden');
+                input.classList.remove('border-red-400');
+            });
+        });
+    }
 
     // ===== Inrichting & Planning: hero =====
     const ipHeroEls = document.querySelectorAll('.ip-hero-el');

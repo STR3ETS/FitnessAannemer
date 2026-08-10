@@ -70,11 +70,11 @@ class LandingPageResource extends Resource
                     TextInput::make('hero_cta_text')
                         ->label('Primaire knop tekst')
                         ->required()
-                        ->placeholder('Gratis adviesgesprek'),
+                        ->placeholder('Vrijblijvend adviesgesprek'),
                     TextInput::make('hero_cta_url')
                         ->label('Primaire knop link')
                         ->required()
-                        ->placeholder('/gratis-adviesgesprek'),
+                        ->placeholder('/vrijblijvend-adviesgesprek'),
                     TextInput::make('hero_cta2_text')
                         ->label('Secundaire knop tekst')
                         ->placeholder('Bekijk onze projecten'),

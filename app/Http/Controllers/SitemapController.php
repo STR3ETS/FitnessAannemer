@@ -14,9 +14,9 @@ class SitemapController extends Controller
         $staticPages = [
             ['url' => '/', 'priority' => '1.0', 'changefreq' => 'weekly'],
             ['url' => '/diensten', 'priority' => '0.9', 'changefreq' => 'monthly'],
+            ['url' => '/diensten/turnkey-sportschool-bouwen', 'priority' => '0.9', 'changefreq' => 'monthly'],
             ['url' => '/diensten/inrichting-en-planning', 'priority' => '0.8', 'changefreq' => 'monthly'],
             ['url' => '/diensten/levering-en-installatie', 'priority' => '0.8', 'changefreq' => 'monthly'],
-            ['url' => '/diensten/onderhoud-en-reparaties', 'priority' => '0.8', 'changefreq' => 'monthly'],
             ['url' => '/diensten/leasing-en-financiering', 'priority' => '0.8', 'changefreq' => 'monthly'],
             ['url' => '/projecten', 'priority' => '0.8', 'changefreq' => 'weekly'],
             ['url' => '/apparatuur', 'priority' => '0.8', 'changefreq' => 'monthly'],
@@ -26,9 +26,8 @@ class SitemapController extends Controller
             ['url' => '/fitnesswijzer/gym-verdienmodellen', 'priority' => '0.7', 'changefreq' => 'weekly'],
             ['url' => '/fitnesswijzer/tips-en-inspiratie', 'priority' => '0.7', 'changefreq' => 'weekly'],
             ['url' => '/fitnesswijzer/gymreviews', 'priority' => '0.7', 'changefreq' => 'weekly'],
-            ['url' => '/contact', 'priority' => '0.6', 'changefreq' => 'monthly'],
-            ['url' => '/gratis-adviesgesprek', 'priority' => '0.8', 'changefreq' => 'monthly'],
-            ['url' => '/offerte-aanvragen', 'priority' => '0.8', 'changefreq' => 'monthly'],
+            ['url' => '/oplossingen', 'priority' => '0.8', 'changefreq' => 'monthly'],
+            ['url' => '/vrijblijvend-adviesgesprek', 'priority' => '0.8', 'changefreq' => 'monthly'],
             ['url' => '/privacybeleid', 'priority' => '0.3', 'changefreq' => 'yearly'],
             ['url' => '/algemene-voorwaarden', 'priority' => '0.3', 'changefreq' => 'yearly'],
             ['url' => '/cookies', 'priority' => '0.3', 'changefreq' => 'yearly'],
@@ -41,17 +40,13 @@ class SitemapController extends Controller
         // Oplossingen pages
         $oplossingen = [
             'sportschool-inrichten',
-            'pilates-studio-inrichten',
             'pt-studio-inrichten',
-            'hotel-gym-inrichten',
-            'wellnessruimte-inrichten',
-            'boksruimte-inrichten',
+            'pilates-studio-inrichten',
             'homegyms-inrichten',
-            'crossfit-box-inrichten',
+            'hotel-gym-inrichten',
             'bedrijfsfitness-inrichten',
             'hyrox-box-inrichten',
-            'recovery-ruimte-inrichten',
-            'groepsfitness-ruimte-inrichten',
+            'wellnessruimte-inrichten',
         ];
 
         foreach ($oplossingen as $slug) {
@@ -59,7 +54,7 @@ class SitemapController extends Controller
         }
 
         // Apparatuur categories
-        $apparatuur = ['collecties', 'cardio', 'krachtapparatuur', 'apparatuur-functioneel', 'gewichten', 'flooring', 'herstel'];
+        $apparatuur = ['collecties', 'cardio', 'krachtapparatuur', 'apparatuur-functioneel', 'gewichten', 'sportvloeren', 'herstel', 'pvc-laminaat-vloeren', 'verlichting', 'audio', 'spiegels', 'kluisjes', 'meubels'];
         foreach ($apparatuur as $slug) {
             $urls->push(['url' => '/apparatuur/' . $slug, 'priority' => '0.7', 'changefreq' => 'monthly']);
         }

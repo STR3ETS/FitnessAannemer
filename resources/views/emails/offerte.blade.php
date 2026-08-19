@@ -49,5 +49,10 @@
     @endif
 </table>
 
+@if(!empty($bestandenAantal))
+<br>
+<p style="font-family:Arial,sans-serif;font-size:14px;color:#333;"><strong>Bijlagen:</strong> {{ $bestandenAantal }} bestand{{ $bestandenAantal > 1 ? 'en' : '' }} bijgevoegd bij deze e-mail.</p>
+@endif
+
 <br>
 <p style="font-family:Arial,sans-serif;font-size:12px;color:#999;">Bron: Offerte-aanvraag formulier op fitnessaannemer.nl</p>

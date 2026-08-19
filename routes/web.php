@@ -22,6 +22,9 @@ Route::view('/privacybeleid', 'privacybeleid')->name('privacybeleid');
 Route::view('/algemene-voorwaarden', 'algemene-voorwaarden')->name('algemene-voorwaarden');
 Route::view('/cookies', 'cookies')->name('cookies');
 
+// Offerte
+Route::post('/offerte-aanvragen', [ContactController::class, 'submitOfferte'])->name('offerte.submit');
+
 // Redirects (old pages → multi-step form)
 Route::redirect('/gratis-adviesgesprek', '/vrijblijvend-adviesgesprek', 301);
 Route::redirect('/contact', '/vrijblijvend-adviesgesprek', 301);

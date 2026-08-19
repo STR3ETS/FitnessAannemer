@@ -71,7 +71,7 @@
                     </div>
                 </div>
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
-                    <video src="{{ asset('shorts/fitnessaannemer-short-2.mp4') }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                    <img src="{{ asset('assets/projecten-hero.jpg') }}" alt="Sportschool interieur met Matrix apparatuur" class="w-full h-full object-cover" loading="eager">
                 </div>
             </div>
         </div>

@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             SeoMetadataSeeder::class,
+            ProjectSeeder::class,
         ]);
     }
 }

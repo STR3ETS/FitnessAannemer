@@ -178,12 +178,25 @@
                     <p class="social-fade lg:max-w-[400px] lg:text-right text-xs text-white opacity-80">Gemiddeld 1.000.000 weergaven per maand. Volg ons en bekijk hoe wij fitnessruimtes van ontwerp tot oplevering transformeren. Bereik dat we ook direct als marketing inzetten voor onze klanten.</p>
                 </div>
                 <div class="video-track" id="video-track">
-                    @for ($i = 1; $i <= 9; $i++)
-                    <div class="video-card rounded-3xl relative shadow-2xl" data-index="{{ $i - 1 }}">
-                        <video src="/shorts/fitnessaannemer-short-{{ $i }}.mp4" class="absolute z-1 object-cover w-full h-full" muted loop playsinline></video>
+                    @php
+                    $socialVideos = [
+                        'shorts/social-1.mp4',
+                        'shorts/social-2.mp4',
+                        'shorts/social-3.mp4',
+                        'shorts/social-4.mp4',
+                        'shorts/social-5.mp4',
+                        'shorts/social-6.mp4',
+                        'shorts/fitnessaannemer-short-1.mp4',
+                        'shorts/fitnessaannemer-short-2.mp4',
+                        'shorts/fitnessaannemer-short-3.mp4',
+                    ];
+                    @endphp
+                    @foreach ($socialVideos as $idx => $video)
+                    <div class="video-card rounded-3xl relative shadow-2xl" data-index="{{ $idx }}">
+                        <video src="{{ asset($video) }}" class="absolute z-1 object-cover w-full h-full" muted loop playsinline></video>
                         <div class="video-overlay bg-secondary absolute z-2"></div>
                     </div>
-                    @endfor
+                    @endforeach
                 </div>
                 <div class="social-fade flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-8 lg:mt-12">
                     <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
@@ -367,7 +380,7 @@
                         </div>
                         {{-- Desktop videos --}}
                         <div class="flex-shrink-0 relative hidden lg:block">
-                            <video src="/shorts/fitnessaannemer-short-1.mp4" class="w-[270px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
+                            <video src="{{ asset('assets/hww-stap1.mp4') }}" class="w-[270px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
                             <div class="absolute -bottom-6 -left-6 bg-white rounded-3xl shadow-xl p-5">
                                 <div class="flex items-center gap-3">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -476,8 +489,8 @@
                         </div>
                         {{-- Desktop videos --}}
                         <div class="flex-shrink-0 hidden lg:flex items-end gap-5 relative">
-                            <video src="/shorts/fitnessaannemer-short-2.mp4" class="w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
-                            <video src="/shorts/fitnessaannemer-short-3.mp4" class="w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl -mb-12" muted loop playsinline autoplay></video>
+                            <video src="{{ asset('assets/hww-stap2a.mp4') }}" class="w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
+                            <video src="{{ asset('assets/hww-stap2b.mp4') }}" class="w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl -mb-12" muted loop playsinline autoplay></video>
                             <div class="absolute -top-4 -right-4 bg-white rounded-3xl shadow-xl p-4 z-10">
                                 <div class="flex items-center gap-3">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -822,19 +835,37 @@
                 <p class="brands-fade text-white/35 text-sm leading-relaxed max-w-lg mx-auto">Wij zijn officieel dealer van maar liefst 18 merken en zitten dus niet vast aan een. Daardoor adviseren we wat echt past bij jouw doelgroep, budget en verdienmodel. Zonder voorkeur, zonder verplichtingen. Van Matrix tot Eleiko, van cardio tot strength: wij stellen de mix samen die voor jouw club het beste rendeert.</p>
             </div>
 
+            @php
+            $marqueeRow1 = [
+                ['src' => 'assets/wp-uploads/MATRIX-LOGO.png', 'alt' => 'Matrix', 's' => 1.3],
+                ['src' => 'assets/brand-logos/Logo_Egym.png', 'alt' => 'EGYM', 's' => 0.55],
+                ['src' => 'assets/brand-logos/Logo_ZIVA.png', 'alt' => 'ZIVA', 's' => 2],
+                ['src' => 'assets/brand-logos/Vision_Fitness_Logo.jpg', 'alt' => 'Vision', 's' => 1.15],
+                ['src' => 'assets/brand-logos/Logo_YourReformer.png', 'alt' => 'YourReformer', 's' => 1],
+                ['src' => 'assets/wp-uploads/Life-Fitness.png', 'alt' => 'Life Fitness', 's' => 1],
+                ['src' => 'assets/brand-logos/Eleiko_Logo_2021_RGB-scaled.png', 'alt' => 'Eleiko', 's' => 1.35],
+                ['src' => 'assets/brand-logos/logo-hammer-strength.png', 'alt' => 'Hammer Strength', 's' => 2],
+                ['src' => 'assets/wp-uploads/Concept2-1.png', 'alt' => 'Concept2', 's' => 1.2],
+            ];
+            $marqueeRow2 = [
+                ['src' => 'assets/brand-logos/Logo_Watson.png', 'alt' => 'Watson', 's' => 2],
+                ['src' => 'assets/wp-uploads/LOGO_WEIss-1024x462-1.png', 'alt' => 'Gym80', 's' => 1.2],
+                ['src' => 'assets/brand-logos/NikeStrength_Black_Logo_600px.png', 'alt' => 'Nike Strength', 's' => 1.1],
+                ['src' => 'assets/brand-logos/Logo_Lifemaxx.webp', 'alt' => 'LifeMaxx', 's' => 2.8],
+                ['src' => 'assets/brand-logos/Logo_TKO.webp', 'alt' => 'TKO', 's' => 1],
+                ['src' => 'assets/brand-logos/assault_fitness_logo.webp', 'alt' => 'Assault Fitness', 's' => 1],
+                ['src' => 'assets/brand-logos/Logo_Sprinttracks.png', 'alt' => 'Sprinttracks', 's' => 2.8],
+                ['src' => 'assets/brand-logos/Logo_Inbody.png', 'alt' => 'InBody', 's' => 1.15],
+            ];
+            @endphp
+
             {{-- Brand marquee row 1 (left-to-right) --}}
             <div class="brands-marquee-wrap mb-4 relative z-10">
                 <div class="brands-marquee">
                     @for ($i = 0; $i < 3; $i++)
-                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/MATRIX-LOGO.png') }}" alt="Matrix" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Logo_Egym.png') }}" alt="EGYM" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Logo_ZIVA.png') }}" alt="ZIVA" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Vision_Fitness_Logo.jpg') }}" alt="Vision" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Logo_YourReformer.png') }}" alt="YourReformer" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/Life-Fitness.png') }}" alt="Life Fitness" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Eleiko_Logo_2021_RGB-scaled.png') }}" alt="Eleiko" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/logo-hammer-strength.png') }}" alt="Hammer Strength" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/Concept2-1.png') }}" alt="Concept2" class="brand-logo"></span>
+                    @foreach ($marqueeRow1 as $brand)
+                    <span class="brand-pill"><img src="{{ asset($brand['src']) }}" alt="{{ $brand['alt'] }}" class="brand-logo" style="--logo-scale: {{ $brand['s'] }}"></span>
+                    @endforeach
                     @endfor
                 </div>
             </div>
@@ -843,14 +874,9 @@
             <div class="brands-marquee-wrap mb-20 relative z-10">
                 <div class="brands-marquee brands-marquee--reverse">
                     @for ($i = 0; $i < 3; $i++)
-                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Logo_Watson.png') }}" alt="Watson" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/wp-uploads/LOGO_WEIss-1024x462-1.png') }}" alt="Gym80" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/NikeStrength_Black_Logo_600px.png') }}" alt="Nike Strength" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Logo_Lifemaxx.webp') }}" alt="LifeMaxx" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Logo_TKO.webp') }}" alt="TKO" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/assault_fitness_logo.webp') }}" alt="Assault Fitness" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Logo_Sprinttracks.png') }}" alt="Sprinttracks" class="brand-logo"></span>
-                    <span class="brand-pill"><img src="{{ asset('assets/brand-logos/Logo_Inbody.png') }}" alt="InBody" class="brand-logo"></span>
+                    @foreach ($marqueeRow2 as $brand)
+                    <span class="brand-pill"><img src="{{ asset($brand['src']) }}" alt="{{ $brand['alt'] }}" class="brand-logo" style="--logo-scale: {{ $brand['s'] }}"></span>
+                    @endforeach
                     @endfor
                 </div>
             </div>
@@ -1097,165 +1123,6 @@
             </div>
         </section>
 
-        {{-- Reviews Section - Split Editorial --}}
-        @php
-        $reviews = [
-            [
-                'quote' => 'Tijdens de uitvoering van de grote sportschool renovatie van Vitality Sports in Duiven hebben wij als LIPS Aannemers met veel plezier samen gewerkt met Fitness Aannemer.',
-                'initials' => 'EP',
-                'name' => 'Esmee Piek',
-                'role' => 'Samenwerkingspartner',
-                'company' => 'LIPS Aannemers',
-                'image' => asset('assets/wp-uploads/011_DSC0596-HDR-scaled-e1758023491547.jpg'),
-                'project' => 'Vitality Sports Duiven',
-                'projectDesc' => 'Hyrox gym van 1.000 m2 in Duiven',
-                'location' => 'Duiven',
-                'size' => '1.000 m²',
-            ],
-            [
-                'quote' => 'Stijn en zijn team zijn om mee te sparren over alles omtrent het opstarten en opschalen van je eigen gym en hebben de juiste connecties in het fitness wereldje.',
-                'initials' => 'GR',
-                'name' => 'Google Review',
-                'role' => 'Klant',
-                'company' => 'Fitness Aannemer',
-                'image' => asset('assets/wp-uploads/FA_VDS_AUG2025-07-scaled.jpg'),
-                'project' => 'MANA Eindhoven',
-                'projectDesc' => 'Social Performance Club van 900 m2 in de Blob',
-                'location' => 'Eindhoven',
-                'size' => '900 m²',
-            ],
-            [
-                'quote' => 'Fijne jongens om mee te werken. Altijd bereikbaar en zorgen voor een mooi eindproduct.',
-                'initials' => 'JT',
-                'name' => 'Johannes Talhout',
-                'role' => 'Klant',
-                'company' => 'Fitness Aannemer',
-                'image' => asset('assets/wp-uploads/009_DSC0569-HDR-scaled.jpg'),
-                'project' => 'De Krachtfabriek Huissen',
-                'projectDesc' => 'Urban gym van 900 m2 in Huissen',
-                'location' => 'Huissen',
-                'size' => '900 m²',
-            ],
-            [
-                'quote' => 'Wij zijn erg tevreden over de kwaliteit van alle Kingsbox producten in onze box! Daarnaast heb ik altijd fijn (en snel) contact met Stijn. Kortom, heel tevreden!',
-                'initials' => 'YJ',
-                'name' => 'Y de Jong',
-                'role' => 'Eigenaar',
-                'company' => 'Google Review',
-                'image' => asset('assets/wp-uploads/SOCIAL-Farmfit-018-WF104894.jpg'),
-                'project' => 'Farm Fit Culemborg',
-                'projectDesc' => 'Functionele studio in een oude varkensstal',
-                'location' => 'Culemborg',
-                'size' => '150 m²',
-            ],
-            [
-                'quote' => 'Stijn is een jonge ondernemer die goed meedenkt met de mogelijkheden van wat je wensen zijn. Hij houdt je goed op de hoogte van de voortgang van de processen. De materialen van Kingsbox zijn goed en onderscheidend.',
-                'initials' => 'JG',
-                'name' => 'Job Grave',
-                'role' => 'Klant',
-                'company' => 'Fitness Aannemer',
-                'image' => asset('assets/wp-uploads/FULL-Ballin-Fit-021-WF106948-scaled.jpg'),
-                'project' => 'Ballin Fit Amsterdam',
-                'projectDesc' => 'Performance club van 770 m2 in Amsterdam-Noord',
-                'location' => 'Amsterdam-Noord',
-                'size' => '770 m²',
-            ],
-            [
-                'quote' => 'Geweldig bedrijf om zaken mee te doen! Aardige, professionele en gedreven (jonge) ondernemers met een passie voor het vak.',
-                'initials' => 'SR',
-                'name' => 'Schar Reaux',
-                'role' => 'Klant',
-                'company' => 'Fitness Aannemer',
-                'image' => asset('assets/wp-uploads/Kopie-van-FitnessAaannemer_Upshape_VDS-7694-scaled.jpg'),
-                'project' => 'ONA Gym Vught',
-                'projectDesc' => 'Women\'s only gym van 250 m2 in Vught',
-                'location' => 'Vught',
-                'size' => '250 m²',
-            ],
-            [
-                'quote' => 'Super happy met de fitness equipment die ik via Fitness Aannemer heb besteld! Ook de hulp, het advies en de service was top. Het is precies geworden zoals ik voor ogen had.',
-                'initials' => 'CH',
-                'name' => 'Christa',
-                'role' => 'Klant',
-                'company' => 'Fitness Aannemer',
-                'image' => asset('assets/wp-uploads/FULL-Ballin-Fit-004-WF206687-scaled.jpg'),
-                'project' => 'FitCore Breda',
-                'projectDesc' => 'Pijnvrij bewegen studio van 50 m2 in Breda',
-                'location' => 'Breda',
-                'size' => '50 m²',
-            ],
-        ];
-        @endphp
-        @if(count($reviews))
-        <section class="reviews-section bg-secondary py-16 lg:py-32 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6">
-
-                <div class="review-showcase">
-                    <div class="flex flex-col lg:flex-row gap-10 lg:gap-16">
-                        {{-- Left: Quote --}}
-                        <div class="lg:w-[55%] flex flex-col justify-between">
-                            <div class="relative min-h-[280px] sm:min-h-[240px]">
-                                @foreach($reviews as $idx => $review)
-                                <div class="review-slide absolute inset-0 {{ $idx > 0 ? 'opacity-0' : '' }}">
-                                    <svg class="w-10 h-10 text-primary/20 mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609L9.978 5.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H0z"/></svg>
-                                    <p class="text-white text-lg sm:text-xl lg:text-2xl font-medium leading-relaxed mb-8">{{ $review['quote'] }}</p>
-                                    <div class="flex items-center gap-4">
-                                        <div class="w-12 h-12 rounded-full bg-primary/15 border border-primary/25 flex items-center justify-center">
-                                            <span class="text-primary text-sm font-bold">{{ $review['initials'] }}</span>
-                                        </div>
-                                        <div>
-                                            <p class="text-white text-sm font-semibold">{{ $review['name'] }}</p>
-                                            <p class="text-white/40 text-xs">{{ $review['role'] }}, {{ $review['company'] }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                @endforeach
-                            </div>
-
-                            {{-- Progress bars + nav --}}
-                            <div class="flex items-center justify-between mt-10 lg:mt-16">
-                                <div class="flex items-center gap-2">
-                                    @foreach($reviews as $idx => $review)
-                                    <button class="review-progress-bar w-10 h-1 rounded-full bg-white/10 relative overflow-hidden cursor-pointer" data-review="{{ $idx }}">
-                                        <div class="review-progress-fill absolute inset-0 bg-primary rounded-full origin-left {{ $idx > 0 ? 'scale-x-0' : '' }}"></div>
-                                    </button>
-                                    @endforeach
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <button class="review-prev w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:border-primary/50 hover:text-primary transition-colors">
-                                        <i class="fa-solid fa-arrow-left text-xs"></i>
-                                    </button>
-                                    <button class="review-next w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:border-primary/50 hover:text-primary transition-colors">
-                                        <i class="fa-solid fa-arrow-right text-xs"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        {{-- Right: Project image card --}}
-                        <div class="lg:w-[45%]">
-                            <div class="relative rounded-2xl overflow-hidden aspect-square">
-                                @foreach($reviews as $idx => $review)
-                                <div class="review-card-img absolute inset-0 {{ $idx > 0 ? 'opacity-0' : '' }}">
-                                    <img src="{{ $review['image'] }}" alt="{{ $review['project'] }}" class="w-full h-full object-cover" loading="lazy">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent"></div>
-                                    <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                                        <h3 class="text-white text-xl font-bold mb-2">{{ $review['project'] }}</h3>
-                                        <p class="text-white/60 text-sm leading-relaxed mb-4">{{ $review['projectDesc'] }}</p>
-                                        <div class="flex items-center gap-4">
-                                            <span class="text-white/50 text-xs font-medium"><i class="fa-solid fa-location-dot mr-1.5 text-primary/70"></i>{{ $review['location'] }}</span>
-                                            <span class="text-white/50 text-xs font-medium"><i class="fa-solid fa-ruler-combined mr-1.5 text-primary/70"></i>{{ $review['size'] }}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        @endif
 
         {{-- E-book Download Section --}}
         <section class="bg-white py-16 lg:py-32 overflow-hidden" data-header-light>

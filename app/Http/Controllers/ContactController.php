@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Submission;
 use Illuminate\Http\Request;
 use App\Mail\AdviesgesprekAanvraag;
 use App\Services\OdooService;
@@ -31,6 +32,15 @@ class ContactController extends Controller
             'utm_campaign' => 'nullable|string|max:255',
             'utm_term' => 'nullable|string|max:255',
             'utm_content' => 'nullable|string|max:255',
+        ]);
+
+        Submission::create([
+            'type' => 'adviesgesprek',
+            'naam' => $validated['naam'],
+            'email' => $validated['email'],
+            'telefoon' => $validated['telefoon'],
+            'bedrijfsnaam' => $validated['bedrijfsnaam'] ?? null,
+            'data' => $validated,
         ]);
 
         Mail::to(config('mail.to_address', 'info@fitnessaannemer.nl'))
@@ -90,10 +100,31 @@ class ContactController extends Controller
             'diensten' => 'nullable|array',
             'diensten.*' => 'string|max:100',
             'bericht' => 'nullable|string|max:2000',
+            'bestanden' => 'nullable|array|max:5',
+            'bestanden.*' => 'file|max:10240',
+        ]);
+
+        $bestanden = $request->file('bestanden', []);
+
+        $storedPaths = [];
+        foreach ($bestanden as $file) {
+            if ($file && $file->isValid()) {
+                $storedPaths[] = $file->store('submissions', 'local');
+            }
+        }
+
+        Submission::create([
+            'type' => 'offerte',
+            'naam' => $validated['naam'],
+            'email' => $validated['email'],
+            'telefoon' => $validated['telefoon'],
+            'bedrijfsnaam' => $validated['bedrijf'] ?? null,
+            'data' => $validated,
+            'bestanden' => $storedPaths ?: null,
         ]);
 
         Mail::to(config('mail.to_address', 'info@fitnessaannemer.nl'))
-            ->send(new \App\Mail\OfferteAanvraag($validated));
+            ->send(new \App\Mail\OfferteAanvraag($validated, $bestanden));
 
         try {
             $odoo = new OdooService();

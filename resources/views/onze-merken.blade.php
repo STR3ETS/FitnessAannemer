@@ -81,32 +81,32 @@
 
             @php
             $merken = [
-                ['name' => 'Life Fitness', 'logo' => 'assets/wp-uploads/Life-Fitness.png', 'desc' => 'Wereldleider in fitnessapparatuur. Premium cardio- en krachtapparatuur voor commercieel gebruik.', 'cat' => 'Cardio en Kracht'],
-                ['name' => 'Matrix Fitness', 'logo' => 'assets/wp-uploads/MATRIX-LOGO.png', 'desc' => 'Innovatieve fitnessoplossingen met geavanceerde technologie en strak design.', 'cat' => 'Cardio en Kracht'],
-                ['name' => 'GYM80', 'logo' => 'assets/wp-uploads/LOGO_WEIss-1024x462-1.png', 'desc' => 'Duitse precisie-engineering. Commerciele krachtapparatuur van de hoogste kwaliteit.', 'cat' => 'Krachtapparatuur'],
-                ['name' => 'Hammer Strength', 'logo' => 'assets/brand-logos/logo-hammer-strength.png', 'desc' => 'Plate-loaded krachtapparatuur voor serieuze krachtsporters. Robuust en professioneel.', 'cat' => 'Krachtapparatuur'],
-                ['name' => 'Concept2', 'logo' => 'assets/wp-uploads/Concept2-1.png', 'desc' => 'De standaard in roeimachines, SkiErg en BikeErg. Onmisbaar voor functionele training.', 'cat' => 'Cardio'],
-                ['name' => 'EGYM', 'logo' => 'assets/brand-logos/Logo_Egym.png', 'desc' => 'Digitale kracht- en flexibiliteitstraining. Slimme apparatuur die automatisch op de gebruiker afstemt.', 'cat' => 'Digitaal en Kracht'],
-                ['name' => 'Eleiko', 'logo' => 'assets/brand-logos/Eleiko_Logo_2021_RGB-scaled.png', 'desc' => 'Zweedse topkwaliteit. Olympische halters, bumper plates en platforms voor serieuze kracht.', 'cat' => 'Functioneel'],
-                ['name' => 'Watson', 'logo' => 'assets/brand-logos/Logo_Watson.png', 'desc' => 'Handgemaakte Britse krachtapparatuur. Gebouwd om generaties mee te gaan.', 'cat' => 'Krachtapparatuur'],
-                ['name' => 'Nike Strength', 'logo' => 'assets/brand-logos/NikeStrength_Black_Logo_600px.png', 'desc' => 'Functionele trainingsapparatuur en accessoires met het kenmerkende Nike DNA.', 'cat' => 'Functioneel'],
-                ['name' => 'ZIVA', 'logo' => 'assets/brand-logos/Logo_ZIVA.png', 'desc' => 'Professionele dumbbells, kettlebells en accessoires. Duurzaam en stijlvol ontworpen.', 'cat' => 'Functioneel'],
-                ['name' => 'Vision', 'logo' => 'assets/brand-logos/Vision_Fitness_Logo.jpg', 'desc' => 'Betrouwbare cardio-apparatuur voor commercieel en thuisgebruik. Solide en onderhoudsvriendelijk.', 'cat' => 'Cardio en Kracht'],
-                ['name' => 'YourReformer', 'logo' => 'assets/brand-logos/Logo_YourReformer.png', 'desc' => 'Reformers en pilatesapparatuur voor studio\'s. Compact, stijlvol en professioneel.', 'cat' => 'Reformers'],
-                ['name' => 'LifeMaxx', 'logo' => 'assets/brand-logos/Logo_Lifemaxx.webp', 'desc' => 'Nederlands merk voor dumbbells, racks en functionele trainingstools. Breed assortiment.', 'cat' => 'Functioneel en Kracht'],
-                ['name' => 'TKO', 'logo' => 'assets/brand-logos/Logo_TKO.webp', 'desc' => 'Professionele krachtaccessoires, bags en opslagsystemen voor commerciele gyms.', 'cat' => 'Cardio en Kracht'],
-                ['name' => 'Assault Fitness', 'logo' => 'assets/brand-logos/assault_fitness_logo.webp', 'desc' => 'AirBikes en runners voor high-intensity training. Gebouwd voor de zwaarste workouts.', 'cat' => 'Cardio'],
-                ['name' => 'Sprinttracks', 'logo' => 'assets/brand-logos/Logo_Sprinttracks.png', 'desc' => 'Professionele sprintbanen voor indoor gebruik. Ideaal voor functionele en HIIT zones.', 'cat' => 'Vloeren'],
-                ['name' => 'InBody', 'logo' => 'assets/brand-logos/Logo_Inbody.png', 'desc' => 'Lichaamsanalyse en compositiemetingen. Professionele meetapparatuur voor resultaattracking.', 'cat' => 'Analyse en metingen'],
+                ['name' => 'Life Fitness', 'logo' => 'assets/wp-uploads/Life-Fitness.png', 'desc' => 'Wereldleider in fitnessapparatuur. Premium cardio- en krachtapparatuur voor commercieel gebruik.', 'cat' => 'Cardio en Kracht', 's' => 1],
+                ['name' => 'Matrix Fitness', 'logo' => 'assets/wp-uploads/MATRIX-LOGO.png', 'desc' => 'Innovatieve fitnessoplossingen met geavanceerde technologie en strak design.', 'cat' => 'Cardio en Kracht', 's' => 1.3],
+                ['name' => 'GYM80', 'logo' => 'assets/wp-uploads/LOGO_WEIss-1024x462-1.png', 'desc' => 'Duitse precisie-engineering. Commerciele krachtapparatuur van de hoogste kwaliteit.', 'cat' => 'Krachtapparatuur', 's' => 1.2],
+                ['name' => 'Hammer Strength', 'logo' => 'assets/brand-logos/logo-hammer-strength.png', 'desc' => 'Plate-loaded krachtapparatuur voor serieuze krachtsporters. Robuust en professioneel.', 'cat' => 'Krachtapparatuur', 's' => 2],
+                ['name' => 'Concept2', 'logo' => 'assets/wp-uploads/Concept2-1.png', 'desc' => 'De standaard in roeimachines, SkiErg en BikeErg. Onmisbaar voor functionele training.', 'cat' => 'Cardio', 's' => 1.2],
+                ['name' => 'EGYM', 'logo' => 'assets/brand-logos/Logo_Egym.png', 'desc' => 'Digitale kracht- en flexibiliteitstraining. Slimme apparatuur die automatisch op de gebruiker afstemt.', 'cat' => 'Digitaal en Kracht', 's' => 0.55],
+                ['name' => 'Eleiko', 'logo' => 'assets/brand-logos/Eleiko_Logo_2021_RGB-scaled.png', 'desc' => 'Zweedse topkwaliteit. Olympische halters, bumper plates en platforms voor serieuze kracht.', 'cat' => 'Functioneel', 's' => 1.35],
+                ['name' => 'Watson', 'logo' => 'assets/brand-logos/Logo_Watson.png', 'desc' => 'Handgemaakte Britse krachtapparatuur. Gebouwd om generaties mee te gaan.', 'cat' => 'Krachtapparatuur', 's' => 2],
+                ['name' => 'Nike Strength', 'logo' => 'assets/brand-logos/NikeStrength_Black_Logo_600px.png', 'desc' => 'Functionele trainingsapparatuur en accessoires met het kenmerkende Nike DNA.', 'cat' => 'Functioneel', 's' => 1.1],
+                ['name' => 'ZIVA', 'logo' => 'assets/brand-logos/Logo_ZIVA.png', 'desc' => 'Professionele dumbbells, kettlebells en accessoires. Duurzaam en stijlvol ontworpen.', 'cat' => 'Functioneel', 's' => 2],
+                ['name' => 'Vision', 'logo' => 'assets/brand-logos/Vision_Fitness_Logo.jpg', 'desc' => 'Betrouwbare cardio-apparatuur voor commercieel en thuisgebruik. Solide en onderhoudsvriendelijk.', 'cat' => 'Cardio en Kracht', 's' => 1.15],
+                ['name' => 'YourReformer', 'logo' => 'assets/brand-logos/Logo_YourReformer.png', 'desc' => 'Reformers en pilatesapparatuur voor studio\'s. Compact, stijlvol en professioneel.', 'cat' => 'Reformers', 's' => 1],
+                ['name' => 'LifeMaxx', 'logo' => 'assets/brand-logos/Logo_Lifemaxx.webp', 'desc' => 'Nederlands merk voor dumbbells, racks en functionele trainingstools. Breed assortiment.', 'cat' => 'Functioneel en Kracht', 's' => 2.8],
+                ['name' => 'TKO', 'logo' => 'assets/brand-logos/Logo_TKO.webp', 'desc' => 'Professionele krachtaccessoires, bags en opslagsystemen voor commerciele gyms.', 'cat' => 'Cardio en Kracht', 's' => 1],
+                ['name' => 'Assault Fitness', 'logo' => 'assets/brand-logos/assault_fitness_logo.webp', 'desc' => 'AirBikes en runners voor high-intensity training. Gebouwd voor de zwaarste workouts.', 'cat' => 'Cardio', 's' => 1],
+                ['name' => 'Sprinttracks', 'logo' => 'assets/brand-logos/Logo_Sprinttracks.png', 'desc' => 'Professionele sprintbanen voor indoor gebruik. Ideaal voor functionele en HIIT zones.', 'cat' => 'Vloeren', 's' => 2.8],
+                ['name' => 'InBody', 'logo' => 'assets/brand-logos/Logo_Inbody.png', 'desc' => 'Lichaamsanalyse en compositiemetingen. Professionele meetapparatuur voor resultaattracking.', 'cat' => 'Analyse en metingen', 's' => 1.15],
             ];
             @endphp
 
             <div class="ip-fade grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
                 @foreach($merken as $merk)
                 <div class="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-7 hover:border-primary/30 hover:bg-primary/[0.04] transition-all duration-300">
-                    <div class="h-12 flex items-center mb-6">
+                    <div class="h-14 flex items-center mb-6">
                         @if($merk['logo'])
-                            <img src="{{ asset($merk['logo']) }}" alt="{{ $merk['name'] }}" class="h-7 w-auto object-contain" style="filter: brightness(0) invert(1); opacity: 0.7;">
+                            <img src="{{ asset($merk['logo']) }}" alt="{{ $merk['name'] }}" class="w-auto object-contain" style="height: calc(28px * {{ $merk['s'] }}); filter: brightness(0) invert(1); opacity: 0.7;">
                         @else
                             <span class="text-white/70 text-lg font-bold" style="font-family: 'Inter'">{{ $merk['name'] }}</span>
                         @endif

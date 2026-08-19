@@ -59,7 +59,7 @@
                         </a>
                     </div>
                     @else
-                    <form action="{{ url('/offerte-aanvragen') }}" method="POST" class="space-y-6">
+                    <form action="{{ url('/offerte-aanvragen') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
                         @csrf
 
                         <div>
@@ -165,6 +165,20 @@
                         </div>
 
                         <div>
+                            <label class="block text-secondary text-xs font-semibold mb-2">Bestanden toevoegen</label>
+                            <p class="text-secondary/40 text-xs mb-3">Voeg plattegronden, foto's of andere bestanden toe (max. 5 bestanden, elk max. 10MB).</p>
+                            <label for="bestanden" class="flex flex-col items-center justify-center w-full bg-secondary/[0.03] border-2 border-dashed border-secondary/[0.12] rounded-xl px-4 py-8 cursor-pointer hover:border-primary/30 hover:bg-primary/[0.02] transition group">
+                                <i class="fa-solid fa-cloud-arrow-up text-secondary/20 text-2xl mb-3 group-hover:text-primary/50 transition"></i>
+                                <span class="text-secondary/50 text-sm group-hover:text-secondary/70 transition">Klik om bestanden te selecteren</span>
+                                <span class="text-secondary/30 text-xs mt-1">PDF, JPG, PNG, DWG, DXF (max. 10MB per bestand)</span>
+                                <input type="file" id="bestanden" name="bestanden[]" multiple accept=".pdf,.jpg,.jpeg,.png,.dwg,.dxf,.doc,.docx,.xls,.xlsx" class="hidden">
+                            </label>
+                            <div id="bestanden-lijst" class="mt-3 space-y-2"></div>
+                            @error('bestanden') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+                            @error('bestanden.*') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+                        </div>
+
+                        <div>
                             <button type="submit" class="w-full bg-primary hover:bg-primary/90 rounded-full px-8 py-4 text-white text-sm font-semibold transition flex items-center justify-center gap-2">
                                 Offerte aanvragen <i class="fa-solid fa-arrow-right text-xs"></i>
                             </button>
@@ -258,4 +272,25 @@
             </div>
         </div>
     </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const input = document.getElementById('bestanden');
+    const lijst = document.getElementById('bestanden-lijst');
+    if (!input || !lijst) return;
+
+    input.addEventListener('change', function() {
+        lijst.innerHTML = '';
+        Array.from(this.files).forEach(function(file) {
+            const size = (file.size / 1024 / 1024).toFixed(1);
+            const el = document.createElement('div');
+            el.className = 'flex items-center gap-3 bg-secondary/[0.03] border border-secondary/[0.08] rounded-lg px-4 py-2.5';
+            el.innerHTML = '<i class="fa-solid fa-file text-primary/50 text-sm"></i>' +
+                '<span class="text-secondary text-sm flex-1 truncate">' + file.name + '</span>' +
+                '<span class="text-secondary/30 text-xs">' + size + ' MB</span>';
+            lijst.appendChild(el);
+        });
+    });
+});
+</script>
 @endsection

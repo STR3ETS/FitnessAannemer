@@ -104,7 +104,7 @@
                     <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Wie wij zijn</span>
                     <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Gebouwd op <span class="text-primary">de vloer</span></h2>
                     <p class="text-secondary/50 text-sm leading-relaxed mb-4">Sinds 2016 zitten wij in de fitnessbranche. Oprichters Stijn Harder en Sil Wartena stonden jarenlang zelf op de vloer van commerciële clubs en zagen daar wat werkt en wat niet. Die tien jaar ervaring vormt de basis van elk project dat we vandaag realiseren.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Inmiddels staat er een team van specialisten in concept, ontwerp, sales, projectuitvoering en finance, met 60+ gerealiseerde projecten door heel de Benelux. Van boutique studio's tot commerciële clubs van meer dan 1.000 m², telkens vanuit dezelfde overtuiging: een sportschool moet niet alleen mooi zijn, maar ook renderen.</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Inmiddels staat er een team van specialisten in concept, ontwerp en bouw, met 60+ gerealiseerde projecten door heel de Benelux. Van boutique studio's tot commerciële clubs van meer dan 1.000 m², telkens vanuit dezelfde overtuiging: een sportschool moet niet alleen mooi zijn, maar ook renderen.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                         <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk projecten</a>
@@ -133,14 +133,14 @@
 
             @php
             $team = [
-                ['name' => 'Stijn Harder', 'role' => 'Founder', 'desc' => 'Marketing, strategie en concept.'],
-                ['name' => 'Sil Wartena', 'role' => 'Founder', 'desc' => 'Strategie.'],
-                ['name' => 'Timo', 'role' => 'Salesmanager', 'desc' => 'Jouw eerste aanspreekpunt van kennismaking tot offerte.'],
+                ['name' => 'Stijn', 'role' => 'Founder en concept manager', 'desc' => 'Strategie, concept en marketing.'],
+                ['name' => 'Sil', 'role' => 'Strategie', 'desc' => 'Strategie en bedrijfsvoering.'],
+                ['name' => 'Timo', 'role' => 'Projectmanager', 'desc' => 'Begeleidt projecten van start tot oplevering.'],
                 ['name' => 'Kevin', 'role' => 'Accountmanager', 'desc' => 'Denkt mee van eerste vraag tot passend voorstel.'],
-                ['name' => 'Lars', 'role' => 'Accountmanager', 'desc' => 'Denkt mee van eerste vraag tot passend voorstel.'],
-                ['name' => 'Cacharel', 'role' => 'Design en projectuitvoering', 'desc' => 'Vertaalt het ontwerp naar de vloer.'],
-                ['name' => 'Renee', 'role' => 'Design', 'desc' => 'Plattegronden en 3D-visualisaties.'],
-                ['name' => 'Jeroen', 'role' => 'Data en finance', 'desc' => 'Bewaakt budgetten en cijfers achter elk project.'],
+                ['name' => 'Lars', 'role' => 'Assistent Conceptmanager', 'desc' => 'Ondersteunt bij conceptontwikkeling en uitvoering.'],
+                ['name' => 'Cacharel', 'role' => 'Interieur ontwerpster', 'desc' => 'Vertaalt het ontwerp naar de vloer.'],
+                ['name' => 'Renee', 'role' => 'Interieur ontwerpster', 'desc' => 'Plattegronden en 3D-visualisaties.'],
+                ['name' => 'Jeroen', 'role' => 'Data en Finance', 'desc' => 'Bewaakt budgetten en cijfers achter elk project.'],
             ];
             @endphp
 

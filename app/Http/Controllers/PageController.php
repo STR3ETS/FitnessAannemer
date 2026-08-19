@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
+
 class PageController extends Controller
 {
     private array $oplossingen = [
@@ -2896,19 +2898,65 @@ class PageController extends Controller
 
     public function projectOverview()
     {
-        return view('projecten', ['projecten' => $this->projecten]);
+        $projecten = Project::where('is_published', true)
+            ->orderBy('sort_order')
+            ->get()
+            ->mapWithKeys(fn (Project $p) => [$p->slug => [
+                'title' => $p->title,
+                'type' => $p->type ?? '',
+                'size' => $p->size ?? '',
+                'location' => $p->location ?? '',
+                'cardDesc' => $p->card_desc ?? '',
+                'cardImage' => $p->card_image ?? '',
+            ]])
+            ->all();
+
+        return view('projecten', ['projecten' => $projecten]);
     }
 
     public function project(string $slug)
     {
-        if (!isset($this->projecten[$slug])) {
-            abort(404);
-        }
+        $project = Project::where('slug', $slug)->where('is_published', true)->firstOrFail();
 
-        return view('projecten.show', array_merge(
-            $this->projecten[$slug],
-            ['slug' => $slug]
-        ));
+        $sections = $project->sections ?? [];
+
+        $data = [
+            'slug' => $project->slug,
+            'project' => $project,
+            'title' => $project->title,
+            'metaDesc' => $project->meta_desc ?? '',
+            'type' => $project->type ?? '',
+            'size' => $project->size ?? '',
+            'location' => $project->location ?? '',
+            'heroTitle' => $project->hero_title ?? '',
+            'heroDesc' => $project->hero_desc ?? '',
+            'merken' => $project->merken ?? [],
+            'highlights' => $project->highlights ?? [],
+            'sections' => $sections,
+            'introLabel' => $sections[0]['label'] ?? '',
+            'introTitle' => $sections[0]['title'] ?? '',
+            'introP1' => $sections[0]['p1'] ?? '',
+            'introP2' => $sections[0]['p2'] ?? '',
+            'media1' => $sections[0]['media'] ?? '',
+            'midLabel' => $sections[1]['label'] ?? '',
+            'midTitle' => $sections[1]['title'] ?? '',
+            'midP1' => $sections[1]['p1'] ?? '',
+            'midP2' => $sections[1]['p2'] ?? '',
+            'mediaMid' => $sections[1]['media'] ?? '',
+            'section3Label' => $sections[2]['label'] ?? '',
+            'section3Title' => $sections[2]['title'] ?? '',
+            'section3P1' => $sections[2]['p1'] ?? '',
+            'section3P2' => $sections[2]['p2'] ?? '',
+            'media3' => $sections[2]['media'] ?? '',
+            'extraSections' => array_map(fn ($s) => [
+                'label' => $s['label'] ?? '',
+                'title' => $s['title'] ?? '',
+                'paragraphs' => array_filter([$s['p1'] ?? '', $s['p2'] ?? '']),
+                'media' => $s['media'] ?? '',
+            ], array_slice($sections, 3)),
+        ];
+
+        return view('projecten.show', $data);
     }
 
     public function oplossing(string $slug)

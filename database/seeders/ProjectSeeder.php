@@ -557,7 +557,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => ['Concept2', 'Gymboxx'],
                 'highlights' => ['Leiderschap & fitheid', 'Compact formaat', 'Volledige realisatie'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 11,
             ],
             [
@@ -603,7 +603,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => ['Nike Strength', 'Assault Fitness', 'Concept2'],
                 'highlights' => ['Pijnvrij bewegen', 'Conceptontwikkeling', 'Binnen budget'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 12,
             ],
             [
@@ -656,7 +656,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Verbouwing & afwerking', 'Content studio', 'Multifunctioneel'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 13,
             ],
             [
@@ -709,7 +709,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Horeca-ontwerp', 'Vier zones', 'Luxe positionering'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 14,
             ],
             [
@@ -762,7 +762,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => ['EGYM', 'Matrix'],
                 'highlights' => ['Buurtcentrum', 'eGym-cirkel', 'Lounge & vrije gym'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 15,
             ],
             [
@@ -801,7 +801,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => ['YourReformer'],
                 'highlights' => ['Judozaal omgevormd', 'Reformer Pilates', 'Interieur design'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 16,
             ],
             [
@@ -840,7 +840,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => ['YourReformer'],
                 'highlights' => ['60 jaar sportschool', 'Reformer Pilates', 'Interieur design'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 17,
             ],
             [
@@ -879,7 +879,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Tweede locatie', 'Interieur design', 'Visie vertaald'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 18,
             ],
             [
@@ -918,7 +918,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => ['LifeMaxx', 'TKO'],
                 'highlights' => ['Bedrijfsfitness', 'Volledige realisatie', 'Vitaliteit voor medewerkers'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 19,
             ],
             [
@@ -957,7 +957,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Tweede locatie', 'Casco nieuwbouw', 'Interieur design'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 20,
             ],
             [
@@ -996,7 +996,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Healthclub concept', 'Turnkey inrichting', 'Ontwerp op maat'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 21,
             ],
             [
@@ -1035,7 +1035,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Lifestyle concept', 'Welzijn & fitness', 'Uniek ontwerp'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 22,
             ],
             [
@@ -1074,7 +1074,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Reformer pilates', 'Stijlvol design', 'Op maat ingericht'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 23,
             ],
             [
@@ -1113,7 +1113,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Bedrijfsfitness', 'Vitaliteit', 'Op maat ingericht'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 24,
             ],
             [
@@ -1191,7 +1191,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Home gym', 'Op maat ontworpen', 'Premium inrichting'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 26,
             ],
             [
@@ -1230,7 +1230,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Performance training', 'Functioneel', 'Atletische focus'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 27,
             ],
             [
@@ -1269,7 +1269,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Boutique concept', 'Belgie', 'Persoonlijke aanpak'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 28,
             ],
             [
@@ -1308,7 +1308,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Lokale sportschool', 'Turnkey inrichting', 'Community gym'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 29,
             ],
             [
@@ -1347,7 +1347,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Hotel gym', 'Premium uitstraling', 'Utrecht'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 30,
             ],
             [
@@ -1386,7 +1386,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Eigen identiteit', 'Turnkey ingericht', 'Professioneel ontwerp'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 31,
             ],
             [
@@ -1425,7 +1425,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Home gym', 'Op maat', 'Persoonlijk ontwerp'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 32,
             ],
             [
@@ -1464,7 +1464,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Pilates studio', 'Regio Oldambt', 'Op maat ontworpen'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 33,
             ],
             [
@@ -1503,7 +1503,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['PT studio', 'Resultaatgericht', 'Turnkey ingericht'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 34,
             ],
             [
@@ -1542,7 +1542,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Home gym', 'Op maat', 'Persoonlijke inrichting'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 35,
             ],
             [
@@ -1581,7 +1581,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Performance PT', 'Functionele training', 'Op maat ingericht'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 36,
             ],
             [
@@ -1620,7 +1620,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Sportcentrum', 'Breed aanbod', 'Turnkey ingericht'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 37,
             ],
             [
@@ -1659,7 +1659,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Modern concept', 'Strak ontwerp', 'Compleet ingericht'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 38,
             ],
             [
@@ -1698,7 +1698,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'merken' => [],
                 'highlights' => ['Personal training', 'Klantgericht', 'Op maat ingericht'],
-                'is_published' => true,
+                'is_published' => false,
                 'sort_order' => 39,
             ],
         ];

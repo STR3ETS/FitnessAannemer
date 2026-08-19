@@ -638,8 +638,8 @@
                         </div>
                         {{-- Desktop videos --}}
                         <div class="flex-shrink-0 hidden lg:flex items-start gap-5 relative">
-                            <video src="/shorts/fitnessaannemer-short-realisatie-1.mp4" class="w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl -mt-12" muted loop playsinline autoplay></video>
-                            <video src="/shorts/fitnessaannemer-short-realisatie-2.mp4" class="w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
+                            <video src="{{ asset('shorts/fitnessaannemer-short-realisatie-1.mp4') }}" class="w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl -mt-12" muted loop playsinline autoplay></video>
+                            <video src="{{ asset('shorts/fitnessaannemer-short-realisatie-2.mp4') }}" class="w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
                             <div class="absolute bottom-8 -left-8 bg-white rounded-3xl shadow-xl p-5 z-10">
                                 <div class="flex items-center gap-3">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -683,11 +683,11 @@
                         </div>
                         {{-- Mobile image --}}
                         <div class="lg:hidden rounded-3xl overflow-hidden aspect-[9/16] max-h-[400px]">
-                            <video src="/shorts/fitnessaannemer-short-schoonmaak.mp4" class="w-full h-full object-cover" muted loop playsinline autoplay></video>
+                            <video src="{{ asset('shorts/fitnessaannemer-short-schoonmaak.mp4') }}" class="w-full h-full object-cover" muted loop playsinline autoplay></video>
                         </div>
                         {{-- Desktop video --}}
                         <div class="flex-shrink-0 hidden lg:flex items-start gap-5 relative">
-                            <video src="/shorts/fitnessaannemer-short-schoonmaak.mp4" class="w-[270px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
+                            <video src="{{ asset('shorts/fitnessaannemer-short-schoonmaak.mp4') }}" class="w-[270px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
                             <div class="absolute -bottom-4 -left-4 bg-white rounded-3xl shadow-xl p-5 z-10">
                                 <div class="flex items-center gap-3">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -785,7 +785,7 @@
                         </div>
                         {{-- Desktop videos --}}
                         <div class="flex-shrink-0 relative hidden lg:block">
-                            <video src="/shorts/fitnessaannemer-short-nazorg.mp4" class="w-[270px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
+                            <video src="{{ asset('shorts/fitnessaannemer-short-nazorg.mp4') }}" class="w-[270px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
                             <div class="absolute -top-4 -right-4 bg-white rounded-3xl shadow-xl p-4 z-10">
                                 <div class="flex items-center gap-3">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -982,7 +982,7 @@
                     {{-- Fitnessapparatuur --}}
                     <a href="{{ url('/diensten/onderhoud-en-reparaties') }}" class="dienst-card group bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300">
                         <div class="aspect-[16/9] relative overflow-hidden">
-                            <img src="/assets/3.jpg" alt="Fitnessapparatuur" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <img src="{{ asset('assets/3.jpg') }}" alt="Fitnessapparatuur" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/20"></div>
                             <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                                 <div class="flex items-center gap-3 mb-3">
@@ -1196,7 +1196,7 @@
         <div class="project-arc bg-secondary relative z-10 hidden sm:block">
             @for ($i = 1; $i <= 9; $i++)
             <div class="project-arc-card rounded-3xl" data-arc-index="{{ $i - 1 }}">
-                <video src="/shorts/fitnessaannemer-short-{{ $i }}.mp4" class="absolute inset-0 w-full h-full object-cover rounded-3xl" muted loop playsinline></video>
+                <video src="{{ asset('shorts/fitnessaannemer-short-' . $i . '.mp4') }}" class="absolute inset-0 w-full h-full object-cover rounded-3xl" muted loop playsinline></video>
                 <div class="project-arc-overlay absolute inset-0 bg-secondary rounded-3xl pointer-events-none"></div>
             </div>
             @endfor

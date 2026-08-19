@@ -15,7 +15,7 @@
     @endphp
     @foreach($arcShorts as $idx => $num)
     <div class="project-arc-card rounded-2xl" data-arc-index="{{ $idx }}">
-        <video src="/shorts/fitnessaannemer-short-{{ $num }}.mp4" class="absolute inset-0 w-full h-full object-cover rounded-2xl" muted loop playsinline></video>
+        <video src="{{ asset('shorts/fitnessaannemer-short-' . $num . '.mp4') }}" class="absolute inset-0 w-full h-full object-cover rounded-2xl" muted loop playsinline></video>
         <div class="project-arc-overlay absolute inset-0 bg-secondary rounded-2xl pointer-events-none"></div>
     </div>
     @endforeach

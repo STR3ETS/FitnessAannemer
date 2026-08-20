@@ -25,10 +25,25 @@ Route::view('/cookies', 'cookies')->name('cookies');
 // Offerte
 Route::post('/offerte-aanvragen', [ContactController::class, 'submitOfferte'])->name('offerte.submit');
 
-// Redirects (old pages → multi-step form)
+// Redirects (old WordPress pages → new Laravel routes)
 Route::redirect('/gratis-adviesgesprek', '/vrijblijvend-adviesgesprek', 301);
 Route::redirect('/contact', '/vrijblijvend-adviesgesprek', 301);
 Route::redirect('/offerte-aanvragen', '/vrijblijvend-adviesgesprek', 301);
+Route::redirect('/adviesgesprek', '/vrijblijvend-adviesgesprek', 301);
+Route::redirect('/welkom-bij-fitnessaannemer', '/', 301);
+Route::redirect('/onze-aanpak', '/diensten/turnkey-sportschool-bouwen', 301);
+Route::redirect('/sportschool-starten', '/fitnesswijzer/tips-en-inspiratie', 301);
+Route::redirect('/hotels-en-hospitality', '/hotel-gym-inrichten', 301);
+Route::redirect('/boutique-gym-inrichten', '/pt-studio-inrichten', 301);
+Route::redirect('/apparatuur-2', '/apparatuur', 301);
+Route::redirect('/bedankt-adviesgesprek', '/bedankt/adviesgesprek', 301);
+Route::redirect('/bedankt-offerte', '/bedankt/offerte', 301);
+Route::redirect('/bedankt-ebook', '/bedankt/ebook', 301);
+Route::redirect('/e-book-start-je-eigen-sportschool', '/fitnesswijzer', 301);
+Route::redirect('/e-book-start-je-eigen-reformer-pilates-studio', '/fitnesswijzer', 301);
+Route::redirect('/e-book-hoe-blijf-je-als-sportschool-relevant-in-een-snel-veranderende-fitnessmarkt', '/fitnesswijzer', 301);
+Route::redirect('/e-book-verzekering-sportschool', '/fitnesswijzer', 301);
+Route::redirect('/farm-fit-culemborg', '/projecten/farm-fit-culemborg', 301);
 
 // Diensten
 Route::view('/diensten', 'diensten.index')->name('diensten');
@@ -38,12 +53,20 @@ Route::view('/diensten/levering-en-installatie', 'diensten.levering-en-installat
 Route::redirect('/diensten/onderhoud-en-reparaties', '/diensten', 301);
 Route::view('/diensten/leasing-en-financiering', 'diensten.leasing-en-financiering')->name('diensten.leasing');
 
+// Oude WordPress diensten subpaginas → parent
+Route::redirect('/diensten/inrichting-en-planning/{any}', '/diensten/inrichting-en-planning', 301)->where('any', '.*');
+Route::redirect('/diensten/leasing-en-financiering/{any}', '/diensten/leasing-en-financiering', 301)->where('any', '.*');
+
 // Projecten
 Route::get('/projecten', [PageController::class, 'projectOverview'])->name('projecten');
+Route::redirect('/projecten/ballin-fit-amsterdam-luxe-gym', '/projecten/ballin-fit-amsterdam', 301);
+Route::redirect('/projecten/project-pt024-boutique-gym', '/projecten', 301);
+Route::redirect('/projecten/vitality-sports-duiven', '/projecten', 301);
 Route::get('/projecten/{slug}', [PageController::class, 'project'])->name('projecten.show');
 
 // Onze merken
 Route::view('/onze-merken', 'onze-merken')->name('merken');
+Route::redirect('/onze-merken/{any}', '/onze-merken', 301)->where('any', '.*');
 
 // Oplossingen
 Route::view('/oplossingen', 'oplossingen.index')->name('oplossingen');
@@ -70,6 +93,8 @@ Route::get('/apparatuur/gewichten', [PageController::class, 'apparatuurCategorie
 Route::get('/apparatuur/sportvloeren', [PageController::class, 'apparatuurCategorie'])->defaults('slug', 'sportvloeren')->name('apparatuur.sportvloeren');
 Route::get('/apparatuur/flooring', fn () => redirect('/apparatuur/sportvloeren', 301));
 Route::get('/apparatuur/herstel', [PageController::class, 'apparatuurCategorie'])->defaults('slug', 'herstel')->name('apparatuur.herstel');
+Route::redirect('/apparatuur/vloeren/{any?}', '/apparatuur/sportvloeren', 301)->where('any', '.*');
+Route::redirect('/apparatuur/herstel/{any}', '/apparatuur/herstel', 301)->where('any', '.*');
 Route::get('/apparatuur/pvc-laminaat-vloeren', [PageController::class, 'apparatuurCategorie'])->defaults('slug', 'pvc-laminaat-vloeren')->name('apparatuur.pvc-laminaat-vloeren');
 Route::get('/apparatuur/verlichting', [PageController::class, 'apparatuurCategorie'])->defaults('slug', 'verlichting')->name('apparatuur.verlichting');
 Route::get('/apparatuur/audio', [PageController::class, 'apparatuurCategorie'])->defaults('slug', 'audio')->name('apparatuur.audio');
@@ -91,3 +116,8 @@ Route::get('/lp/{slug}', [LandingPageController::class, 'show'])->name('landing-
 
 // Sitemap
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
+
+// Catch-all: oude WordPress wp-content URLs → 404
+Route::get('/wp-content/{any}', fn () => abort(404))->where('any', '.*');
+Route::get('/wp-admin/{any?}', fn () => abort(404))->where('any', '.*');
+Route::get('/wp-login.php', fn () => abort(404));

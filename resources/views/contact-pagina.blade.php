@@ -51,7 +51,7 @@
     </section>
 
     {{-- Contact info + kaart --}}
-    <section class="bg-white py-24">
+    <section class="bg-white py-24" data-header-light>
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 {{-- Contactgegevens --}}

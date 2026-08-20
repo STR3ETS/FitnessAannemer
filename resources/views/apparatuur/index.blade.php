@@ -56,7 +56,7 @@
     </section>
 
     {{-- APPARATUUR --}}
-    <section class="bg-white py-16 lg:py-24">
+    <section class="bg-white py-16 lg:py-24" data-header-light>
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="ip-fade mb-10">
                 <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-3">Apparatuur</span>
@@ -131,7 +131,7 @@
     </section>
 
     {{-- CTA + Merken --}}
-    <section class="bg-white py-16 lg:py-24">
+    <section class="bg-white py-16 lg:py-24" data-header-light>
         <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
             <div class="ip-fade">
                 <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">18 merken</span>

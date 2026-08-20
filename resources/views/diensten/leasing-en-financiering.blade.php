@@ -60,7 +60,7 @@
         </div>
     </section>
 
-    <section class="bg-white py-16 lg:py-32 relative overflow-hidden" id="lf-section1">
+    <section class="bg-white py-16 lg:py-32 relative overflow-hidden" id="lf-section1" data-header-light>
         <div class="horizontal-blob w-[700px] h-[700px]" style="background: radial-gradient(circle, rgba(82,171,226,0.2) 0%, rgba(82,171,226,0) 70%); top: -20%; left: -10%; animation: blob-float-1 18s ease-in-out infinite;"></div>
         <div class="horizontal-blob w-[500px] h-[500px]" style="background: radial-gradient(circle, rgba(82,171,226,0.15) 0%, rgba(82,171,226,0) 70%); top: 40%; right: -10%; animation: blob-float-2 22s ease-in-out infinite;"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
@@ -180,7 +180,7 @@
         </div>
     </section>
 
-    <section class="bg-white py-16 lg:py-32 relative overflow-hidden" id="lf-section2">
+    <section class="bg-white py-16 lg:py-32 relative overflow-hidden" id="lf-section2" data-header-light>
         <div class="horizontal-blob w-[600px] h-[600px]" style="background: radial-gradient(circle, rgba(82,171,226,0.18) 0%, rgba(82,171,226,0) 70%); top: -15%; right: -5%; animation: blob-float-3 15s ease-in-out infinite;"></div>
         <div class="horizontal-blob w-[500px] h-[500px]" style="background: radial-gradient(circle, rgba(82,171,226,0.15) 0%, rgba(82,171,226,0) 70%); bottom: -20%; left: -8%; animation: blob-float-1 20s ease-in-out infinite;"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">

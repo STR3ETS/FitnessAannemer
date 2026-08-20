@@ -26,7 +26,7 @@
         </div>
     </section>
 
-    <section class="bg-white py-12 lg:py-20">
+    <section class="bg-white py-12 lg:py-20" data-header-light>
         <div class="max-w-3xl mx-auto px-4 sm:px-6">
             <p class="text-secondary/50 text-xs mb-12">Laatst bijgewerkt: {{ date('d-m-Y') }}</p>
 

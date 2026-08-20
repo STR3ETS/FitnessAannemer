@@ -92,7 +92,7 @@
     </section>
 
     {{-- Diensten grid --}}
-    <section class="bg-white py-24">
+    <section class="bg-white py-24" data-header-light>
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             {{-- Flagship card: Turnkey --}}
             <a href="{{ url('/diensten/turnkey-sportschool-bouwen') }}" class="group bg-secondary rounded-3xl p-8 lg:p-12 hover:shadow-2xl hover:shadow-primary/10 transition-all mb-6 block">

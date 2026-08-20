@@ -68,7 +68,7 @@
         </div>
     </section>
 
-    <section class="bg-white py-16 lg:py-32 relative overflow-hidden" id="pd-section1">
+    <section class="bg-white py-16 lg:py-32 relative overflow-hidden" id="pd-section1" data-header-light>
         <div class="horizontal-blob w-[700px] h-[700px]" style="background: radial-gradient(circle, rgba(82,171,226,0.2) 0%, rgba(82,171,226,0) 70%); top: -20%; left: -10%; animation: blob-float-1 18s ease-in-out infinite;"></div>
         <div class="horizontal-blob w-[500px] h-[500px]" style="background: radial-gradient(circle, rgba(82,171,226,0.15) 0%, rgba(82,171,226,0) 70%); top: 40%; right: -10%; animation: blob-float-2 22s ease-in-out infinite;"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
@@ -141,7 +141,7 @@
         </div>
     </section>
 
-    <section class="bg-white py-16 lg:py-32 relative overflow-hidden" id="pd-section3">
+    <section class="bg-white py-16 lg:py-32 relative overflow-hidden" id="pd-section3" data-header-light>
         <div class="horizontal-blob w-[600px] h-[600px]" style="background: radial-gradient(circle, rgba(82,171,226,0.18) 0%, rgba(82,171,226,0) 70%); top: -15%; right: -5%; animation: blob-float-3 15s ease-in-out infinite;"></div>
         <div class="horizontal-blob w-[500px] h-[500px]" style="background: radial-gradient(circle, rgba(82,171,226,0.15) 0%, rgba(82,171,226,0) 70%); bottom: -20%; left: -8%; animation: blob-float-1 20s ease-in-out infinite;"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
@@ -172,7 +172,7 @@
     @if(!empty($extraSections))
         @foreach($extraSections as $i => $es)
             @php $isDark = $i % 2 === 0; @endphp
-            <section class="{{ $isDark ? 'bg-secondary' : 'bg-white relative overflow-hidden' }} py-16 lg:py-32" id="pd-section{{ $i + 4 }}">
+            <section class="{{ $isDark ? 'bg-secondary' : 'bg-white relative overflow-hidden' }} py-16 lg:py-32" id="pd-section{{ $i + 4 }}" @if(!$isDark) data-header-light @endif>
                 @if(!$isDark)
                     <div class="horizontal-blob w-[600px] h-[600px]" style="background: radial-gradient(circle, rgba(82,171,226,0.18) 0%, rgba(82,171,226,0) 70%); top: -15%; {{ $i % 4 === 1 ? 'right' : 'left' }}: -5%; animation: blob-float-{{ ($i % 3) + 1 }} {{ 15 + $i * 2 }}s ease-in-out infinite;"></div>
                 @endif

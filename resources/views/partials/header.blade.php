@@ -1,4 +1,4 @@
-<header id="main-header" class="w-full fixed top-0 left-0 z-50 transition-all duration-300">
+<header id="main-header" class="w-full fixed top-0 left-0 z-[60] transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between">
         <a href="{{ url('/') }}" class="relative z-[60]"><img src="{{ asset('fitnessaannemer-logo-fa-blauw.png') }}" alt="FitnessAannemer" class="max-h-8 sm:max-h-10"></a>
 

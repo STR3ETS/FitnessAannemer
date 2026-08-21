@@ -328,12 +328,20 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(type, 400);
     }
 
-    // Video carousel auto-slide (desktop only — mobile uses native CSS scroll)
+    // Video carousel auto-slide (infinite loop, 9 cards)
     const videoCards = document.querySelectorAll('.video-card');
-    if (videoCards.length && isDesktop) {
+    if (videoCards.length) {
         const total = videoCards.length;
         let activeIndex = 0;
         const half = Math.floor(total / 2);
+
+        function getCardStep() {
+            const w = window.innerWidth;
+            if (w < 400) return 95;
+            if (w < 640) return 110;
+            if (w < 1024) return 145;
+            return 190;
+        }
 
         const overlayOpacities = [0, 0.25, 0.50, 0.75, 1];
         const zIndexes = [10, 9, 8, 7, 0];
@@ -349,8 +357,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const absOffset = Math.abs(offset);
             const overlay = card.querySelector('.video-overlay');
             const video = card.querySelector('video');
+            const step = getCardStep();
 
-            card.style.transform = `translate(calc(-50% + ${offset * 190}px), -50%)`;
+            card.style.transform = `translate(calc(-50% + ${offset * step}px), -50%)`;
 
             if (absOffset === 0) {
                 card.classList.add('is-active');

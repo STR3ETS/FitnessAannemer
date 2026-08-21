@@ -134,7 +134,7 @@ h1,h2,h3,h4,h5,h6 {
 .video-track {
     position: relative;
     height: 525px;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .video-card {
@@ -620,43 +620,18 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 
-/* Video Carousel — mobile: native horizontal scroll */
+/* Video Carousel — mobile sizes */
 @media (max-width: 1023px) {
     .video-track {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        gap: 12px;
-        padding: 0 calc(50vw - 90px);
-        height: auto;
-        scrollbar-width: none;
-    }
-
-    .video-track::-webkit-scrollbar {
-        display: none;
+        height: 400px;
     }
 
     .video-card {
-        position: relative;
-        left: auto;
-        top: auto;
-        transform: none !important;
-        flex-shrink: 0;
-        scroll-snap-align: center;
-        z-index: 1 !important;
-        transition: none;
-        width: 170px;
-        border-color: rgba(82, 171, 226, 0.3);
+        width: 160px;
     }
 
     .video-card.is-active {
-        width: 170px;
-        border-color: rgba(82, 171, 226, 0.3);
-    }
-
-    .video-card .video-overlay {
-        display: none;
+        width: 200px;
     }
 
     .horizontal-panel {
@@ -679,13 +654,15 @@ h1,h2,h3,h4,h5,h6 {
 
 @media (max-width: 639px) {
     .video-track {
-        gap: 10px;
-        padding: 0 calc(50vw - 70px);
+        height: 310px;
     }
 
-    .video-card,
+    .video-card {
+        width: 115px;
+    }
+
     .video-card.is-active {
-        width: 140px;
+        width: 150px;
     }
 
     .project-arc {

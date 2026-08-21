@@ -337,9 +337,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function getCardStep() {
             const w = window.innerWidth;
-            if (w < 400) return 95;
-            if (w < 640) return 110;
-            if (w < 1024) return 145;
+            if (w < 400) return 105;
+            if (w < 640) return 120;
+            if (w < 1024) return 155;
             return 190;
         }
 

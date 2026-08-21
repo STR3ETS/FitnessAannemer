@@ -620,18 +620,22 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 
-/* Video Carousel — mobile sizes */
+/* Video Carousel — mobile sizes (same width active/inactive for smooth animation) */
 @media (max-width: 1023px) {
     .video-track {
         height: 400px;
     }
 
     .video-card {
-        width: 160px;
+        width: 175px;
+        transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                    box-shadow 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                    border-color 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                    opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .video-card.is-active {
-        width: 200px;
+        width: 175px;
     }
 
     .horizontal-panel {
@@ -658,11 +662,11 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     .video-card {
-        width: 115px;
+        width: 135px;
     }
 
     .video-card.is-active {
-        width: 150px;
+        width: 135px;
     }
 
     .project-arc {

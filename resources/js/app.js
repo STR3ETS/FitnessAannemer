@@ -315,8 +315,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const half = Math.floor(total / 2);
 
         function getCardStep() {
-            if (window.innerWidth < 640) return 110;
-            if (window.innerWidth < 1024) return 140;
+            const w = window.innerWidth;
+            if (w < 400) return 95;
+            if (w < 640) return 110;
+            if (w < 1024) return 145;
             return 190;
         }
 
@@ -357,6 +359,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function updateCarousel() {
+            const wrapping = [];
             videoCards.forEach((card, i) => {
                 const offset = getOffset(i);
                 const prev = prevOffsets[i];
@@ -364,14 +367,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (prev !== undefined && Math.abs(offset - prev) > half) {
                     card.style.transition = 'none';
                     applyCard(card, offset);
-                    card.offsetHeight;
-                    card.style.transition = '';
+                    wrapping.push(card);
                 } else {
                     applyCard(card, offset);
                 }
 
                 prevOffsets[i] = offset;
             });
+
+            if (wrapping.length) {
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        wrapping.forEach(card => card.style.transition = '');
+                    });
+                });
+            }
         }
 
         videoCards.forEach((card, i) => {

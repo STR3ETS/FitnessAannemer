@@ -133,6 +133,7 @@ h1,h2,h3,h4,h5,h6 {
 .video-track {
     position: relative;
     height: 525px;
+    overflow: hidden;
 }
 
 .video-card {
@@ -652,15 +653,15 @@ h1,h2,h3,h4,h5,h6 {
 
 @media (max-width: 639px) {
     .video-track {
-        height: 300px;
+        height: 310px;
     }
 
     .video-card {
-        width: 120px;
+        width: 115px;
     }
 
     .video-card.is-active {
-        width: 155px;
+        width: 150px;
     }
 
     .project-arc {

@@ -9,7 +9,7 @@
 </div>
 
 {{-- Video Arc Carousel --}}
-<div class="project-arc bg-secondary relative z-10">
+<div class="project-arc bg-secondary relative z-10 hidden lg:block">
     @php
     $arcShorts = [22, 20, 21, 1, 3, 5, 7, 9, 10];
     @endphp

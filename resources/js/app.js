@@ -51,6 +51,17 @@ gsap.ticker.add((time) => {
 });
 gsap.ticker.lagSmoothing(0);
 
+// ===== Loading screen =====
+const loadingScreen = document.getElementById('loading-screen');
+if (loadingScreen) {
+    const dismiss = () => {
+        loadingScreen.style.opacity = '0';
+        setTimeout(() => loadingScreen.remove(), 500);
+    };
+    window.addEventListener('load', dismiss);
+    setTimeout(dismiss, 3000);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // ===== Fixed header: glass on scroll, hide down / show up =====
     const header = document.getElementById('main-header');
@@ -170,8 +181,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===== Scroll Video Hero =====
     const heroVideo = document.getElementById('hero-video');
     const heroScroll = document.getElementById('hero-scroll');
+    const isDesktop = window.innerWidth >= 1024;
 
-    if (heroVideo && heroScroll) {
+    if (heroVideo && heroScroll && isDesktop) {
         heroVideo.pause();
         heroVideo.currentTime = 0;
 
@@ -210,7 +222,6 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         });
 
-        // Fade out hero content in last 30% of scroll
         gsap.to('.hero-content', {
             opacity: 0,
             y: -60,
@@ -222,6 +233,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrub: true,
             },
         });
+    } else if (heroScroll && !isDesktop) {
+        heroScroll.style.height = 'auto';
+        const pinned = document.getElementById('hero-pinned');
+        if (pinned) pinned.style.position = 'relative';
     }
 
     // ===== Hero fade-in (subtitle, buttons, stats) =====
@@ -291,15 +306,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Video carousel auto-slide (infinite loop, 9 cards)
     const videoCards = document.querySelectorAll('.video-card');
     if (videoCards.length) {
-        const total = videoCards.length; // 9
+        const total = videoCards.length;
         let activeIndex = 0;
-        const half = Math.floor(total / 2); // 4
-        const cardStep = 190;
+        const half = Math.floor(total / 2);
 
-        // offset 0=active, 1/2/3=visible, 4=off-screen (overlay=1 = invisible)
+        function getCardStep() {
+            if (window.innerWidth < 640) return 110;
+            if (window.innerWidth < 1024) return 140;
+            return 190;
+        }
+
         const overlayOpacities = [0, 0.25, 0.50, 0.75, 1];
         const zIndexes = [10, 9, 8, 7, 0];
-
         const prevOffsets = [];
 
         function getOffset(i) {
@@ -312,13 +330,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const absOffset = Math.abs(offset);
             const overlay = card.querySelector('.video-overlay');
             const video = card.querySelector('video');
+            const step = getCardStep();
 
-            card.style.transform = `translate(calc(-50% + ${offset * cardStep}px), -50%)`;
+            card.style.transform = `translate(calc(-50% + ${offset * step}px), -50%)`;
 
             if (absOffset === 0) {
                 card.classList.add('is-active');
                 video.currentTime = 0;
-                video.play();
+                video.play().catch(() => {});
             } else {
                 card.classList.remove('is-active');
                 video.pause();
@@ -338,7 +357,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const offset = getOffset(i);
                 const prev = prevOffsets[i];
 
-                // Wrap: card jumps from ±4 to ∓4 (both off-screen, invisible)
                 if (prev !== undefined && Math.abs(offset - prev) > half) {
                     card.style.transition = 'none';
                     applyCard(card, offset);
@@ -352,7 +370,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Initial position without transition
         videoCards.forEach((card, i) => {
             card.style.transition = 'none';
             const offset = getOffset(i);
@@ -366,6 +383,15 @@ document.addEventListener('DOMContentLoaded', () => {
             activeIndex = (activeIndex + 1) % total;
             updateCarousel();
         }, 5000);
+
+        window.addEventListener('resize', () => {
+            videoCards.forEach((card, i) => {
+                card.style.transition = 'none';
+                applyCard(card, getOffset(i));
+            });
+            videoCards[0].offsetHeight;
+            videoCards.forEach(card => card.style.transition = '');
+        });
     }
 
     // ===== Social/video section fade-in =====

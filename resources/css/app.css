@@ -607,6 +607,17 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ===== Mobile Responsive ===== */
 
+@media (max-width: 1023px) {
+    .hero-scroll-wrapper {
+        height: auto;
+    }
+
+    .hero-pinned {
+        height: 100svh;
+        position: relative;
+    }
+}
+
 /* Video Carousel */
 @media (max-width: 1023px) {
     .video-track {
@@ -614,11 +625,11 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     .video-card {
-        width: 180px;
+        width: 160px;
     }
 
     .video-card.is-active {
-        width: 220px;
+        width: 200px;
     }
 
     .horizontal-panel {
@@ -641,15 +652,15 @@ h1,h2,h3,h4,h5,h6 {
 
 @media (max-width: 639px) {
     .video-track {
-        height: 340px;
+        height: 300px;
     }
 
     .video-card {
-        width: 150px;
+        width: 120px;
     }
 
     .video-card.is-active {
-        width: 190px;
+        width: 155px;
     }
 
     .project-arc {

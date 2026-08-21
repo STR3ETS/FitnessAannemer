@@ -124,12 +124,20 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="bg-white">
+        {{-- Loading Screen --}}
+        <div id="loading-screen" class="fixed inset-0 bg-secondary z-[100] flex items-center justify-center transition-opacity duration-500">
+            <div class="text-center">
+                <img src="{{ asset('fitnessaannemer-logo-fa-blauw.png') }}" alt="Fitness Aannemer" class="h-10 mx-auto mb-6 animate-pulse">
+            </div>
+        </div>
+
         @include('partials.header')
 
         {{-- Scroll Video Hero --}}
         <section id="hero-scroll" class="hero-scroll-wrapper">
             <div id="hero-pinned" class="hero-pinned">
-                <video id="hero-video" src="{{ asset('assets/video_hero_home_scrub.mp4') }}" muted playsinline preload="auto" class="hero-video"></video>
+                <video id="hero-video" src="{{ asset('assets/video_hero_home_scrub.mp4') }}" muted playsinline preload="auto" class="hero-video hidden lg:block"></video>
+                <img id="hero-poster" src="{{ asset('assets/foto-assets/MCJO3851_FA-1-1024x683.jpg') }}" alt="Fitness Aannemer" class="hero-video lg:hidden">
                 <div class="hero-video-overlay"></div>
                 <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center justify-center h-full relative z-10">
                     <h1 id="hero-heading" class="text-white text-3xl sm:text-5xl lg:text-6xl font-bold text-center leading-[1]"></h1>

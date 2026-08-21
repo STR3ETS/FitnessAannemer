@@ -109,14 +109,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             scrollAccum += Math.abs(delta);
 
-            if (scrollY > 200 && scrollAccum > scrollThreshold) {
-                if (direction > 0) {
-                    header.classList.add('is-hidden');
-                } else {
+            if (!header.classList.contains('menu-open')) {
+                if (scrollY > 200 && scrollAccum > scrollThreshold) {
+                    if (direction > 0) {
+                        header.classList.add('is-hidden');
+                    } else {
+                        header.classList.remove('is-hidden');
+                    }
+                } else if (scrollY <= 200) {
                     header.classList.remove('is-hidden');
                 }
-            } else if (scrollY <= 200) {
-                header.classList.remove('is-hidden');
             }
 
             lastScrollY = scrollY;
@@ -144,13 +146,14 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileToggle.addEventListener('click', () => {
             menuOpen = !menuOpen;
             if (menuOpen) {
+                header.classList.remove('is-hidden');
+                header.classList.add('menu-open');
                 mobileMenu.classList.remove('invisible', 'pointer-events-none');
                 mobileMenu.classList.add('opacity-100');
                 document.body.style.overflow = 'hidden';
                 iconOpen.classList.add('opacity-0', 'scale-75');
                 iconClose.classList.remove('opacity-0', 'scale-75');
                 iconClose.classList.add('opacity-100', 'scale-100');
-                // Stagger animate nav links
                 mobileMenu.querySelectorAll('.mobile-nav-link').forEach((el, i) => {
                     el.style.opacity = '0';
                     el.style.transform = 'translateY(20px)';
@@ -161,6 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }, 80 + i * 50);
                 });
             } else {
+                header.classList.remove('menu-open');
                 mobileMenu.classList.remove('opacity-100');
                 mobileMenu.classList.add('invisible', 'pointer-events-none');
                 document.body.style.overflow = '';

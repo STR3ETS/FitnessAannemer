@@ -88,7 +88,7 @@
             <div class="ip-fade grid grid-cols-1 md:grid-cols-2 gap-6">
                 @foreach($artikelen as $slug => $artikel)
                 <a href="{{ url('/fitnesswijzer/tips-en-inspiratie/' . $slug) }}" class="group bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300 {{ $loop->first ? 'md:col-span-2' : '' }}">
-                    <div class="aspect-[16/9] {{ $loop->first ? 'md:aspect-[21/9]' : '' }} relative overflow-hidden">
+                    <div class="aspect-[3/4] sm:aspect-[16/9] {{ $loop->first ? 'md:aspect-[21/9]' : '' }} relative overflow-hidden">
                         @if(str_starts_with($artikel['cardImage'], 'http'))
                             <img src="{{ $artikel['cardImage'] }}" alt="{{ $artikel['title'] }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         @else

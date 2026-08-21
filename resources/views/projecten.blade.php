@@ -87,7 +87,7 @@
             <div class="ip-fade grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 lg:mb-20">
                 @foreach($projecten as $slug => $project)
                 <a href="{{ url('/projecten/' . $slug) }}" class="group bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300 {{ $loop->first ? 'md:col-span-2' : '' }}">
-                    <div class="aspect-[16/9] {{ $loop->first ? 'md:aspect-[21/9]' : '' }} relative overflow-hidden">
+                    <div class="aspect-[3/4] sm:aspect-[16/9] {{ $loop->first ? 'md:aspect-[21/9]' : '' }} relative overflow-hidden">
                         <img src="{{ asset($project['cardImage']) }}" alt="{{ $project['title'] }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/20"></div>
                         <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8">

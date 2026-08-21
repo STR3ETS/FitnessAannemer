@@ -136,7 +136,7 @@
         {{-- Scroll Video Hero --}}
         <section id="hero-scroll" class="hero-scroll-wrapper">
             <div id="hero-pinned" class="hero-pinned">
-                <video id="hero-video" src="{{ asset('assets/video_hero_home_scrub.mp4') }}" muted playsinline preload="auto" class="hero-video hidden lg:block"></video>
+                <video id="hero-video" src="{{ asset('assets/video_hero_home_scrub.mp4') }}" muted playsinline preload="none" class="hero-video hidden lg:block"></video>
                 <img id="hero-poster" src="{{ asset('assets/foto-assets/MCJO3851_FA-1-1024x683.jpg') }}" alt="Fitness Aannemer" class="hero-video lg:hidden">
                 <div class="hero-video-overlay"></div>
                 <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center justify-center h-full relative z-10">
@@ -201,7 +201,7 @@
                     @endphp
                     @foreach ($socialVideos as $idx => $video)
                     <div class="video-card rounded-3xl relative shadow-2xl" data-index="{{ $idx }}">
-                        <video src="{{ asset($video) }}" class="absolute z-1 object-cover w-full h-full" muted loop playsinline></video>
+                        <video data-src="{{ asset($video) }}" preload="none" class="lazy-video absolute z-1 object-cover w-full h-full" muted loop playsinline></video>
                         <div class="video-overlay bg-secondary absolute z-2"></div>
                     </div>
                     @endforeach
@@ -270,7 +270,7 @@
                         </div>
                         <div class="flex-shrink-0 w-[480px] hidden lg:block">
                             <div class="rounded-3xl aspect-[9/16] max-h-[420px] overflow-hidden relative">
-                                <video src="{{ asset('assets/10_AI-Transitions_v1.mp4') }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                                <video data-src="{{ asset('assets/10_AI-Transitions_v1.mp4') }}" preload="none" class="lazy-video w-full h-full object-cover" muted loop playsinline></video>
                             </div>
                         </div>
                         <div class="absolute bottom-16 right-6 hidden lg:flex items-center gap-2 text-secondary/30">
@@ -388,7 +388,7 @@
                         </div>
                         {{-- Desktop videos --}}
                         <div class="flex-shrink-0 relative hidden lg:block">
-                            <video src="{{ asset('assets/hww-stap1.mp4') }}" class="w-[270px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
+                            <video data-src="{{ asset('assets/hww-stap1.mp4') }}" preload="none" class="lazy-video w-[270px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline></video>
                             <div class="absolute -bottom-6 -left-6 bg-white rounded-3xl shadow-xl p-5">
                                 <div class="flex items-center gap-3">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -497,8 +497,8 @@
                         </div>
                         {{-- Desktop videos --}}
                         <div class="flex-shrink-0 hidden lg:flex items-end gap-5 relative">
-                            <video src="{{ asset('assets/hww-stap2a.mp4') }}" class="w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
-                            <video src="{{ asset('assets/hww-stap2b.mp4') }}" class="w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl -mb-12" muted loop playsinline autoplay></video>
+                            <video data-src="{{ asset('assets/hww-stap2a.mp4') }}" preload="none" class="lazy-video w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline></video>
+                            <video data-src="{{ asset('assets/hww-stap2b.mp4') }}" preload="none" class="lazy-video w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl -mb-12" muted loop playsinline></video>
                             <div class="absolute -top-4 -right-4 bg-white rounded-3xl shadow-xl p-4 z-10">
                                 <div class="flex items-center gap-3">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -646,8 +646,8 @@
                         </div>
                         {{-- Desktop videos --}}
                         <div class="flex-shrink-0 hidden lg:flex items-start gap-5 relative">
-                            <video src="{{ asset('shorts/fitnessaannemer-short-realisatie-1.mp4') }}" class="w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl -mt-12" muted loop playsinline autoplay></video>
-                            <video src="{{ asset('shorts/fitnessaannemer-short-realisatie-2.mp4') }}" class="w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
+                            <video data-src="{{ asset('shorts/fitnessaannemer-short-realisatie-1.mp4') }}" preload="none" class="lazy-video w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl -mt-12" muted loop playsinline></video>
+                            <video data-src="{{ asset('shorts/fitnessaannemer-short-realisatie-2.mp4') }}" preload="none" class="lazy-video w-[210px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline></video>
                             <div class="absolute bottom-8 -left-8 bg-white rounded-3xl shadow-xl p-5 z-10">
                                 <div class="flex items-center gap-3">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -691,11 +691,11 @@
                         </div>
                         {{-- Mobile image --}}
                         <div class="lg:hidden rounded-3xl overflow-hidden aspect-[9/16] max-h-[400px]">
-                            <video src="{{ asset('shorts/fitnessaannemer-short-schoonmaak.mp4') }}" class="w-full h-full object-cover" muted loop playsinline autoplay></video>
+                            <video data-src="{{ asset('shorts/fitnessaannemer-short-schoonmaak.mp4') }}" preload="none" class="lazy-video w-full h-full object-cover" muted loop playsinline></video>
                         </div>
                         {{-- Desktop video --}}
                         <div class="flex-shrink-0 hidden lg:flex items-start gap-5 relative">
-                            <video src="{{ asset('shorts/fitnessaannemer-short-schoonmaak.mp4') }}" class="w-[270px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
+                            <video data-src="{{ asset('shorts/fitnessaannemer-short-schoonmaak.mp4') }}" preload="none" class="lazy-video w-[270px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline></video>
                             <div class="absolute -bottom-4 -left-4 bg-white rounded-3xl shadow-xl p-5 z-10">
                                 <div class="flex items-center gap-3">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -793,7 +793,7 @@
                         </div>
                         {{-- Desktop videos --}}
                         <div class="flex-shrink-0 relative hidden lg:block">
-                            <video src="{{ asset('shorts/fitnessaannemer-short-nazorg.mp4') }}" class="w-[270px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline autoplay></video>
+                            <video data-src="{{ asset('shorts/fitnessaannemer-short-nazorg.mp4') }}" preload="none" class="lazy-video w-[270px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline></video>
                             <div class="absolute -top-4 -right-4 bg-white rounded-3xl shadow-xl p-4 z-10">
                                 <div class="flex items-center gap-3">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -1204,7 +1204,7 @@
         <div class="project-arc bg-secondary relative z-10 hidden sm:block">
             @for ($i = 1; $i <= 9; $i++)
             <div class="project-arc-card rounded-3xl" data-arc-index="{{ $i - 1 }}">
-                <video src="{{ asset('shorts/fitnessaannemer-short-' . $i . '.mp4') }}" class="absolute inset-0 w-full h-full object-cover rounded-3xl" muted loop playsinline></video>
+                <video data-src="{{ asset('shorts/fitnessaannemer-short-' . $i . '.mp4') }}" preload="none" class="lazy-video absolute inset-0 w-full h-full object-cover rounded-3xl" muted loop playsinline></video>
                 <div class="project-arc-overlay absolute inset-0 bg-secondary rounded-3xl pointer-events-none"></div>
             </div>
             @endfor

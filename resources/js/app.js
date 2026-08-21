@@ -62,6 +62,26 @@ if (loadingScreen) {
     setTimeout(dismiss, 3000);
 }
 
+// ===== Lazy-load videos =====
+const lazyVideos = document.querySelectorAll('video.lazy-video');
+if (lazyVideos.length) {
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const video = entry.target;
+                if (!video.dataset.src) return;
+                video.src = video.dataset.src;
+                delete video.dataset.src;
+                video.classList.remove('lazy-video');
+                video.play().catch(() => {});
+                videoObserver.unobserve(video);
+            }
+        });
+    }, { rootMargin: '300px' });
+
+    lazyVideos.forEach(video => videoObserver.observe(video));
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // ===== Fixed header: glass on scroll, hide down / show up =====
     const header = document.getElementById('main-header');
@@ -188,6 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isDesktop = window.innerWidth >= 1024;
 
     if (heroVideo && heroScroll && isDesktop) {
+        heroVideo.preload = 'auto';
         heroVideo.pause();
         heroVideo.currentTime = 0;
 
@@ -307,20 +328,12 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(type, 400);
     }
 
-    // Video carousel auto-slide (infinite loop, 9 cards)
+    // Video carousel auto-slide (desktop only — mobile uses native CSS scroll)
     const videoCards = document.querySelectorAll('.video-card');
-    if (videoCards.length) {
+    if (videoCards.length && isDesktop) {
         const total = videoCards.length;
         let activeIndex = 0;
         const half = Math.floor(total / 2);
-
-        function getCardStep() {
-            const w = window.innerWidth;
-            if (w < 400) return 95;
-            if (w < 640) return 110;
-            if (w < 1024) return 145;
-            return 190;
-        }
 
         const overlayOpacities = [0, 0.25, 0.50, 0.75, 1];
         const zIndexes = [10, 9, 8, 7, 0];
@@ -336,17 +349,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const absOffset = Math.abs(offset);
             const overlay = card.querySelector('.video-overlay');
             const video = card.querySelector('video');
-            const step = getCardStep();
 
-            card.style.transform = `translate(calc(-50% + ${offset * step}px), -50%)`;
+            card.style.transform = `translate(calc(-50% + ${offset * 190}px), -50%)`;
 
             if (absOffset === 0) {
                 card.classList.add('is-active');
-                video.currentTime = 0;
-                video.play().catch(() => {});
+                if (video.src) {
+                    video.currentTime = 0;
+                    video.play().catch(() => {});
+                }
             } else {
                 card.classList.remove('is-active');
-                video.pause();
+                if (video.src) video.pause();
             }
 
             overlay.style.opacity = absOffset < overlayOpacities.length
@@ -778,12 +792,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (absOffset === 0) {
                 card.classList.add('is-active');
                 overlay.style.opacity = 0;
-                video.currentTime = 0;
-                video.play();
+                if (video.src) {
+                    video.currentTime = 0;
+                    video.play().catch(() => {});
+                }
             } else {
                 card.classList.remove('is-active');
                 overlay.style.opacity = Math.min(0.15 + absOffset * 0.18, 0.85);
-                video.pause();
+                if (video.src) video.pause();
             }
         }
 

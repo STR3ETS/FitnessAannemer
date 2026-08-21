@@ -22,6 +22,7 @@ html.lenis, html.lenis body {
 
 body {
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -187,7 +188,7 @@ h1,h2,h3,h4,h5,h6 {
 /* Mobile: convert horizontal scroll to vertical stacking */
 @media (max-width: 1023px) {
     .horizontal-section {
-        overflow: visible;
+        overflow: hidden;
     }
 
     .horizontal-track {

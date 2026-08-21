@@ -109,41 +109,42 @@
         </div>
     </div>
 
-    {{-- Fullscreen mobile menu --}}
-    <div id="mobile-menu" class="lg:hidden fixed inset-0 bg-secondary z-50 flex flex-col opacity-0 invisible transition-all duration-400 pointer-events-none">
-        <div class="flex-1 flex flex-col justify-center px-8 py-24 overflow-y-auto">
-            <nav class="flex flex-col gap-1 mb-8">
-                <a href="{{ url('/diensten') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Diensten</a>
-                <a href="{{ url('/oplossingen') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Oplossingen</a>
-                <a href="{{ url('/apparatuur') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Apparatuur</a>
-                <a href="{{ url('/onze-merken') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Onze merken</a>
-                <a href="{{ url('/projecten') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Projecten</a>
-                <a href="{{ url('/fitnesswijzer') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Fitnesswijzer</a>
-                <a href="{{ url('/over-ons') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Over ons</a>
-                <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 transition" style="font-family: 'DM Serif Display'">Contact</a>
-            </nav>
+</header>
 
-            <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="mobile-nav-link block text-center bg-primary rounded-full px-6 py-4 text-white text-sm font-semibold hover:bg-primary/90 transition">
-                Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i>
+{{-- Fullscreen mobile menu (outside header to avoid transform containing block issues) --}}
+<div id="mobile-menu" class="lg:hidden fixed inset-0 bg-secondary z-[55] flex flex-col opacity-0 invisible transition-all duration-400 pointer-events-none">
+    <div class="flex-1 flex flex-col justify-center px-8 py-24 overflow-y-auto">
+        <nav class="flex flex-col gap-1 mb-8">
+            <a href="{{ url('/diensten') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Diensten</a>
+            <a href="{{ url('/oplossingen') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Oplossingen</a>
+            <a href="{{ url('/apparatuur') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Apparatuur</a>
+            <a href="{{ url('/onze-merken') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Onze merken</a>
+            <a href="{{ url('/projecten') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Projecten</a>
+            <a href="{{ url('/fitnesswijzer') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Fitnesswijzer</a>
+            <a href="{{ url('/over-ons') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Over ons</a>
+            <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 transition" style="font-family: 'DM Serif Display'">Contact</a>
+        </nav>
+
+        <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="mobile-nav-link block text-center bg-primary rounded-full px-6 py-4 text-white text-sm font-semibold hover:bg-primary/90 transition">
+            Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i>
+        </a>
+
+        <div class="flex items-center justify-center gap-4 mt-8">
+            <a href="https://www.instagram.com/fitnessaannemer.nl/" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
+                <i class="fa-brands fa-instagram text-sm"></i>
             </a>
-
-            <div class="flex items-center justify-center gap-4 mt-8">
-                <a href="https://www.instagram.com/fitnessaannemer.nl/" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
-                    <i class="fa-brands fa-instagram text-sm"></i>
-                </a>
-                <a href="https://www.tiktok.com/@fitnessaannemer" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
-                    <i class="fa-brands fa-tiktok text-sm"></i>
-                </a>
-                <a href="https://www.youtube.com/@FitnessAannemer" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
-                    <i class="fa-brands fa-youtube text-sm"></i>
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61557754181423" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
-                    <i class="fa-brands fa-facebook-f text-sm"></i>
-                </a>
-                <a href="https://pin.it/7jMdHylyE" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
-                    <i class="fa-brands fa-pinterest-p text-sm"></i>
-                </a>
-            </div>
+            <a href="https://www.tiktok.com/@fitnessaannemer" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
+                <i class="fa-brands fa-tiktok text-sm"></i>
+            </a>
+            <a href="https://www.youtube.com/@FitnessAannemer" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
+                <i class="fa-brands fa-youtube text-sm"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61557754181423" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
+                <i class="fa-brands fa-facebook-f text-sm"></i>
+            </a>
+            <a href="https://pin.it/7jMdHylyE" target="_blank" rel="noopener" class="mobile-nav-link w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition">
+                <i class="fa-brands fa-pinterest-p text-sm"></i>
+            </a>
         </div>
     </div>
-</header>
+</div>

@@ -113,7 +113,8 @@
 
 {{-- Fullscreen mobile menu (outside header to avoid transform containing block issues) --}}
 <div id="mobile-menu" class="lg:hidden fixed inset-0 bg-secondary z-[55] flex flex-col opacity-0 invisible transition-all duration-400 pointer-events-none">
-    <div class="flex-1 flex flex-col justify-center px-8 py-24 overflow-y-auto">
+    <div class="shrink-0 h-20 bg-secondary"></div>
+    <div class="flex-1 flex flex-col px-8 pb-8 overflow-y-auto">
         <nav class="flex flex-col gap-1 mb-8">
             <details class="mobile-dropdown border-b border-white/[0.06]">
                 <summary class="mobile-nav-link flex items-center justify-between text-white text-2xl font-bold py-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden">

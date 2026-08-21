@@ -1,5 +1,5 @@
 {{-- CTA Section --}}
-<div class="bg-secondary text-center pt-16 lg:pt-32 px-4 sm:px-6 relative z-10">
+<div class="bg-secondary text-center pt-16 lg:pt-32 pb-16 lg:pb-0 px-4 sm:px-6 relative z-10">
     <h2 class="brands-fade text-white text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.05] mb-6">Klaar om jouw gym<br><span class="text-primary">te realiseren?</span></h2>
     <p class="brands-fade text-white/35 text-sm leading-relaxed max-w-lg mx-auto">Van ontwerp tot oplevering, wij regelen alles. Neem contact op voor een vrijblijvend adviesgesprek en ontdek wat wij voor jouw gym kunnen betekenen.</p>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-8">

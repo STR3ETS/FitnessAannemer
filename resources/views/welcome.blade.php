@@ -377,7 +377,7 @@
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Behoefteanalyse</span>
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Budgetindicatie</span>
                             </div>
-                            <div class="flex items-center gap-3 mt-8">
+                            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 mt-8">
                                 <a href="#" class="bg-primary rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Plan een gesprek <i class="fa-solid fa-arrow-right text-xs ml-1.5"></i></a>
                                 <a href="#" class="border border-secondary/15 rounded-full px-6 py-3 text-secondary/60 text-xs font-semibold hover:border-primary/30 hover:text-primary transition-colors">Bel ons direct</a>
                             </div>
@@ -529,7 +529,7 @@
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Apparatuurkeuze</span>
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Revisierondes</span>
                             </div>
-                            <div class="flex items-center gap-3 mt-8">
+                            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 mt-8">
                                 <a href="#" class="bg-primary rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Bekijk voorbeeldontwerpen <i class="fa-solid fa-arrow-right text-xs ml-1.5"></i></a>
                                 <a href="#" class="border border-secondary/15 rounded-full px-6 py-3 text-secondary/60 text-xs font-semibold hover:border-primary/30 hover:text-primary transition-colors">Start jouw ontwerp</a>
                             </div>
@@ -635,7 +635,7 @@
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Volledig turnkey</span>
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Direct klaar voor gebruik</span>
                             </div>
-                            <div class="flex items-center gap-3 mt-8">
+                            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 mt-8">
                                 <a href="#" class="bg-primary rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Offerte aanvragen <i class="fa-solid fa-arrow-right text-xs ml-1.5"></i></a>
                                 <a href="#" class="border border-secondary/15 rounded-full px-6 py-3 text-secondary/60 text-xs font-semibold hover:border-primary/30 hover:text-primary transition-colors">Bekijk projecten</a>
                             </div>
@@ -684,7 +684,7 @@
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Sleuteloverdracht</span>
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Direct klaar voor opening</span>
                             </div>
-                            <div class="flex items-center gap-3 mt-8">
+                            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 mt-8">
                                 <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-1.5"></i></a>
                                 <a href="{{ url('/projecten') }}" class="border border-secondary/15 rounded-full px-6 py-3 text-secondary/60 text-xs font-semibold hover:border-primary/30 hover:text-primary transition-colors">Bekijk projecten</a>
                             </div>
@@ -823,7 +823,7 @@
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Uitbreidingsadvies</span>
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Snelle responstijd</span>
                             </div>
-                            <div class="flex items-center gap-3 mt-8">
+                            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 mt-8">
                                 <a href="#" class="bg-primary rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Neem contact op <i class="fa-solid fa-arrow-right text-xs ml-1.5"></i></a>
                                 <a href="#" class="border border-secondary/15 rounded-full px-6 py-3 text-secondary/60 text-xs font-semibold hover:border-primary/30 hover:text-primary transition-colors">Servicepakketten</a>
                             </div>
@@ -908,18 +908,18 @@
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
                     @php
                     $categories = [
-                        ['name' => 'Apparatuur', 'desc' => 'Cardio, kracht en functioneel van 18 merken', 'image' => 'apparatuur.jpg', 'icon' => 'fa-dumbbell'],
-                        ['name' => 'Vloeren', 'desc' => 'PVC, laminaat en sportvloeren zoals rubberen tegels en Sprinttracks', 'image' => 'vloeren.jpg', 'icon' => 'fa-border-all'],
-                        ['name' => 'Verlichting', 'desc' => 'Alle soorten, van sfeer tot functioneel', 'image' => 'verlichting.jpg', 'icon' => 'fa-lightbulb'],
-                        ['name' => 'Audio', 'desc' => 'Voor iedere ruimte', 'image' => 'audio.jpg', 'icon' => 'fa-volume-high'],
-                        ['name' => 'Spiegels', 'desc' => 'Op maat voor elke wand', 'image' => 'spiegels.jpg', 'icon' => 'fa-clone'],
-                        ['name' => 'Kluisjes', 'desc' => 'Voor kleedkamer en entree', 'image' => 'kluisjes.jpg', 'icon' => 'fa-lock'],
-                        ['name' => 'Meubels', 'desc' => 'Van receptie tot loungehoek', 'image' => 'meubels.jpg', 'icon' => 'fa-couch'],
+                        ['name' => 'Apparatuur', 'desc' => 'Cardio, kracht en functioneel van 18 merken', 'image' => 'apparatuur.jpg', 'icon' => 'fa-dumbbell', 'url' => '/apparatuur'],
+                        ['name' => 'Vloeren', 'desc' => 'PVC, laminaat en sportvloeren zoals rubberen tegels en Sprinttracks', 'image' => 'vloeren.jpg', 'icon' => 'fa-border-all', 'url' => '/apparatuur/sportvloeren'],
+                        ['name' => 'Verlichting', 'desc' => 'Alle soorten, van sfeer tot functioneel', 'image' => 'verlichting.jpg', 'icon' => 'fa-lightbulb', 'url' => '/apparatuur/verlichting'],
+                        ['name' => 'Audio', 'desc' => 'Voor iedere ruimte', 'image' => 'audio.jpg', 'icon' => 'fa-volume-high', 'url' => '/apparatuur/audio'],
+                        ['name' => 'Spiegels', 'desc' => 'Op maat voor elke wand', 'image' => 'spiegels.jpg', 'icon' => 'fa-clone', 'url' => '/apparatuur/spiegels'],
+                        ['name' => 'Kluisjes', 'desc' => 'Voor kleedkamer en entree', 'image' => 'kluisjes.jpg', 'icon' => 'fa-lock', 'url' => '/apparatuur/kluisjes'],
+                        ['name' => 'Meubels', 'desc' => 'Van receptie tot loungehoek', 'image' => 'meubels.jpg', 'icon' => 'fa-couch', 'url' => '/apparatuur/meubels'],
                     ];
                     @endphp
 
                     @foreach($categories as $cat)
-                    <div class="club-fade group relative rounded-2xl overflow-hidden aspect-[3/4] cursor-default">
+                    <a href="{{ url($cat['url']) }}" class="club-fade group relative rounded-2xl overflow-hidden aspect-[3/4] block">
                         @if($cat['image'])
                         <img src="{{ asset('assets/categories/' . $cat['image']) }}" alt="{{ $cat['name'] }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         @else
@@ -933,7 +933,7 @@
                             <h3 class="text-white text-sm sm:text-base font-bold mb-1">{{ $cat['name'] }}</h3>
                             <p class="text-white/60 text-[11px] sm:text-xs leading-relaxed">{{ $cat['desc'] }}</p>
                         </div>
-                    </div>
+                    </a>
                     @endforeach
                 </div>
 
@@ -956,8 +956,8 @@
                 {{-- Diensten Grid --}}
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {{-- Interieurontwerp --}}
-                    <a href="{{ url('/diensten/inrichting-en-planning') }}" class="dienst-card group bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300">
-                        <div class="aspect-[16/9] relative overflow-hidden">
+                    <a href="{{ url('/diensten/inrichting-en-planning') }}" class="dienst-card group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl border border-secondary/[0.08] hover:border-primary/30 transition-all duration-300">
+                        <div class="aspect-[3/4] sm:aspect-[16/9] relative overflow-hidden">
                             <img src="{{ asset('assets/dienst-interieur.jpg') }}" alt="Interieurontwerp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/20"></div>
                             <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
@@ -972,8 +972,8 @@
                     </a>
 
                     {{-- Bouw, levering & installatie --}}
-                    <a href="{{ url('/diensten/levering-en-installatie') }}" class="dienst-card group bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300">
-                        <div class="aspect-[16/9] relative overflow-hidden">
+                    <a href="{{ url('/diensten/levering-en-installatie') }}" class="dienst-card group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl border border-secondary/[0.08] hover:border-primary/30 transition-all duration-300">
+                        <div class="aspect-[3/4] sm:aspect-[16/9] relative overflow-hidden">
                             <img src="{{ asset('assets/dienst-bouw.jpg') }}" alt="Bouw, levering & installatie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/20"></div>
                             <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
@@ -988,8 +988,8 @@
                     </a>
 
                     {{-- Fitnessapparatuur --}}
-                    <a href="{{ url('/diensten/onderhoud-en-reparaties') }}" class="dienst-card group bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300">
-                        <div class="aspect-[16/9] relative overflow-hidden">
+                    <a href="{{ url('/diensten/onderhoud-en-reparaties') }}" class="dienst-card group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl border border-secondary/[0.08] hover:border-primary/30 transition-all duration-300">
+                        <div class="aspect-[3/4] sm:aspect-[16/9] relative overflow-hidden">
                             <img src="{{ asset('assets/3.jpg') }}" alt="Fitnessapparatuur" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/20"></div>
                             <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
@@ -1004,8 +1004,8 @@
                     </a>
 
                     {{-- Leasing & financiering --}}
-                    <a href="{{ url('/diensten/leasing-en-financiering') }}" class="dienst-card group bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300">
-                        <div class="aspect-[16/9] relative overflow-hidden">
+                    <a href="{{ url('/diensten/leasing-en-financiering') }}" class="dienst-card group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl border border-secondary/[0.08] hover:border-primary/30 transition-all duration-300">
+                        <div class="aspect-[3/4] sm:aspect-[16/9] relative overflow-hidden">
                             <img src="{{ asset('assets/dienst-leasing.jpg') }}" alt="Leasing & financiering" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/20"></div>
                             <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8">

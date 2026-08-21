@@ -88,6 +88,10 @@ h1,h2,h3,h4,h5,h6 {
     color: rgba(6, 9, 15, 0.7);
 }
 
+#main-header.is-light #mobile-menu-toggle {
+    color: rgba(6, 9, 15, 0.8);
+}
+
 #main-header.is-light .nav-link:hover,
 #main-header.is-light .nav-dropdown > a:hover {
     color: rgba(6, 9, 15, 1);

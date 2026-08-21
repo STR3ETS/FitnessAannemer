@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
-                    <video src="{{ asset('assets/tk-regie.mp4') }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                    <video data-src="{{ asset('assets/tk-regie.mp4') }}" class="w-full h-full object-cover lazy-video" preload="none" autoplay muted loop playsinline></video>
                 </div>
             </div>
         </div>
@@ -160,7 +160,7 @@
 
                         <div class="hidden lg:block lg:w-1/2 {{ $index % 2 === 0 ? 'lg:pl-16' : 'lg:pr-16' }}">
                             <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-white/[0.03] border border-white/[0.06]">
-                                <video src="{{ asset($stap['video']) }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                                <video data-src="{{ asset($stap['video']) }}" class="w-full h-full object-cover lazy-video" preload="none" autoplay muted loop playsinline></video>
                             </div>
                         </div>
                     </div>

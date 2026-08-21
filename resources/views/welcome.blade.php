@@ -1115,9 +1115,9 @@
                             <details class="faq-item group" {{ $idx === 0 ? 'open' : '' }}>
                                 <summary class="flex items-center justify-between gap-4 py-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                                     <h3 class="text-secondary text-base font-semibold group-open:text-primary transition-colors">{{ $faq['question'] }}</h3>
-                                    <div class="w-8 h-8 rounded-full border border-secondary/10 group-open:border-primary/30 group-open:bg-primary/5 flex items-center justify-center shrink-0 transition-colors">
-                                        <i class="fa-solid fa-plus text-[10px] text-secondary/40 group-open:hidden"></i>
-                                        <i class="fa-solid fa-minus text-[10px] text-primary hidden group-open:block"></i>
+                                    <div class="faq-toggle w-8 h-8 rounded-full border border-secondary/10 flex items-center justify-center shrink-0 transition-colors">
+                                        <i class="fa-solid fa-plus faq-icon-plus text-[10px] text-secondary/40"></i>
+                                        <i class="fa-solid fa-minus faq-icon-minus text-[10px] text-primary"></i>
                                     </div>
                                 </summary>
                                 <div class="pb-6 pr-12">

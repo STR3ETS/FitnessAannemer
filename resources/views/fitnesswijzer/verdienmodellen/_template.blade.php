@@ -41,7 +41,7 @@
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30 relative overflow-hidden">
         <div class="hidden lg:block absolute inset-y-0 right-0 w-1/2">
             @if(str_ends_with($media1, '.mp4'))
-                <video src="{{ asset($media1) }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                <video data-src="{{ asset($media1) }}" class="lazy-video w-full h-full object-cover" autoplay muted loop playsinline preload="none"></video>
             @elseif(str_starts_with($media1, 'http'))
                 <img src="{{ $media1 }}" alt="" class="w-full h-full object-cover">
             @else
@@ -87,7 +87,7 @@
                 </div>
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
                     @if(str_ends_with($media1, '.mp4'))
-                        <video src="{{ asset($media1) }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                        <video data-src="{{ asset($media1) }}" class="lazy-video w-full h-full object-cover" autoplay muted loop playsinline preload="none"></video>
                     @elseif(str_starts_with($media1, 'http'))
                         <img src="{{ $media1 }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
                     @else
@@ -103,7 +103,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
                     @if(str_ends_with($mediaMid, '.mp4'))
-                        <video src="{{ asset($mediaMid) }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                        <video data-src="{{ asset($mediaMid) }}" class="lazy-video w-full h-full object-cover" autoplay muted loop playsinline preload="none"></video>
                     @elseif(str_starts_with($mediaMid, 'http'))
                         <img src="{{ $mediaMid }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
                     @else
@@ -141,7 +141,7 @@
                 </div>
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
                     @if(str_ends_with($media3, '.mp4'))
-                        <video src="{{ asset($media3) }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                        <video data-src="{{ asset($media3) }}" class="lazy-video w-full h-full object-cover" autoplay muted loop playsinline preload="none"></video>
                     @elseif(str_starts_with($media3, 'http'))
                         <img src="{{ $media3 }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
                     @else

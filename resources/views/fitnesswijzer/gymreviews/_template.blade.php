@@ -41,7 +41,7 @@
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30 relative overflow-hidden">
         <div class="hidden lg:block absolute inset-y-0 right-0 w-1/2">
             @if(str_ends_with($media1, '.mp4'))
-                <video src="{{ asset($media1) }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                <video data-src="{{ asset($media1) }}" class="lazy-video w-full h-full object-cover" autoplay muted loop playsinline preload="none"></video>
             @elseif(str_starts_with($media1, 'http'))
                 <img src="{{ $media1 }}" alt="" class="w-full h-full object-cover">
             @else
@@ -60,7 +60,7 @@
                 <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">{{ $title }}</span>
             </div>
             <div class="max-w-3xl">
-                <h1 class="ip-hero-el text-white text-5xl lg:text-6xl font-bold leading-[1]">{!! $heroTitle !!}</h1>
+                <h1 class="ip-hero-el text-white text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1]">{!! $heroTitle !!}</h1>
                 <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">{{ $heroDesc }}</p>
                 <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                     <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
                     @if(str_ends_with($media1, '.mp4'))
-                        <video src="{{ asset($media1) }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                        <video data-src="{{ asset($media1) }}" class="lazy-video w-full h-full object-cover" autoplay muted loop playsinline preload="none"></video>
                     @elseif(str_starts_with($media1, 'http'))
                         <img src="{{ $media1 }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
                     @else
@@ -103,7 +103,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
                     @if(str_ends_with($mediaMid, '.mp4'))
-                        <video src="{{ asset($mediaMid) }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                        <video data-src="{{ asset($mediaMid) }}" class="lazy-video w-full h-full object-cover" autoplay muted loop playsinline preload="none"></video>
                     @elseif(str_starts_with($mediaMid, 'http'))
                         <img src="{{ $mediaMid }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
                     @else
@@ -141,7 +141,7 @@
                 </div>
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
                     @if(str_ends_with($media3, '.mp4'))
-                        <video src="{{ asset($media3) }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                        <video data-src="{{ asset($media3) }}" class="lazy-video w-full h-full object-cover" autoplay muted loop playsinline preload="none"></video>
                     @elseif(str_starts_with($media3, 'http'))
                         <img src="{{ $media3 }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
                     @else

@@ -117,7 +117,7 @@
                     </div>
                 </div>
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
-                    <video src="{{ asset('assets/opl-blok4.mp4') }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                    <video data-src="{{ asset('assets/opl-blok4.mp4') }}" class="lazy-video w-full h-full object-cover" autoplay muted loop playsinline preload="none"></video>
                 </div>
             </div>
         </div>

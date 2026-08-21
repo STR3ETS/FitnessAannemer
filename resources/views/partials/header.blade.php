@@ -115,14 +115,67 @@
 <div id="mobile-menu" class="lg:hidden fixed inset-0 bg-secondary z-[55] flex flex-col opacity-0 invisible transition-all duration-400 pointer-events-none">
     <div class="flex-1 flex flex-col justify-center px-8 py-24 overflow-y-auto">
         <nav class="flex flex-col gap-1 mb-8">
-            <a href="{{ url('/diensten') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Diensten</a>
-            <a href="{{ url('/oplossingen') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Oplossingen</a>
-            <a href="{{ url('/apparatuur') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Apparatuur</a>
-            <a href="{{ url('/onze-merken') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Onze merken</a>
-            <a href="{{ url('/projecten') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Projecten</a>
-            <a href="{{ url('/fitnesswijzer') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Fitnesswijzer</a>
-            <a href="{{ url('/over-ons') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition" style="font-family: 'DM Serif Display'">Over ons</a>
-            <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 transition" style="font-family: 'DM Serif Display'">Contact</a>
+            <details class="mobile-dropdown border-b border-white/[0.06]">
+                <summary class="mobile-nav-link flex items-center justify-between text-white text-2xl font-bold py-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                    Diensten
+                    <svg class="w-4 h-4 text-white/30 mobile-dropdown-chevron transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="flex flex-col gap-1 pb-3 pl-4">
+                    <a href="{{ url('/diensten') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Overzicht</a>
+                    <a href="{{ url('/diensten/turnkey-sportschool-bouwen') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Turnkey sportschool bouwen</a>
+                    <a href="{{ url('/diensten/inrichting-en-planning') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Interieurontwerp en 3D-visualisatie</a>
+                    <a href="{{ url('/diensten/levering-en-installatie') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Levering en installatie</a>
+                    <a href="{{ url('/diensten/leasing-en-financiering') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Leasing en financiering</a>
+                </div>
+            </details>
+            <details class="mobile-dropdown border-b border-white/[0.06]">
+                <summary class="mobile-nav-link flex items-center justify-between text-white text-2xl font-bold py-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                    Oplossingen
+                    <svg class="w-4 h-4 text-white/30 mobile-dropdown-chevron transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="flex flex-col gap-1 pb-3 pl-4">
+                    <a href="{{ url('/oplossingen') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Overzicht</a>
+                    <a href="{{ url('/sportschool-inrichten') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Sportscholen</a>
+                    <a href="{{ url('/pilates-studio-inrichten') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Pilates studio's</a>
+                    <a href="{{ url('/pt-studio-inrichten') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">PT studio's</a>
+                    <a href="{{ url('/hotel-gym-inrichten') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Hotel gyms</a>
+                    <a href="{{ url('/homegyms-inrichten') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Homegyms</a>
+                    <a href="{{ url('/bedrijfsfitness-inrichten') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Bedrijfsfitness</a>
+                    <a href="{{ url('/hyrox-box-inrichten') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Hyrox boxen</a>
+                    <a href="{{ url('/wellnessruimte-inrichten') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Wellness en recovery</a>
+                </div>
+            </details>
+            <details class="mobile-dropdown border-b border-white/[0.06]">
+                <summary class="mobile-nav-link flex items-center justify-between text-white text-2xl font-bold py-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                    Apparatuur
+                    <svg class="w-4 h-4 text-white/30 mobile-dropdown-chevron transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="flex flex-col gap-1 pb-3 pl-4">
+                    <a href="{{ url('/apparatuur') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Overzicht</a>
+                    <a href="{{ url('/apparatuur/krachtapparatuur') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Krachtapparatuur</a>
+                    <a href="{{ url('/apparatuur/cardio') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Cardio</a>
+                    <a href="{{ url('/apparatuur/apparatuur-functioneel') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Functioneel</a>
+                    <a href="{{ url('/apparatuur/gewichten') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Gewichten</a>
+                    <a href="{{ url('/apparatuur/sportvloeren') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Sportvloeren</a>
+                    <a href="{{ url('/apparatuur/herstel') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Herstel en Recovery</a>
+                </div>
+            </details>
+            <a href="{{ url('/onze-merken') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition">Onze merken</a>
+            <a href="{{ url('/projecten') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition">Projecten</a>
+            <details class="mobile-dropdown border-b border-white/[0.06]">
+                <summary class="mobile-nav-link flex items-center justify-between text-white text-2xl font-bold py-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                    Fitnesswijzer
+                    <svg class="w-4 h-4 text-white/30 mobile-dropdown-chevron transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="flex flex-col gap-1 pb-3 pl-4">
+                    <a href="{{ url('/fitnesswijzer') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Overzicht</a>
+                    <a href="{{ url('/fitnesswijzer/gym-verdienmodellen') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Gym verdienmodellen</a>
+                    <a href="{{ url('/fitnesswijzer/tips-en-inspiratie') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Tips en inspiratie</a>
+                    <a href="{{ url('/fitnesswijzer/gymreviews') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Gymreviews</a>
+                </div>
+            </details>
+            <a href="{{ url('/over-ons') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition">Over ons</a>
+            <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 transition">Contact</a>
         </nav>
 
         <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="mobile-nav-link block text-center bg-primary rounded-full px-6 py-4 text-white text-sm font-semibold hover:bg-primary/90 transition">

@@ -611,6 +611,29 @@ h1,h2,h3,h4,h5,h6 {
     border-bottom: none;
 }
 
+/* ===== FAQ accordion icons ===== */
+.faq-item .faq-icon-minus {
+    display: none;
+}
+
+.faq-item[open] .faq-icon-plus {
+    display: none;
+}
+
+.faq-item[open] .faq-icon-minus {
+    display: inline-block;
+}
+
+.faq-item[open] .faq-toggle {
+    border-color: rgba(82, 171, 226, 0.3);
+    background: rgba(82, 171, 226, 0.05);
+}
+
+/* ===== Mobile dropdown nav ===== */
+.mobile-dropdown[open] .mobile-dropdown-chevron {
+    transform: rotate(180deg);
+}
+
 /* ===== Mobile Responsive ===== */
 
 @media (max-width: 1023px) {

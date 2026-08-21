@@ -33,7 +33,7 @@
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30 relative overflow-hidden">
         <div class="hidden lg:block absolute inset-y-0 right-0 w-1/2">
-            <video src="{{ asset('assets/10-1_AI-Transitions_v2.mp4') }}" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+            <video data-src="{{ asset('assets/10-1_AI-Transitions_v2.mp4') }}" class="lazy-video w-full h-full object-cover" autoplay muted loop playsinline preload="none"></video>
             <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-transparent"></div>
             <div class="absolute w-[650px] h-[650px] rounded-full border border-white/[0.07] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
             <div class="absolute w-[400px] h-[400px] rounded-full border border-white/[0.10] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>

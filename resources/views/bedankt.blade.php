@@ -11,6 +11,14 @@
         <link rel="preload" href="{{ asset('fontawesome/css/all.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}"></noscript>
 
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WP74DW6');</script>
+        <!-- End Google Tag Manager -->
+
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         {{-- Google Ads conversion tracking --}}
@@ -25,6 +33,9 @@
         </script>
     </head>
     <body class="bg-secondary min-h-screen flex flex-col items-center justify-center">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WP74DW6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
 
         <div class="w-full max-w-2xl mx-auto px-6 py-16">
             <div class="text-center">

@@ -38,7 +38,7 @@ Route::redirect('/boutique-gym-inrichten', '/pt-studio-inrichten', 301);
 Route::redirect('/apparatuur-2', '/apparatuur', 301);
 Route::redirect('/bedankt-adviesgesprek', '/bedankt/adviesgesprek', 301);
 Route::redirect('/bedankt-offerte', '/bedankt/offerte', 301);
-Route::redirect('/bedankt-ebook', '/bedankt/ebook', 301);
+Route::view('/bedankt-ebook', 'bedankt-ebook')->name('bedankt-ebook');
 Route::redirect('/e-book-start-je-eigen-sportschool', '/fitnesswijzer', 301);
 Route::redirect('/e-book-start-je-eigen-reformer-pilates-studio', '/fitnesswijzer', 301);
 Route::redirect('/e-book-hoe-blijf-je-als-sportschool-relevant-in-een-snel-veranderende-fitnessmarkt', '/fitnesswijzer', 301);

@@ -928,8 +928,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.click();
                 document.body.removeChild(link);
 
-                ebookForm.classList.add('hidden');
-                successEl.classList.remove('hidden');
+                setTimeout(() => {
+                    window.location.href = '/bedankt-ebook';
+                }, 500);
             }, 800);
         });
 

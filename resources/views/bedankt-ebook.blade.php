@@ -46,8 +46,8 @@
                     <div class="w-20 h-20 rounded-full bg-primary/15 flex items-center justify-center mx-auto mb-6">
                         <i class="fa-solid fa-book-open text-primary text-3xl"></i>
                     </div>
-                    <h1 class="text-white text-2xl font-bold mb-3">Je e-book is onderweg!</h1>
-                    <p class="text-white/40 text-sm leading-relaxed mb-8 max-w-md mx-auto">Bedankt voor je download. Je ontvangt het e-book binnen enkele minuten in je inbox. Check ook je spam-folder als je het niet direct ziet.</p>
+                    <h1 class="text-white text-2xl font-bold mb-3">Bedankt voor je download!</h1>
+                    <p class="text-white/40 text-sm leading-relaxed mb-8 max-w-md mx-auto">Je e-book wordt direct gedownload. Veel leesplezier! Heb je vragen of wil je vrijblijvend sparren over jouw plannen? Neem gerust contact met ons op.</p>
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
                         <a href="{{ url('/') }}" class="inline-flex items-center bg-primary rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">
                             Terug naar home <i class="fa-solid fa-arrow-right text-[10px] ml-2"></i>

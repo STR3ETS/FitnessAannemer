@@ -31,6 +31,17 @@
             'dienst': '{{ $dienst }}'
         });
         </script>
+
+        {{-- Meta Pixel Lead event --}}
+        <script>
+        (function fireFbq() {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {value: {{ $conversionValue }}.00, currency: 'EUR'});
+            } else {
+                setTimeout(fireFbq, 200);
+            }
+        })();
+        </script>
     </head>
     <body class="bg-secondary min-h-screen flex flex-col items-center justify-center">
         <!-- Google Tag Manager (noscript) -->

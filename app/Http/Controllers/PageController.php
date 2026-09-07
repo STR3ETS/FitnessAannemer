@@ -1548,8 +1548,11 @@ class PageController extends Controller
             'introP1' => 'Een collectie biedt het voordeel van apparatuur die perfect op elkaar is afgestemd qua design, kwaliteit en functionaliteit. Ideaal voor een consistente uitstraling in jouw gym.',
             'introP2' => 'Wij stellen collecties samen op basis van jouw concept, doelgroep en budget. Van commerciele full-gym setups tot boutique studio pakketten en compacte homegym sets.',
             'media1' => 'assets/foto-assets/MCJO3837-1-1024x683.jpg',
-            'midLabel' => 'Merken & kwaliteit',
+            'midLabel' => 'Merken en kwaliteit',
             'midTitle' => 'Topmerken, scherpe <span class="text-primary">prijzen</span>',
+            'midP1' => 'Wij werken met een selectie van 18+ topmerken waaronder Life Fitness, Matrix, Gym80 en Hammer Strength. Dankzij directe partnerships bieden wij scherpe collectieprijzen zonder concessies aan kwaliteit.',
+            'midP2' => 'Of je kiest voor een complete lijn van een merk of een mix van het beste uit meerdere merken: wij adviseren wat past bij jouw concept en stellen de collectie samen die het verschil maakt.',
+            'mediaMid' => 'assets/foto-assets/MCJO3851_FA-1-1024x683.jpg',
             'products' => [
                 ['icon' => 'fa-layer-group', 'title' => 'Samengestelde sets', 'desc' => 'Apparatuurpakketten samengesteld per concept en doelgroep. Cardio, kracht en functioneel in een pakket.'],
                 ['icon' => 'fa-palette', 'title' => 'Uniforme uitstraling', 'desc' => 'Alle machines uit dezelfde serie voor een consistent design door jouw hele fitnessruimte.'],

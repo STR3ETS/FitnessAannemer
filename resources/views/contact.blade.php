@@ -359,6 +359,17 @@
             });
 
             goToStep(1);
+
+            // Populate UTM hidden fields from URL params or cookies
+            const urlParams = new URLSearchParams(window.location.search);
+            ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(key => {
+                const input = form.querySelector(`input[name="${key}"]`);
+                if (!input) return;
+                const fromUrl = urlParams.get(key);
+                if (fromUrl) { input.value = fromUrl; return; }
+                const match = document.cookie.match(new RegExp('(?:^|; )' + key + '=([^;]*)'));
+                if (match) input.value = decodeURIComponent(match[1]);
+            });
         });
         </script>
     </body>

@@ -892,9 +892,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (ebookForm) {
         const naamInput = document.getElementById('ebook-naam');
         const emailInput = document.getElementById('ebook-email');
+        const telefoonInput = document.getElementById('ebook-telefoon');
         const errorEl = document.getElementById('ebook-error');
         const btn = document.getElementById('ebook-btn');
-        const successEl = document.getElementById('ebook-success');
 
         ebookForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -902,6 +902,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const naam = naamInput.value.trim();
             const email = emailInput.value.trim();
+            const telefoon = telefoonInput.value.trim();
 
             if (!naam) {
                 errorEl.textContent = 'Vul je naam in om het e-book te downloaden.';
@@ -917,10 +918,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            if (!telefoon) {
+                errorEl.textContent = 'Vul je telefoonnummer in.';
+                errorEl.classList.remove('hidden');
+                telefoonInput.focus();
+                return;
+            }
+
             btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-xs"></i> Even geduld...';
             btn.disabled = true;
 
-            setTimeout(() => {
+            fetch('/api/ebook-download', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+                },
+                body: JSON.stringify({ naam, email, telefoon }),
+            })
+            .then(() => {
                 const link = document.createElement('a');
                 link.href = ebookForm.closest('section').querySelector('[download]').href;
                 link.download = '';
@@ -931,10 +947,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     window.location.href = '/bedankt-ebook';
                 }, 500);
-            }, 800);
+            })
+            .catch(() => {
+                const link = document.createElement('a');
+                link.href = ebookForm.closest('section').querySelector('[download]').href;
+                link.download = '';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+                setTimeout(() => {
+                    window.location.href = '/bedankt-ebook';
+                }, 500);
+            });
         });
 
-        [naamInput, emailInput].forEach(input => {
+        [naamInput, emailInput, telefoonInput].forEach(input => {
             input.addEventListener('input', () => {
                 errorEl.classList.add('hidden');
                 input.classList.remove('border-red-400');

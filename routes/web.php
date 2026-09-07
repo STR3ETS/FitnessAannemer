@@ -111,6 +111,9 @@ Route::get('/fitnesswijzer/tips-en-inspiratie/{slug}', [PageController::class, '
 Route::get('/fitnesswijzer/gymreviews', [PageController::class, 'gymreviewsOverview'])->name('fitnesswijzer.reviews');
 Route::get('/fitnesswijzer/gymreviews/{slug}', [PageController::class, 'gymreview'])->name('fitnesswijzer.reviews.show');
 
+// E-book download
+Route::post('/api/ebook-download', [ContactController::class, 'ebookDownload']);
+
 // Landingspagina's
 Route::get('/lp/{slug}', [LandingPageController::class, 'show'])->name('landing-page.show');
 

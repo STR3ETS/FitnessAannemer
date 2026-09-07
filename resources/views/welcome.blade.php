@@ -1181,6 +1181,10 @@
                                 <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-secondary/20 text-xs"></i>
                                 <input type="email" name="email" id="ebook-email" placeholder="jouw@email.nl" required class="w-full bg-secondary/[0.03] border border-secondary/10 rounded-xl pl-11 pr-4 py-3.5 text-sm text-secondary placeholder:text-secondary/30 focus:outline-none focus:border-primary/40 transition">
                             </div>
+                            <div class="relative">
+                                <i class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-secondary/20 text-xs"></i>
+                                <input type="tel" name="telefoon" id="ebook-telefoon" placeholder="06 12345678" required class="w-full bg-secondary/[0.03] border border-secondary/10 rounded-xl pl-11 pr-4 py-3.5 text-sm text-secondary placeholder:text-secondary/30 focus:outline-none focus:border-primary/40 transition">
+                            </div>
                             <p id="ebook-error" class="text-red-500 text-xs hidden"></p>
                             <button type="submit" id="ebook-btn" class="w-full bg-secondary hover:bg-secondary/90 text-white text-sm font-semibold rounded-xl px-6 py-3.5 flex items-center justify-center gap-2 transition">
                                 <i class="fa-solid fa-download text-xs"></i>

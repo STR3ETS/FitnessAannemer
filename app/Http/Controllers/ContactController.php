@@ -148,4 +148,40 @@ class ContactController extends Controller
 
         return back()->with('offerte_success', true);
     }
+
+    public function ebookDownload(Request $request)
+    {
+        $validated = $request->validate([
+            'naam' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'telefoon' => 'required|string|max:20',
+        ]);
+
+        Submission::create([
+            'type' => 'ebook',
+            'naam' => $validated['naam'],
+            'email' => $validated['email'],
+            'telefoon' => $validated['telefoon'],
+            'data' => $validated,
+        ]);
+
+        try {
+            $odoo = new OdooService();
+            if ($odoo->isConfigured()) {
+                $leadId = $odoo->createLead([
+                    'naam' => $validated['naam'],
+                    'email' => $validated['email'],
+                    'telefoon' => $validated['telefoon'],
+                    'ruimte_type' => 'E-book download',
+                    'oppervlakte' => '',
+                    'bedrijfsnaam' => '',
+                ]);
+                Log::info("Odoo ebook lead created: #{$leadId}");
+            }
+        } catch (\Exception $e) {
+            Log::error('Odoo ebook lead creation failed: ' . $e->getMessage());
+        }
+
+        return response()->json(['status' => 'ok']);
+    }
 }

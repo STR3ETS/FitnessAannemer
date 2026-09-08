@@ -92,6 +92,21 @@
                 </div>
             </div>
 
+            {{-- E-books --}}
+            <div class="nav-dropdown relative">
+                <a href="{{ url('/ebooks/starten-sportschool') }}" class="nav-link px-4 py-2 rounded-md font-semibold text-xs text-white/80 hover:text-white hover:bg-white/5 transition inline-flex items-center gap-1.5">
+                    E-books
+                    <svg class="w-3 h-3 opacity-50 transition-transform duration-200 nav-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </a>
+                <div class="nav-dropdown-menu absolute top-full left-0 pt-2 opacity-0 invisible translate-y-1 transition-all duration-200">
+                    <div class="bg-secondary/95 backdrop-blur-xl border border-white/10 rounded-xl p-2 shadow-2xl">
+                        <a href="{{ url('/ebooks/starten-sportschool') }}" class="nav-dropdown-item block whitespace-nowrap px-4 py-2.5 text-xs text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition">Start je eigen sportschool</a>
+                        <a href="{{ url('/ebooks/pilates') }}" class="nav-dropdown-item block whitespace-nowrap px-4 py-2.5 text-xs text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition">Pilates studio inrichten</a>
+                        <a href="{{ url('/ebooks/lease') }}" class="nav-dropdown-item block whitespace-nowrap px-4 py-2.5 text-xs text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition">Leasing en financiering</a>
+                    </div>
+                </div>
+            </div>
+
             {{-- Over ons --}}
             <a href="{{ url('/over-ons') }}" class="nav-link px-4 py-2 rounded-md font-semibold text-xs text-white/80 hover:text-white hover:bg-white/5 transition">Over ons</a>
         </nav>
@@ -173,6 +188,17 @@
                     <a href="{{ url('/fitnesswijzer/gym-verdienmodellen') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Gym verdienmodellen</a>
                     <a href="{{ url('/fitnesswijzer/tips-en-inspiratie') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Tips en inspiratie</a>
                     <a href="{{ url('/fitnesswijzer/gymreviews') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Gymreviews</a>
+                </div>
+            </details>
+            <details class="mobile-dropdown border-b border-white/[0.06]">
+                <summary class="mobile-nav-link flex items-center justify-between text-white text-2xl font-bold py-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                    E-books
+                    <svg class="w-4 h-4 text-white/30 mobile-dropdown-chevron transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="flex flex-col gap-1 pb-3 pl-4">
+                    <a href="{{ url('/ebooks/starten-sportschool') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Start je eigen sportschool</a>
+                    <a href="{{ url('/ebooks/pilates') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Pilates studio inrichten</a>
+                    <a href="{{ url('/ebooks/lease') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Leasing en financiering</a>
                 </div>
             </details>
             <a href="{{ url('/over-ons') }}" class="mobile-nav-link text-white text-2xl font-bold py-3 border-b border-white/[0.06] transition">Over ons</a>

@@ -39,10 +39,10 @@ Route::redirect('/apparatuur-2', '/apparatuur', 301);
 Route::redirect('/bedankt-adviesgesprek', '/bedankt/adviesgesprek', 301);
 Route::redirect('/bedankt-offerte', '/bedankt/offerte', 301);
 Route::view('/bedankt-ebook', 'bedankt-ebook')->name('bedankt-ebook');
-Route::redirect('/e-book-start-je-eigen-sportschool', '/#ebook-form', 301);
-Route::redirect('/e-book-start-je-eigen-reformer-pilates-studio', '/#ebook-form', 301);
-Route::redirect('/e-book-hoe-blijf-je-als-sportschool-relevant-in-een-snel-veranderende-fitnessmarkt', '/#ebook-form', 301);
-Route::redirect('/e-book-verzekering-sportschool', '/#ebook-form', 301);
+Route::redirect('/e-book-start-je-eigen-sportschool', '/ebooks/starten-sportschool', 301);
+Route::redirect('/e-book-start-je-eigen-reformer-pilates-studio', '/ebooks/pilates', 301);
+Route::redirect('/e-book-hoe-blijf-je-als-sportschool-relevant-in-een-snel-veranderende-fitnessmarkt', '/ebooks/starten-sportschool', 301);
+Route::redirect('/e-book-verzekering-sportschool', '/ebooks/starten-sportschool', 301);
 Route::redirect('/farm-fit-culemborg', '/projecten/farm-fit-culemborg', 301);
 
 // Diensten
@@ -111,7 +111,8 @@ Route::get('/fitnesswijzer/tips-en-inspiratie/{slug}', [PageController::class, '
 Route::get('/fitnesswijzer/gymreviews', [PageController::class, 'gymreviewsOverview'])->name('fitnesswijzer.reviews');
 Route::get('/fitnesswijzer/gymreviews/{slug}', [PageController::class, 'gymreview'])->name('fitnesswijzer.reviews.show');
 
-// E-book download
+// E-books
+Route::get('/ebooks/{slug}', [ContactController::class, 'ebook'])->name('ebooks.show');
 Route::post('/api/ebook-download', [ContactController::class, 'ebookDownload']);
 
 // Landingspagina's

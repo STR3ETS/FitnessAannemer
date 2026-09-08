@@ -1143,67 +1143,6 @@
         </section>
 
 
-        {{-- E-book Download Section --}}
-        <section class="bg-white py-16 lg:py-32 overflow-hidden" data-header-light>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                <div class="flex flex-col lg:flex-row rounded-3xl overflow-hidden border border-secondary/[0.06]">
-
-                    {{-- Left: E-book afbeelding --}}
-                    <div class="lg:w-[45%] aspect-square">
-                        <img src="{{ asset('assets/e-book.jpeg') }}" alt="Gratis Gym-Inrichting Handboek - Fitness Aannemer" class="w-full h-full object-cover">
-                    </div>
-
-                    {{-- Right: Content + Form --}}
-                    <div class="lg:w-[55%] bg-white p-8 sm:p-12 lg:p-16 flex flex-col justify-center">
-                        <span class="text-primary text-xs font-semibold uppercase tracking-widest mb-4 block">Gratis e-book</span>
-                        <h2 class="text-secondary text-2xl sm:text-3xl lg:text-4xl font-bold leading-[1.1] mb-4">Van idee tot <span class="text-primary">succesvolle sportschool</span></h2>
-                        <p class="text-secondary/50 text-sm leading-relaxed mb-8">Alles wat je moet weten voordat je begint: van concept en businessplan tot inrichting en opening. Download ons gratis e-book en start goed voorbereid.</p>
-
-                        {{-- USPs --}}
-                        <div class="flex flex-col gap-3 mb-8">
-                            @foreach(['Stap-voor-stap van idee tot opening', 'Praktische checklists & budgettips', 'Inzichten uit 60+ gerealiseerde projecten'] as $usp)
-                            <div class="flex items-center gap-3">
-                                <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                                    <i class="fa-solid fa-check text-primary text-[10px]"></i>
-                                </div>
-                                <span class="text-secondary text-sm font-medium">{{ $usp }}</span>
-                            </div>
-                            @endforeach
-                        </div>
-
-                        {{-- Form --}}
-                        <form id="ebook-form" class="space-y-3" novalidate>
-                            <div class="relative">
-                                <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-secondary/20 text-xs"></i>
-                                <input type="text" name="naam" id="ebook-naam" placeholder="Jouw naam" required class="w-full bg-secondary/[0.03] border border-secondary/10 rounded-xl pl-11 pr-4 py-3.5 text-sm text-secondary placeholder:text-secondary/30 focus:outline-none focus:border-primary/40 transition">
-                            </div>
-                            <div class="relative">
-                                <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-secondary/20 text-xs"></i>
-                                <input type="email" name="email" id="ebook-email" placeholder="jouw@email.nl" required class="w-full bg-secondary/[0.03] border border-secondary/10 rounded-xl pl-11 pr-4 py-3.5 text-sm text-secondary placeholder:text-secondary/30 focus:outline-none focus:border-primary/40 transition">
-                            </div>
-                            <div class="relative">
-                                <i class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-secondary/20 text-xs"></i>
-                                <input type="tel" name="telefoon" id="ebook-telefoon" placeholder="06 12345678" required class="w-full bg-secondary/[0.03] border border-secondary/10 rounded-xl pl-11 pr-4 py-3.5 text-sm text-secondary placeholder:text-secondary/30 focus:outline-none focus:border-primary/40 transition">
-                            </div>
-                            <p id="ebook-error" class="text-red-500 text-xs hidden"></p>
-                            <button type="submit" id="ebook-btn" class="w-full bg-secondary hover:bg-secondary/90 text-white text-sm font-semibold rounded-xl px-6 py-3.5 flex items-center justify-center gap-2 transition">
-                                <i class="fa-solid fa-download text-xs"></i>
-                                Download gratis e-book
-                            </button>
-                        </form>
-                        <div id="ebook-success" class="hidden text-center py-6">
-                            <div class="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
-                                <i class="fa-solid fa-check text-green-600 text-xl"></i>
-                            </div>
-                            <h3 class="text-secondary text-lg font-bold mb-2">Je download start automatisch</h3>
-                            <p class="text-secondary/50 text-sm mb-4">Het e-book wordt nu gedownload. Niet ontvangen?</p>
-                            <a href="{{ asset('EBook_Startende_Ondernemers.pdf') }}" download class="text-primary text-sm font-semibold hover:underline">Klik hier om opnieuw te downloaden</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
 
 
 

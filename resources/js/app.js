@@ -888,15 +888,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ===== E-book form validation + download =====
-    const ebookForm = document.getElementById('ebook-form');
-    if (ebookForm) {
-        const naamInput = document.getElementById('ebook-naam');
-        const emailInput = document.getElementById('ebook-email');
-        const telefoonInput = document.getElementById('ebook-telefoon');
-        const errorEl = document.getElementById('ebook-error');
-        const btn = document.getElementById('ebook-btn');
+    document.querySelectorAll('.ebook-download-form').forEach(form => {
+        const naamInput = form.querySelector('input[name="naam"]');
+        const emailInput = form.querySelector('input[name="email"]');
+        const telefoonInput = form.querySelector('input[name="telefoon"]');
+        const errorEl = form.querySelector('.ebook-error');
+        const btn = form.querySelector('.ebook-btn');
+        const successEl = form.parentElement.querySelector('.ebook-success');
+        const ebookSlug = form.dataset.ebookSlug;
+        const pdfUrl = form.dataset.pdf;
 
-        ebookForm.addEventListener('submit', (e) => {
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
             errorEl.classList.add('hidden');
 
@@ -928,38 +930,26 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-xs"></i> Even geduld...';
             btn.disabled = true;
 
+            const triggerDownload = () => {
+                const link = document.createElement('a');
+                link.href = pdfUrl;
+                link.download = '';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                setTimeout(() => { window.location.href = '/bedankt-ebook'; }, 500);
+            };
+
             fetch('/api/ebook-download', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
                 },
-                body: JSON.stringify({ naam, email, telefoon }),
+                body: JSON.stringify({ naam, email, telefoon, ebook: ebookSlug }),
             })
-            .then(() => {
-                const link = document.createElement('a');
-                link.href = ebookForm.closest('section').querySelector('[download]').href;
-                link.download = '';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-
-                setTimeout(() => {
-                    window.location.href = '/bedankt-ebook';
-                }, 500);
-            })
-            .catch(() => {
-                const link = document.createElement('a');
-                link.href = ebookForm.closest('section').querySelector('[download]').href;
-                link.download = '';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-
-                setTimeout(() => {
-                    window.location.href = '/bedankt-ebook';
-                }, 500);
-            });
+            .then(triggerDownload)
+            .catch(triggerDownload);
         });
 
         [naamInput, emailInput, telefoonInput].forEach(input => {
@@ -968,7 +958,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 input.classList.remove('border-red-400');
             });
         });
-    }
+    });
 
     // ===== Inrichting & Planning: hero =====
     const ipHeroEls = document.querySelectorAll('.ip-hero-el');

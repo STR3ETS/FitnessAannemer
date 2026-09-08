@@ -149,13 +149,89 @@ class ContactController extends Controller
         return back()->with('offerte_success', true);
     }
 
+    private array $ebooks = [
+        'starten-sportschool' => [
+            'title' => 'E-book Start je eigen sportschool',
+            'odooName' => 'Website E-book starten sportschool',
+            'metaDesc' => 'Gratis e-book: alles wat je moet weten om je eigen sportschool te starten. Van businessplan tot inrichting en opening.',
+            'heroImage' => 'assets/e-book.jpeg',
+            'heroTitle' => 'Start je eigen <span class="text-primary">sportschool</span>',
+            'heroDesc' => 'Alles wat je moet weten voordat je begint: van concept en businessplan tot inrichting en opening. Download ons gratis e-book en start goed voorbereid.',
+            'coverImage' => 'assets/e-book.jpeg',
+            'formTitle' => 'Van idee tot <span class="text-primary">succesvolle sportschool</span>',
+            'formDesc' => 'Alles wat je moet weten voordat je begint: van concept en businessplan tot inrichting en opening. Download ons gratis e-book en start goed voorbereid.',
+            'usps' => ['Stap-voor-stap van idee tot opening', 'Praktische checklists en budgettips', 'Inzichten uit 60+ gerealiseerde projecten'],
+            'pdfFile' => 'EBook_Startende_Ondernemers.pdf',
+            'contentTitle' => 'Alles over je <span class="text-primary">sportschool starten</span>',
+            'extraSections' => [
+                ['icon' => 'lightbulb', 'title' => 'Van concept tot plan', 'desc' => 'Hoe je jouw visie vertaalt naar een concreet businessplan dat investeerders en verhuurders overtuigt.'],
+                ['icon' => 'euro-sign', 'title' => 'Financiering en budget', 'desc' => 'Wat een sportschool starten kost, welke financieringsvormen er zijn en hoe je slim investeert.'],
+                ['icon' => 'ruler-combined', 'title' => 'Inrichting en apparatuur', 'desc' => 'Hoe je de juiste apparatuur kiest en jouw ruimte optimaal indeelt voor jouw doelgroep.'],
+            ],
+        ],
+        'pilates' => [
+            'title' => 'E-book Pilates studio inrichten',
+            'odooName' => 'Website E-book pilates',
+            'metaDesc' => 'Gratis e-book: alles over het inrichten van een pilates studio. Van reformers en apparatuur tot ruimte-indeling en sfeer.',
+            'heroImage' => 'assets/e-book.jpeg',
+            'heroTitle' => 'Pilates studio <span class="text-primary">inrichten</span>',
+            'heroDesc' => 'Alles wat je moet weten over het opzetten en inrichten van een succesvolle pilates studio. Van reformers tot sfeer en beleving.',
+            'coverImage' => 'assets/e-book.jpeg',
+            'formTitle' => 'Jouw pilates studio <span class="text-primary">succesvol inrichten</span>',
+            'formDesc' => 'Van de juiste reformers en apparatuur tot ruimte-indeling en sfeer. Download ons gratis e-book en richt jouw pilates studio professioneel in.',
+            'usps' => ['Reformer keuze en positionering', 'Sfeer en beleving creeren', 'Praktische tips uit onze projecten'],
+            'pdfFile' => 'EBook_Pilates_FitnessAannemer.pdf',
+            'contentTitle' => 'Alles over je <span class="text-primary">pilates studio</span>',
+            'extraSections' => [
+                ['icon' => 'spa', 'title' => 'Sfeer en beleving', 'desc' => 'Hoe je met verlichting, kleuren en materialen de juiste sfeer creert voor jouw pilates studio.'],
+                ['icon' => 'dumbbell', 'title' => 'Apparatuur kiezen', 'desc' => 'Welke reformers en props je nodig hebt en waar je op moet letten bij de aanschaf.'],
+                ['icon' => 'drafting-compass', 'title' => 'Ruimte-indeling', 'desc' => 'Hoe je de beschikbare ruimte optimaal benut voor groepslessen en privesessies.'],
+            ],
+        ],
+        'lease' => [
+            'title' => 'E-book Leasing en financiering',
+            'odooName' => 'Website E-book lease',
+            'metaDesc' => 'Gratis e-book: alles over leasing en financiering van fitnessapparatuur. Vergelijk opties en maak de juiste keuze voor jouw gym.',
+            'heroImage' => 'assets/e-book.jpeg',
+            'heroTitle' => 'Leasing en <span class="text-primary">financiering</span>',
+            'heroDesc' => 'Alles over de financieringsmogelijkheden voor jouw fitnessapparatuur. Van operational lease tot koop: vergelijk de opties en kies wat bij jou past.',
+            'coverImage' => 'assets/e-book.jpeg',
+            'formTitle' => 'Slim investeren in <span class="text-primary">fitnessapparatuur</span>',
+            'formDesc' => 'Kopen, leasen of een combinatie? Download ons gratis e-book en ontdek welke financieringsvorm het beste past bij jouw situatie.',
+            'usps' => ['Vergelijking lease vs. koop', 'Rekenvoorbeelden en scenario\'s', 'Tips voor de beste deal'],
+            'pdfFile' => 'EBook_Lease.pdf',
+            'contentTitle' => 'Alles over <span class="text-primary">financiering</span>',
+            'extraSections' => [
+                ['icon' => 'calculator', 'title' => 'Lease vs. koop', 'desc' => 'De voor- en nadelen van leasen versus kopen, met concrete rekenvoorbeelden voor jouw situatie.'],
+                ['icon' => 'file-contract', 'title' => 'Contractvormen', 'desc' => 'Operational lease, financial lease of huurkoop: wat zijn de verschillen en waar let je op?'],
+                ['icon' => 'piggy-bank', 'title' => 'Slim budgetteren', 'desc' => 'Hoe je jouw investering spreidt en je cashflow gezond houdt vanaf dag een.'],
+            ],
+        ],
+    ];
+
+    public function ebook(string $slug)
+    {
+        if (!isset($this->ebooks[$slug])) {
+            abort(404);
+        }
+
+        return view('ebooks._template', array_merge(
+            $this->ebooks[$slug],
+            ['slug' => $slug]
+        ));
+    }
+
     public function ebookDownload(Request $request)
     {
         $validated = $request->validate([
             'naam' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'telefoon' => 'required|string|max:20',
+            'ebook' => 'required|string|max:50',
         ]);
+
+        $ebookData = $this->ebooks[$validated['ebook']] ?? null;
+        $odooName = $ebookData ? $ebookData['odooName'] : 'Website E-book onbekend';
 
         Submission::create([
             'type' => 'ebook',
@@ -165,6 +241,8 @@ class ContactController extends Controller
             'data' => $validated,
         ]);
 
+        $voornaam = explode(' ', trim($validated['naam']))[0];
+
         try {
             $odoo = new OdooService();
             if ($odoo->isConfigured()) {
@@ -172,7 +250,7 @@ class ContactController extends Controller
                     'naam' => $validated['naam'],
                     'email' => $validated['email'],
                     'telefoon' => $validated['telefoon'],
-                    'ruimte_type' => 'E-book download',
+                    'ruimte_type' => "{$odooName} - {$voornaam}",
                     'oppervlakte' => '',
                     'bedrijfsnaam' => '',
                 ]);

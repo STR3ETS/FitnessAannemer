@@ -228,6 +228,11 @@ class ContactController extends Controller
             'email' => 'required|email|max:255',
             'telefoon' => 'required|string|max:20',
             'ebook' => 'required|string|max:50',
+            'utm_source' => 'nullable|string|max:255',
+            'utm_medium' => 'nullable|string|max:255',
+            'utm_campaign' => 'nullable|string|max:255',
+            'utm_term' => 'nullable|string|max:255',
+            'utm_content' => 'nullable|string|max:255',
         ]);
 
         $ebookData = $this->ebooks[$validated['ebook']] ?? null;
@@ -241,8 +246,6 @@ class ContactController extends Controller
             'data' => $validated,
         ]);
 
-        $voornaam = explode(' ', trim($validated['naam']))[0];
-
         try {
             $odoo = new OdooService();
             if ($odoo->isConfigured()) {
@@ -253,6 +256,11 @@ class ContactController extends Controller
                     'ruimte_type' => $odooName,
                     'oppervlakte' => '',
                     'bedrijfsnaam' => '',
+                    'utm_source' => $validated['utm_source'] ?? '',
+                    'utm_medium' => $validated['utm_medium'] ?? '',
+                    'utm_campaign' => $validated['utm_campaign'] ?? '',
+                    'utm_term' => $validated['utm_term'] ?? '',
+                    'utm_content' => $validated['utm_content'] ?? '',
                 ]);
                 Log::info("Odoo ebook lead created: #{$leadId}");
             }

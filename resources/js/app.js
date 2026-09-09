@@ -940,13 +940,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => { window.location.href = '/bedankt-ebook'; }, 500);
             };
 
+            const utmData = {};
+            ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(key => {
+                const fromUrl = new URLSearchParams(window.location.search).get(key);
+                if (fromUrl) { utmData[key] = fromUrl; return; }
+                const match = document.cookie.match(new RegExp('(?:^|; )' + key + '=([^;]*)'));
+                if (match) utmData[key] = decodeURIComponent(match[1]);
+            });
+
             fetch('/api/ebook-download', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
                 },
-                body: JSON.stringify({ naam, email, telefoon, ebook: ebookSlug }),
+                body: JSON.stringify({ naam, email, telefoon, ebook: ebookSlug, ...utmData }),
             })
             .then(triggerDownload)
             .catch(triggerDownload);

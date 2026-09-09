@@ -250,7 +250,7 @@ class ContactController extends Controller
                     'naam' => $validated['naam'],
                     'email' => $validated['email'],
                     'telefoon' => $validated['telefoon'],
-                    'ruimte_type' => "{$odooName} - {$voornaam}",
+                    'ruimte_type' => $odooName,
                     'oppervlakte' => '',
                     'bedrijfsnaam' => '',
                 ]);

@@ -258,6 +258,13 @@ class OdooService
             Log::warning('Odoo UTM linking failed: ' . $e->getMessage());
         }
 
+        if (!empty($data['utm_term'])) {
+            $leadData['x_utm_term'] = $data['utm_term'];
+        }
+        if (!empty($data['utm_content'])) {
+            $leadData['x_utm_content'] = $data['utm_content'];
+        }
+
         $leadId = $this->create('crm.lead', $leadData);
 
         // Set Properties fields (must be written after create, as they're

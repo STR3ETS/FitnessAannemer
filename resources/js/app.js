@@ -17,6 +17,26 @@ gsap.registerPlugin(ScrollTrigger);
                 document.cookie = `${p}=${encodeURIComponent(val)};path=/;max-age=${60 * 60 * 24 * 30};SameSite=Lax`;
             }
         });
+    } else {
+        const hasExisting = utmParams.some(p => document.cookie.match(new RegExp('(?:^|; )' + p + '=')));
+        if (!hasExisting && document.referrer) {
+            try {
+                const ref = new URL(document.referrer).hostname.replace('www.', '');
+                const engines = { 'google.com': 'google', 'google.nl': 'google', 'bing.com': 'bing', 'yahoo.com': 'yahoo', 'duckduckgo.com': 'duckduckgo', 'ecosia.org': 'ecosia' };
+                const social = { 'facebook.com': 'facebook', 'l.facebook.com': 'facebook', 'lm.facebook.com': 'facebook', 'instagram.com': 'instagram', 'l.instagram.com': 'instagram', 't.co': 'twitter', 'linkedin.com': 'linkedin', 'tiktok.com': 'tiktok' };
+                const maxAge = `;path=/;max-age=${60 * 60 * 24 * 30};SameSite=Lax`;
+                if (engines[ref]) {
+                    document.cookie = `utm_source=${engines[ref]}${maxAge}`;
+                    document.cookie = `utm_medium=organic${maxAge}`;
+                } else if (social[ref]) {
+                    document.cookie = `utm_source=${social[ref]}${maxAge}`;
+                    document.cookie = `utm_medium=social${maxAge}`;
+                } else if (ref && !ref.includes('fitnessaannemer')) {
+                    document.cookie = `utm_source=${encodeURIComponent(ref)}${maxAge}`;
+                    document.cookie = `utm_medium=referral${maxAge}`;
+                }
+            } catch (e) {}
+        }
     }
 
     // Fill hidden UTM fields if present on page

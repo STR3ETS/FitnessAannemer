@@ -37,6 +37,11 @@ gsap.registerPlugin(ScrollTrigger);
                 }
             } catch (e) {}
         }
+        if (!hasExisting && !document.referrer) {
+            const maxAge = `;path=/;max-age=${60 * 60 * 24 * 30};SameSite=Lax`;
+            document.cookie = `utm_source=direct${maxAge}`;
+            document.cookie = `utm_medium=none${maxAge}`;
+        }
     }
 
     // Fill hidden UTM fields if present on page

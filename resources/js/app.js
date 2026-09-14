@@ -30,7 +30,7 @@ gsap.registerPlugin(ScrollTrigger);
                     document.cookie = `utm_medium=organic${maxAge}`;
                 } else if (social[ref]) {
                     document.cookie = `utm_source=${social[ref]}${maxAge}`;
-                    document.cookie = `utm_medium=social${maxAge}`;
+                    document.cookie = `utm_medium=organic${maxAge}`;
                 } else if (ref && !ref.includes('fitnessaannemer')) {
                     document.cookie = `utm_source=${encodeURIComponent(ref)}${maxAge}`;
                     document.cookie = `utm_medium=referral${maxAge}`;

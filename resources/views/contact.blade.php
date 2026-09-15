@@ -360,6 +360,14 @@
 
             goToStep(1);
 
+            // Disable submit button on form submit to prevent double clicks
+            form.addEventListener('submit', function () {
+                const btn = form.querySelector('button[type="submit"]');
+                if (btn.disabled) { event.preventDefault(); return; }
+                btn.disabled = true;
+                btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-xs mr-2"></i> Bezig met versturen...';
+            });
+
             // Populate UTM hidden fields from URL params or cookies
             const urlParams = new URLSearchParams(window.location.search);
             ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(key => {

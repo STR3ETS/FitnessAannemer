@@ -22,8 +22,8 @@ gsap.registerPlugin(ScrollTrigger);
         if (!hasExisting && document.referrer) {
             try {
                 const ref = new URL(document.referrer).hostname.replace('www.', '');
-                const engines = { 'google.com': 'google', 'google.nl': 'google', 'google.be': 'google', 'google.de': 'google', 'googleapis.com': 'google', 'googleusercontent.com': 'google', 'bing.com': 'bing', 'yahoo.com': 'yahoo', 'duckduckgo.com': 'duckduckgo', 'ecosia.org': 'ecosia' };
-                const social = { 'facebook.com': 'facebook', 'l.facebook.com': 'facebook', 'lm.facebook.com': 'facebook', 'm.facebook.com': 'facebook', 'instagram.com': 'instagram', 'l.instagram.com': 'instagram', 't.co': 'twitter', 'linkedin.com': 'linkedin', 'tiktok.com': 'tiktok', 'youtube.com': 'youtube', 'm.youtube.com': 'youtube' };
+                const engines = { 'google.com': 'google', 'google.nl': 'google', 'bing.com': 'bing', 'yahoo.com': 'yahoo', 'duckduckgo.com': 'duckduckgo', 'ecosia.org': 'ecosia' };
+                const social = { 'facebook.com': 'facebook', 'l.facebook.com': 'facebook', 'lm.facebook.com': 'facebook', 'instagram.com': 'instagram', 'l.instagram.com': 'instagram', 't.co': 'twitter', 'linkedin.com': 'linkedin', 'tiktok.com': 'tiktok' };
                 const maxAge = `;path=/;max-age=${60 * 60 * 24 * 30};SameSite=Lax`;
                 if (engines[ref]) {
                     document.cookie = `utm_source=${engines[ref]}${maxAge}`;

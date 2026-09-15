@@ -216,16 +216,6 @@ class OdooService
             $description .= "\n\nBericht:\n{$data['bericht']}";
         }
 
-        // Add UTM info to description as fallback
-        $utmParts = [];
-        foreach (['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'] as $key) {
-            if (!empty($data[$key])) {
-                $utmParts[] = "{$key}: {$data[$key]}";
-            }
-        }
-        if (!empty($utmParts)) {
-            $description .= "\n\nUTM: " . implode(' | ', $utmParts);
-        }
 
         $leadData = [
             'name' => "{$data['ruimte_type']} - {$data['naam']}",

@@ -90,23 +90,32 @@ if (loadingScreen) {
 }
 
 // ===== Lazy-load videos =====
-const lazyVideos = document.querySelectorAll('video.lazy-video');
-if (lazyVideos.length) {
+function loadVideo(video) {
+    if (!video || !video.dataset.src) return;
+    video.src = video.dataset.src;
+    delete video.dataset.src;
+    video.classList.remove('lazy-video');
+}
+
+const standaloneVideos = document.querySelectorAll('video.lazy-video');
+if (standaloneVideos.length) {
+    const skipSelectors = '.video-card video, .project-arc-card video, .horizontal-panel video';
     const videoObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const video = entry.target;
-                if (!video.dataset.src) return;
-                video.src = video.dataset.src;
-                delete video.dataset.src;
-                video.classList.remove('lazy-video');
+                loadVideo(video);
                 video.play().catch(() => {});
                 videoObserver.unobserve(video);
             }
         });
     }, { rootMargin: '1500px 0px' });
 
-    lazyVideos.forEach(video => videoObserver.observe(video));
+    standaloneVideos.forEach(video => {
+        if (!video.matches('.video-card video, .project-arc-card video, .horizontal-panel video')) {
+            videoObserver.observe(video);
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -378,6 +387,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             card.style.transform = `translate(calc(-50% + ${offset * step}px), -50%)`;
 
+            if (absOffset <= 1) loadVideo(video);
+
             if (absOffset === 0) {
                 card.classList.add('is-active');
                 if (video.src) {
@@ -492,7 +503,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // "Black hole" reveal: content gets pulled into place from the right
         const panels = gsap.utils.toArray('.horizontal-panel');
         panels.forEach((panel, i) => {
-            if (i === 0) return; // intro is already in view
+            const panelVideos = panel.querySelectorAll('video[data-src]');
+            if (i === 0) {
+                panelVideos.forEach(v => { loadVideo(v); v.play().catch(() => {}); });
+                return;
+            }
 
             const inner = panel.querySelector('.max-w-7xl');
             if (!inner) return;
@@ -510,6 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     start: 'left 85%',
                     end: 'left 25%',
                     scrub: 1,
+                    onEnter: () => panelVideos.forEach(v => { loadVideo(v); v.play().catch(() => {}); }),
                 },
             });
 
@@ -558,6 +574,7 @@ document.addEventListener('DOMContentLoaded', () => {
         panels.forEach((panel) => {
             const inner = panel.querySelector('.max-w-7xl');
             if (!inner) return;
+            const panelVideos = panel.querySelectorAll('video[data-src]');
 
             gsap.from(gsap.utils.toArray(inner.children), {
                 y: 40,
@@ -569,6 +586,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     trigger: panel,
                     start: 'top 80%',
                     once: true,
+                    onEnter: () => panelVideos.forEach(v => { loadVideo(v); v.play().catch(() => {}); }),
                 },
             });
         });
@@ -814,6 +832,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             card.style.transform = `rotate(${offset * arcStep}deg)`;
             card.style.zIndex = arcTotal - absOffset;
+
+            if (absOffset <= 1) loadVideo(video);
 
             if (absOffset === 0) {
                 card.classList.add('is-active');

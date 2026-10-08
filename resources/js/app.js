@@ -94,7 +94,7 @@ const lazyVideos = document.querySelectorAll('video.lazy-video');
 if (lazyVideos.length) {
     const loadQueue = [];
     let activeLoads = 0;
-    const MAX_CONCURRENT = 2;
+    const MAX_CONCURRENT = 3;
 
     function processQueue() {
         while (activeLoads < MAX_CONCURRENT && loadQueue.length) {

@@ -25,3 +25,4 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 *.mp4
+!public/assets/video_hero_home_scrub.mp4

@@ -147,7 +147,7 @@
         {{-- Scroll Video Hero --}}
         <section id="hero-scroll" class="hero-scroll-wrapper">
             <div id="hero-pinned" class="hero-pinned">
-                <video id="hero-video" src="{{ asset('assets/video_hero_home_scrub.mp4') }}" muted playsinline preload="none" class="hero-video hidden lg:block"></video>
+                <video id="hero-video" src="{{ asset('assets/video_hero_home_scrub.mp4') }}" muted playsinline preload="metadata" class="hero-video hidden lg:block"></video>
                 <img id="hero-poster" src="{{ asset('assets/foto-assets/MCJO3851_FA-1-1024x683.jpg') }}" alt="Fitness Aannemer" class="hero-video lg:hidden">
                 <div class="hero-video-overlay"></div>
                 <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center justify-center h-full relative z-10">

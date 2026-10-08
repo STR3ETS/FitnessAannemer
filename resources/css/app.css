@@ -42,6 +42,8 @@ h1,h2,h3,h4,h5,h6 {
     position: relative;
     overflow: hidden;
     background: #06090f;
+    isolation: isolate;
+    will-change: transform;
 }
 
 .hero-video {

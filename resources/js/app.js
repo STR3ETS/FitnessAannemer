@@ -80,7 +80,10 @@ const loadingScreen = document.getElementById('loading-screen');
 if (loadingScreen) {
     const dismiss = () => {
         loadingScreen.style.opacity = '0';
-        setTimeout(() => loadingScreen.remove(), 500);
+        setTimeout(() => {
+            loadingScreen.remove();
+            ScrollTrigger.refresh();
+        }, 500);
     };
     window.addEventListener('load', dismiss);
     setTimeout(dismiss, 3000);
@@ -237,24 +240,14 @@ document.addEventListener('DOMContentLoaded', () => {
         heroVideo.currentTime = 0;
 
         let targetTime = 0;
-        let isSeeking = false;
+        let rafId = null;
 
         function doSeek() {
-            if (Math.abs(heroVideo.currentTime - targetTime) > 0.01) {
-                isSeeking = true;
+            rafId = null;
+            if (heroVideo.readyState >= 2) {
                 heroVideo.currentTime = targetTime;
-            } else {
-                isSeeking = false;
             }
         }
-
-        heroVideo.addEventListener('seeked', () => {
-            if (Math.abs(heroVideo.currentTime - targetTime) > 0.01) {
-                heroVideo.currentTime = targetTime;
-            } else {
-                isSeeking = false;
-            }
-        });
 
         ScrollTrigger.create({
             trigger: heroScroll,
@@ -265,8 +258,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!heroVideo.duration) return;
                 const maxTime = heroVideo.duration - 0.3;
                 targetTime = Math.min(self.progress * heroVideo.duration, maxTime);
-                if (!isSeeking) {
-                    requestAnimationFrame(doSeek);
+                if (!rafId) {
+                    rafId = requestAnimationFrame(doSeek);
                 }
             },
         });

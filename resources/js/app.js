@@ -92,6 +92,7 @@ if (loadingScreen) {
 // ===== Lazy-load videos =====
 function loadVideo(video) {
     if (!video || !video.dataset.src) return;
+    video.preload = 'auto';
     video.src = video.dataset.src;
     delete video.dataset.src;
     video.classList.remove('lazy-video');

@@ -387,7 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             card.style.transform = `translate(calc(-50% + ${offset * step}px), -50%)`;
 
-            if (absOffset <= 1) loadVideo(video);
+            if (absOffset <= 2) loadVideo(video);
 
             if (absOffset === 0) {
                 card.classList.add('is-active');

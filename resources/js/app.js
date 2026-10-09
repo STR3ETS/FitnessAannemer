@@ -167,13 +167,16 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollAccum += Math.abs(delta);
 
             if (!header.classList.contains('menu-open')) {
-                if (scrollY > 200 && scrollAccum > scrollThreshold) {
+                const heroSection = document.getElementById('hero-scroll');
+                const pastHero = !heroSection || scrollY > heroSection.offsetHeight;
+
+                if (pastHero && scrollY > 200 && scrollAccum > scrollThreshold) {
                     if (direction > 0) {
                         header.classList.add('is-hidden');
                     } else {
                         header.classList.remove('is-hidden');
                     }
-                } else if (scrollY <= 200) {
+                } else if (!pastHero || scrollY <= 200) {
                     header.classList.remove('is-hidden');
                 }
             }

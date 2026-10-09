@@ -663,8 +663,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const dienstCards = document.querySelectorAll('.dienst-card');
     if (dienstCards.length) {
         const dienstenFades = document.querySelectorAll('.diensten-fade');
-        gsap.set(dienstenFades, { y: 40, opacity: 0 });
-        gsap.set(dienstCards, { y: 40, opacity: 0 });
 
         ScrollTrigger.create({
             trigger: '.diensten-section',
@@ -673,17 +671,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 gsap.to(dienstenFades, {
                     y: 0,
                     opacity: 1,
-                    stagger: 0.1,
+                    stagger: 0.12,
                     duration: 0.8,
                     ease: 'power3.out',
                 });
                 gsap.to(dienstCards, {
                     y: 0,
                     opacity: 1,
-                    stagger: 0.08,
-                    duration: 0.6,
+                    stagger: 0.12,
+                    duration: 0.8,
                     ease: 'power3.out',
-                    delay: 0.2,
+                    delay: 0.25,
                 });
             },
             once: true,

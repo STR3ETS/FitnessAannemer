@@ -68,6 +68,13 @@ h1,h2,h3,h4,h5,h6 {
     z-index: 10;
 }
 
+/* Scroll-reveal initial state (prevents FOUC) */
+.diensten-fade,
+.dienst-card {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
 /* Fixed header */
 #main-header {
     transition: transform 0.3s, background 0.3s, border-color 0.3s;

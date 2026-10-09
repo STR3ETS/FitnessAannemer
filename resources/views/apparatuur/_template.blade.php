@@ -66,7 +66,7 @@
                     <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $introLabel }}</span>
                     <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">{!! $introTitle !!}</h2>
                     <p class="text-secondary/50 text-sm leading-relaxed mb-4">{{ $introP1 }}</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">{{ $introP2 }}</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8 [&_a]:text-primary [&_a]:font-semibold [&_a:hover]:underline">{!! $introP2 !!}</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                         <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url($introCta2Url ?? '/onze-merken') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">{{ $introCta2Text ?? 'Bekijk alle merken' }}</a>

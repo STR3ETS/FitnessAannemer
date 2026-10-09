@@ -133,22 +133,26 @@
 
             @php
             $team = [
-                ['name' => 'Stijn', 'role' => 'Founder en concept manager', 'desc' => 'Strategie, concept en marketing.'],
-                ['name' => 'Sil', 'role' => 'Strategie', 'desc' => 'Strategie en bedrijfsvoering.'],
-                ['name' => 'Timo', 'role' => 'Projectmanager', 'desc' => 'Begeleidt projecten van start tot oplevering.'],
-                ['name' => 'Kevin', 'role' => 'Accountmanager', 'desc' => 'Denkt mee van eerste vraag tot passend voorstel.'],
-                ['name' => 'Lars', 'role' => 'Assistent Conceptmanager', 'desc' => 'Ondersteunt bij conceptontwikkeling en uitvoering.'],
-                ['name' => 'Cacharel', 'role' => 'Interieur ontwerpster', 'desc' => 'Vertaalt het ontwerp naar de vloer.'],
-                ['name' => 'Renee', 'role' => 'Interieur ontwerpster', 'desc' => 'Plattegronden en 3D-visualisaties.'],
-                ['name' => 'Jeroen', 'role' => 'Data en Finance', 'desc' => 'Bewaakt budgetten en cijfers achter elk project.'],
+                ['name' => 'Stijn', 'role' => 'Founder en concept manager', 'desc' => 'Strategie, concept en marketing.', 'photo' => 'assets/team/stijn.webp'],
+                ['name' => 'Sil', 'role' => 'Strategie', 'desc' => 'Strategie en bedrijfsvoering.', 'photo' => 'assets/team/sil.webp'],
+                ['name' => 'Timo', 'role' => 'Projectmanager', 'desc' => 'Begeleidt projecten van start tot oplevering.', 'photo' => 'assets/team/timo.webp'],
+                ['name' => 'Kevin', 'role' => 'Accountmanager', 'desc' => 'Denkt mee van eerste vraag tot passend voorstel.', 'photo' => 'assets/team/kevin.webp'],
+                ['name' => 'Lars', 'role' => 'Assistent Conceptmanager', 'desc' => 'Ondersteunt bij conceptontwikkeling en uitvoering.', 'photo' => 'assets/team/lars.webp'],
+                ['name' => 'Cacharel', 'role' => 'Interieur ontwerpster', 'desc' => 'Vertaalt het ontwerp naar de vloer.', 'photo' => 'assets/team/cacharel.webp'],
+                ['name' => 'Renee', 'role' => 'Interieur ontwerpster', 'desc' => 'Plattegronden en 3D-visualisaties.', 'photo' => null],
+                ['name' => 'Jeroen', 'role' => 'Controller', 'desc' => 'Bewaakt budgetten en cijfers achter elk project.', 'photo' => 'assets/team/jeroen.webp'],
             ];
             @endphp
 
             <div class="ip-fade grid grid-cols-2 md:grid-cols-4 gap-5">
                 @foreach($team as $lid)
                 <div class="bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden">
-                    <div class="aspect-[3/4] bg-white/[0.02] flex items-center justify-center">
-                        <i class="fa-solid fa-user text-white/10 text-3xl"></i>
+                    <div class="aspect-[3/4] bg-white/[0.02] flex items-center justify-center overflow-hidden">
+                        @if(!empty($lid['photo']))
+                            <img src="{{ asset($lid['photo']) }}" alt="{{ $lid['name'] }}, {{ $lid['role'] }} bij Fitness Aannemer" class="w-full h-full object-cover" loading="lazy" width="720" height="960">
+                        @else
+                            <i class="fa-solid fa-user text-white/10 text-3xl"></i>
+                        @endif
                     </div>
                     <div class="p-5">
                         <h3 class="text-white font-bold text-sm mb-0.5">{{ $lid['name'] }}</h3>

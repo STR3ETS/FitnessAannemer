@@ -132,7 +132,11 @@
                     @if(!empty($merken))
                     <div class="flex flex-wrap gap-2">
                         @foreach($merken as $merk)
+                            @if($merkUrl = \App\Support\Merken::urlVoor($merk))
+                            <a href="{{ $merkUrl }}" class="inline-block bg-primary/10 hover:bg-primary/20 text-primary text-[10px] font-semibold px-2.5 py-1 rounded-full border border-primary/20 transition-colors">{{ $merk }}</a>
+                            @else
                             <span class="inline-block bg-primary/10 text-primary text-[10px] font-semibold px-2.5 py-1 rounded-full border border-primary/20">{{ $merk }}</span>
+                            @endif
                         @endforeach
                     </div>
                     @endif

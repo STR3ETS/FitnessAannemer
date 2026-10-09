@@ -57,6 +57,10 @@
                 "https://www.youtube.com/@FitnessAannemer",
                 "https://www.facebook.com/profile.php?id=61557754181423",
                 "https://pin.it/7jMdHylyE"
+            ],
+            "brand": [
+                { "@@type": "Brand", "name": "Gym80", "url": "{{ url('/onze-merken/gym80') }}" },
+                { "@@type": "Brand", "name": "Watson Gym Equipment", "url": "{{ url('/onze-merken/watson') }}" }
             ]
         }
         </script>

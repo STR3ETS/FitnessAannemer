@@ -66,6 +66,13 @@ Route::get('/projecten/{slug}', [PageController::class, 'project'])->name('proje
 
 // Onze merken
 Route::view('/onze-merken', 'onze-merken')->name('merken');
+Route::get('/onze-merken/{slug}', [PageController::class, 'merk'])
+    ->where('slug', implode('|', array_keys(config('merken.paginas'))))
+    ->name('merken.show');
+
+// Oude merk-URL's → merkpagina's (aanvullen met de URL's uit Search Console van de oude site)
+Route::redirect('/gym80', '/onze-merken/gym80', 301);
+Route::redirect('/watson', '/onze-merken/watson', 301);
 Route::redirect('/onze-merken/{any}', '/onze-merken', 301)->where('any', '.*');
 
 // Oplossingen

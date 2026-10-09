@@ -37,6 +37,11 @@ class SitemapController extends Controller
             $urls->push($page);
         }
 
+        // Merkpagina's
+        foreach (array_keys(config('merken.paginas')) as $slug) {
+            $urls->push(['url' => '/onze-merken/' . $slug, 'priority' => '0.7', 'changefreq' => 'monthly']);
+        }
+
         // Oplossingen pages
         $oplossingen = [
             'sportschool-inrichten',

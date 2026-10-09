@@ -835,7 +835,8 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.transform = `rotate(${offset * arcStep}deg)`;
             card.style.zIndex = arcTotal - absOffset;
 
-            if (absOffset <= 1) loadVideo(video);
+            // Laad alle kaarten die in beeld (kunnen) zijn: ±3 is nog deels zichtbaar, ±4 valt buiten de arc
+            if (absOffset <= 3) loadVideo(video);
 
             if (absOffset === 0) {
                 card.classList.add('is-active');
@@ -1022,7 +1023,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ===== Diensten pages: content blocks =====
-    document.querySelectorAll('#ip-zonering, #ip-apparatuur, #li-section1, #li-section2, #or-section1, #or-section2, #lf-section1, #lf-section2, #opl-section1, #opl-section2, #opl-section3, #app-section1, #app-section2, #app-section3, #fw-section1, #fw-section2, #fw-section3, #vm-section1, #vm-section2, #vm-section3, #ti-section1, #ti-section2, #ti-section3, #gr-section1, #gr-section2, #gr-section3, #om-section1, #om-section2, #om-section3, #pj-section1, #pj-section2, #pj-section3, #pd-section1, #pd-section2, #pd-section3, #vd-section1, #vd-section2, #vd-section3, #td-section1, #td-section2, #td-section3, #gd-section1, #gd-section2, #gd-section3, #oo-section1, #oo-section2, #oo-section3').forEach((section) => {
+    document.querySelectorAll('#ip-zonering, #ip-apparatuur, #li-section1, #li-section2, #or-section1, #or-section2, #lf-section1, #lf-section2, #opl-section1, #opl-section2, #opl-section3, #app-section1, #app-section2, #app-section3, #fw-section1, #fw-section2, #fw-section3, #vm-section1, #vm-section2, #vm-section3, #ti-section1, #ti-section2, #ti-section3, #gr-section1, #gr-section2, #gr-section3, #om-section1, #om-section2, #om-section3, #pj-section1, #pj-section2, #pj-section3, #pd-section1, #pd-section2, #pd-section3, #vd-section1, #vd-section2, #vd-section3, #td-section1, #td-section2, #td-section3, #gd-section1, #gd-section2, #gd-section3, #oo-section1, #oo-section2, #oo-section3, #mk-section1, #mk-section2, #mk-section3').forEach((section) => {
         const text = section.querySelector('.ip-block-text');
         const media = section.querySelector('.ip-block-media');
         if (!text && !media) return;

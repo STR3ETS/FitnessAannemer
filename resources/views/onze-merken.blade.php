@@ -59,7 +59,7 @@
                     <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Premium partners</span>
                     <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Directe lijnen met <span class="text-primary">topfabrikanten</span></h2>
                     <p class="text-secondary/50 text-sm leading-relaxed mb-4">Wij werken rechtstreeks samen met de grootste namen in de fitnessindustrie. Dat betekent geen tussenhandel, scherpe prijzen en toegang tot het volledige assortiment van elk merk.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Van Life Fitness en Matrix voor cardio en kracht, tot Concept2 voor functionele training en Gym80 voor Duitse precisie-krachtapparatuur. Wij adviseren objectief welke merken en modellen het beste passen bij jouw concept.</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Van Life Fitness en Matrix voor cardio en kracht, tot Concept2 voor functionele training en <a href="{{ url('/onze-merken/gym80') }}" class="text-primary font-semibold hover:underline">Gym80</a> voor Duitse precisie-krachtapparatuur. Wij adviseren objectief welke merken en modellen het beste passen bij jouw concept.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                         <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/apparatuur') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk apparatuur</a>
@@ -103,7 +103,13 @@
 
             <div class="ip-fade grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
                 @foreach($merken as $merk)
-                <div class="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-7 hover:border-primary/30 hover:bg-primary/[0.04] transition-all duration-300">
+                @php
+                    // Merken met een eigen pagina (config/merken.php) worden een klikbare kaart
+                    $merkSlug = \App\Support\Merken::slugVoor($merk['name']);
+                    $merkNaam = $merkSlug ? config('merken.paginas')[$merkSlug] : $merk['name'];
+                    $tag = $merkSlug ? 'a' : 'div';
+                @endphp
+                <{{ $tag }} @if($merkSlug) href="{{ url('/onze-merken/' . $merkSlug) }}" aria-label="Bekijk de merkpagina van {{ $merkNaam }}" @endif class="group flex flex-col bg-white/[0.03] border border-white/[0.06] rounded-2xl p-7 hover:border-primary/30 hover:bg-primary/[0.04] transition-all duration-300">
                     <div class="h-14 flex items-center mb-6">
                         @if($merk['logo'])
                             <img src="{{ asset($merk['logo']) }}" alt="{{ $merk['name'] }}" class="w-auto object-contain" style="height: calc(28px * {{ $merk['s'] }}); filter: brightness(0) invert(1); opacity: 0.7;">
@@ -112,8 +118,13 @@
                         @endif
                     </div>
                     <p class="text-white/40 text-sm leading-relaxed mb-4">{{ $merk['desc'] }}</p>
-                    <span class="inline-block bg-primary/10 text-primary text-[10px] font-semibold px-2.5 py-1 rounded-full border border-primary/20">{{ $merk['cat'] }}</span>
-                </div>
+                    <div class="mt-auto flex items-center justify-between gap-3">
+                        <span class="inline-block bg-primary/10 text-primary text-[10px] font-semibold px-2.5 py-1 rounded-full border border-primary/20">{{ $merk['cat'] }}</span>
+                        @if($merkSlug)
+                        <span class="inline-flex items-center text-primary text-xs font-semibold">{{ $merkNaam }} <i class="fa-solid fa-arrow-right text-[10px] ml-2 group-hover:translate-x-1 transition-transform"></i></span>
+                        @endif
+                    </div>
+                </{{ $tag }}>
                 @endforeach
             </div>
 
@@ -146,7 +157,7 @@
                 <div class="ip-block-text">
                     <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Objectief advies</span>
                     <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Het juiste merk voor <span class="text-primary">jouw concept</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Elk merk heeft zijn eigen sterke punten. Life Fitness voor all-round commercieel gebruik, Gym80 voor high-end kracht, Concept2 voor functionele training. Wij adviseren objectief welke combinatie past bij jouw situatie.</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Elk merk heeft zijn eigen sterke punten. Life Fitness voor all-round commercieel gebruik, <a href="{{ url('/onze-merken/gym80') }}" class="text-primary font-semibold hover:underline">Gym80</a> en <a href="{{ url('/onze-merken/watson') }}" class="text-primary font-semibold hover:underline">Watson</a> voor high-end kracht, Concept2 voor functionele training. Wij adviseren objectief welke combinatie past bij jouw situatie.</p>
                     <p class="text-secondary/50 text-sm leading-relaxed mb-8">Geen vaste merkverplichtingen, geen verborgen kosten. Wij stellen samen met jou het optimale pakket samen op basis van concept, doelgroep en budget. Inclusief levering, installatie en garantie.</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                         <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>

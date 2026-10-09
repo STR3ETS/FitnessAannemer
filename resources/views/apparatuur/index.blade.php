@@ -140,7 +140,11 @@
             </div>
             <div class="ip-fade flex flex-wrap items-center justify-center gap-x-8 gap-y-4 mb-10">
                 @foreach(['Life Fitness', 'Matrix', 'GYM80', 'Hammer Strength', 'Eleiko', 'Concept2', 'EGYM', 'ZIVA', 'Vision', 'YourReformer', 'Watson', 'Nike Strength', 'LifeMaxx', 'TKO', 'Assault Fitness', 'Sprinttracks', 'InBody'] as $merk)
+                @if($merkUrl = \App\Support\Merken::urlVoor($merk))
+                <a href="{{ $merkUrl }}" class="text-secondary/30 hover:text-primary text-sm font-semibold transition-colors" style="font-family: 'Inter'">{{ $merk }}</a>
+                @else
                 <span class="text-secondary/30 text-sm font-semibold" style="font-family: 'Inter'">{{ $merk }}</span>
+                @endif
                 @endforeach
             </div>
             <a href="{{ url('/onze-merken') }}" class="ip-fade inline-flex items-center bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Bekijk alle merken <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>

@@ -1608,7 +1608,7 @@ class PageController extends Controller
             'introLabel' => 'De juiste krachtlijn',
             'introTitle' => 'Machines die passen <span class="text-primary">bij jouw leden</span>',
             'introP1' => 'Een bodybuilding-publiek vraagt andere apparatuur dan een breed ledenbestand of een revalidatiepraktijk. Plate loaded of pin loaded, een volledige circuitlijn of juist losse stations: de juiste keuze volgt uit wie er bij jou traint.',
-            'introP2' => 'Als officieel dealer van merken als Gym80, Hammer Strength, Matrix, Life Fitness en Watson adviseren wij zonder voorkeur. Wij stellen de mix samen die jouw concept versterkt, ook als dat betekent dat we merken combineren.',
+            'introP2' => 'Als officieel dealer van merken als <a href="/onze-merken/gym80">Gym80</a>, Hammer Strength, Matrix, Life Fitness en <a href="/onze-merken/watson">Watson</a> adviseren wij zonder voorkeur. Wij stellen de mix samen die jouw concept versterkt, ook als dat betekent dat we merken combineren.',
             'media1' => 'assets/kr-blok2.jpg',
             'midLabel' => 'Meer dan een machine',
             'midTitle' => 'Ingetekend op <span class="text-primary">de juiste plek</span>',
@@ -2898,6 +2898,170 @@ class PageController extends Controller
             'media3' => 'assets/foto-assets/MCJO3837-1-1024x683.jpg',
         ],
     ];
+
+    // ===== MERKPAGINA'S (/onze-merken/{slug}) =====
+    // Slugs moeten overeenkomen met config/merken.php. Foto's gemarkeerd met PLACEHOLDER
+    // tonen nog geen Gym80/Watson apparatuur: vervang ze door eigen projectfoto's
+    // (WebP, max ca. 200 kB, bestandsnaam met zoekwoord). De alt-teksten staan al klaar.
+    private array $merken = [
+        'gym80' => [
+            'naam' => 'Gym80',
+            'metaTitle' => 'Gym80 kopen | Duitse krachtapparatuur | Fitness Aannemer',
+            'metaDesc' => 'Gym80 krachtapparatuur kopen? Wij adviseren, ontwerpen en installeren Gym80 in jouw sportschool. Pure Kraft, Sygnum en meer. Plan een adviesgesprek.',
+            'heroTitle' => 'Gym80 kopen: Duitse krachtapparatuur <span class="text-primary">voor jouw sportschool</span>',
+            'heroImage' => 'assets/sp-hero.jpg', // PLACEHOLDER: Gym80 Pure Kraft of Sygnum opstelling in een opgeleverd FA-project
+            'heroAlt' => 'Gym80 krachtapparatuur in sportschool ingericht door Fitness Aannemer',
+            'heroDesc' => 'Gym80 staat in de fitnesswereld bekend als de King of Machines. Al sinds 1980 bouwt dit Duitse merk krachtapparatuur die voelt als geen ander en tientallen jaren meegaat. Wil je Gym80 kopen voor je <a href="/sportschool-inrichten">sportschool</a>, <a href="/pt-studio-inrichten">PT studio</a> of <a href="/hotel-gym-inrichten">hotel gym</a>? Wij helpen je kiezen welke machines passen bij jouw leden en jouw vloer, ontwerpen de complete indeling en leveren en installeren alles in heel Nederland en België.',
+            'aboutLabel' => 'Over het merk',
+            'aboutTitle' => 'Over Gym80: <span class="text-primary">100% made in Germany</span>',
+            'aboutP' => [
+                'Gym80 ontwikkelt en produceert alles zelf in Gelsenkirchen, midden in het Ruhrgebied. Op meer dan 60.000 m² productieruimte worden de machines met lasersnijders, lasrobots en een eigen poedercoatlijn gebouwd. Geen productie in het Verre Oosten, maar Duitse engineering van ontwerp tot laatste las.',
+                'Dat zie je terug in de details. Het kenmerkende ovale frame van 4 mm dik staal maakt Gym80 direct herkenbaar en extreem stabiel. Veel machines draaien op kevlar riemen in plaats van kabels, wat soepeler traint en minder onderhoud vraagt. En de biomechanica is waar Gym80 echt het verschil maakt: natuurlijke bewegingsbanen, een kloppende weerstandscurve en een instap die voor iedere lengte goed werkt.',
+            ],
+            'aboutFacts' => [
+                ['value' => '1980', 'label' => 'Bouwt krachtapparatuur sinds'],
+                ['value' => '60.000 m²', 'label' => 'Productie in Gelsenkirchen'],
+                ['value' => '4 mm', 'label' => 'Staal in het ovale frame'],
+            ],
+            'aboutImage' => 'assets/kr-blok2.jpg', // PLACEHOLDER: close-up gepersonaliseerde Gym80 bekleding met logo of kleurdetail
+            'aboutAlt' => 'Gym80 Pure Kraft plate loaded machine met gepersonaliseerde bekleding',
+            'seriesLabel' => 'Series en productlijnen',
+            'seriesTitle' => 'De Gym80 <span class="text-primary">series</span>',
+            'series' => [
+                ['naam' => 'Gym80 Sygnum', 'tag' => 'Selectorized', 'desc' => 'Selectorized krachtapparatuur met geïntegreerde gewichtsstapel. De ruggengraat van de meeste commerciële sportscholen: veilig, intuïtief en geschikt voor beginners én gevorderden.'],
+                ['naam' => 'Gym80 Pure Kraft en Pure Kraft Strong', 'tag' => 'Plate loaded', 'desc' => 'Plate loaded machines voor maximale krachtontwikkeling. Dé reden dat serieuze krachtsporters een sportschool uitkiezen.'],
+                ['naam' => 'Gym80 Glute Kraft', 'tag' => 'Billen en benen', 'desc' => 'Een complete lijn machines specifiek voor billen en benen. Ideaal om je vrouwelijke doelgroep te bedienen en een sterke glute zone neer te zetten.'],
+                ['naam' => '80Athletics en Qubes', 'tag' => 'Functioneel', 'desc' => 'Functionele trainingsoplossingen voor athletic training, small group en Hyrox-achtige concepten.'],
+                ['naam' => 'Med80', 'tag' => 'Medisch', 'desc' => 'Ergonomische apparatuur voor fysiotherapie, revalidatie en medische fitness.'],
+                ['naam' => 'Gym80 Hospitality en Outdoor', 'tag' => 'Hotel en buiten', 'desc' => 'Compacte oplossingen voor hotels en bedrijfsfitness, en weerbestendige machines voor buitentraining.'],
+            ],
+            'seriesNote' => 'Alles is volledig te personaliseren. Framekleur, bekleding, stiksels en zelfs je eigen logo in de bekleding of het frame. Zo wordt je apparatuur onderdeel van je merk, niet zomaar een machine uit de catalogus.',
+            'fitLabel' => 'Voor wie',
+            'fitTitle' => 'Voor wie is Gym80 <span class="text-primary">de juiste keuze?</span>',
+            'fitIntro' => 'Gym80 is een investering. Het past het best bij:',
+            'fitFor' => [
+                ['title' => 'Premium en high end sportscholen', 'desc' => 'Je wilt je onderscheiden van ketens met een vloer vol topapparatuur.', 'url' => '/sportschool-inrichten'],
+                ['title' => 'Krachtgerichte gyms en bodybuilding gyms', 'desc' => 'Je leden weten precies wat goede machines zijn.'],
+                ['title' => 'Boutique gyms en PT studio\'s', 'desc' => 'Je wilt met minder machines een maximale indruk maken.', 'url' => '/pt-studio-inrichten'],
+                ['title' => 'Hotels, bedrijfsfitness en fysiopraktijken', 'desc' => 'Je vindt kwaliteit en duurzaamheid belangrijker dan de laagste prijs.', 'url' => '/hotel-gym-inrichten'],
+            ],
+            'fitNot' => 'Run je een low budget concept met veel instroom en weinig krachtfocus? Dan adviseren we je eerlijk of een <a href="/onze-merken">ander merk</a> beter bij je doelgroep past, of hoe je Gym80 slim combineert met andere merken.',
+            'whyLabel' => 'Waarom Fitness Aannemer',
+            'whyTitle' => 'Waarom Gym80 <span class="text-primary">via Fitness Aannemer?</span>',
+            'whyIntro' => 'Een Gym80 machine kun je overal bestellen. Het verschil zit in wat eromheen gebeurt.',
+            'why' => [
+                ['icon' => 'fa-compass', 'title' => 'Advies op basis van jouw concept', 'text' => 'We zijn niet gebonden aan één merk. We kijken naar je doelgroep, je ruimte en je businessplan, en kiezen de Gym80 machines die daar het meeste rendement opleveren.', 'url' => '/sportschool-inrichten', 'link' => 'Sportschool inrichten'],
+                ['icon' => 'fa-cube', 'title' => 'Ontworpen in jouw gym', 'text' => 'Onze ontwerpers plaatsen elke machine in een 3D-ontwerp van je pand. Je ziet vooraf hoe de krachtzone eruitziet en hoe leden door de ruimte bewegen.', 'url' => '/diensten/inrichting-en-planning', 'link' => 'Inrichting en planning'],
+                ['icon' => 'fa-handshake', 'title' => 'Nauwe samenwerking met de fabrikant', 'text' => 'We stemmen per project samen met Gym80 af wat het beste aanbod is. Zo krijg je de juiste configuratie voor een scherpe prijs.', 'url' => '/apparatuur/krachtapparatuur', 'link' => 'Alle krachtapparatuur'],
+                ['icon' => 'fa-layer-group', 'title' => 'Alles onder één dak', 'text' => 'Naast Gym80 regelen we je sportvloer, verlichting, audio, spiegels en kluisjes. Eén aanspreekpunt van ontwerp tot oplevering.', 'url' => '/apparatuur', 'link' => 'Bekijk apparatuur'],
+                ['icon' => 'fa-truck', 'title' => 'Levering en installatie in de Benelux', 'text' => 'We leveren, plaatsen en stellen af, ook bij sportscholen tot ruim 3.000 m².', 'url' => '/diensten/levering-en-installatie', 'link' => 'Levering en installatie'],
+                ['icon' => 'fa-coins', 'title' => 'Leasing en financiering', 'text' => 'Liever niet alles in één keer betalen? We regelen ook de lease van je Gym80 apparatuur.', 'url' => '/diensten/leasing-en-financiering', 'link' => 'Leasing en financiering'],
+            ],
+            'caseLabel' => 'Ontwerp en realisatie',
+            'caseTitle' => 'Van 3D-ontwerp tot <span class="text-primary">opgeleverde krachtzone</span>',
+            'caseP' => [
+                'Elke krachtzone die wij inrichten begint met een ontwerp van het complete pand. Daarin staat iedere Gym80 machine op de juiste plek, met logische looproutes, veilige tussenafstanden en zichtlijnen die de zone overzichtelijk houden.',
+                'Zo zie je vooraf precies hoe jouw krachtzone eruit komt te zien en weet je zeker dat het klopt voordat er één machine geleverd wordt. Bekijk <a href="/projecten">onze projecten</a> voor een indruk van wat we voor sportscholen, PT studio\'s en hotels hebben gerealiseerd.',
+            ],
+            'caseImage' => 'assets/kr-blok3.jpg', // PLACEHOLDER: opgeleverd project met Gym80
+            'caseAlt' => 'Krachtzone met Gym80 apparatuur, ontwerp en realisatie Fitness Aannemer',
+            'faqTitle' => 'Veelgestelde vragen <span class="text-primary">over Gym80</span>',
+            'faqs' => [
+                ['q' => 'Waar kan ik Gym80 kopen in Nederland?', 'a' => 'Via Fitness Aannemer koop je Gym80 krachtapparatuur voor commercieel gebruik in Nederland en België. We adviseren, ontwerpen, leveren en installeren.'],
+                ['q' => 'Wat kost Gym80 apparatuur?', 'a' => 'De prijs hangt af van de serie, de configuratie en je personalisatie. Plate loaded en selectorized machines verschillen flink in prijs. Vraag een adviesgesprek aan, dan stellen we een pakket samen dat past bij je budget.'],
+                ['q' => 'Wat is het verschil tussen Gym80 Sygnum en Pure Kraft?', 'a' => 'Sygnum werkt met een geïntegreerde gewichtsstapel en is laagdrempelig voor alle leden. Pure Kraft is plate loaded: je laadt zelf halterschijven, wat zwaardere belasting en een rauwer trainingsgevoel geeft. De meeste sportscholen combineren beide.'],
+                ['q' => 'Waar wordt Gym80 geproduceerd?', 'a' => 'Alle Gym80 apparatuur wordt ontwikkeld en gebouwd in de eigen fabriek in Gelsenkirchen, Duitsland.'],
+                ['q' => 'Kan ik Gym80 apparatuur in mijn eigen huisstijl laten maken?', 'a' => 'Ja. Framekleur, bekleding, stiksels en logo zijn aan te passen. Wij helpen je kiezen wat past bij de uitstraling van je gym.'],
+                ['q' => 'Kan ik Gym80 leasen?', 'a' => 'Ja, we bieden leasing en financiering voor Gym80 apparatuur, zodat je je investering spreidt.'],
+                ['q' => 'Kan ik Gym80 combineren met andere merken?', 'a' => 'Zeker. Veel van onze klanten combineren Gym80 kracht met cardio van een ander merk. Wij adviseren welke combinatie het best werkt voor jouw concept.'],
+            ],
+            'ctaTitle' => 'Een krachtzone met Gym80 <span class="text-primary">die je leden niet vergeten?</span>',
+            'ctaText' => 'Vertel ons over je plannen. In een vrijblijvend adviesgesprek bespreken we welke Gym80 machines passen bij je concept, je ruimte en je budget.',
+        ],
+        'watson' => [
+            'naam' => 'Watson',
+            'metaTitle' => 'Watson Gym Equipment kopen | Britse kracht | Fitness Aannemer',
+            'metaDesc' => 'Watson Gym Equipment voor je sportschool? Handgemaakte Britse krachtapparatuur met levenslange garantie. Advies, ontwerp en installatie in de Benelux.',
+            'heroTitle' => 'Watson Gym Equipment: handgemaakte Britse <span class="text-primary">krachtapparatuur</span>',
+            'heroImage' => 'assets/projecten/de-krachtfabriek-huissen/krachtfabriek-intro.jpeg', // PLACEHOLDER: Watson Animal of Dual Stack machines in een opgeleverd FA-project
+            'heroAlt' => 'Watson Gym Equipment krachtapparatuur in sportschool ingericht door Fitness Aannemer',
+            'heroDesc' => 'Watson Gym Equipment bouwt krachtapparatuur voor mensen die weten wat trainen is. Handgemaakt in Engeland van Brits staal, zonder plastic kappen en zonder concessies. Het resultaat: machines die zwaar, strak en vrijwel onverwoestbaar zijn, met een levenslange garantie op het frame. Wil je Watson kopen voor je <a href="/sportschool-inrichten">sportschool</a> of <a href="/pt-studio-inrichten">PT studio</a>? Wij adviseren welke Watson machines bij jouw concept passen, ontwerpen je krachtzone en verzorgen levering en installatie in Nederland en België.',
+            'aboutLabel' => 'Over het merk',
+            'aboutTitle' => 'Over Watson: <span class="text-primary">engineering greatness uit Engeland</span>',
+            'aboutP' => [
+                'Watson begon in 1999, toen oprichter Simon Watson zijn eerste apparatuur met de hand bouwde. Inmiddels produceert het merk in Frome, Somerset, en staat het in topsportscholen over de hele wereld. Atleten als Eddie Hall en Chris Bumstead trainen op Watson, en ketens als Gymshark en Pure Fitness kiezen het voor hun vloer. In 2021 won Watson de Queen\'s Award for Enterprise voor internationale handel.',
+                'De filosofie is helder: functie boven franje. Geen glimmend chroom of instructiestickers op de voorkant, wel dik staal, perfect lopende bewegingsbanen en een trainingsgevoel dat ervaren sporters direct herkennen. Daarbij is Watson volledig te personaliseren in kleur, bekleding en stiksels, zodat je apparatuur naadloos past bij de uitstraling van je gym.',
+            ],
+            'aboutFacts' => [
+                ['value' => '1999', 'label' => 'Opgericht door Simon Watson'],
+                ['value' => 'Frome', 'label' => 'Handgemaakt in Somerset, Engeland'],
+                ['value' => '2021', 'label' => 'Queen\'s Award for Enterprise'],
+            ],
+            'aboutImage' => 'assets/sp-hero.jpg', // PLACEHOLDER: Watson Pro Dumbbells in rek of close-up van een Animal machine
+            'aboutAlt' => 'Watson Pro roestvrijstalen dumbbells in sportschool',
+            'seriesLabel' => 'Het assortiment',
+            'seriesTitle' => 'Het Watson <span class="text-primary">assortiment</span>',
+            'series' => [
+                ['naam' => 'Watson Animal', 'tag' => 'Plate loaded', 'desc' => 'De iconische plate loaded lijn, van hack squat en 45 graden leg press tot lateral row. Zwaar gebouwd voor serieuze belasting.'],
+                ['naam' => 'Watson Dual Stack', 'tag' => 'Selectorized', 'desc' => 'Selectorized machines met twee gewichtsstapels en onafhankelijke bewegingsbanen. Elke arm of elk been werkt apart, wat spieronbalans tegengaat.'],
+                ['naam' => 'Watson Single Stack', 'tag' => 'Selectorized', 'desc' => 'Selectorized machines met één stapel, van chest press tot multi-hip. Toegankelijk voor een breder ledenbestand zonder in te leveren op kwaliteit.'],
+                ['naam' => 'Watson Westside', 'tag' => 'Powerlifting', 'desc' => 'Specialistische machines zoals de reverse hyper, ontwikkeld voor powerlifting en kracht.'],
+                ['naam' => 'Watson Pro Dumbbells', 'tag' => 'Losse gewichten', 'desc' => 'De beroemde roestvrijstalen dumbbells, voor veel sporters de reden om een gym te kiezen.'],
+                ['naam' => 'Racks, rigs, benches en halters', 'tag' => 'Functioneel', 'desc' => 'Van power racks en custom rigs tot de Safety Squat Bar en verstelbare banken.'],
+            ],
+            'seriesNote' => 'Elke Watson machine is te personaliseren in framekleur, bekleding en stiksels. Zo sluit je krachtzone naadloos aan op de uitstraling van je gym, van de eerste rack tot de laatste dumbbell.',
+            'fitLabel' => 'Voor wie',
+            'fitTitle' => 'Voor wie is Watson <span class="text-primary">de juiste keuze?</span>',
+            'fitIntro' => 'Watson is gemaakt voor een specifieke doelgroep, en dat is precies de kracht ervan. Het past het best bij:',
+            'fitFor' => [
+                ['title' => 'Krachtgerichte sportscholen en bodybuilding gyms', 'desc' => 'Je leden komen om zwaar te trainen.', 'url' => '/sportschool-inrichten'],
+                ['title' => 'Performance gyms en strength clubs', 'desc' => 'Je hebt een community van ervaren sporters.'],
+                ['title' => 'PT studio\'s en boutique gyms', 'desc' => 'Je wilt je onderscheiden met apparatuur die je nergens anders tegenkomt.', 'url' => '/pt-studio-inrichten'],
+                ['title' => 'Topsportaccommodaties', 'desc' => 'Je apparatuur wordt dagelijks tot het uiterste belast.'],
+            ],
+            'fitNot' => 'Richt je je vooral op beginners en een breed publiek? Dan bespreken we eerlijk of Watson de beste fit is, of hoe je het combineert met meer <a href="/apparatuur/krachtapparatuur">laagdrempelige apparatuur</a>.',
+            'whyLabel' => 'Waarom Fitness Aannemer',
+            'whyTitle' => 'Waarom Watson <span class="text-primary">via Fitness Aannemer?</span>',
+            'whyIntro' => 'Watson wordt in Engeland gebouwd. Jouw gym staat in de Benelux. Wij zorgen dat die twee perfect samenkomen.',
+            'why' => [
+                ['icon' => 'fa-compass', 'title' => 'Advies dat past bij je doelgroep', 'text' => 'We zijn niet gebonden aan één merk. We kijken wat jouw leden zoeken en welke Watson machines daar het meeste waarde toevoegen.', 'url' => '/sportschool-inrichten', 'link' => 'Sportschool inrichten'],
+                ['icon' => 'fa-cube', 'title' => 'Je krachtzone in 3D', 'text' => 'Watson machines zijn groot en zwaar. We plaatsen ze vooraf in een 3D-ontwerp, inclusief looproutes, vloerbelasting en sportvloer.', 'url' => '/diensten/inrichting-en-planning', 'link' => 'Inrichting en planning'],
+                ['icon' => 'fa-handshake', 'title' => 'Nauwe samenwerking met de leverancier', 'text' => 'Per project bepalen we samen wat het beste aanbod is. De leverancier weet wat er speelt, en samen gaan we voor het beste eindresultaat.', 'url' => '/apparatuur/krachtapparatuur', 'link' => 'Alle krachtapparatuur'],
+                ['icon' => 'fa-layer-group', 'title' => 'Eén partner voor de hele gym', 'text' => 'Naast Watson regelen we vloer, verlichting, audio, spiegels en kluisjes. Eén aanspreekpunt van ontwerp tot oplevering.', 'url' => '/apparatuur', 'link' => 'Bekijk apparatuur'],
+                ['icon' => 'fa-truck', 'title' => 'Levering en installatie', 'text' => 'We regelen het transport uit Engeland en de plaatsing in je gym, zodat jij je alleen hoeft te focussen op je opening.', 'url' => '/diensten/levering-en-installatie', 'link' => 'Levering en installatie'],
+                ['icon' => 'fa-coins', 'title' => 'Leasing en financiering', 'text' => 'Spreid je investering met een lease op maat. Wij rekenen de scenario\'s voor je door.', 'url' => '/diensten/leasing-en-financiering', 'link' => 'Leasing en financiering'],
+            ],
+            'caseLabel' => 'Ontwerp en realisatie',
+            'caseTitle' => 'Zwaar materiaal vraagt om <span class="text-primary">een goed plan</span>',
+            'caseP' => [
+                'Een krachtzone met Watson vul je niet zomaar in. De machines zijn groot en zwaar, dus de vloeropbouw, de looproutes en de plek van elke rack bepalen of de zone werkt. Daarom tekenen we alles vooraf in op de plattegrond van je pand.',
+                'Zo weet je zeker dat het klopt voordat de eerste machine Engeland verlaat. Bekijk <a href="/projecten">onze projecten</a> voor een indruk van de krachtzones die we voor sportscholen en PT studio\'s hebben gerealiseerd.',
+            ],
+            'caseImage' => 'assets/kr-blok3.jpg', // PLACEHOLDER: opgeleverd project met Watson
+            'caseAlt' => 'Krachtzone met Watson Gym Equipment, ontwerp en realisatie Fitness Aannemer',
+            'faqTitle' => 'Veelgestelde vragen <span class="text-primary">over Watson</span>',
+            'faqs' => [
+                ['q' => 'Waar kan ik Watson Gym Equipment kopen in Nederland?', 'a' => 'Via Fitness Aannemer koop je Watson krachtapparatuur voor sportscholen en PT studio\'s in Nederland en België, inclusief advies, ontwerp, levering en installatie.'],
+                ['q' => 'Waar wordt Watson gemaakt?', 'a' => 'Watson wordt ontworpen en gebouwd in Frome, Engeland, van Brits staal.'],
+                ['q' => 'Welke garantie zit er op Watson?', 'a' => 'Watson geeft levenslange garantie op het frame. Over de exacte voorwaarden per product informeren we je in het adviesgesprek.'],
+                ['q' => 'Wat kost Watson apparatuur?', 'a' => 'Watson zit in het premium segment. De prijs hangt af van de machines, de configuratie en de personalisatie. In een adviesgesprek stellen we een pakket samen dat past bij je budget.'],
+                ['q' => 'Wat is het verschil tussen Watson Animal en Dual Stack?', 'a' => 'Animal is plate loaded: je laadt zelf halterschijven. Dual Stack werkt met twee gewichtsstapels en onafhankelijke bewegingsbanen per arm of been.'],
+                ['q' => 'Kan ik Watson combineren met andere merken?', 'a' => 'Ja. Veel sportscholen bouwen een krachtzone met Watson en kiezen voor cardio en selectorized basics een ander merk. Wij adviseren welke combinatie werkt.'],
+                ['q' => 'Kan ik Watson leasen?', 'a' => 'Ja, we bieden leasing en financiering voor Watson apparatuur.'],
+            ],
+            'ctaTitle' => 'Een krachtzone met Watson <span class="text-primary">waar sporters voor omrijden?</span>',
+            'ctaText' => 'Vertel ons over je plannen. We bespreken vrijblijvend welke Watson machines passen bij je concept, je ruimte en je budget.',
+        ],
+    ];
+
+    public function merk(string $slug)
+    {
+        if (!isset($this->merken[$slug])) {
+            abort(404);
+        }
+
+        return view('merken._template', array_merge($this->merken[$slug], ['slug' => $slug]));
+    }
 
     public function projectOverview()
     {

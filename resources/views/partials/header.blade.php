@@ -12,7 +12,7 @@
                 <div class="nav-dropdown-menu absolute top-full left-0 pt-2 opacity-0 invisible translate-y-1 transition-all duration-200">
                     <div class="bg-secondary/95 backdrop-blur-xl border border-white/10 rounded-xl p-2 shadow-2xl">
                         <a href="{{ url('/diensten/turnkey-sportschool-bouwen') }}" class="nav-dropdown-item block whitespace-nowrap px-4 py-2.5 text-xs text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition">Turnkey sportschool bouwen</a>
-                        <a href="{{ url('/diensten/inrichting-en-planning') }}" class="nav-dropdown-item block whitespace-nowrap px-4 py-2.5 text-xs text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition">Interieurontwerp & 3D-visualisatie</a>
+                        <a href="{{ url('/diensten/sportschool-ontwerpen') }}" class="nav-dropdown-item block whitespace-nowrap px-4 py-2.5 text-xs text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition">Sportschool ontwerpen</a>
                         <a href="{{ url('/diensten/levering-en-installatie') }}" class="nav-dropdown-item block whitespace-nowrap px-4 py-2.5 text-xs text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition">Levering & installatie</a>
                         <a href="{{ url('/diensten/leasing-en-financiering') }}" class="nav-dropdown-item block whitespace-nowrap px-4 py-2.5 text-xs text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition">Leasing & financiering</a>
                     </div>
@@ -139,7 +139,7 @@
                 <div class="flex flex-col gap-1 pb-3 pl-4">
                     <a href="{{ url('/diensten') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Overzicht</a>
                     <a href="{{ url('/diensten/turnkey-sportschool-bouwen') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Turnkey sportschool bouwen</a>
-                    <a href="{{ url('/diensten/inrichting-en-planning') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Interieurontwerp en 3D-visualisatie</a>
+                    <a href="{{ url('/diensten/sportschool-ontwerpen') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Sportschool ontwerpen</a>
                     <a href="{{ url('/diensten/levering-en-installatie') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Levering en installatie</a>
                     <a href="{{ url('/diensten/leasing-en-financiering') }}" class="text-white/60 text-sm py-1.5 hover:text-primary transition">Leasing en financiering</a>
                 </div>

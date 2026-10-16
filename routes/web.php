@@ -48,13 +48,14 @@ Route::redirect('/farm-fit-culemborg', '/projecten/farm-fit-culemborg', 301);
 // Diensten
 Route::view('/diensten', 'diensten.index')->name('diensten');
 Route::view('/diensten/turnkey-sportschool-bouwen', 'diensten.turnkey-sportschool-bouwen')->name('diensten.turnkey');
-Route::view('/diensten/inrichting-en-planning', 'diensten.inrichting-en-planning')->name('diensten.inrichting');
+Route::view('/diensten/sportschool-ontwerpen', 'diensten.sportschool-ontwerpen')->name('diensten.ontwerp');
+Route::redirect('/diensten/inrichting-en-planning', '/diensten/sportschool-ontwerpen', 301);
 Route::view('/diensten/levering-en-installatie', 'diensten.levering-en-installatie')->name('diensten.levering');
-Route::redirect('/diensten/onderhoud-en-reparaties', '/diensten', 301);
+Route::redirect('/diensten/onderhoud-en-reparaties', '/apparatuur', 301);
 Route::view('/diensten/leasing-en-financiering', 'diensten.leasing-en-financiering')->name('diensten.leasing');
 
 // Oude WordPress diensten subpaginas → parent
-Route::redirect('/diensten/inrichting-en-planning/{any}', '/diensten/inrichting-en-planning', 301)->where('any', '.*');
+Route::redirect('/diensten/inrichting-en-planning/{any}', '/diensten/sportschool-ontwerpen', 301)->where('any', '.*');
 Route::redirect('/diensten/leasing-en-financiering/{any}', '/diensten/leasing-en-financiering', 301)->where('any', '.*');
 
 // Projecten
@@ -62,6 +63,7 @@ Route::get('/projecten', [PageController::class, 'projectOverview'])->name('proj
 Route::redirect('/projecten/ballin-fit-amsterdam-luxe-gym', '/projecten/ballin-fit-amsterdam', 301);
 Route::redirect('/projecten/project-pt024-boutique-gym', '/projecten', 301);
 Route::redirect('/projecten/vitality-sports-duiven', '/projecten', 301);
+Route::redirect('/projecten/oldambt', '/projecten', 301);
 Route::get('/projecten/{slug}', [PageController::class, 'project'])->name('projecten.show');
 
 // Onze merken

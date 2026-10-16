@@ -160,7 +160,7 @@ class ContactController extends Controller
             'coverImage' => 'assets/e-book.jpeg',
             'formTitle' => 'Van idee tot <span class="text-primary">succesvolle sportschool</span>',
             'formDesc' => 'Alles wat je moet weten voordat je begint: van concept en businessplan tot inrichting en opening. Download ons gratis e-book en start goed voorbereid.',
-            'usps' => ['Stap-voor-stap van idee tot opening', 'Praktische checklists en budgettips', 'Inzichten uit 60+ gerealiseerde projecten'],
+            'usps' => ['Stap-voor-stap van idee tot opening', 'Praktische checklists en budgettips', 'Inzichten uit 40+ gerealiseerde projecten'],
             'pdfFile' => 'EBook_Startende_Ondernemers.pdf',
             'contentTitle' => 'Alles over je <span class="text-primary">sportschool starten</span>',
             'extraSections' => [

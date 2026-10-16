@@ -8,7 +8,7 @@
         <title>Sportschool ontwerpen, bouwen en inrichten | Fitness Aannemer</title>
 
         {{-- SEO Meta --}}
-        <meta name="description" content="Sportschool laten ontwerpen, bouwen en inrichten? Wij regelen het complete traject. 60+ projecten, dealer van 18 merken, eigen montageteam. Plan een gratis adviesgesprek.">
+        <meta name="description" content="Sportschool laten ontwerpen, bouwen en inrichten? Wij regelen het complete traject. 40+ projecten, dealer van 18 merken, eigen montageteam. Plan een gratis adviesgesprek.">
         <meta name="keywords" content="fitnessapparatuur, gym inrichting, fitnessruimte ontwerp, krachtapparatuur, cardioapparatuur, fitness aannemer, gym op maat, bedrijfsfitness, PT studio inrichting, fitnessapparatuur leasen">
         <meta name="author" content="Fitness Aannemer">
         <meta name="robots" content="index, follow">
@@ -19,7 +19,7 @@
         <meta property="og:type" content="website">
         <meta property="og:url" content="{{ url('/') }}">
         <meta property="og:title" content="Sportschool ontwerpen, bouwen & inrichten | Fitness Aannemer">
-        <meta property="og:description" content="Sportschool laten ontwerpen, bouwen en inrichten? Wij regelen het complete traject. 60+ projecten, dealer van 18 merken, eigen montageteam.">
+        <meta property="og:description" content="Sportschool laten ontwerpen, bouwen en inrichten? Wij regelen het complete traject. 40+ projecten, dealer van 18 merken, eigen montageteam.">
         <meta property="og:locale" content="nl_NL">
         <meta property="og:site_name" content="Fitness Aannemer">
         {{-- <meta property="og:image" content="{{ asset('images/og-image.jpg') }}"> --}}
@@ -27,7 +27,7 @@
         {{-- Twitter --}}
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Sportschool ontwerpen, bouwen & inrichten | Fitness Aannemer">
-        <meta name="twitter:description" content="Sportschool laten ontwerpen, bouwen en inrichten? Wij regelen het complete traject. 60+ projecten, dealer van 18 merken, eigen montageteam.">
+        <meta name="twitter:description" content="Sportschool laten ontwerpen, bouwen en inrichten? Wij regelen het complete traject. 40+ projecten, dealer van 18 merken, eigen montageteam.">
         {{-- <meta name="twitter:image" content="{{ asset('images/og-image.jpg') }}"> --}}
 
         {{-- Structured Data --}}
@@ -198,7 +198,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div class="flex flex-col lg:flex-row lg:items-end gap-4 lg:gap-0 justify-between mb-8 lg:mb-12">
                     <h2 class="social-fade text-white text-3xl lg:text-5xl font-bold leading-[1]">Bekend van onder andere<br><span class="text-primary">TikTok & Instagram</span></h2>
-                    <p class="social-fade lg:max-w-[400px] lg:text-right text-xs text-white opacity-80">Gemiddeld 1.000.000 weergaven per maand. Volg ons en bekijk hoe wij fitnessruimtes van ontwerp tot oplevering transformeren. Bereik dat we ook direct als marketing inzetten voor onze klanten.</p>
+                    <p class="social-fade lg:max-w-[400px] lg:text-right text-xs text-white opacity-80">Gemiddeld 800.000+ weergaven per maand. Volg ons en bekijk hoe wij fitnessruimtes van ontwerp tot oplevering transformeren. Bereik dat we ook direct als marketing inzetten voor onze klanten.</p>
                 </div>
                 <div class="video-track" id="video-track">
                     @php
@@ -545,8 +545,8 @@
                                 <span class="bg-secondary/5 text-secondary/60 text-[11px] font-medium px-3 py-1.5 rounded-full">Revisierondes</span>
                             </div>
                             <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 mt-8">
-                                <a href="#" class="bg-primary rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Bekijk voorbeeldontwerpen <i class="fa-solid fa-arrow-right text-xs ml-1.5"></i></a>
-                                <a href="#" class="border border-secondary/15 rounded-full px-6 py-3 text-secondary/60 text-xs font-semibold hover:border-primary/30 hover:text-primary transition-colors">Start jouw ontwerp</a>
+                                <a href="{{ url('/diensten/sportschool-ontwerpen') }}" class="bg-primary rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Sportschool ontwerpen <i class="fa-solid fa-arrow-right text-xs ml-1.5"></i></a>
+                                <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="border border-secondary/15 rounded-full px-6 py-3 text-secondary/60 text-xs font-semibold hover:border-primary/30 hover:text-primary transition-colors">Plan een kennismaking</a>
                             </div>
                         </div>
                     </div>
@@ -971,7 +971,7 @@
                 {{-- Diensten Grid --}}
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {{-- Interieurontwerp --}}
-                    <a href="{{ url('/diensten/inrichting-en-planning') }}" class="dienst-card group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl border border-secondary/[0.08] hover:border-primary/30 transition-all duration-300">
+                    <a href="{{ url('/diensten/sportschool-ontwerpen') }}" class="dienst-card group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl border border-secondary/[0.08] hover:border-primary/30 transition-all duration-300">
                         <div class="aspect-[3/4] sm:aspect-[16/9] relative overflow-hidden">
                             <img src="{{ asset('assets/dienst-interieur.jpg') }}" alt="Interieurontwerp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/20"></div>
@@ -1003,7 +1003,7 @@
                     </a>
 
                     {{-- Fitnessapparatuur --}}
-                    <a href="{{ url('/diensten/onderhoud-en-reparaties') }}" class="dienst-card group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl border border-secondary/[0.08] hover:border-primary/30 transition-all duration-300">
+                    <a href="{{ url('/apparatuur') }}" class="dienst-card group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl border border-secondary/[0.08] hover:border-primary/30 transition-all duration-300">
                         <div class="aspect-[3/4] sm:aspect-[16/9] relative overflow-hidden">
                             <img src="{{ asset('assets/3.jpg') }}" alt="Fitnessapparatuur" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/20"></div>
@@ -1040,7 +1040,7 @@
         {{-- Lease CTA Banner --}}
         <section class="bg-secondary py-16 lg:py-32 relative overflow-hidden">
             <div class="absolute inset-0">
-                <img src="{{ asset('assets/lease-bg.jpg') }}" alt="" class="w-full h-full object-cover opacity-30">
+                <img src="{{ asset('assets/lease-bg.jpg') }}" alt="Fitnessapparatuur leasen bij Fitness Aannemer" class="w-full h-full object-cover opacity-30">
                 <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/90 to-secondary/60"></div>
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">

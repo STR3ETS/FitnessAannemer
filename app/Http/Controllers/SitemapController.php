@@ -15,7 +15,7 @@ class SitemapController extends Controller
             ['url' => '/', 'priority' => '1.0', 'changefreq' => 'weekly'],
             ['url' => '/diensten', 'priority' => '0.9', 'changefreq' => 'monthly'],
             ['url' => '/diensten/turnkey-sportschool-bouwen', 'priority' => '0.9', 'changefreq' => 'monthly'],
-            ['url' => '/diensten/inrichting-en-planning', 'priority' => '0.8', 'changefreq' => 'monthly'],
+            ['url' => '/diensten/sportschool-ontwerpen', 'priority' => '0.9', 'changefreq' => 'monthly'],
             ['url' => '/diensten/levering-en-installatie', 'priority' => '0.8', 'changefreq' => 'monthly'],
             ['url' => '/diensten/leasing-en-financiering', 'priority' => '0.8', 'changefreq' => 'monthly'],
             ['url' => '/projecten', 'priority' => '0.8', 'changefreq' => 'weekly'],
@@ -65,7 +65,7 @@ class SitemapController extends Controller
         }
 
         // Projecten detail pages
-        $projecten = ['pt024-nijmegen', 'ballin-fit-amsterdam', 'vitality-sports-duiven', 'upshape-gym-den-haag', 'farm-fit-culemborg', 'de-krachtfabriek-huissen', 'mana-eindhoven', 'fitt-roden', 'ona-gym-vught', 'building-you-etten-leur', 'incircle-waalwijk', 'fit2lead-gouda', 'fitcore-breda', 'fit-met-michael-ridderkerk', 'piazza-sports-houten', 'sportcentrum-pleizier-amsterdam-zuidoost', 'bent-sports-zevenaar', 'ketelaar-sports-ulft', 'elevate-the-gym-nuenen', 'mossink-elektrotechniek-hoevelaken', 'studio-dansu-huizen', 'axon-healthclub', 'base-lifestyle', 'bloom-and-reform', 'brilliant', 'club-confidence', 'donny-roelvink', 'get-real-performance', 'gym-boutique-pittem', 'gym-steenwijk', 'hotel-kavel-v-utrecht', 'house-of-fitness', 'kaj-prins', 'oldambt', 'pt-factory', 'raoul-de-graaf', 'reichwein-pt', 'sportcentrum-de-kloek', 'the-kube', 'yourwaypt'];
+        $projecten = ['pt024-nijmegen', 'ballin-fit-amsterdam', 'vitality-sports-duiven', 'upshape-gym-den-haag', 'farm-fit-culemborg', 'de-krachtfabriek-huissen', 'mana-eindhoven', 'fitt-roden', 'ona-gym-vught', 'building-you-etten-leur', 'incircle-waalwijk', 'fit2lead-gouda', 'fitcore-breda', 'fit-met-michael-ridderkerk', 'piazza-sports-houten', 'sportcentrum-pleizier-amsterdam-zuidoost', 'bent-sports-zevenaar', 'ketelaar-sports-ulft', 'elevate-the-gym-nuenen', 'mossink-elektrotechniek-hoevelaken', 'studio-dansu-huizen', 'axon-healthclub', 'base-lifestyle', 'bloom-and-reform', 'brilliant', 'club-confidence', 'donny-roelvink', 'get-real-performance', 'gym-boutique-pittem', 'gym-steenwijk', 'hotel-kavel-v-utrecht', 'house-of-fitness', 'kaj-prins', 'pt-factory', 'raoul-de-graaf', 'reichwein-pt', 'sportcentrum-de-kloek', 'the-kube', 'yourwaypt'];
         foreach ($projecten as $slug) {
             $urls->push(['url' => '/projecten/' . $slug, 'priority' => '0.7', 'changefreq' => 'monthly']);
         }

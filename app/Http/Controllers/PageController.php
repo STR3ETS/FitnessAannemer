@@ -9,7 +9,7 @@ class PageController extends Controller
     private array $oplossingen = [
         'sportschool' => [
             'title' => 'Sportschool inrichten | Van ontwerp tot oplevering',
-            'metaDesc' => 'Sportschool inrichten? Wij verzorgen ontwerp, bouw, apparatuur en installatie uit een hand. 60+ gerealiseerde projecten in de Benelux. Plan een gratis adviesgesprek.',
+            'metaDesc' => 'Sportschool inrichten? Wij verzorgen ontwerp, bouw, apparatuur en installatie uit een hand. 40+ gerealiseerde projecten in de Benelux. Plan een gratis adviesgesprek.',
             'heroLabel' => 'Sportschool inrichten',
             'heroTitle' => 'Sportschool<br><span class="text-primary">inrichten</span>',
             'heroDesc' => 'Een commerciële sportschool die opvalt én rendeert. Wij ontwerpen, bouwen en realiseren complete sportscholen met slimme indeling, de juiste apparatuur en een professionele uitstraling.',
@@ -2951,7 +2951,7 @@ class PageController extends Controller
             'whyIntro' => 'Een Gym80 machine kun je overal bestellen. Het verschil zit in wat eromheen gebeurt.',
             'why' => [
                 ['icon' => 'fa-compass', 'title' => 'Advies op basis van jouw concept', 'text' => 'We zijn niet gebonden aan één merk. We kijken naar je doelgroep, je ruimte en je businessplan, en kiezen de Gym80 machines die daar het meeste rendement opleveren.', 'url' => '/sportschool-inrichten', 'link' => 'Sportschool inrichten'],
-                ['icon' => 'fa-cube', 'title' => 'Ontworpen in jouw gym', 'text' => 'Onze ontwerpers plaatsen elke machine in een 3D-ontwerp van je pand. Je ziet vooraf hoe de krachtzone eruitziet en hoe leden door de ruimte bewegen.', 'url' => '/diensten/inrichting-en-planning', 'link' => 'Inrichting en planning'],
+                ['icon' => 'fa-cube', 'title' => 'Ontworpen in jouw gym', 'text' => 'Onze ontwerpers plaatsen elke machine in een 3D-ontwerp van je pand. Je ziet vooraf hoe de krachtzone eruitziet en hoe leden door de ruimte bewegen.', 'url' => '/diensten/sportschool-ontwerpen', 'link' => 'Sportschool ontwerpen'],
                 ['icon' => 'fa-handshake', 'title' => 'Nauwe samenwerking met de fabrikant', 'text' => 'We stemmen per project samen met Gym80 af wat het beste aanbod is. Zo krijg je de juiste configuratie voor een scherpe prijs.', 'url' => '/apparatuur/krachtapparatuur', 'link' => 'Alle krachtapparatuur'],
                 ['icon' => 'fa-layer-group', 'title' => 'Alles onder één dak', 'text' => 'Naast Gym80 regelen we je sportvloer, verlichting, audio, spiegels en kluisjes. Eén aanspreekpunt van ontwerp tot oplevering.', 'url' => '/apparatuur', 'link' => 'Bekijk apparatuur'],
                 ['icon' => 'fa-truck', 'title' => 'Levering en installatie in de Benelux', 'text' => 'We leveren, plaatsen en stellen af, ook bij sportscholen tot ruim 3.000 m².', 'url' => '/diensten/levering-en-installatie', 'link' => 'Levering en installatie'],
@@ -3025,7 +3025,7 @@ class PageController extends Controller
             'whyIntro' => 'Watson wordt in Engeland gebouwd. Jouw gym staat in de Benelux. Wij zorgen dat die twee perfect samenkomen.',
             'why' => [
                 ['icon' => 'fa-compass', 'title' => 'Advies dat past bij je doelgroep', 'text' => 'We zijn niet gebonden aan één merk. We kijken wat jouw leden zoeken en welke Watson machines daar het meeste waarde toevoegen.', 'url' => '/sportschool-inrichten', 'link' => 'Sportschool inrichten'],
-                ['icon' => 'fa-cube', 'title' => 'Je krachtzone in 3D', 'text' => 'Watson machines zijn groot en zwaar. We plaatsen ze vooraf in een 3D-ontwerp, inclusief looproutes, vloerbelasting en sportvloer.', 'url' => '/diensten/inrichting-en-planning', 'link' => 'Inrichting en planning'],
+                ['icon' => 'fa-cube', 'title' => 'Je krachtzone in 3D', 'text' => 'Watson machines zijn groot en zwaar. We plaatsen ze vooraf in een 3D-ontwerp, inclusief looproutes, vloerbelasting en sportvloer.', 'url' => '/diensten/sportschool-ontwerpen', 'link' => 'Sportschool ontwerpen'],
                 ['icon' => 'fa-handshake', 'title' => 'Nauwe samenwerking met de leverancier', 'text' => 'Per project bepalen we samen wat het beste aanbod is. De leverancier weet wat er speelt, en samen gaan we voor het beste eindresultaat.', 'url' => '/apparatuur/krachtapparatuur', 'link' => 'Alle krachtapparatuur'],
                 ['icon' => 'fa-layer-group', 'title' => 'Eén partner voor de hele gym', 'text' => 'Naast Watson regelen we vloer, verlichting, audio, spiegels en kluisjes. Eén aanspreekpunt van ontwerp tot oplevering.', 'url' => '/apparatuur', 'link' => 'Bekijk apparatuur'],
                 ['icon' => 'fa-truck', 'title' => 'Levering en installatie', 'text' => 'We regelen het transport uit Engeland en de plaatsing in je gym, zodat jij je alleen hoeft te focussen op je opening.', 'url' => '/diensten/levering-en-installatie', 'link' => 'Levering en installatie'],

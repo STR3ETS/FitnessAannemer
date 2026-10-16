@@ -28,7 +28,7 @@
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-20 relative overflow-hidden">
         <div class="hidden lg:block absolute inset-y-0 right-0 w-1/2">
-            <img src="{{ asset('assets/foto-assets/MCJO3851_FA-1-1024x683.jpg') }}" alt="" class="w-full h-full object-cover">
+            <img src="{{ asset('assets/foto-assets/MCJO3851_FA-1-1024x683.jpg') }}" alt="Offerte aanvragen bij Fitness Aannemer" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-transparent"></div>
             <div class="absolute w-[650px] h-[650px] rounded-full border border-white/[0.07] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
             <div class="absolute w-[400px] h-[400px] rounded-full border border-white/[0.10] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
@@ -254,7 +254,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
-                    <p class="text-primary text-3xl lg:text-4xl font-bold mb-2">60+</p>
+                    <p class="text-primary text-3xl lg:text-4xl font-bold mb-2">40+</p>
                     <p class="text-white/50 text-xs uppercase font-semibold tracking-wider">Projecten</p>
                 </div>
                 <div>

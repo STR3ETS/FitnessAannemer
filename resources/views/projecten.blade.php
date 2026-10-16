@@ -110,7 +110,7 @@
 
             <div class="ip-fade grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center pt-12 lg:pt-16 border-t border-white/[0.06]">
                 <div>
-                    <p class="text-primary text-3xl lg:text-5xl font-bold mb-2">60+</p>
+                    <p class="text-primary text-3xl lg:text-5xl font-bold mb-2">40+</p>
                     <p class="text-white/40 text-xs uppercase font-semibold tracking-wider">Projecten</p>
                 </div>
                 <div>

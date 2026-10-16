@@ -207,7 +207,7 @@ $schemas = [
                     </div>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                         <a href="{{ url('/projecten') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Bekijk onze projecten <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
-                        <a href="{{ url('/diensten/inrichting-en-planning') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Inrichting en planning</a>
+                        <a href="{{ url('/diensten/sportschool-ontwerpen') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Sportschool ontwerpen</a>
                     </div>
                 </div>
             </div>

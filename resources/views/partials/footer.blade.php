@@ -31,7 +31,7 @@
             <h6 class="text-white font-semibold text-sm mb-4">Diensten</h6>
             <div class="flex flex-col gap-2.5">
                 <a href="{{ url('/diensten/turnkey-sportschool-bouwen') }}" class="text-white/50 text-xs hover:text-white transition">Turnkey sportschool bouwen</a>
-                <a href="{{ url('/diensten/inrichting-en-planning') }}" class="text-white/50 text-xs hover:text-white transition">Interieurontwerp & 3D-visualisatie</a>
+                <a href="{{ url('/diensten/sportschool-ontwerpen') }}" class="text-white/50 text-xs hover:text-white transition">Sportschool ontwerpen</a>
                 <a href="{{ url('/diensten/levering-en-installatie') }}" class="text-white/50 text-xs hover:text-white transition">Levering & installatie</a>
                 <a href="{{ url('/diensten/leasing-en-financiering') }}" class="text-white/50 text-xs hover:text-white transition">Leasing & financiering</a>
             </div>

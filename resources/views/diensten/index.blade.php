@@ -37,8 +37,8 @@
                 "@@type": "Offer",
                 "itemOffered": {
                     "@@type": "Service",
-                    "name": "Interieurontwerp & 3D-visualisatie",
-                    "url": "{{ url('/diensten/inrichting-en-planning') }}"
+                    "name": "Sportschool ontwerpen",
+                    "url": "{{ url('/diensten/sportschool-ontwerpen') }}"
                 }
             },
             {
@@ -121,11 +121,11 @@
             @php
             $diensten = [
                 [
-                    'url' => '/diensten/inrichting-en-planning',
+                    'url' => '/diensten/sportschool-ontwerpen',
                     'icon' => 'fa-compass-drafting',
-                    'title' => 'Interieurontwerp & 3D-visualisatie',
-                    'desc' => 'Slim ontwerp vormt de basis van elke succesvolle sportschool. Wij vertalen jouw doelen naar een indeling die rendeert: optimale looplijnen, elke m² benut en een ontwerp dat leden bindt.',
-                    'tags' => ['3D Visualisatie', 'Plattegrond', 'Behoefteanalyse', 'Apparatuurkeuze'],
+                    'title' => 'Sportschool ontwerpen',
+                    'desc' => 'Een goed sportschoolontwerp past bij je budget en verdient zichzelf terug. Wij ontwerpen je gym op basis van je businessmodel: indeling, sfeer, apparatuur en materialen afgestemd op wat je wilt investeren.',
+                    'tags' => ['3D Visualisatie', 'Plattegrond', 'Businessmodel', 'Apparatuurkeuze'],
                 ],
                 [
                     'url' => '/diensten/levering-en-installatie',

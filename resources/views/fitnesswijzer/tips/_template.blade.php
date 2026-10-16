@@ -43,9 +43,9 @@
             @if(str_ends_with($media1, '.mp4'))
                 <video data-src="{{ asset($media1) }}" class="lazy-video w-full h-full object-cover" autoplay muted loop playsinline preload="none"></video>
             @elseif(str_starts_with($media1, 'http'))
-                <img src="{{ $media1 }}" alt="" class="w-full h-full object-cover">
+                <img src="{{ $media1 }}" alt="{{ $title }}" class="w-full h-full object-cover">
             @else
-                <img src="{{ asset($media1) }}" alt="" class="w-full h-full object-cover">
+                <img src="{{ asset($media1) }}" alt="{{ $title }}" class="w-full h-full object-cover">
             @endif
             <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-transparent"></div>
             <div class="absolute w-[650px] h-[650px] rounded-full border border-white/[0.07] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>

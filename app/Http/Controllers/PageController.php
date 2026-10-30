@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
+use App\Services\CmsContentService;
 
 class PageController extends Controller
 {
@@ -3144,13 +3145,33 @@ class PageController extends Controller
         return view('apparatuur._template', $this->apparatuur[$slug]);
     }
 
-    public function tipsOverview()
+    public function tipsOverview(CmsContentService $cms)
     {
-        return view('fitnesswijzer.tips-en-inspiratie', ['artikelen' => $this->tipsEnInspiratie]);
+        // Wat InSpace aanlevert komt bovenaan, in dezelfde kaarten als de rest.
+        $aangeleverd = $cms->artikelen()->map(fn (array $artikel) => [
+            'title' => $artikel['title'],
+            'cardImage' => $artikel['featured_image'] ?: 'assets/wp-uploads/FA_VDS_AUG2025-07-scaled.jpg',
+            'cardDesc' => $artikel['excerpt'] ?: $artikel['meta_description'],
+        ])->all();
+
+        return view('fitnesswijzer.tips-en-inspiratie', ['artikelen' => $aangeleverd + $this->tipsEnInspiratie]);
     }
 
-    public function tip(string $slug)
+    public function tip(string $slug, CmsContentService $cms)
     {
+        // Eerst wat InSpace aanlevert: stuurt die een bestaand adres, dan is dat de nieuwe versie.
+        if ($artikel = $cms->artikel($slug)) {
+            return view('content.pagina', [
+                'pagina' => $artikel,
+                'tekst' => CmsContentService::schoon((string) ($artikel['content'] ?? ''), $artikel['title']),
+                'kruimels' => [
+                    ['naam' => 'Fitnesswijzer', 'url' => url('/fitnesswijzer')],
+                    ['naam' => 'Tips & inspiratie', 'url' => url('/fitnesswijzer/tips-en-inspiratie')],
+                ],
+                'artikel' => true,
+            ]);
+        }
+
         if (!isset($this->tipsEnInspiratie[$slug])) {
             abort(404);
         }
@@ -3193,5 +3214,24 @@ class PageController extends Controller
             $this->gymreviews[$slug],
             ['slug' => $slug]
         ));
+    }
+
+    /** Een servicepagina van InSpace, direct onder het domein. */
+    public function dienst(string $slug, CmsContentService $cms)
+    {
+        $dienst = $cms->dienst($slug) ?? abort(404);
+
+        return view('content.pagina', [
+            'pagina' => $dienst,
+            'tekst' => CmsContentService::schoon((string) ($dienst['content'] ?? ''), $dienst['title']),
+            'kruimels' => [['naam' => 'Diensten', 'url' => url('/diensten')]],
+            'artikel' => false,
+        ]);
+    }
+
+    /** Een auteur van InSpace-artikelen, met die artikelen erbij. */
+    public function auteur(string $slug, CmsContentService $cms)
+    {
+        return view('content.auteur', ['auteur' => $cms->auteur($slug) ?? abort(404)]);
     }
 }

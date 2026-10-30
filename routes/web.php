@@ -134,3 +134,10 @@ Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap')
 Route::get('/wp-content/{any}', fn () => abort(404))->where('any', '.*');
 Route::get('/wp-admin/{any?}', fn () => abort(404))->where('any', '.*');
 Route::get('/wp-login.php', fn () => abort(404));
+
+// Content van InSpace (via EazyDash): de auteurs, en servicepagina's direct onder het domein.
+// Als laatste, en de slug met minstens één streepje: alle vaste pagina's gaan voor.
+Route::get('/auteur/{slug}', [PageController::class, 'auteur'])->name('auteur.show');
+Route::get('/{slug}', [PageController::class, 'dienst'])
+    ->where('slug', '[a-z0-9]+(?:-[a-z0-9]+)+')
+    ->name('content.dienst');

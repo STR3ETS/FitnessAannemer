@@ -169,6 +169,27 @@ class InSpaceContentTest extends TestCase
         Http::assertNothingSent();
     }
 
+    public function test_een_nieuwe_pagina_verschijnt_ook_als_de_eerste_bezoeker_een_404_krijgt(): void
+    {
+        $dienst = $this->stuk(['id' => 2, 'type' => 'service', 'title' => 'Sportschool laten bouwen', 'slug' => 'sportschool-laten-bouwen', 'author' => null]);
+
+        Http::fake([
+            self::API . '/content/' . $dienst['slug'] => Http::response(['data' => $dienst + ['content' => '<p>Alles.</p>']]),
+            // Met het vraagteken: anders loopt ook de losse pagina hierdoor en raakt de reeks op.
+            self::API . '/content?*' => Http::sequence()
+                ->push(['data' => [], 'meta' => ['last_page' => 1]])
+                ->push(['data' => [$dienst], 'meta' => ['last_page' => 1]]),
+        ]);
+
+        // De lijst is nog leeg en staat in de cache.
+        $this->get('/fitnesswijzer/tips-en-inspiratie')->assertOk();
+        $this->travel(6)->minutes();
+
+        // Na de eerste vijf minuten: deze bezoeker krijgt nog de oude lijst, en daarna wordt hij ververst.
+        $this->get('/sportschool-laten-bouwen')->assertNotFound();
+        $this->get('/sportschool-laten-bouwen')->assertOk();
+    }
+
     public function test_als_de_api_wegvalt_blijft_de_site_werken(): void
     {
         Http::fake(['*' => Http::response('Storing', 500)]);

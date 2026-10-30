@@ -169,7 +169,9 @@ class CmsContentService
         }
 
         try {
-            return Cache::flexible($sleutel, [self::VERS, self::BEWAAR], $ophalen);
+            // alwaysDefer: anders slaat Laravel het verversen over na een 404, en dat is
+            // juist wat de eerste bezoeker van een nieuwe pagina krijgt.
+            return Cache::flexible($sleutel, [self::VERS, self::BEWAAR], $ophalen, alwaysDefer: true);
         } catch (\Throwable $e) {
             Log::warning('Content uit EazyDash niet opgehaald', ['fout' => $e->getMessage()]);
             Cache::put('cms.storing', true, self::STORING);

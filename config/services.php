@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    // Content van InSpace, via EazyDash. Het token is het leestoken van deze site.
+    'eazyonline' => [
+        'url' => env('EAZY_CMS_URL', 'https://eazyonline.nl/api/v1'),
+        'token' => env('EAZY_CMS_TOKEN'),
+    ],
+
 ];

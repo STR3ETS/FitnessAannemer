@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\CmsContentService;
 use Illuminate\Http\Response;
 
 class SitemapController extends Controller
 {
-    public function index(): Response
+    public function index(CmsContentService $cms): Response
     {
         $urls = collect();
 
@@ -120,12 +121,29 @@ class SitemapController extends Controller
             $urls->push(['url' => '/fitnesswijzer/gymreviews/' . $slug, 'priority' => '0.6', 'changefreq' => 'monthly']);
         }
 
+        // Content van InSpace (via EazyDash)
+        foreach ($cms->artikelen() as $slug => $artikel) {
+            $urls->push(['url' => '/fitnesswijzer/tips-en-inspiratie/' . $slug, 'priority' => '0.6', 'changefreq' => 'monthly', 'lastmod' => $artikel['updated_at'] ?? null]);
+        }
+
+        foreach ($cms->diensten() as $slug => $dienst) {
+            $urls->push(['url' => '/' . $slug, 'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $dienst['updated_at'] ?? null]);
+        }
+
+        // Een artikel van InSpace met het adres van een vast artikel: één keer in de sitemap.
+        $urls = $urls->unique('url');
+
         $content = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
         $content .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
 
         foreach ($urls as $entry) {
             $content .= '  <url>' . "\n";
             $content .= '    <loc>' . url($entry['url']) . '</loc>' . "\n";
+
+            if (! empty($entry['lastmod'])) {
+                $content .= '    <lastmod>' . e($entry['lastmod']) . '</lastmod>' . "\n";
+            }
+
             $content .= '    <changefreq>' . $entry['changefreq'] . '</changefreq>' . "\n";
             $content .= '    <priority>' . $entry['priority'] . '</priority>' . "\n";
             $content .= '  </url>' . "\n";

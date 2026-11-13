@@ -32,11 +32,14 @@ class AppServiceProvider extends ServiceProvider
         });
 
         // Teksten die InSpace via EazyDash op de vaste pagina's aanpast. De lijst
-        // met velden geeft zijn eigen opname mee, daarom alleen als hij er niet is.
+        // met velden geeft zijn eigen opname en SEO-gegevens mee; anders horen ze
+        // bij dit adres. Een aangepaste titel gaat voor die uit het beheer.
         View::composer(['apparatuur._template', 'oplossingen._template', 'diensten.*'], function ($view) {
-            if (! array_key_exists('teksten', $view->getData())) {
-                $view->with('teksten', PaginaTeksten::voor(request()->getPathInfo()));
-            }
+            $data = $view->getData();
+            $teksten = $data['teksten'] ?? PaginaTeksten::voor(request()->getPathInfo());
+            $seo = array_key_exists('seo', $data) ? $data['seo'] : app(SeoService::class)->getForCurrentRequest();
+
+            $view->with(['teksten' => $teksten, 'seo' => $teksten->metSeo($seo)]);
         });
 
         // Custom Blade directives for SEO with database-first, @section fallback

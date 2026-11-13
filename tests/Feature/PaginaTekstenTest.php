@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\SeoMetadata;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Http;
 use Tests\TestCase;
@@ -113,6 +114,32 @@ class PaginaTekstenTest extends TestCase
             ->assertSee('Ontwerp &amp; projectplan', false);
 
         $this->get('/hyrox-box-inrichten')->assertOk()->assertSee('Een nieuwe alinea.');
+    }
+
+    public function test_titel_en_omschrijving_uit_het_beheer_zijn_de_standaard_en_inspace_gaat_voor(): void
+    {
+        SeoMetadata::create(['url_path' => '/apparatuur/cardio', 'meta_title' => 'Cardio apparatuur | Fitness Aannemer', 'meta_description' => 'Premium cardio apparatuur.']);
+        SeoMetadata::create(['url_path' => '/apparatuur/gewichten', 'meta_title' => 'Gewichten | Fitness Aannemer', 'meta_description' => 'Dumbbells en barbells.']);
+
+        Http::fake();
+        $lijst = collect($this->getJson('/inspace/paginas', ['Authorization' => 'Bearer leestoken'])->json('data'))->keyBy('path');
+        $cardio = collect($lijst['/apparatuur/cardio']['fields'])->keyBy('name');
+        $this->assertSame('Cardio apparatuur', $cardio['meta_title']['default']);
+        $this->assertSame('Premium cardio apparatuur.', $cardio['meta_description']['default']);
+
+        Http::swap(new \Illuminate\Http\Client\Factory);
+        $this->aanpassingen(['/apparatuur/cardio' => ['meta_title' => 'Loopbanden en crosstrainers', 'meta_description' => 'Nieuwe omschrijving.']]);
+
+        $this->get('/apparatuur/cardio')
+            ->assertOk()
+            ->assertSee('<title>Loopbanden en crosstrainers | Fitness Aannemer</title>', false)
+            ->assertSee('<meta name="description" content="Nieuwe omschrijving.">', false);
+
+        // Zonder aanpassing blijft het beheer precies staan.
+        $this->get('/apparatuur/gewichten')
+            ->assertOk()
+            ->assertSee('<title>Gewichten | Fitness Aannemer</title>', false)
+            ->assertSee('<meta name="description" content="Dumbbells en barbells.">', false);
     }
 
     public function test_bij_een_storing_blijft_de_tekst_zoals_hij_was(): void

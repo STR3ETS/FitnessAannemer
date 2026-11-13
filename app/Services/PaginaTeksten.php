@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\SeoMetadata;
 use Illuminate\Support\HtmlString;
 
 /**
@@ -69,6 +70,31 @@ class PaginaTeksten
         return $eigen === null ? $standaard : self::plat($eigen);
     }
 
+    /**
+     * Bij de meeste vaste pagina's staan titel en omschrijving voor Google in het
+     * beheer (SeoMetadata), en die gaan in de layout voor de tekst van de pagina.
+     * Dat is dus wat er nu staat. Heeft InSpace ze aangepast, dan gaat dat voor;
+     * anders blijft het beheer precies zoals het was.
+     */
+    public function metSeo(?SeoMetadata $seo): ?SeoMetadata
+    {
+        if (! $seo) {
+            return null;
+        }
+
+        $seo = clone $seo;
+
+        if ($seo->meta_title && ($titel = $this->eigen('meta_title', self::TEKST, self::zonderMerk($seo->meta_title))) !== null) {
+            $seo->meta_title = self::plat($titel) . ' | Fitness Aannemer';
+        }
+
+        if ($seo->meta_description && ($omschrijving = $this->eigen('meta_description', self::TEKST, $seo->meta_description)) !== null) {
+            $seo->meta_description = self::plat($omschrijving);
+        }
+
+        return $seo;
+    }
+
     /** De extra tekst onderaan, of null als die er niet is. */
     public function seoTekst(): ?HtmlString
     {
@@ -104,6 +130,11 @@ class PaginaTeksten
     private static function plat(string $html): string
     {
         return trim((string) preg_replace('~\s+~u', ' ', html_entity_decode(strip_tags(self::zonderScripts($html)), ENT_QUOTES | ENT_HTML5, 'UTF-8')));
+    }
+
+    private static function zonderMerk(string $titel): string
+    {
+        return trim((string) preg_replace('~\s*\|\s*Fitness Aannemer\s*$~i', '', $titel));
     }
 
     /** strip_tags laat de inhoud van een script staan; die moet er ook uit. */

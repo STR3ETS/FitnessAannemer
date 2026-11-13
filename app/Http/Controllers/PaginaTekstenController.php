@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SeoMetadata;
 use App\Services\PaginaTeksten;
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -28,7 +29,7 @@ class PaginaTekstenController extends Controller
 
         foreach (self::paginas() as $pad => [$sjabloon, $view]) {
             $opname = PaginaTeksten::opname();
-            $view()->with('teksten', $opname)->render();
+            $view()->with(['teksten' => $opname, 'seo' => SeoMetadata::findByPath($pad)])->render();
 
             $paginas[] = ['path' => $pad, 'template' => $sjabloon, 'fields' => $opname->velden()];
         }

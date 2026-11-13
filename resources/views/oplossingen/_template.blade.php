@@ -1,16 +1,16 @@
 ﻿{{-- Shared template for all solution pages --}}
 @extends('layouts.app')
 
-@section('title', $title . ' | Fitness Aannemer')
-@section('meta_description', $metaDesc)
+@section('title', $teksten->meta('meta_title', $title) . ' | Fitness Aannemer')
+@section('meta_description', $teksten->meta('meta_description', $metaDesc))
 
 @section('schema')
 <script type="application/ld+json">
 {
     "@@context": "https://schema.org",
     "@@type": "Service",
-    "name": "{{ $title }}",
-    "description": "{{ $metaDesc }}",
+    "name": "{{ $teksten->meta('meta_title', $title) }}",
+    "description": "{{ $teksten->meta('meta_description', $metaDesc) }}",
     "url": "{{ url()->current() }}",
     "provider": {
         "@@type": "Organization",
@@ -29,7 +29,7 @@
     "@@type": "BreadcrumbList",
     "itemListElement": [
         { "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}" },
-        { "@@type": "ListItem", "position": 2, "name": "{{ $title }}", "item": "{{ url()->current() }}" }
+        { "@@type": "ListItem", "position": 2, "name": "{{ $teksten->meta('meta_title', $title) }}", "item": "{{ url()->current() }}" }
     ]
 }
 </script>
@@ -55,8 +55,8 @@
                 <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">{{ $heroLabel }}</span>
             </div>
             <div class="max-w-3xl">
-                <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">{!! $heroTitle !!}</h1>
-                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">{{ $heroDesc }}</p>
+                <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">{{ $teksten->inline('hero_title', $heroTitle) }}</h1>
+                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">{{ $teksten->tekst('hero_text', e($heroDesc)) }}</p>
                 <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                     <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                     <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk onze projecten</a>
@@ -71,10 +71,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="ip-block-text">
-                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $introLabel }}</span>
-                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">{!! $introTitle !!}</h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">{{ $introP1 }}</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">{{ $introP2 }}</p>
+                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $teksten->tekst('section2_label', e($introLabel)) }}</span>
+                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">{{ $teksten->inline('section2_title', $introTitle) }}</h2>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">{{ $teksten->tekst('section2_text1', e($introP1)) }}</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">{{ $teksten->tekst('section2_text2', e($introP2)) }}</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                         <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
@@ -98,14 +98,14 @@
                     @if(str_ends_with($mediaMid, '.mp4'))
                         <video data-src="{{ asset($mediaMid) }}" class="lazy-video w-full h-full object-cover" autoplay muted loop playsinline preload="none"></video>
                     @else
-                        <img src="{{ asset($mediaMid) }}" alt="{{ $midLabel }}" class="w-full h-full object-cover" loading="lazy">
+                        <img src="{{ asset($mediaMid) }}" alt="{{ $teksten->tekst('section3_label', e($midLabel)) }}" class="w-full h-full object-cover" loading="lazy">
                     @endif
                 </div>
                 <div class="ip-block-text">
-                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $midLabel }}</span>
-                    <h2 class="text-white text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">{!! $midTitle !!}</h2>
-                    <p class="text-white/50 text-sm leading-relaxed mb-4">{{ $midP1 }}</p>
-                    <p class="text-white/50 text-sm leading-relaxed mb-8">{{ $midP2 }}</p>
+                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $teksten->tekst('section3_label', e($midLabel)) }}</span>
+                    <h2 class="text-white text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">{{ $teksten->inline('section3_title', $midTitle) }}</h2>
+                    <p class="text-white/50 text-sm leading-relaxed mb-4">{{ $teksten->tekst('section3_text1', e($midP1)) }}</p>
+                    <p class="text-white/50 text-sm leading-relaxed mb-8">{{ $teksten->tekst('section3_text2', e($midP2)) }}</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                         <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk onze projecten</a>
@@ -121,10 +121,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="ip-block-text">
-                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $section3Label }}</span>
-                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">{!! $section3Title !!}</h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">{{ $section3P1 }}</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">{{ $section3P2 }}</p>
+                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $teksten->tekst('section4_label', e($section3Label)) }}</span>
+                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">{{ $teksten->inline('section4_title', $section3Title) }}</h2>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">{{ $teksten->tekst('section4_text1', e($section3P1)) }}</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">{{ $teksten->tekst('section4_text2', e($section3P2)) }}</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                         <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
@@ -134,11 +134,13 @@
                     @if(str_ends_with($media3, '.mp4'))
                         <video data-src="{{ asset($media3) }}" class="lazy-video w-full h-full object-cover" autoplay muted loop playsinline preload="none"></video>
                     @else
-                        <img src="{{ asset($media3) }}" alt="{{ $section3Label }}" class="w-full h-full object-cover" loading="lazy">
+                        <img src="{{ asset($media3) }}" alt="{{ $teksten->tekst('section4_label', e($section3Label)) }}" class="w-full h-full object-cover" loading="lazy">
                     @endif
                 </div>
             </div>
         </div>
     </section>
+
+    @include('partials.seo-tekst')
 
 @endsection

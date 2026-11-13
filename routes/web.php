@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PaginaTekstenController;
 use App\Http\Controllers\SitemapController;
 
 Route::get('/', function () {
@@ -135,9 +136,11 @@ Route::get('/wp-content/{any}', fn () => abort(404))->where('any', '.*');
 Route::get('/wp-admin/{any?}', fn () => abort(404))->where('any', '.*');
 Route::get('/wp-login.php', fn () => abort(404));
 
-// Content van InSpace (via EazyDash): de auteurs, en servicepagina's direct onder het domein.
+// Content van InSpace (via EazyDash): de auteurs, de lijst met aanpasbare teksten op de vaste
+// pagina's (alleen voor EazyDash, met het leestoken), en servicepagina's direct onder het domein.
 // Als laatste, en de slug met minstens één streepje: alle vaste pagina's gaan voor.
 Route::get('/auteur/{slug}', [PageController::class, 'auteur'])->name('auteur.show');
+Route::get('/inspace/paginas', PaginaTekstenController::class)->name('inspace.paginas');
 Route::get('/{slug}', [PageController::class, 'dienst'])
     ->where('slug', '[a-z0-9]+(?:-[a-z0-9]+)+')
     ->name('content.dienst');

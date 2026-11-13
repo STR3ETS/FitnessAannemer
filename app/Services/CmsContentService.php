@@ -69,6 +69,18 @@ class CmsContentService
     }
 
     /**
+     * Aangepaste teksten op de vaste pagina's, per adres (zie PaginaTeksten).
+     *
+     * @return Collection<string, array<string, string>>
+     */
+    public function paginaTeksten(): Collection
+    {
+        return collect($this->bewaard('cms.paginateksten', fn () => collect($this->vraag('/page-texts')->json('data', []))
+            ->mapWithKeys(fn (array $pagina) => [$pagina['path'] => $pagina['fields']])
+            ->all()));
+    }
+
+    /**
      * De tekst zoals InSpace hem stuurt, met drie dingen eruit. Een eigen h1: die
      * staat al in de kop, en twee verwarren Google. Scripts en gebeurtenissen.
      * En een omhulsel van een heel document, als dat meekwam.

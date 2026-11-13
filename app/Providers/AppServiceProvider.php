@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Services\PaginaTeksten;
 use App\Services\SeoService;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
@@ -27,6 +28,14 @@ class AppServiceProvider extends ServiceProvider
             if (! isset($view->seo)) {
                 $seo = app(SeoService::class)->getForCurrentRequest();
                 $view->with('seo', $seo);
+            }
+        });
+
+        // Teksten die InSpace via EazyDash op de vaste pagina's aanpast. De lijst
+        // met velden geeft zijn eigen opname mee, daarom alleen als hij er niet is.
+        View::composer(['apparatuur._template', 'oplossingen._template', 'diensten.*'], function ($view) {
+            if (! array_key_exists('teksten', $view->getData())) {
+                $view->with('teksten', PaginaTeksten::voor(request()->getPathInfo()));
             }
         });
 

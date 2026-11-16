@@ -166,7 +166,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden order-2 lg:order-1">
-                    <img src="{{ asset('assets/foto-assets/FULL-Ballin-Fit-013-WF206762-1-1024x683.jpg') }}" alt="Sportschool interieur ontworpen naar budget" class="w-full h-full object-cover">
+                    <img src="{{ asset('assets/projecten/axon-healthclub/axon-ontwerp.webp') }}" alt="3D-ontwerp van AXON Healthclub, ontworpen naar budget" class="w-full h-full object-cover" loading="lazy">
                 </div>
                 <div class="ip-block-text order-1 lg:order-2">
                     <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $teksten->tekst('section3_label', 'Budget') }}</span>
@@ -359,11 +359,11 @@
                         'desc' => '880 m² casco omgebouwd tot complete sportschool. Geopend januari 2026, break-even in maand 6, nu 600 leden.',
                     ],
                     [
-                        'url' => '/projecten/axon-healthclub',
-                        'image' => 'assets/projecten/axon-healthclub/axon-ontwerp.webp',
-                        'title' => 'AXON',
-                        'location' => 'Maasbracht',
-                        'desc' => '1.200 m², turnkey gerealiseerd. Meer dan 200 aanmeldingen voor de opening.',
+                        'url' => '/projecten/studio-dansu-huizen',
+                        'image' => 'assets/tk-inrichting.jpg',
+                        'title' => 'Studio Dansu',
+                        'location' => 'Huizen',
+                        'desc' => 'Dans- en yogastudio. Van casco naar 2 groepsleszalen met nieuwe kleedkamers, bar en sanitair. 140 lessen per week.',
                     ],
                     [
                         'url' => '/projecten/sportcentrum-pleizier-amsterdam-zuidoost',

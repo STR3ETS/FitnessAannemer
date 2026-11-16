@@ -2620,11 +2620,12 @@ class PageController extends Controller
             'midP1' => 'Het machinepark is indrukwekkend: Life Fitness krachtstations en cardio-apparatuur gecombineerd met Hammer Strength plate-loaded machines. De vrije gewichtenzone is ruim opgezet met premium dumbbells en barbells.',
             'midP2' => 'Een uniek detail is het reward-systeem: voor elke workout ontvang je 1 euro terug. Bij 79 euro per vier weken en regelmatig trainen verdien je een deel van je lidmaatschap terug.',
             'mediaMid' => 'shorts/fitnessaannemer-short-5.mp4',
+            'tiktok' => '7443823009527319830',
             'section3Label' => 'Ons oordeel',
             'section3Title' => 'Premium met een <span class="text-primary">stoer randje</span>',
             'section3P1' => 'TrainMore Black Label bewijst dat premium fitness niet per se luxueus hoeft te zijn. De raw industrial sfeer combineert met topapparatuur tot een unieke gymervaring.',
             'section3P2' => 'De prijs van 79 euro per vier weken is stevig maar gerechtvaardigd. Het reward-systeem, de apparatuur en de locatie maken dit een van de betere gyms van Amsterdam.',
-            'media3' => 'assets/foto-assets/MCJO3837-1-1024x683.jpg',
+            'media3' => 'assets/gymreviews/trainmore.webp',
         ],
         'gymreview-credo-gym-haarlem' => [
             'title' => 'Gymreview: Credo Gym Haarlem',

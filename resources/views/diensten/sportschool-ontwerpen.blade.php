@@ -360,7 +360,7 @@
                     ],
                     [
                         'url' => '/projecten/axon-healthclub',
-                        'image' => 'assets/tk-inrichting.jpg',
+                        'image' => 'assets/projecten/axon-healthclub/axon-ontwerp.webp',
                         'title' => 'AXON',
                         'location' => 'Maasbracht',
                         'desc' => '1.200 m², turnkey gerealiseerd. Meer dan 200 aanmeldingen voor de opening.',

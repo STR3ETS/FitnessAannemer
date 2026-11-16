@@ -360,7 +360,7 @@
                     ],
                     [
                         'url' => '/projecten/studio-dansu-huizen',
-                        'image' => 'assets/tk-inrichting.jpg',
+                        'image' => 'assets/projecten/studio-dansu-huizen/dansu-zaal.webp',
                         'title' => 'Studio Dansu',
                         'location' => 'Huizen',
                         'desc' => 'Dans- en yogastudio. Van casco naar 2 groepsleszalen met nieuwe kleedkamers, bar en sanitair. 140 lessen per week.',

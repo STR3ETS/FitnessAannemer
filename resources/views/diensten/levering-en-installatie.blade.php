@@ -1,7 +1,7 @@
 ﻿@extends('layouts.app')
 
-@section('title', 'Levering & installatie fitnessapparatuur | Fitness Aannemer')
-@section('meta_description', 'Complete levering en installatie van fitnessapparatuur en inrichting door ons eigen montageteam. Een aanspreekpunt, een opleverdatum, actief in heel de Benelux. Vraag een offerte aan.')
+@section('title', $teksten->meta('meta_title', 'Levering & installatie fitnessapparatuur') . ' | Fitness Aannemer')
+@section('meta_description', $teksten->meta('meta_description', 'Complete levering en installatie van fitnessapparatuur en inrichting door ons eigen montageteam. Een aanspreekpunt, een opleverdatum, actief in heel de Benelux. Vraag een offerte aan.'))
 
 @section('schema')
 <script type="application/ld+json">
@@ -50,8 +50,8 @@
                 <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">Levering & installatie</span>
             </div>
             <div class="max-w-3xl">
-                <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Levering &<br><span class="text-primary">installatie</span></h1>
-                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">Complete levering en installatie van alles wat jouw sportschool nodig heeft, door ons eigen montageteam. Van transport tot de laatste afgestelde machine: alles uit één hand, met één opleverdatum.</p>
+                <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">{{ $teksten->inline('hero_title', 'Levering &<br><span class="text-primary">installatie</span>') }}</h1>
+                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">{{ $teksten->tekst('hero_text', 'Complete levering en installatie van alles wat jouw sportschool nodig heeft, door ons eigen montageteam. Van transport tot de laatste afgestelde machine: alles uit één hand, met één opleverdatum.') }}</p>
                 <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                     <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                     <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk onze projecten</a>
@@ -66,10 +66,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="ip-block-text">
-                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Eigen montageteam</span>
-                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Geïnstalleerd zoals het <span class="text-primary">ontworpen is</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Ons eigen montageteam verzorgt de volledige levering en installatie, in heel Nederland en België. Geen externe monteurs die het ontwerp voor het eerst zien, maar een vast team dat het project kent en precies weet waar alles moet staan.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Elke machine wordt geplaatst volgens de plattegrond, afgesteld en getest voor gebruik. Van het uitladen tot de laatste stelschroef: als wij de deur achter ons dichttrekken, kun jij open.</p>
+                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $teksten->tekst('section2_label', 'Eigen montageteam') }}</span>
+                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">{{ $teksten->inline('section2_title', 'Geïnstalleerd zoals het <span class="text-primary">ontworpen is</span>') }}</h2>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">{{ $teksten->tekst('section2_text1', 'Ons eigen montageteam verzorgt de volledige levering en installatie, in heel Nederland en België. Geen externe monteurs die het ontwerp voor het eerst zien, maar een vast team dat het project kent en precies weet waar alles moet staan.') }}</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">{{ $teksten->tekst('section2_text2', 'Elke machine wordt geplaatst volgens de plattegrond, afgesteld en getest voor gebruik. Van het uitladen tot de laatste stelschroef: als wij de deur achter ons dichttrekken, kun jij open.') }}</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                         <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
@@ -86,8 +86,8 @@
     <section class="bg-secondary py-16 lg:py-32 overflow-hidden" id="li-process">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-20">
-                <span class="ip-fade inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">Hoe wij werken</span>
-                <h2 class="ip-fade text-white text-4xl lg:text-5xl font-bold leading-[1.05]">Van bestelling tot<br><span class="text-primary">opgeleverde sportschool</span></h2>
+                <span class="ip-fade inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">{{ $teksten->tekst('section3_label', 'Hoe wij werken') }}</span>
+                <h2 class="ip-fade text-white text-4xl lg:text-5xl font-bold leading-[1.05]">{{ $teksten->inline('section3_title', 'Van bestelling tot<br><span class="text-primary">opgeleverde sportschool</span>') }}</h2>
             </div>
 
             @php
@@ -95,16 +95,16 @@
                 [
                     'nr' => '01',
                     'icon' => 'fa-clipboard-check',
-                    'title' => 'Orderbevestiging & planning',
-                    'desc' => 'Na akkoord op de offerte plannen we direct de levering in. Je krijgt één planning met een vaste opleverdatum, afgestemd op de bouw of verbouwing van jouw ruimte.',
+                    'title' => $teksten->tekst('section3_step1_title', e('Orderbevestiging & planning')),
+                    'desc' => $teksten->tekst('section3_step1_text', e('Na akkoord op de offerte plannen we direct de levering in. Je krijgt één planning met een vaste opleverdatum, afgestemd op de bouw of verbouwing van jouw ruimte.')),
                     'detail' => 'Vaste opleverdatum',
                     'video' => '/assets/li-step01.mp4',
                 ],
                 [
                     'nr' => '02',
                     'icon' => 'fa-truck-fast',
-                    'title' => 'Levering & transport',
-                    'desc' => 'Wij regelen het volledige transport, van fabrikant tot jouw deur. Ook bij lastige locaties: verdiepingen, smalle doorgangen of binnensteden. Wij hebben het allemaal gezien.',
+                    'title' => $teksten->tekst('section3_step2_title', e('Levering & transport')),
+                    'desc' => $teksten->tekst('section3_step2_text', e('Wij regelen het volledige transport, van fabrikant tot jouw deur. Ook bij lastige locaties: verdiepingen, smalle doorgangen of binnensteden. Wij hebben het allemaal gezien.')),
                     'detail' => 'NL & BE breed',
                     'image' => '/assets/li-step02.jpg',
                     'image_alt' => 'Levering fitnessapparatuur',
@@ -112,8 +112,8 @@
                 [
                     'nr' => '03',
                     'icon' => 'fa-screwdriver-wrench',
-                    'title' => 'Montage & installatie',
-                    'desc' => 'Ons montageteam bouwt alles op volgens het ontwerp: apparatuur, vloeren, verlichting, spiegels, kluisjes, meubels en audio. Elke machine wordt afgesteld en getest.',
+                    'title' => $teksten->tekst('section3_step3_title', e('Montage & installatie')),
+                    'desc' => $teksten->tekst('section3_step3_text', e('Ons montageteam bouwt alles op volgens het ontwerp: apparatuur, vloeren, verlichting, spiegels, kluisjes, meubels en audio. Elke machine wordt afgesteld en getest.')),
                     'detail' => 'Eigen montageteam',
                     'image' => '/assets/li-step03.jpg',
                     'image_alt' => 'Montage fitnessapparatuur',
@@ -121,8 +121,8 @@
                 [
                     'nr' => '04',
                     'icon' => 'fa-circle-check',
-                    'title' => 'Oplevering',
-                    'desc' => 'We lopen samen alles na: staat elke machine op de juiste plek, werkt alles naar behoren? Pas als jij tevreden bent, is de klus af.',
+                    'title' => $teksten->tekst('section3_step4_title', e('Oplevering')),
+                    'desc' => $teksten->tekst('section3_step4_text', e('We lopen samen alles na: staat elke machine op de juiste plek, werkt alles naar behoren? Pas als jij tevreden bent, is de klus af.')),
                     'detail' => 'Direct klaar voor gebruik',
                     'video' => '/assets/li-step04.mp4',
                 ],
@@ -189,10 +189,10 @@
                     <img src="{{ asset('assets/li-blok4.jpg') }}" alt="Complete sportschoolinrichting" class="w-full h-full object-cover">
                 </div>
                 <div class="ip-block-text">
-                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Compleet assortiment</span>
-                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Meer dan alleen <span class="text-primary">apparatuur</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Een sportschool is meer dan een rij machines. Daarom leveren en installeren wij de complete inrichting: apparatuur van 18 merken, sportvloeren zoals PVC, laminaat, rubberen tegels en Sprinttracks, verlichting, spiegels, kluisjes, meubels en audio.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Alles komt uit één hand en wordt in één planning geïnstalleerd. Geen vijf leveranciers met vijf leverdata, maar één team dat jouw sportschool compleet oplevert.</p>
+                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $teksten->tekst('section4_label', 'Compleet assortiment') }}</span>
+                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">{{ $teksten->inline('section4_title', 'Meer dan alleen <span class="text-primary">apparatuur</span>') }}</h2>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">{{ $teksten->tekst('section4_text1', 'Een sportschool is meer dan een rij machines. Daarom leveren en installeren wij de complete inrichting: apparatuur van 18 merken, sportvloeren zoals PVC, laminaat, rubberen tegels en Sprinttracks, verlichting, spiegels, kluisjes, meubels en audio.') }}</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">{{ $teksten->tekst('section4_text2', 'Alles komt uit één hand en wordt in één planning geïnstalleerd. Geen vijf leveranciers met vijf leverdata, maar één team dat jouw sportschool compleet oplevert.') }}</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                         <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/onze-merken') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk alle merken</a>
@@ -201,5 +201,7 @@
             </div>
         </div>
     </section>
+
+    @include('partials.seo-tekst')
 
 @endsection

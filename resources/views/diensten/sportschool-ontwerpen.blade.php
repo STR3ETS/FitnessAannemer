@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Sportschool ontwerpen laten maken | Fitness Aannemer')
-@section('meta_description', 'Sportschool laten ontwerpen? Plattegrond, 3D-ontwerp en raming in een traject, gebaseerd op een businessmodel dat klopt. 40+ projecten in NL en BE.')
+@section('title', $teksten->meta('meta_title', 'Sportschool ontwerpen laten maken') . ' | Fitness Aannemer')
+@section('meta_description', $teksten->meta('meta_description', 'Sportschool laten ontwerpen? Plattegrond, 3D-ontwerp en raming in een traject, gebaseerd op een businessmodel dat klopt. 40+ projecten in NL en BE.'))
 
 @section('schema')
 <script type="application/ld+json">
@@ -119,8 +119,8 @@
                 <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">Sportschool ontwerpen</span>
             </div>
             <div class="max-w-3xl">
-                <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Sportschool<br><span class="text-primary">ontwerpen</span></h1>
-                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">Een goed sportschoolontwerp past bij je budget en verdient zichzelf terug. Wij ontwerpen je gym op basis van je businessmodel: indeling, sfeer, apparatuur en materialen afgestemd op wat je wilt investeren. Zo weet je vóór de eerste schop in de grond wat je bouwt, wat het kost en wanneer je het terugverdient.</p>
+                <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">{{ $teksten->inline('hero_title', 'Sportschool<br><span class="text-primary">ontwerpen</span>') }}</h1>
+                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">{{ $teksten->tekst('hero_text', 'Een goed sportschoolontwerp past bij je budget en verdient zichzelf terug. Wij ontwerpen je gym op basis van je businessmodel: indeling, sfeer, apparatuur en materialen afgestemd op wat je wilt investeren. Zo weet je vóór de eerste schop in de grond wat je bouwt, wat het kost en wanneer je het terugverdient.') }}</p>
                 <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                     <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Plan een kennismaking <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                     <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk projecten</a>
@@ -148,10 +148,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="ip-block-text">
-                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Onze aanpak</span>
-                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Eerst rekenen, dan tekenen, <span class="text-primary">dan bouwen</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Wij richten ons alleen op sportscholen. Daardoor weten we hoe een club beweegt, hoe hij geld verdient en wat materialen en apparatuur kosten. Die kennis zit vanaf de eerste schets in je ontwerp.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Eerst rekenen we je businessmodel door: hoeveel leden heb je nodig, wat mag de inrichting kosten, wat levert elke vierkante meter op. Daarna tekenen we. En als ontwerp en prijs kloppen, bouwen we.</p>
+                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $teksten->tekst('section2_label', 'Onze aanpak') }}</span>
+                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">{{ $teksten->inline('section2_title', 'Eerst rekenen, dan tekenen, <span class="text-primary">dan bouwen</span>') }}</h2>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">{{ $teksten->tekst('section2_text1', 'Wij richten ons alleen op sportscholen. Daardoor weten we hoe een club beweegt, hoe hij geld verdient en wat materialen en apparatuur kosten. Die kennis zit vanaf de eerste schets in je ontwerp.') }}</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">{{ $teksten->tekst('section2_text2', 'Eerst rekenen we je businessmodel door: hoeveel leden heb je nodig, wat mag de inrichting kosten, wat levert elke vierkante meter op. Daarna tekenen we. En als ontwerp en prijs kloppen, bouwen we.') }}</p>
                     <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Plan een kennismaking <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                 </div>
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
@@ -169,10 +169,10 @@
                     <img src="{{ asset('assets/foto-assets/FULL-Ballin-Fit-013-WF206762-1-1024x683.jpg') }}" alt="Sportschool interieur ontworpen naar budget" class="w-full h-full object-cover">
                 </div>
                 <div class="ip-block-text order-1 lg:order-2">
-                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Budget</span>
-                    <h2 class="text-white text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Ontwerpen naar <span class="text-primary">budget</span></h2>
-                    <p class="text-white/50 text-sm leading-relaxed mb-4">Elk ontwerp dat we maken past bij je budget. Een sportschool moet zich in een succesvolle casus binnen 3 tot 5 jaar terugverdienen. Een onbeperkt budget bestaat dus niet: alles wat je extra uitgeeft, moet je ook weer terugverdienen.</p>
-                    <p class="text-white/50 text-sm leading-relaxed">High end hoeft niet altijd duur te zijn. Echt marmer of RVS ziet er prachtig uit, maar HPL-platen met dezelfde look schelen enorm in prijs. Juist omdat we materialen en hun prijzen kennen, kunnen we de uitstraling neerzetten die je wilt, binnen het bedrag dat je wilt investeren.</p>
+                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $teksten->tekst('section3_label', 'Budget') }}</span>
+                    <h2 class="text-white text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">{{ $teksten->inline('section3_title', 'Ontwerpen naar <span class="text-primary">budget</span>') }}</h2>
+                    <p class="text-white/50 text-sm leading-relaxed mb-4">{{ $teksten->tekst('section3_text1', 'Elk ontwerp dat we maken past bij je budget. Een sportschool moet zich in een succesvolle casus binnen 3 tot 5 jaar terugverdienen. Een onbeperkt budget bestaat dus niet: alles wat je extra uitgeeft, moet je ook weer terugverdienen.') }}</p>
+                    <p class="text-white/50 text-sm leading-relaxed">{{ $teksten->tekst('section3_text2', 'High end hoeft niet altijd duur te zijn. Echt marmer of RVS ziet er prachtig uit, maar HPL-platen met dezelfde look schelen enorm in prijs. Juist omdat we materialen en hun prijzen kennen, kunnen we de uitstraling neerzetten die je wilt, binnen het bedrag dat je wilt investeren.') }}</p>
                 </div>
             </div>
         </div>
@@ -183,8 +183,8 @@
         <div class="horizontal-blob w-[500px] h-[500px]" style="background: radial-gradient(circle, rgba(82,171,226,0.15) 0%, rgba(82,171,226,0) 70%); top: -15%; right: -5%; animation: blob-float-2 22s ease-in-out infinite;"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
             <div class="text-center mb-12 lg:mb-16">
-                <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">Wat je krijgt</span>
-                <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05]">Wat je van ons <span class="text-primary">krijgt</span></h2>
+                <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">{{ $teksten->tekst('section4_label', 'Wat je krijgt') }}</span>
+                <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05]">{{ $teksten->inline('section4_title', 'Wat je van ons <span class="text-primary">krijgt</span>') }}</h2>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 @php
@@ -215,8 +215,8 @@
     <section class="bg-secondary py-16 lg:py-32 overflow-hidden" id="so-process">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-20">
-                <span class="ip-fade inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">Het traject</span>
-                <h2 class="ip-fade text-white text-4xl lg:text-5xl font-bold leading-[1.05]">Zo verloopt het<br><span class="text-primary">ontwerptraject</span></h2>
+                <span class="ip-fade inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">{{ $teksten->tekst('section5_label', 'Het traject') }}</span>
+                <h2 class="ip-fade text-white text-4xl lg:text-5xl font-bold leading-[1.05]">{{ $teksten->inline('section5_title', 'Zo verloopt het<br><span class="text-primary">ontwerptraject</span>') }}</h2>
             </div>
 
             @php
@@ -224,37 +224,37 @@
                 [
                     'nr' => '01',
                     'icon' => 'fa-magnifying-glass',
-                    'title' => 'Haalbaarheid en schetsontwerp',
+                    'title' => $teksten->tekst('section5_step1_title', e('Haalbaarheid en schetsontwerp')),
                     'duration' => '4 weken',
-                    'desc' => 'Na akkoord plannen we een online kick-off, daarna een locatiebezoek met ontwerper en aannemer. Drie weken later ligt er een schetsontwerp met raming (marge ±10%). Hier beslis je of je doorgaat.',
+                    'desc' => $teksten->tekst('section5_step1_text', e('Na akkoord plannen we een online kick-off, daarna een locatiebezoek met ontwerper en aannemer. Drie weken later ligt er een schetsontwerp met raming (marge ±10%). Hier beslis je of je doorgaat.')),
                 ],
                 [
                     'nr' => '02',
                     'icon' => 'fa-compass-drafting',
-                    'title' => 'Voorlopig ontwerp',
+                    'title' => $teksten->tekst('section5_step2_title', e('Voorlopig ontwerp')),
                     'duration' => '',
-                    'desc' => 'De indeling en sfeer worden uitgewerkt in 3D. Daarna volgt de definitieve offerte.',
+                    'desc' => $teksten->tekst('section5_step2_text', e('De indeling en sfeer worden uitgewerkt in 3D. Daarna volgt de definitieve offerte.')),
                 ],
                 [
                     'nr' => '03',
                     'icon' => 'fa-file-signature',
-                    'title' => 'Definitief ontwerp',
+                    'title' => $teksten->tekst('section5_step3_title', e('Definitief ontwerp')),
                     'duration' => '',
-                    'desc' => 'Alles staat vast: tekeningen, materialen en apparatuur.',
+                    'desc' => $teksten->tekst('section5_step3_text', e('Alles staat vast: tekeningen, materialen en apparatuur.')),
                 ],
                 [
                     'nr' => '04',
                     'icon' => 'fa-list-check',
-                    'title' => 'Werkvoorbereiding',
+                    'title' => $teksten->tekst('section5_step4_title', e('Werkvoorbereiding')),
                     'duration' => '',
-                    'desc' => 'Planning, bestellingen en afspraken met leveranciers en aannemer.',
+                    'desc' => $teksten->tekst('section5_step4_text', e('Planning, bestellingen en afspraken met leveranciers en aannemer.')),
                 ],
                 [
                     'nr' => '05',
                     'icon' => 'fa-hammer',
-                    'title' => 'Realisatie',
+                    'title' => $teksten->tekst('section5_step5_title', e('Realisatie')),
                     'duration' => '6-8 weken bouw',
-                    'desc' => 'We kunnen een week na opdracht starten met bouwen. De bouw duurt 6 tot 8 weken, de levertijd van apparatuur 10 tot 20 weken, afhankelijk van het merk. Wij voeren de regie tot de sleuteloverdracht.',
+                    'desc' => $teksten->tekst('section5_step5_text', e('We kunnen een week na opdracht starten met bouwen. De bouw duurt 6 tot 8 weken, de levertijd van apparatuur 10 tot 20 weken, afhankelijk van het merk. Wij voeren de regie tot de sleuteloverdracht.')),
                 ],
             ];
             @endphp
@@ -289,8 +289,8 @@
             </div>
 
             <div class="mt-16 text-center">
-                <p class="text-white/50 text-sm mb-2">Heb je een harde openingsdatum? Dan werken we sneller.</p>
-                <p class="text-white/50 text-sm">Je betaalt per fase en beslist na iedere fase of je verder gaat. Bouw je daarna met ons, dan krijg je 50% van het ontwerptraject terug als korting op de realisatie, mits wij de complete inrichting leveren.</p>
+                <p class="text-white/50 text-sm mb-2">{{ $teksten->tekst('section5_text1', 'Heb je een harde openingsdatum? Dan werken we sneller.') }}</p>
+                <p class="text-white/50 text-sm">{{ $teksten->tekst('section5_text2', 'Je betaalt per fase en beslist na iedere fase of je verder gaat. Bouw je daarna met ons, dan krijg je 50% van het ontwerptraject terug als korting op de realisatie, mits wij de complete inrichting leveren.') }}</p>
             </div>
         </div>
     </section>
@@ -300,10 +300,10 @@
         <div class="horizontal-blob w-[600px] h-[600px]" style="background: radial-gradient(circle, rgba(82,171,226,0.18) 0%, rgba(82,171,226,0) 70%); bottom: -20%; left: -8%; animation: blob-float-1 20s ease-in-out infinite;"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
             <div class="max-w-3xl mx-auto text-center">
-                <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">Investering</span>
-                <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Wat kost een sportschool <span class="text-primary">ontwerp?</span></h2>
-                <p class="text-secondary/50 text-sm leading-relaxed mb-4">Een volledig ontwerptraject start vanaf &euro;10.000. De prijs hangt af van het aantal vierkante meters en je budget. Een PT-studio van 150 m² vraagt een ander traject dan een club van 1.500 m².</p>
-                <p class="text-secondary/50 text-sm leading-relaxed mb-8">Een compleet ontwerptraject past bij ondernemers met een pand (of een pand op het oog) en een investeringsbudget vanaf &euro;100.000. Is je budget lager? Dan is een volledig interieurontwerp vaak niet nodig. We helpen je dan met een slimme indeling en de juiste inrichting, zonder compleet ontwerptraject.</p>
+                <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">{{ $teksten->tekst('section6_label', 'Investering') }}</span>
+                <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">{{ $teksten->inline('section6_title', 'Wat kost een sportschool <span class="text-primary">ontwerp?</span>') }}</h2>
+                <p class="text-secondary/50 text-sm leading-relaxed mb-4">{{ $teksten->tekst('section6_text1', 'Een volledig ontwerptraject start vanaf &euro;10.000. De prijs hangt af van het aantal vierkante meters en je budget. Een PT-studio van 150 m² vraagt een ander traject dan een club van 1.500 m².') }}</p>
+                <p class="text-secondary/50 text-sm leading-relaxed mb-8">{{ $teksten->tekst('section6_text2', 'Een compleet ontwerptraject past bij ondernemers met een pand (of een pand op het oog) en een investeringsbudget vanaf &euro;100.000. Is je budget lager? Dan is een volledig interieurontwerp vaak niet nodig. We helpen je dan met een slimme indeling en de juiste inrichting, zonder compleet ontwerptraject.') }}</p>
                 <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="inline-flex bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Plan een kennismaking <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
             </div>
         </div>
@@ -313,8 +313,8 @@
     <section class="bg-secondary py-16 lg:py-32 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-12 lg:mb-16">
-                <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">Waarom wij</span>
-                <h2 class="text-white text-3xl lg:text-5xl font-bold leading-[1.05]">Waarom <span class="text-primary">Fitness Aannemer</span></h2>
+                <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">{{ $teksten->tekst('section7_label', 'Waarom wij') }}</span>
+                <h2 class="text-white text-3xl lg:text-5xl font-bold leading-[1.05]">{{ $teksten->inline('section7_title', 'Waarom <span class="text-primary">Fitness Aannemer</span>') }}</h2>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 @php
@@ -343,8 +343,8 @@
     <section class="bg-white py-16 lg:py-32 relative overflow-hidden" data-header-light>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
             <div class="text-center mb-12 lg:mb-16">
-                <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">Projecten</span>
-                <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05]">Ontwerpen die <span class="text-primary">al draaien</span></h2>
+                <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">{{ $teksten->tekst('section8_label', 'Projecten') }}</span>
+                <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05]">{{ $teksten->inline('section8_title', 'Ontwerpen die <span class="text-primary">al draaien</span>') }}</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 @php
@@ -401,8 +401,8 @@
     <section class="bg-secondary py-16 lg:py-32 overflow-hidden" id="so-faq">
         <div class="max-w-3xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-12 lg:mb-16">
-                <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">FAQ</span>
-                <h2 class="text-white text-3xl lg:text-5xl font-bold leading-[1.05]">Veelgestelde <span class="text-primary">vragen</span></h2>
+                <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">{{ $teksten->tekst('section9_label', 'FAQ') }}</span>
+                <h2 class="text-white text-3xl lg:text-5xl font-bold leading-[1.05]">{{ $teksten->inline('section9_title', 'Veelgestelde <span class="text-primary">vragen</span>') }}</h2>
             </div>
             @php
             $faqs = [
@@ -433,9 +433,11 @@
     {{-- Slot CTA --}}
     <section class="bg-primary py-16 lg:py-24 overflow-hidden">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-            <h2 class="text-white text-3xl lg:text-5xl font-bold leading-[1.05] mb-6">Klaar om je sportschool te <span class="text-secondary">ontwerpen?</span></h2>
-            <p class="text-white/80 text-sm leading-relaxed mb-8 max-w-xl mx-auto">Plan een kennismaking. We bespreken je plan, pand en budget, en vertellen eerlijk of het haalbaar is.</p>
+            <h2 class="text-white text-3xl lg:text-5xl font-bold leading-[1.05] mb-6">{{ $teksten->inline('section10_title', 'Klaar om je sportschool te <span class="text-secondary">ontwerpen?</span>') }}</h2>
+            <p class="text-white/80 text-sm leading-relaxed mb-8 max-w-xl mx-auto">{{ $teksten->tekst('section10_text1', 'Plan een kennismaking. We bespreken je plan, pand en budget, en vertellen eerlijk of het haalbaar is.') }}</p>
             <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="inline-flex bg-secondary hover:bg-secondary/90 rounded-full px-8 py-4 text-white text-sm font-semibold transition">Plan een kennismaking <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
         </div>
     </section>
+    @include('partials.seo-tekst')
+
 @endsection

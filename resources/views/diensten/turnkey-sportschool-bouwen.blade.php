@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Turnkey sportschool bouwen | Fitness Aannemer')
-@section('meta_description', 'Turnkey sportschool bouwen: van ontwerp tot sleuteloverdracht onder één regie. Eén aanspreekpunt, vaste opleverdatum, complete inrichting. Plan een gratis adviesgesprek.')
+@section('title', $teksten->meta('meta_title', 'Turnkey sportschool bouwen') . ' | Fitness Aannemer')
+@section('meta_description', $teksten->meta('meta_description', 'Turnkey sportschool bouwen: van ontwerp tot sleuteloverdracht onder één regie. Eén aanspreekpunt, vaste opleverdatum, complete inrichting. Plan een gratis adviesgesprek.'))
 
 @section('schema')
 <script type="application/ld+json">
@@ -51,8 +51,8 @@
                 <span class="text-white/70 text-xs font-medium" style="font-family: 'Inter'">Turnkey sportschool bouwen</span>
             </div>
             <div class="max-w-3xl">
-                <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">Turnkey sportschool<br><span class="text-primary">bouwen</span></h1>
-                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">Eén partij die alles regelt: ontwerp, bouw, inrichting en oplevering. Wij stellen het bouwteam samen, voeren de totale regie en leveren zelf alles wat jouw sportschool tot sportschool maakt.</p>
+                <h1 class="ip-hero-el text-white text-4xl lg:text-6xl font-bold leading-[1]">{{ $teksten->inline('hero_title', 'Turnkey sportschool<br><span class="text-primary">bouwen</span>') }}</h1>
+                <p class="ip-hero-el text-white/60 text-sm lg:text-base leading-relaxed max-w-xl my-8">{{ $teksten->tekst('hero_text', 'Eén partij die alles regelt: ontwerp, bouw, inrichting en oplevering. Wij stellen het bouwteam samen, voeren de totale regie en leveren zelf alles wat jouw sportschool tot sportschool maakt.') }}</p>
                 <div class="ip-hero-el flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                     <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                     <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk onze projecten</a>
@@ -68,10 +68,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="ip-block-text">
-                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Totale regie</span>
-                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Eén aanspreekpunt, <span class="text-primary">geen gedoe</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Een sportschool bouwen betekent normaal schakelen met een aannemer, elektricien, vloerenlegger, apparatuurleverancier en nog vijf andere partijen. Bij ons niet. Wij stellen per project een bouwteam samen van vaste partneraannemers en specialisten, en voeren de totale regie over elke fase.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Van sloop en wanden tot installaties, gietvloeren en schilderwerk; jij hebt één aanspreekpunt, één planning en één opleverdatum. Heb je zelf al een schilder of installateur? Die schuift gewoon aan in ons bouwteam, onder onze regie.</p>
+                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $teksten->tekst('section2_label', 'Totale regie') }}</span>
+                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">{{ $teksten->inline('section2_title', 'Eén aanspreekpunt, <span class="text-primary">geen gedoe</span>') }}</h2>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">{{ $teksten->tekst('section2_text1', 'Een sportschool bouwen betekent normaal schakelen met een aannemer, elektricien, vloerenlegger, apparatuurleverancier en nog vijf andere partijen. Bij ons niet. Wij stellen per project een bouwteam samen van vaste partneraannemers en specialisten, en voeren de totale regie over elke fase.') }}</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">{{ $teksten->tekst('section2_text2', 'Van sloop en wanden tot installaties, gietvloeren en schilderwerk; jij hebt één aanspreekpunt, één planning en één opleverdatum. Heb je zelf al een schilder of installateur? Die schuift gewoon aan in ons bouwteam, onder onze regie.') }}</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                         <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
@@ -88,8 +88,8 @@
     <section class="bg-secondary py-16 lg:py-32 overflow-hidden" id="tk-process">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-20">
-                <span class="ip-fade inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">Hoe wij werken</span>
-                <h2 class="ip-fade text-white text-4xl lg:text-5xl font-bold leading-[1.05]">Van eerste gesprek tot<br><span class="text-primary">sleuteloverdracht</span></h2>
+                <span class="ip-fade inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-4">{{ $teksten->tekst('section3_label', 'Hoe wij werken') }}</span>
+                <h2 class="ip-fade text-white text-4xl lg:text-5xl font-bold leading-[1.05]">{{ $teksten->inline('section3_title', 'Van eerste gesprek tot<br><span class="text-primary">sleuteloverdracht</span>') }}</h2>
             </div>
 
             @php
@@ -97,40 +97,40 @@
                 [
                     'nr' => '01',
                     'icon' => 'fa-comments',
-                    'title' => 'Kennismaking & intake',
-                    'desc' => 'We starten met een vrijblijvend gesprek. Wat is jouw plan? Wie moet er straks trainen én betalen? Welke ruimte heb je op het oog? We brengen alles in kaart, van ambitie tot budget.',
+                    'title' => $teksten->tekst('section3_step1_title', e('Kennismaking & intake')),
+                    'desc' => $teksten->tekst('section3_step1_text', e('We starten met een vrijblijvend gesprek. Wat is jouw plan? Wie moet er straks trainen én betalen? Welke ruimte heb je op het oog? We brengen alles in kaart, van ambitie tot budget.')),
                     'detail' => 'Bij ons op kantoor of op locatie',
                     'video' => '/assets/tk-step01.mp4',
                 ],
                 [
                     'nr' => '02',
                     'icon' => 'fa-compass-drafting',
-                    'title' => 'Ontwerp & projectplan',
-                    'desc' => 'Ons ontwerpteam maakt de plattegrond en fotorealistische 3D-visualisatie, inclusief apparatuurkeuze. Alles komt samen in een helder projectplan met planning en transparante offerte.',
+                    'title' => $teksten->tekst('section3_step2_title', e('Ontwerp & projectplan')),
+                    'desc' => $teksten->tekst('section3_step2_text', e('Ons ontwerpteam maakt de plattegrond en fotorealistische 3D-visualisatie, inclusief apparatuurkeuze. Alles komt samen in een helder projectplan met planning en transparante offerte.')),
                     'detail' => 'Compleet en transparant',
                     'video' => '/assets/tk-step02.mp4',
                 ],
                 [
                     'nr' => '03',
                     'icon' => 'fa-helmet-safety',
-                    'title' => 'Bouw onder onze regie',
-                    'desc' => 'Wij stellen het bouwteam samen en voeren de regie over de volledige verbouwing: wanden, vloeren, installaties, schilderwerk en afwerking. Jij hoeft nergens achteraan.',
+                    'title' => $teksten->tekst('section3_step3_title', e('Bouw onder onze regie')),
+                    'desc' => $teksten->tekst('section3_step3_text', e('Wij stellen het bouwteam samen en voeren de regie over de volledige verbouwing: wanden, vloeren, installaties, schilderwerk en afwerking. Jij hoeft nergens achteraan.')),
                     'detail' => 'Eén planning, één aanspreekpunt',
                     'video' => '/shorts/fitnessaannemer-short-4.mp4',
                 ],
                 [
                     'nr' => '04',
                     'icon' => 'fa-truck-fast',
-                    'title' => 'Levering & installatie',
-                    'desc' => 'Terwijl de bouw loopt, is de apparatuur al onderweg. Ons montageteam installeert de complete inrichting: apparatuur, vloeren, verlichting, spiegels, kluisjes, meubels en audio.',
+                    'title' => $teksten->tekst('section3_step4_title', e('Levering & installatie')),
+                    'desc' => $teksten->tekst('section3_step4_text', e('Terwijl de bouw loopt, is de apparatuur al onderweg. Ons montageteam installeert de complete inrichting: apparatuur, vloeren, verlichting, spiegels, kluisjes, meubels en audio.')),
                     'detail' => 'Eigen montageteam, NL & BE breed',
                     'video' => '/assets/tk-step04.mp4',
                 ],
                 [
                     'nr' => '05',
                     'icon' => 'fa-key',
-                    'title' => 'Schoonmaak & sleuteloverdracht',
-                    'desc' => 'Ons schoonmaakteam maakt de volledige ruimte grondig schoon. Daarna lopen we samen elk punt van het ontwerp na. Klopt alles? Dan krijg jij de sleutel en kan de opening gepland worden.',
+                    'title' => $teksten->tekst('section3_step5_title', e('Schoonmaak & sleuteloverdracht')),
+                    'desc' => $teksten->tekst('section3_step5_text', e('Ons schoonmaakteam maakt de volledige ruimte grondig schoon. Daarna lopen we samen elk punt van het ontwerp na. Klopt alles? Dan krijg jij de sleutel en kan de opening gepland worden.')),
                     'detail' => 'Klaar voor je eerste leden',
                     'video' => '/assets/tk-step05.mp4',
                 ],
@@ -180,10 +180,10 @@
                     <img src="{{ asset('assets/tk-planning.jpg') }}" alt="Slimme planning sportschoolproject" class="w-full h-full object-cover">
                 </div>
                 <div class="ip-block-text">
-                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Slimme planning</span>
-                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Geen week <span class="text-primary">verloren</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">De doorlooptijd van een sportschoolproject wordt vooral bepaald door de levertijd van apparatuur: gemiddeld 12 tot 14 weken. Die tijd benutten we slim. Terwijl de apparatuur onderweg is, bouwen en richten wij de ruimte in.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Zo staat alles klaar zodra de machines arriveren en loopt de bouw nooit te wachten op de levering, of andersom. In het adviesgesprek krijg je een concrete planning voor jouw project, met een vaste opleverdatum.</p>
+                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $teksten->tekst('section4_label', 'Slimme planning') }}</span>
+                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">{{ $teksten->inline('section4_title', 'Geen week <span class="text-primary">verloren</span>') }}</h2>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">{{ $teksten->tekst('section4_text1', 'De doorlooptijd van een sportschoolproject wordt vooral bepaald door de levertijd van apparatuur: gemiddeld 12 tot 14 weken. Die tijd benutten we slim. Terwijl de apparatuur onderweg is, bouwen en richten wij de ruimte in.') }}</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">{{ $teksten->tekst('section4_text2', 'Zo staat alles klaar zodra de machines arriveren en loopt de bouw nooit te wachten op de levering, of andersom. In het adviesgesprek krijg je een concrete planning voor jouw project, met een vaste opleverdatum.') }}</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                         <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk onze projecten</a>
@@ -199,10 +199,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="ip-block-text">
-                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">Complete inrichting</span>
-                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Alles uit <span class="text-primary">één hand</span></h2>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">Naast de bouw leveren wij zelf de volledige inrichting: apparatuur van 18 merken, sportvloeren zoals PVC, laminaat, rubberen tegels en Sprinttracks, verlichting, spiegels, kluisjes, meubels en audio.</p>
-                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">Alles wordt ontworpen door ons eigen ontwerpteam en geïnstalleerd door ons eigen montageteam. Zo sluit elk onderdeel naadloos op elkaar aan, van plattegrond tot de laatste machine.</p>
+                    <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $teksten->tekst('section5_label', 'Complete inrichting') }}</span>
+                    <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">{{ $teksten->inline('section5_title', 'Alles uit <span class="text-primary">één hand</span>') }}</h2>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-4">{{ $teksten->tekst('section5_text1', 'Naast de bouw leveren wij zelf de volledige inrichting: apparatuur van 18 merken, sportvloeren zoals PVC, laminaat, rubberen tegels en Sprinttracks, verlichting, spiegels, kluisjes, meubels en audio.') }}</p>
+                    <p class="text-secondary/50 text-sm leading-relaxed mb-8">{{ $teksten->tekst('section5_text2', 'Alles wordt ontworpen door ons eigen ontwerpteam en geïnstalleerd door ons eigen montageteam. Zo sluit elk onderdeel naadloos op elkaar aan, van plattegrond tot de laatste machine.') }}</p>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                         <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/onze-merken') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Bekijk alle merken</a>
@@ -214,5 +214,7 @@
             </div>
         </div>
     </section>
+
+    @include('partials.seo-tekst')
 
 @endsection

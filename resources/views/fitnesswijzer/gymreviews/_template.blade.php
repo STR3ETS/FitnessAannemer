@@ -38,6 +38,7 @@
 @endsection
 
 @section('content')
+    @php $stillUitsnede = str_starts_with($media1, 'assets/gymreviews/') ? 'object-[center_28%]' : ''; @endphp
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30 relative overflow-hidden">
         <div class="hidden lg:block absolute inset-y-0 right-0 w-1/2">
             @if(str_ends_with($media1, '.mp4'))
@@ -45,7 +46,7 @@
             @elseif(str_starts_with($media1, 'http'))
                 <img src="{{ $media1 }}" alt="{{ $title }}" class="w-full h-full object-cover">
             @else
-                <img src="{{ asset($media1) }}" alt="{{ $title }}" class="w-full h-full object-cover">
+                <img src="{{ asset($media1) }}" alt="{{ $title }}" class="w-full h-full object-cover {{ $stillUitsnede }}">
             @endif
             <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-transparent"></div>
             <div class="absolute w-[650px] h-[650px] rounded-full border border-white/[0.07] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
@@ -91,7 +92,7 @@
                     @elseif(str_starts_with($media1, 'http'))
                         <img src="{{ $media1 }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
                     @else
-                        <img src="{{ asset($media1) }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
+                        <img src="{{ asset($media1) }}" alt="{{ $title }}" class="w-full h-full object-cover {{ $stillUitsnede }}" loading="lazy">
                     @endif
                 </div>
             </div>
@@ -101,6 +102,19 @@
     <section class="bg-secondary py-16 lg:py-32 overflow-hidden" id="gd-section2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                @if(!empty($tiktok))
+                {{-- De TikTok-speler laadt pas na een klik: scheelt laadtijd en er gaat vooraf niets naar TikTok --}}
+                <div class="flex justify-center">
+                    <div class="ip-block-media relative w-full max-w-[340px] aspect-[9/16] rounded-3xl overflow-hidden bg-black border border-white/[0.08] shadow-2xl">
+                        <button type="button" class="tiktok-facade group absolute inset-0 w-full h-full cursor-pointer" data-tiktok-id="{{ $tiktok }}" aria-label="Speel de videoreview af: {{ $title }}">
+                            <img src="{{ asset($media3 ?: $media1) }}" alt="Videoreview {{ $title }}" class="w-full h-full object-cover" loading="lazy" width="540" height="960">
+                            <span class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></span>
+                            <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform"><i class="fa-solid fa-play text-white text-xl ml-1"></i></span>
+                            <span class="absolute bottom-5 left-0 right-0 text-center text-white text-xs font-semibold" style="font-family: 'Inter'">Bekijk de videoreview</span>
+                        </button>
+                    </div>
+                </div>
+                @else
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
                     @if(str_ends_with($mediaMid, '.mp4'))
                         <video data-src="{{ asset($mediaMid) }}" class="lazy-video w-full h-full object-cover" autoplay muted loop playsinline preload="none"></video>
@@ -110,6 +124,7 @@
                         <img src="{{ asset($mediaMid) }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
                     @endif
                 </div>
+                @endif
                 <div class="ip-block-text">
                     <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $midLabel }}</span>
                     <h2 class="text-white text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">{!! $midTitle !!}</h2>
@@ -128,7 +143,7 @@
         <div class="horizontal-blob w-[600px] h-[600px]" style="background: radial-gradient(circle, rgba(82,171,226,0.18) 0%, rgba(82,171,226,0) 70%); top: -15%; right: -5%; animation: blob-float-3 15s ease-in-out infinite;"></div>
         <div class="horizontal-blob w-[500px] h-[500px]" style="background: radial-gradient(circle, rgba(82,171,226,0.15) 0%, rgba(82,171,226,0) 70%); bottom: -20%; left: -8%; animation: blob-float-1 20s ease-in-out infinite;"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div class="grid grid-cols-1 {{ $media3 ? 'lg:grid-cols-2' : 'max-w-3xl' }} gap-10 lg:gap-16 items-center">
                 <div class="ip-block-text">
                     <span class="inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">{{ $section3Label }}</span>
                     <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">{!! $section3Title !!}</h2>
@@ -139,15 +154,17 @@
                         <a href="{{ url('/fitnesswijzer/gymreviews') }}" class="bg-secondary/10 border border-secondary/20 rounded-full px-6 py-3.5 text-secondary text-xs font-semibold hover:bg-secondary/20 transition">Alle gymreviews</a>
                     </div>
                 </div>
+                @if($media3)
                 <div class="ip-block-media rounded-3xl aspect-[4/3] overflow-hidden">
                     @if(str_ends_with($media3, '.mp4'))
                         <video data-src="{{ asset($media3) }}" class="lazy-video w-full h-full object-cover" autoplay muted loop playsinline preload="none"></video>
                     @elseif(str_starts_with($media3, 'http'))
                         <img src="{{ $media3 }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
                     @else
-                        <img src="{{ asset($media3) }}" alt="{{ $title }}" class="w-full h-full object-cover" loading="lazy">
+                        <img src="{{ asset($media3) }}" alt="{{ $title }}" class="w-full h-full object-cover object-[center_25%]" loading="lazy">
                     @endif
                 </div>
+                @endif
             </div>
         </div>
     </section>

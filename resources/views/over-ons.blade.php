@@ -77,7 +77,6 @@
                     {{-- Klantlogo's worden toegevoegd zodra logo's beschikbaar zijn --}}
                     @php
                     $klanten = [
-                        ['name' => 'Vitality Sports'],
                         ['name' => 'MANA'],
                         ['name' => 'De Krachtfabriek'],
                         ['name' => 'Ballin Fit'],
@@ -126,9 +125,8 @@
                 <p class="text-white/50 text-sm leading-relaxed max-w-2xl mx-auto">Eén team dat jouw project draagt: van concept en ontwerp tot verkoop, planning en cijfers. De uitvoering op de vloer doen we met ons vaste montageteam en bouwpartners, onder onze regie.</p>
             </div>
 
-            {{-- Groepsfoto placeholder --}}
-            <div class="ip-fade rounded-3xl aspect-[21/9] overflow-hidden bg-white/[0.03] border border-white/[0.06] mb-12 flex items-center justify-center">
-                <p class="text-white/20 text-sm">Groepsfoto volgt</p>
+            <div class="ip-fade rounded-3xl aspect-[3/2] lg:aspect-[16/9] overflow-hidden bg-white/[0.03] border border-white/[0.06] mb-12">
+                <img src="{{ asset('assets/team/groepsfoto.webp') }}" alt="Het team van Fitness Aannemer op de beursstand" class="w-full h-full object-cover object-[center_35%]" loading="lazy" width="1920" height="1280">
             </div>
 
             @php
@@ -139,8 +137,10 @@
                 ['name' => 'Kevin', 'role' => 'Accountmanager', 'desc' => 'Denkt mee van eerste vraag tot passend voorstel.', 'photo' => 'assets/team/kevin.webp'],
                 ['name' => 'Lars', 'role' => 'Assistent Conceptmanager', 'desc' => 'Ondersteunt bij conceptontwikkeling en uitvoering.', 'photo' => 'assets/team/lars.webp'],
                 ['name' => 'Cacharel', 'role' => 'Interieur ontwerpster', 'desc' => 'Vertaalt het ontwerp naar de vloer.', 'photo' => 'assets/team/cacharel.webp'],
+                ['name' => 'Puck', 'role' => 'Interieur ontwerpster', 'desc' => 'Ontwerpt ruimtes die functioneel en visueel kloppen.', 'photo' => 'assets/team/puck.webp'],
                 ['name' => 'Renee', 'role' => 'Interieur ontwerpster', 'desc' => 'Plattegronden en 3D-visualisaties.', 'photo' => null],
                 ['name' => 'Jeroen', 'role' => 'Controller', 'desc' => 'Bewaakt budgetten en cijfers achter elk project.', 'photo' => 'assets/team/jeroen.webp'],
+                ['name' => 'Colin', 'role' => 'Content Creator', 'desc' => 'Maakt beelden van de projecten.', 'photo' => 'assets/team/colin.webp'],
             ];
             @endphp
 

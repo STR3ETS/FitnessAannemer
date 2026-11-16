@@ -235,4 +235,18 @@
         @endforeach
     @endif
 
+    @if(!empty($review))
+    <section class="bg-secondary py-16 lg:py-28 border-t border-b border-white/[0.06]" id="pd-review">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <span class="ip-fade inline-block text-primary text-xs font-semibold uppercase tracking-widest mb-6">De klant aan het woord</span>
+            <div class="ip-fade mb-6"><i class="fa-solid fa-quote-left text-primary/60 text-3xl"></i></div>
+            <blockquote class="ip-fade text-white text-lg lg:text-2xl font-semibold leading-relaxed mb-8">{{ $review['quote'] }}</blockquote>
+            <p class="ip-fade text-white text-sm font-bold" style="font-family: 'Inter'">{{ $review['name'] }}</p>
+            @if(!empty($review['role']))
+            <p class="ip-fade text-white/40 text-xs mt-1" style="font-family: 'Inter'">{{ $review['role'] }}</p>
+            @endif
+        </div>
+    </section>
+    @endif
+
 @endsection

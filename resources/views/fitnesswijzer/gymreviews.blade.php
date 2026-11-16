@@ -34,7 +34,7 @@
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-16 lg:pb-30 relative overflow-hidden">
         <div class="hidden lg:block absolute inset-y-0 right-0 w-1/2">
-            <img src="{{ asset('assets/wp-uploads/011_DSC0596-HDR-scaled-e1758023491547.jpg') }}" alt="Gymreviews door Fitness Aannemer" class="w-full h-full object-cover">
+            <img src="{{ asset('assets/MCJO4421.jpg') }}" alt="Gymreviews door Fitness Aannemer" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-transparent"></div>
             <div class="absolute w-[650px] h-[650px] rounded-full border border-white/[0.07] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
             <div class="absolute w-[400px] h-[400px] rounded-full border border-white/[0.10] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
@@ -92,7 +92,7 @@
                         @if(str_starts_with($artikel['cardImage'], 'http'))
                             <img src="{{ $artikel['cardImage'] }}" alt="{{ $artikel['title'] }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         @else
-                            <img src="{{ asset($artikel['cardImage']) }}" alt="{{ $artikel['title'] }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <img src="{{ asset($artikel['cardImage']) }}" alt="{{ $artikel['title'] }}" class="w-full h-full object-cover {{ str_starts_with($artikel['cardImage'], 'assets/gymreviews/') ? 'object-[center_28%]' : '' }} group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         @endif
                         <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/20"></div>
                         <div class="absolute bottom-0 left-0 right-0 p-8">

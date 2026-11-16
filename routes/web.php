@@ -64,6 +64,7 @@ Route::redirect('/projecten/ballin-fit-amsterdam-luxe-gym', '/projecten/ballin-f
 Route::redirect('/projecten/project-pt024-boutique-gym', '/projecten', 301);
 Route::redirect('/projecten/vitality-sports-duiven', '/projecten', 301);
 Route::redirect('/projecten/oldambt', '/projecten', 301);
+Route::redirect('/projecten/sportcentrum-de-kloek', '/projecten/de-kloek-hyrox-middenbeemster', 301);
 Route::get('/projecten/{slug}', [PageController::class, 'project'])->name('projecten.show');
 
 // Onze merken
@@ -118,6 +119,7 @@ Route::get('/fitnesswijzer/gym-verdienmodellen/{slug}', [PageController::class, 
 Route::get('/fitnesswijzer/tips-en-inspiratie', [PageController::class, 'tipsOverview'])->name('fitnesswijzer.tips');
 Route::get('/fitnesswijzer/tips-en-inspiratie/{slug}', [PageController::class, 'tip'])->name('fitnesswijzer.tips.show');
 Route::get('/fitnesswijzer/gymreviews', [PageController::class, 'gymreviewsOverview'])->name('fitnesswijzer.reviews');
+Route::redirect('/fitnesswijzer/gymreviews/gymreview-van-der-valk-hotel-deventer-gym', '/fitnesswijzer/gymreviews/gymreview-van-der-valk-hotel-duiven-gym', 301);
 Route::get('/fitnesswijzer/gymreviews/{slug}', [PageController::class, 'gymreview'])->name('fitnesswijzer.reviews.show');
 
 // E-books

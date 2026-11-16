@@ -161,6 +161,7 @@
                         <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                         <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk onze projecten</a>
                     </div>
+                    @include('partials.reviews-badge', ['class' => 'hero-fade mt-6'])
                 </div>
             </div>
         </section>
@@ -403,7 +404,7 @@
                         </div>
                         {{-- Desktop videos --}}
                         <div class="flex-shrink-0 relative hidden lg:block">
-                            <video data-src="{{ asset('assets/hww-stap1.mp4') }}" preload="none" class="lazy-video w-[270px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline></video>
+                            <video data-src="{{ asset('assets/hww-adviesgesprek.mp4') }}" preload="none" class="lazy-video w-[270px] aspect-[9/16] object-cover rounded-3xl shadow-2xl" muted loop playsinline></video>
                             <div class="absolute -bottom-6 -left-6 bg-white rounded-3xl shadow-xl p-5">
                                 <div class="flex items-center gap-3">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -1157,6 +1158,7 @@
                 <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary hover:bg-primary/90 rounded-full px-6 py-3.5 text-white text-xs font-semibold transition">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-2"></i></a>
                 <a href="{{ url('/projecten') }}" class="bg-white/10 border border-white/20 rounded-full px-6 py-3.5 text-white text-xs font-semibold hover:bg-white/20 transition">Bekijk onze projecten</a>
             </div>
+            @include('partials.reviews-badge', ['class' => 'mt-6'])
         </div>
 
         <div class="project-arc bg-secondary relative z-10 hidden sm:block">

@@ -119,6 +119,19 @@ if (standaloneVideos.length) {
     });
 }
 
+// ===== TikTok-video's: de speler laadt pas na een klik op de still =====
+document.querySelectorAll('.tiktok-facade').forEach((button) => {
+    button.addEventListener('click', () => {
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.tiktok.com/player/v1/${button.dataset.tiktokId}?autoplay=1&music_info=0&description=0&rel=0`;
+        iframe.allow = 'autoplay; fullscreen; encrypted-media; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.title = button.getAttribute('aria-label');
+        iframe.className = 'absolute inset-0 w-full h-full border-0';
+        button.replaceWith(iframe);
+    }, { once: true });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // ===== Fixed header: glass on scroll, hide down / show up =====
     const header = document.getElementById('main-header');
@@ -283,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ease: 'power2.in',
             scrollTrigger: {
                 trigger: heroScroll,
-                start: '70% top',
+                start: '50% top',
                 end: 'bottom top',
                 scrub: true,
             },

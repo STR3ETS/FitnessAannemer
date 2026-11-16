@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use App\Services\CmsContentService;
 use Illuminate\Http\Response;
 
@@ -65,8 +66,8 @@ class SitemapController extends Controller
             $urls->push(['url' => '/apparatuur/' . $slug, 'priority' => '0.7', 'changefreq' => 'monthly']);
         }
 
-        // Projecten detail pages
-        $projecten = ['pt024-nijmegen', 'ballin-fit-amsterdam', 'vitality-sports-duiven', 'upshape-gym-den-haag', 'farm-fit-culemborg', 'de-krachtfabriek-huissen', 'mana-eindhoven', 'fitt-roden', 'ona-gym-vught', 'building-you-etten-leur', 'incircle-waalwijk', 'fit2lead-gouda', 'fitcore-breda', 'fit-met-michael-ridderkerk', 'piazza-sports-houten', 'sportcentrum-pleizier-amsterdam-zuidoost', 'bent-sports-zevenaar', 'ketelaar-sports-ulft', 'elevate-the-gym-nuenen', 'mossink-elektrotechniek-hoevelaken', 'studio-dansu-huizen', 'axon-healthclub', 'base-lifestyle', 'bloom-and-reform', 'brilliant', 'club-confidence', 'donny-roelvink', 'get-real-performance', 'gym-boutique-pittem', 'gym-steenwijk', 'hotel-kavel-v-utrecht', 'house-of-fitness', 'kaj-prins', 'pt-factory', 'raoul-de-graaf', 'reichwein-pt', 'sportcentrum-de-kloek', 'the-kube', 'yourwaypt'];
+        // Projecten detail pages: alleen wat gepubliceerd is, de rest geeft een 404
+        $projecten = Project::where('is_published', true)->orderBy('sort_order')->pluck('slug');
         foreach ($projecten as $slug) {
             $urls->push(['url' => '/projecten/' . $slug, 'priority' => '0.7', 'changefreq' => 'monthly']);
         }
@@ -113,7 +114,7 @@ class SitemapController extends Controller
             'gymreview-black-phantom-huizen',
             'gymreview-saint-stars-in-amsterdam-fitness-aannemer',
             'healthclub-heijenoord-arnhem-review', 'gymreview-golds-gym-nieuwegein',
-            'gymreview-van-der-valk-hotel-deventer-gym', 'gymreview-kossos-gym',
+            'gymreview-van-der-valk-hotel-duiven-gym', 'gymreview-kossos-gym',
             'movement-gym-amersfoort', 'gymreview-joel-beukers-gym-concept',
             'gymreview-de-basic-fit-kerk',
         ];

@@ -113,7 +113,7 @@
                         </span>
                     </div>
                     <div class="hidden lg:block rounded-2xl overflow-hidden aspect-[4/3] bg-white/[0.04] border border-white/[0.06]">
-                        <img src="{{ asset('assets/foto-assets/MCJO3837-1-1024x683.jpg') }}" alt="Turnkey sportschool bouwen" class="w-full h-full object-cover" loading="lazy">
+                        <img src="{{ asset('assets/projecten/de-kloek-hyrox/kloek-3942.webp') }}" alt="Turnkey gerealiseerde trainingsruimte met sprinttrack bij De Kloek" class="w-full h-full object-cover" loading="lazy">
                     </div>
                 </div>
             </a>

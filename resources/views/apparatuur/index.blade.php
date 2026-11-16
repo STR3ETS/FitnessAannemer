@@ -33,7 +33,7 @@
 @section('content')
     <section class="bg-secondary pt-32 lg:pt-40 pb-12 lg:pb-20 relative overflow-hidden">
         <div class="hidden lg:block absolute inset-y-0 right-0 w-1/2">
-            <img src="{{ asset('assets/wp-uploads/009_DSC0569-HDR-scaled.jpg') }}" alt="Fitnessapparatuur en materiaal overzicht Fitness Aannemer" class="w-full h-full object-cover">
+            <img src="{{ asset('assets/MCJO3905.jpg') }}" alt="Fitnessapparatuur en materiaal overzicht Fitness Aannemer" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-transparent"></div>
             <div class="absolute w-[650px] h-[650px] rounded-full border border-white/[0.07] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
             <div class="absolute w-[400px] h-[400px] rounded-full border border-white/[0.10] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
@@ -65,7 +65,7 @@
 
             @php
             $apparatuur = [
-                ['url' => '/apparatuur/collecties', 'img' => 'assets/foto-assets/MCJO3837-1-1024x683.jpg', 'title' => 'Collecties', 'desc' => 'Complete apparatuurcollecties samengesteld per merk of concept.'],
+                ['url' => '/apparatuur/collecties', 'img' => 'assets/MCJO3939.jpg', 'title' => 'Collecties', 'desc' => 'Complete apparatuurcollecties samengesteld per merk of concept.'],
                 ['url' => '/apparatuur/cardio', 'img' => 'assets/ca-hero.jpg', 'title' => 'Cardio', 'desc' => 'Loopbanden, fietsen, crosstrainers, roeiers en meer van topmerken.'],
                 ['url' => '/apparatuur/krachtapparatuur', 'img' => 'assets/kr-hero.jpg', 'title' => 'Krachtapparatuur', 'desc' => 'Pin-loaded, plate-loaded en cable machines voor elke gym.'],
                 ['url' => '/apparatuur/apparatuur-functioneel', 'img' => 'assets/fn-hero.jpg', 'title' => 'Functioneel', 'desc' => 'Rigs, racks, sleds, kettlebells en functionele accessoires.'],

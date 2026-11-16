@@ -348,24 +348,26 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 @php
+                // Alleen naar een projectpagina linken als die gepubliceerd is, anders is het een 404
+                $gepubliceerd = \App\Models\Project::where('is_published', true)->pluck('slug')->all();
                 $projecten = [
                     [
                         'url' => '/projecten/de-krachtfabriek-huissen',
-                        'image' => 'assets/wp-uploads/009_DSC0569-HDR-scaled.jpg',
+                        'image' => 'assets/projecten/de-krachtfabriek-huissen/krachtfabriek-hero.jpg',
                         'title' => 'De Krachtfabriek',
                         'location' => 'Huissen',
                         'desc' => '880 m² casco omgebouwd tot complete sportschool. Geopend januari 2026, break-even in maand 6, nu 600 leden.',
                     ],
                     [
                         'url' => '/projecten/axon-healthclub',
-                        'image' => 'assets/wp-uploads/011_DSC0596-HDR-scaled-e1758023491547.jpg',
+                        'image' => 'assets/tk-inrichting.jpg',
                         'title' => 'AXON',
                         'location' => 'Maasbracht',
                         'desc' => '1.200 m², turnkey gerealiseerd. Meer dan 200 aanmeldingen voor de opening.',
                     ],
                     [
                         'url' => '/projecten/sportcentrum-pleizier-amsterdam-zuidoost',
-                        'image' => 'assets/wp-uploads/gym-interior-with-exercise-machines-2025-03-09-03-02-13-utc-2.jpg',
+                        'image' => 'assets/projecten-pleizier.webp',
                         'title' => 'Sportcentrum Pleizier',
                         'location' => 'Amsterdam',
                         'desc' => 'Renovatie van 1.000 m² inclusief lounge, terwijl de rest van de club openbleef.',
@@ -373,7 +375,8 @@
                 ];
                 @endphp
                 @foreach($projecten as $project)
-                <a href="{{ url($project['url']) }}" class="group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl border border-secondary/[0.08] hover:border-primary/30 transition-all duration-300">
+                @php $heeftPagina = in_array(basename($project['url']), $gepubliceerd, true); @endphp
+                <{{ $heeftPagina ? 'a' : 'div' }} @if($heeftPagina) href="{{ url($project['url']) }}" @endif class="group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl border border-secondary/[0.08] hover:border-primary/30 transition-all duration-300">
                     <div class="aspect-[4/3] relative overflow-hidden">
                         <img src="{{ asset($project['image']) }}" alt="{{ $project['title'] }} {{ $project['location'] }} sportschool ontwerp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/50 to-transparent"></div>
@@ -383,10 +386,12 @@
                             </div>
                             <h3 class="text-white text-xl font-bold mb-2">{{ $project['title'] }}</h3>
                             <p class="text-white/70 text-sm leading-relaxed">{{ $project['desc'] }}</p>
+                            @if($heeftPagina)
                             <span class="inline-flex items-center text-primary text-xs font-semibold mt-3">Bekijk project <i class="fa-solid fa-arrow-right text-[10px] ml-1.5 group-hover:translate-x-1 transition-transform"></i></span>
+                            @endif
                         </div>
                     </div>
-                </a>
+                </{{ $heeftPagina ? 'a' : 'div' }}>
                 @endforeach
             </div>
         </div>

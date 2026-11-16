@@ -54,6 +54,7 @@
                 </a>
                 <h1 class="text-white text-3xl lg:text-4xl font-bold leading-[1.05] mb-3">Vrijblijvend <span class="text-primary">adviesgesprek</span></h1>
                 <p class="text-white/40 text-sm leading-relaxed max-w-lg mx-auto">Vertel ons over jouw project. Wij nemen binnen 24 uur contact op.</p>
+                @include('partials.reviews-badge', ['class' => 'mt-5'])
             </div>
 
             {{-- Progress bar --}}

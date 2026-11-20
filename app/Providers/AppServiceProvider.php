@@ -42,6 +42,30 @@ class AppServiceProvider extends ServiceProvider
             $view->with(['teksten' => $teksten, 'seo' => $teksten->metSeo($seo)]);
         });
 
+        // Een artikel of dienst van InSpace op een adres dat in het beheer nog de
+        // titel, omschrijving en schema van het oude artikel heeft (een herschreven
+        // vast artikel): wat bij de tekst van InSpace hoort gaat voor. Zonder eigen
+        // titel van InSpace geldt die van de pagina zelf, niet de oude.
+        View::composer('content.pagina', function ($view) {
+            $data = $view->getData();
+            $seo = array_key_exists('seo', $data) ? $data['seo'] : app(SeoService::class)->getForCurrentRequest();
+
+            if (! $seo) {
+                return;
+            }
+
+            $seo = clone $seo;
+            $pagina = (array) ($data['pagina'] ?? []);
+            $seo->meta_title = filled($pagina['meta_title'] ?? null) ? $pagina['meta_title'] : null;
+            $seo->meta_description = filled($pagina['meta_description'] ?? null) ? $pagina['meta_description'] : null;
+            $seo->og_title = null;
+            $seo->og_description = null;
+            $seo->og_image = null;
+            $seo->schema_markup = null;
+
+            $view->with('seo', $seo);
+        });
+
         // Custom Blade directives for SEO with database-first, @section fallback
         Blade::directive('seoTitle', function ($expression) {
             return "<?php echo e(\$seo?->meta_title ?? \$__env->yieldContent('title', $expression)); ?>";

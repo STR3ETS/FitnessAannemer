@@ -3168,8 +3168,9 @@ class PageController extends Controller
 
     public function tipsOverview(CmsContentService $cms)
     {
-        // Wat InSpace aanlevert komt bovenaan, in dezelfde kaarten als de rest.
-        $aangeleverd = $cms->artikelen()->map(fn (array $artikel) => [
+        // Wat InSpace aanlevert komt bovenaan, in dezelfde kaarten als de rest. Een
+        // herschreven artikel uit een andere rubriek staat daar al.
+        $aangeleverd = $cms->artikelen()->reject(fn (array $artikel, $slug) => $this->bestaandAdres((string) $slug))->map(fn (array $artikel) => [
             'title' => $artikel['title'],
             'cardImage' => $artikel['featured_image'] ?: 'assets/wp-uploads/FA_VDS_AUG2025-07-scaled.jpg',
             'cardDesc' => $artikel['excerpt'] ?: $artikel['meta_description'],
@@ -3182,14 +3183,14 @@ class PageController extends Controller
     {
         // Eerst wat InSpace aanlevert: stuurt die een bestaand adres, dan is dat de nieuwe versie.
         if ($artikel = $cms->artikel($slug)) {
-            return view('content.pagina', [
-                'pagina' => $artikel,
-                'tekst' => CmsContentService::schoon((string) ($artikel['content'] ?? ''), $artikel['title']),
-                'kruimels' => [
-                    ['naam' => 'Fitnesswijzer', 'url' => url('/fitnesswijzer')],
-                    ['naam' => 'Tips & inspiratie', 'url' => url('/fitnesswijzer/tips-en-inspiratie')],
-                ],
-                'artikel' => true,
+            // Een herschreven artikel uit een andere rubriek staat op zijn eigen adres.
+            if ($adres = $this->bestaandAdres($slug)) {
+                return redirect($adres, 301);
+            }
+
+            return $this->aangeleverd($artikel, [
+                ['naam' => 'Fitnesswijzer', 'url' => url('/fitnesswijzer')],
+                ['naam' => 'Tips & inspiratie', 'url' => url('/fitnesswijzer/tips-en-inspiratie')],
             ]);
         }
 
@@ -3208,10 +3209,18 @@ class PageController extends Controller
         return view('fitnesswijzer.gym-verdienmodellen', ['artikelen' => $this->verdienmodellen]);
     }
 
-    public function verdienmodel(string $slug)
+    public function verdienmodel(string $slug, CmsContentService $cms)
     {
         if (!isset($this->verdienmodellen[$slug])) {
             abort(404);
+        }
+
+        // Herschreef InSpace dit artikel, dan staat hun tekst op dit adres.
+        if ($artikel = $cms->artikel($slug)) {
+            return $this->aangeleverd($artikel, [
+                ['naam' => 'Fitnesswijzer', 'url' => url('/fitnesswijzer')],
+                ['naam' => 'Gym verdienmodellen', 'url' => url('/fitnesswijzer/gym-verdienmodellen')],
+            ]);
         }
 
         return view('fitnesswijzer.verdienmodellen._template', array_merge(
@@ -3225,16 +3234,49 @@ class PageController extends Controller
         return view('fitnesswijzer.gymreviews', ['artikelen' => $this->gymreviews]);
     }
 
-    public function gymreview(string $slug)
+    public function gymreview(string $slug, CmsContentService $cms)
     {
         if (!isset($this->gymreviews[$slug])) {
             abort(404);
+        }
+
+        if ($artikel = $cms->artikel($slug)) {
+            return $this->aangeleverd($artikel, [
+                ['naam' => 'Fitnesswijzer', 'url' => url('/fitnesswijzer')],
+                ['naam' => 'Gymreviews', 'url' => url('/fitnesswijzer/gymreviews')],
+            ]);
         }
 
         return view('fitnesswijzer.gymreviews._template', array_merge(
             $this->gymreviews[$slug],
             ['slug' => $slug]
         ));
+    }
+
+    /**
+     * Het adres van een vast artikel buiten Tips & inspiratie met deze slug, of
+     * null. Stuurt InSpace een artikel met die slug, dan is dat de nieuwe versie
+     * van dat artikel: de tekst komt op het bestaande adres en niet als tweede
+     * versie onder Tips & inspiratie (zoals Eigen gym starten in november 2026).
+     */
+    public function bestaandAdres(string $slug): ?string
+    {
+        return match (true) {
+            isset($this->verdienmodellen[$slug]) => '/fitnesswijzer/gym-verdienmodellen/' . $slug,
+            isset($this->gymreviews[$slug]) => '/fitnesswijzer/gymreviews/' . $slug,
+            default => null,
+        };
+    }
+
+    /** Een artikel van InSpace in de opmaak van de site. */
+    private function aangeleverd(array $artikel, array $kruimels)
+    {
+        return view('content.pagina', [
+            'pagina' => $artikel,
+            'tekst' => CmsContentService::schoon((string) ($artikel['content'] ?? ''), $artikel['title']),
+            'kruimels' => $kruimels,
+            'artikel' => true,
+        ]);
     }
 
     /** Een servicepagina van InSpace, direct onder het domein. */

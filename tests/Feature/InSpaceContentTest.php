@@ -57,6 +57,65 @@ class InSpaceContentTest extends TestCase
         ]);
     }
 
+    /** InSpace herschreef het vaste artikel Eigen gym starten (gym-verdienmodellen). */
+    private function herschreven(): void
+    {
+        $artikel = $this->stuk([
+            'title' => 'Eigen gym starten',
+            'slug' => 'eigen-gym-starten',
+            'meta_title' => 'Eigen gym starten in 2026 | Fitness Aannemer',
+            'meta_description' => 'De nieuwe omschrijving van InSpace.',
+        ]);
+
+        Http::fake([
+            self::API . '/content/eigen-gym-starten' => Http::response(['data' => $artikel + ['content' => '<h2>Zo begin je</h2><p>De tekst van InSpace.</p>']]),
+            self::API . '/content*' => Http::response(['data' => [$artikel], 'meta' => ['current_page' => 1, 'last_page' => 1, 'per_page' => 100, 'total' => 1]]),
+            self::API . '/authors' => Http::response(['data' => [$artikel['author']]]),
+        ]);
+    }
+
+    public function test_een_herschreven_vast_artikel_staat_op_zijn_eigen_adres(): void
+    {
+        // November 2026: Eigen gym starten stond twee keer online, het oude artikel
+        // en de tekst van InSpace onder Tips & inspiratie.
+        \App\Models\SeoMetadata::create([
+            'url_path' => '/fitnesswijzer/gym-verdienmodellen/eigen-gym-starten',
+            'page_title' => 'Eigen gym starten',
+            'meta_title' => 'Een complete gym starten voor 2.000 euro per maand | Fitness Aannemer',
+            'meta_description' => 'De oude omschrijving.',
+        ]);
+        $this->herschreven();
+        $adres = '/fitnesswijzer/gym-verdienmodellen/eigen-gym-starten';
+
+        $this->get($adres)
+            ->assertOk()
+            ->assertSee('De tekst van InSpace.')
+            ->assertSee('<title>Eigen gym starten in 2026 | Fitness Aannemer</title>', false)
+            ->assertSee('content="De nieuwe omschrijving van InSpace."', false)
+            ->assertDontSee('Een complete gym starten voor 2.000 euro per maand')
+            ->assertDontSee('De oude omschrijving.')
+            ->assertSee('<link rel="canonical" href="' . url($adres) . '">', false)
+            ->assertSee('Gym verdienmodellen');
+
+        $this->get('/fitnesswijzer/tips-en-inspiratie/eigen-gym-starten')->assertStatus(301)->assertRedirect(url($adres));
+
+        // Geen tweede versie tussen de tips, en één keer in de sitemap.
+        $this->get('/fitnesswijzer/tips-en-inspiratie')->assertOk()->assertDontSee('/fitnesswijzer/tips-en-inspiratie/eigen-gym-starten', false);
+        $sitemap = $this->get('/sitemap.xml')->assertOk()->getContent();
+        $this->assertStringNotContainsString('/fitnesswijzer/tips-en-inspiratie/eigen-gym-starten', $sitemap);
+        $this->assertSame(1, substr_count($sitemap, url($adres) . '</loc>'));
+        $this->get('/auteur/kevin-jansen')->assertSee($adres, false);
+    }
+
+    public function test_zonder_herschreven_versie_blijft_het_vaste_artikel_staan(): void
+    {
+        $this->api();
+
+        $this->get('/fitnesswijzer/gym-verdienmodellen/eigen-gym-starten')
+            ->assertOk()
+            ->assertSee('hoeft geen fortuin te kosten');
+    }
+
     public function test_een_artikel_staat_onder_tips_en_inspiratie(): void
     {
         $this->api();

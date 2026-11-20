@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use App\Services\CmsContentService;
+use App\Support\ArtikelAdres;
 use Illuminate\Http\Response;
 
 class SitemapController extends Controller
@@ -124,7 +125,7 @@ class SitemapController extends Controller
 
         // Content van InSpace (via EazyDash)
         foreach ($cms->artikelen() as $slug => $artikel) {
-            $urls->push(['url' => '/fitnesswijzer/tips-en-inspiratie/' . $slug, 'priority' => '0.6', 'changefreq' => 'monthly', 'lastmod' => $artikel['updated_at'] ?? null]);
+            $urls->push(['url' => ArtikelAdres::van((string) $slug), 'priority' => '0.6', 'changefreq' => 'monthly', 'lastmod' => $artikel['updated_at'] ?? null]);
         }
 
         foreach ($cms->diensten() as $slug => $dienst) {

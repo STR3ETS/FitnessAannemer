@@ -61,7 +61,7 @@
                 <h2 class="text-secondary text-3xl lg:text-5xl font-bold leading-[1.05] mb-8">Artikelen van <span class="text-primary">{{ $auteur['name'] }}</span></h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     @foreach($auteur['artikelen'] as $slug => $artikel)
-                        <a href="{{ url('/fitnesswijzer/tips-en-inspiratie/' . $slug) }}" class="group bg-secondary rounded-2xl overflow-hidden transition-all duration-300">
+                        <a href="{{ url(\App\Support\ArtikelAdres::van((string) $slug)) }}" class="group bg-secondary rounded-2xl overflow-hidden transition-all duration-300">
                             <div class="aspect-[16/9] relative overflow-hidden">
                                 <img src="{{ $artikel['featured_image'] ?: asset('assets/wp-uploads/FA_VDS_AUG2025-07-scaled.jpg') }}" alt="{{ $artikel['title'] }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                                 <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/20"></div>

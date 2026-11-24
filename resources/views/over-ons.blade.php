@@ -138,7 +138,6 @@
                 ['name' => 'Lars', 'role' => 'Assistent Conceptmanager', 'desc' => 'Ondersteunt bij conceptontwikkeling en uitvoering.', 'photo' => 'assets/team/lars.webp'],
                 ['name' => 'Cacharel', 'role' => 'Interieur ontwerpster', 'desc' => 'Vertaalt het ontwerp naar de vloer.', 'photo' => 'assets/team/cacharel.webp'],
                 ['name' => 'Puck', 'role' => 'Interieur ontwerpster', 'desc' => 'Ontwerpt ruimtes die functioneel en visueel kloppen.', 'photo' => 'assets/team/puck.webp'],
-                ['name' => 'Renee', 'role' => 'Interieur ontwerpster', 'desc' => 'Plattegronden en 3D-visualisaties.', 'photo' => null],
                 ['name' => 'Jeroen', 'role' => 'Controller', 'desc' => 'Bewaakt budgetten en cijfers achter elk project.', 'photo' => 'assets/team/jeroen.webp'],
                 ['name' => 'Colin', 'role' => 'Content Creator', 'desc' => 'Maakt beelden van de projecten.', 'photo' => 'assets/team/colin.webp'],
             ];
@@ -149,7 +148,8 @@
                 <div class="bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden">
                     <div class="aspect-[3/4] bg-white/[0.02] flex items-center justify-center overflow-hidden">
                         @if(!empty($lid['photo']))
-                            <img src="{{ asset($lid['photo']) }}" alt="{{ $lid['name'] }}, {{ $lid['role'] }} bij Fitness Aannemer" class="w-full h-full object-cover" loading="lazy" width="720" height="960">
+                            {{-- Versienummer in de URL: een vervangen foto is direct zichtbaar, ook bij terugkerende bezoekers --}}
+                            <img src="{{ asset($lid['photo']) }}?v={{ filemtime(public_path($lid['photo'])) }}" alt="{{ $lid['name'] }}, {{ $lid['role'] }} bij Fitness Aannemer" class="w-full h-full object-cover" loading="lazy" width="720" height="960">
                         @else
                             <i class="fa-solid fa-user text-white/10 text-3xl"></i>
                         @endif

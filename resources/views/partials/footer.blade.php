@@ -8,19 +8,19 @@
             <p class="text-white/50 text-xs mt-4 leading-relaxed">De specialist in het ontwerpen en inrichten van sportscholen. Onafhankelijk advies, complete inrichting en oplevering onder een dak.</p>
             {{-- Social icons --}}
             <div class="flex items-center gap-3 mt-6">
-                <a href="https://www.instagram.com/fitnessaannemer.nl/" target="_blank" rel="noopener" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
+                <a href="https://www.instagram.com/fitnessaannemer.nl/" target="_blank" rel="noopener" aria-label="Fitness Aannemer op Instagram" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
                     <i class="fa-brands fa-instagram text-sm"></i>
                 </a>
-                <a href="https://www.tiktok.com/@fitnessaannemer" target="_blank" rel="noopener" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
+                <a href="https://www.tiktok.com/@fitnessaannemer" target="_blank" rel="noopener" aria-label="Fitness Aannemer op TikTok" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
                     <i class="fa-brands fa-tiktok text-sm"></i>
                 </a>
-                <a href="https://www.youtube.com/@FitnessAannemer" target="_blank" rel="noopener" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
+                <a href="https://www.youtube.com/@FitnessAannemer" target="_blank" rel="noopener" aria-label="Fitness Aannemer op YouTube" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
                     <i class="fa-brands fa-youtube text-sm"></i>
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=61557754181423" target="_blank" rel="noopener" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
+                <a href="https://www.facebook.com/profile.php?id=61557754181423" target="_blank" rel="noopener" aria-label="Fitness Aannemer op Facebook" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
                     <i class="fa-brands fa-facebook-f text-sm"></i>
                 </a>
-                <a href="https://pin.it/7jMdHylyE" target="_blank" rel="noopener" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
+                <a href="https://pin.it/7jMdHylyE" target="_blank" rel="noopener" aria-label="Fitness Aannemer op Pinterest" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition">
                     <i class="fa-brands fa-pinterest-p text-sm"></i>
                 </a>
             </div>
@@ -92,9 +92,9 @@
             <div class="mt-6">
                 <p class="text-white text-xs font-semibold mb-3">Blijf op de hoogte</p>
                 <form class="flex gap-1">
-                    <input type="email" placeholder="E-mailadres" class="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-xs text-white placeholder-white/30 focus:outline-none focus:border-primary/50 transition">
-                    <button type="submit" class="bg-primary hover:bg-primary/90 text-white text-xs font-semibold w-[37.59px] h-[37.59px] rounded-lg transition">
-                        <i class="fa-solid fa-arrow-right"></i>
+                    <input type="email" placeholder="E-mailadres" aria-label="Je e-mailadres voor de nieuwsbrief" class="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-xs text-white placeholder-white/30 focus:outline-none focus:border-primary/50 transition">
+                    <button type="submit" aria-label="Aanmelden voor de nieuwsbrief" class="bg-primary hover:bg-primary/90 text-white text-xs font-semibold w-[37.59px] h-[37.59px] rounded-lg transition">
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </button>
                 </form>
             </div>

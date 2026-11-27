@@ -11,7 +11,8 @@
     .cms-tekst ol { list-style: decimal; }
     .cms-tekst li { margin-bottom: 0.4rem; }
     .cms-tekst li::marker { color: #52abe2; }
-    .cms-tekst a { color: #52abe2; text-decoration: underline; text-underline-offset: 2px; transition: opacity 0.2s; }
+    /* Donkerder dan het merkblauw: #52abe2 haalde als linktekst 2,4:1, dit 4,6:1 (WCAG AA). */
+    .cms-tekst a { color: #2477ad; text-decoration: underline; text-underline-offset: 2px; transition: opacity 0.2s; }
     .cms-tekst a:hover { opacity: 0.7; }
     .cms-tekst strong { color: #06090f; font-weight: 600; }
     .cms-tekst img { max-width: 100%; height: auto; border-radius: 1rem; margin: 1.5rem 0; }

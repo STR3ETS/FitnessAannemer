@@ -41,6 +41,16 @@
         <!-- End Google Tag Manager -->
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        {{-- Leesbare lichte tekst (WCAG AA, 4,5:1). Wit op 30 tot 50 procent haalde op de
+             donkere achtergrond 2,5 tot 3,6, het grijs op 50 procent op de lichte 3,7 (scan
+             InSpace, nov 2026). Hover gaat nog steeds voor. --}}
+        <style>
+            @layer utilities {
+                .text-white\/30, .text-white\/35, .text-white\/40, .text-white\/50 { color: rgb(255 255 255 / .65); }
+                .text-secondary\/40, .text-secondary\/50 { color: rgb(6 9 15 / .7); }
+            }
+        </style>
     </head>
     <body class="bg-white">
         <!-- Google Tag Manager (noscript) -->
@@ -48,7 +58,10 @@
         <!-- End Google Tag Manager (noscript) -->
         @include('partials.header')
 
+        {{-- De inhoud in een main: zonder dat landmark weet een schermlezer niet waar de pagina begint (scan InSpace, nov 2026). --}}
+        <main id="inhoud">
         @yield('content')
+        </main>
 
         @include('partials.pre-footer')
         @include('partials.footer')

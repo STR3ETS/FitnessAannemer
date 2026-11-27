@@ -224,19 +224,19 @@
                 </div>
                 <div class="social-fade flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-8 lg:mt-12">
                     <a href="{{ url('/vrijblijvend-adviesgesprek') }}" class="bg-primary rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-primary/80 transition-colors">Vrijblijvend adviesgesprek <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
-                    <a href="https://www.instagram.com/fitnessaannemer.nl/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
+                    <a href="https://www.instagram.com/fitnessaannemer.nl/" target="_blank" rel="noopener" aria-label="Fitness Aannemer op Instagram" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://www.tiktok.com/@fitnessaannemer" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
+                    <a href="https://www.tiktok.com/@fitnessaannemer" target="_blank" rel="noopener" aria-label="Fitness Aannemer op TikTok" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
                         <i class="fa-brands fa-tiktok"></i>
                     </a>
-                    <a href="https://www.youtube.com/@FitnessAannemer" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
+                    <a href="https://www.youtube.com/@FitnessAannemer" target="_blank" rel="noopener" aria-label="Fitness Aannemer op YouTube" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
                         <i class="fa-brands fa-youtube"></i>
                     </a>
-                    <a href="https://www.facebook.com/profile.php?id=61557754181423" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
+                    <a href="https://www.facebook.com/profile.php?id=61557754181423" target="_blank" rel="noopener" aria-label="Fitness Aannemer op Facebook" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
-                    <a href="https://pin.it/7jMdHylyE" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
+                    <a href="https://pin.it/7jMdHylyE" target="_blank" rel="noopener" aria-label="Fitness Aannemer op Pinterest" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-lg hover:bg-primary/80 transition-colors">
                         <i class="fa-brands fa-pinterest-p"></i>
                     </a>
                     <a href="#" class="bg-white/10 border border-white/30 rounded-full px-6 py-3 text-white text-xs font-semibold hover:bg-white/20 transition-colors">Bekijk onze projecten</a>
